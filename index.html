@@ -1,28 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Kelly Legacy Institute | Institutional Fiduciary Education & Governance</title>
-  <meta name="description" content="Kelly Legacy Institute – institutional fiduciary governance under Kelly Legacy Estates Living Trust. Structured education in trust administration, procedural discipline, and fiduciary accountability.">
-  <link rel="icon" type="image/png" href="kli-favicon.png">
-  <link rel="apple-touch-icon" href="kli-favicon.png">
-  
-  <meta property="og:title" content="Kelly Legacy Institute | Fiduciary Governance & Education">
-  <meta property="og:description" content="Institutional fiduciary education and governance systems under Kelly Legacy Estates Living Trust.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://kellylegacyinstitute.org">
-  <meta property="og:image" content="https://kellylegacyinstitute.org/og-image.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Kelly Legacy Institute | Fiduciary Governance">
-  <meta name="twitter:description" content="Institutional fiduciary education and governance systems.">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-  <style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Kelly Legacy Institute | Operational Governance & AI Workflow Systems</title>
+  <meta name="description" content="Kelly Legacy Institute provides operational workflow reviews, AI-use governance, onboarding systems, documentation standards, and administrative continuity frameworks for nonprofits, workforce programs, and small institutions." />
+  <link rel="icon" type="image/png" href="kli-favicon.png" />
+  <link rel="apple-touch-icon" href="kli-favicon.png" />  <meta property="og:title" content="Kelly Legacy Institute | Operational Governance & AI Workflow Systems" />
+  <meta property="og:description" content="Workflow standardization, AI-use governance, onboarding systems, documentation continuity, and institutional accountability for organizations." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kellylegacyinstitute.org" />
+  <meta property="og:image" content="https://kellylegacyinstitute.org/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kelly Legacy Institute | Operational Governance" />
+  <meta name="twitter:description" content="Operational workflow reviews and AI governance systems for nonprofits, workforce programs, and small institutions." />  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />  <style>
     *{margin:0;padding:0;box-sizing:border-box;}
     :root{
       --matte-black:#0A0F1A;
@@ -30,9 +23,11 @@
       --platinum:#D1D5DB;
       --ivory:#F3F4F6;
       --gold:#C6A15B;
-      --gold-light:rgba(198,161,91,0.2);
+      --gold-soft:rgba(198,161,91,0.14);
       --border-gold:rgba(198,161,91,0.35);
-      --glass-bg:rgba(17,24,39,0.7);
+      --glass-bg:rgba(17,24,39,0.72);
+      --blue-slate:#94A3B8;
+      --danger:#F59E0B;
       --shadow-md:0 25px 40px -14px rgba(0,0,0,0.5),0 1px 2px 0 rgba(255,255,255,0.03) inset;
       --transition:all 0.35s cubic-bezier(0.2,0.9,0.4,1.1);
     }
@@ -46,14 +41,14 @@
       position:relative;
     }
     body::after{
-      content:"KLE";
+      content:"KLI";
       position:fixed;
       bottom:8%;
       right:-3%;
       font-family:'Playfair Display',serif;
       font-size:clamp(12rem,22vw,20rem);
       font-weight:800;
-      color:rgba(198,161,91,0.02);
+      color:rgba(198,161,91,0.025);
       pointer-events:none;
       z-index:0;
       user-select:none;
@@ -70,480 +65,296 @@
     }
     .container{max-width:1280px;margin:0 auto;padding:0 36px;position:relative;z-index:5;}
     h1,h2,h3,.serif{font-family:'Playfair Display',serif;font-weight:600;letter-spacing:-0.02em;color:var(--ivory);}
-    h1{font-size:clamp(2.8rem,6vw,5rem);line-height:1.08;font-weight:700;}
-    h2{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:1rem;}
+    h1{font-size:clamp(2.65rem,6vw,5.35rem);line-height:1.06;font-weight:750;max-width:980px;}
+    h2{font-size:clamp(2rem,4vw,2.9rem);margin-bottom:1rem;}
+    h3{font-size:1.45rem;}
+    p{color:#cbd5e1;}
     .gold-text{color:var(--gold);}
-    .btn-group{display:flex;flex-wrap:wrap;gap:1.2rem;margin-top:2rem;}
+    .muted{color:#9CA3AF;}
+    .mono{font-family:'Roboto Mono',monospace;}
+    .btn-group{display:flex;flex-wrap:wrap;gap:1.1rem;margin-top:2rem;}
     .btn{
       display:inline-flex;
       align-items:center;
       gap:0.7rem;
-      padding:0.9rem 2rem;
+      padding:0.92rem 1.7rem;
       border-radius:48px;
       font-family:'Inter',sans-serif;
-      font-weight:500;
-      font-size:0.85rem;
+      font-weight:650;
+      font-size:0.82rem;
       letter-spacing:0.04em;
       text-decoration:none;
       transition:var(--transition);
       border:1px solid transparent;
       cursor:pointer;
+      text-transform:uppercase;
     }
     .btn-primary{background:var(--gold);color:#0A0F1A;box-shadow:0 6px 14px rgba(198,161,91,0.25);}
     .btn-primary:hover{background:#b38f47;transform:translateY(-3px);box-shadow:0 12px 22px rgba(198,161,91,0.3);}
     .btn-outline{border:1px solid var(--gold);color:var(--ivory);background:rgba(0,0,0,0.35);backdrop-filter:blur(4px);}
     .btn-outline:hover{background:rgba(198,161,91,0.12);transform:translateY(-3px);border-color:var(--gold);}
     .btn:focus-visible,.nav-links a:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:4px;}
-    header{
-      position:sticky;
-      top:0;
-      z-index:100;
-      backdrop-filter:blur(16px);
-      background:rgba(10,15,26,0.85);
-      border-bottom:1px solid var(--border-gold);
-    }
-    .nav{display:flex;justify-content:space-between;align-items:center;padding:1.3rem 0;flex-wrap:wrap;gap:1rem;}
-    .logo{
-      font-family:'Playfair Display',serif;
-      font-size:1.35rem;
-      font-weight:700;
-      letter-spacing:-0.3px;
-      border-left:3px solid var(--gold);
-      padding-left:18px;
-      background:linear-gradient(135deg,#fff,var(--gold));
-      -webkit-background-clip:text;
-      background-clip:text;
-      color:transparent;
-    }
+
+    header{position:sticky;top:0;z-index:100;backdrop-filter:blur(16px);background:rgba(10,15,26,0.86);border-bottom:1px solid var(--border-gold);}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 0;flex-wrap:wrap;gap:1rem;}
+    .logo{font-family:'Playfair Display',serif;font-size:1.32rem;font-weight:750;letter-spacing:-0.3px;border-left:3px solid var(--gold);padding-left:18px;background:linear-gradient(135deg,#fff,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent;}
     .logo span{color:var(--gold);background:none;-webkit-background-clip:unset;}
-    .nav-links{display:flex;gap:2.2rem;flex-wrap:wrap;}
-    .nav-links a{
-      font-family:'Roboto Mono',monospace;
-      font-size:0.7rem;
-      letter-spacing:0.12em;
-      text-decoration:none;
-      color:var(--platinum);
-      transition:0.2s;
-      font-weight:500;
-    }
+    .nav-links{display:flex;gap:1.55rem;flex-wrap:wrap;align-items:center;}
+    .nav-links a{font-family:'Roboto Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;text-decoration:none;color:var(--platinum);transition:0.2s;font-weight:600;}
     .nav-links a:hover{color:var(--gold);}
-    .hero{
-      min-height:85vh;
-      display:flex;
-      align-items:center;
-      position:relative;
-      padding:2rem 0 5rem;
-      background:radial-gradient(circle at 80% 20%,rgba(198,161,91,0.1),transparent 70%);
-    }
-    .hero-badge{
-      display:inline-block;
-      font-family:'Roboto Mono',monospace;
-      font-size:0.7rem;
-      letter-spacing:0.2em;
-      padding:0.4rem 1rem;
-      background:rgba(198,161,91,0.08);
-      border-left:3px solid var(--gold);
-      margin-bottom:1.5rem;
-    }
-    .office-badge{
-      display:inline-flex;
-      align-items:center;
-      gap:0.6rem;
-      font-family:'Roboto Mono',monospace;
-      font-size:0.7rem;
-      color:var(--gold);
-      border:1px solid var(--border-gold);
-      border-radius:40px;
-      padding:0.4rem 1.2rem;
-      background:rgba(0,0,0,0.3);
-      backdrop-filter:blur(4px);
-      margin-top:1rem;
-    }
-    .hero p{font-size:1.15rem;max-width:650px;margin:1.5rem 0 0.5rem;color:#e2e8f0;}
+
+    .hero{min-height:88vh;display:flex;align-items:center;position:relative;padding:4rem 0 5rem;background:radial-gradient(circle at 80% 20%,rgba(198,161,91,0.12),transparent 70%);}
+    .hero-grid{display:grid;grid-template-columns:1.05fr 0.75fr;gap:3rem;align-items:center;}
+    .hero-badge{display:inline-block;font-family:'Roboto Mono',monospace;font-size:0.68rem;letter-spacing:0.2em;padding:0.4rem 1rem;background:rgba(198,161,91,0.08);border-left:3px solid var(--gold);margin-bottom:1.4rem;text-transform:uppercase;}
+    .hero p{font-size:1.13rem;max-width:730px;margin:1.35rem 0 0.5rem;color:#e2e8f0;}
+    .problem-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0.85rem;margin-top:2rem;max-width:920px;}
+    .problem-pill{border:1px solid rgba(198,161,91,0.22);background:rgba(17,24,39,0.58);border-radius:16px;padding:0.9rem;font-size:0.78rem;color:#d8dee8;}
+    .problem-pill i{color:var(--gold);margin-right:0.45rem;}
+    .diagnostic-card{background:linear-gradient(145deg,rgba(17,24,39,0.92),rgba(3,7,17,0.88));border:1px solid var(--border-gold);border-radius:30px;padding:2rem;box-shadow:var(--shadow-md);position:relative;overflow:hidden;}
+    .diagnostic-card::before{content:'';position:absolute;top:-40%;right:-30%;width:260px;height:260px;background:radial-gradient(circle,rgba(198,161,91,0.18),transparent 70%);}
+    .score-row{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid rgba(198,161,91,0.16);padding:0.9rem 0;position:relative;z-index:2;}
+    .score-row span:first-child{color:#cbd5e1;}
+    .score-row span:last-child{font-family:'Roboto Mono',monospace;color:var(--gold);font-size:0.78rem;}
+    .score-title{font-family:'Roboto Mono',monospace;font-size:0.72rem;color:var(--gold);letter-spacing:0.16em;text-transform:uppercase;margin-bottom:1rem;position:relative;z-index:2;}
+
     section{padding:5rem 0;border-bottom:1px solid rgba(198,161,91,0.1);}
     .section-header{margin-bottom:3rem;}
     .section-header h2{display:inline-block;position:relative;}
     .section-header h2::after{content:'';position:absolute;bottom:-12px;left:0;width:70px;height:2px;background:var(--gold);}
-    .section-subhead{color:#b9c2d0;max-width:720px;margin-top:0.75rem;}
-    .grid-3,.doctrine-grid,.courses-grid,.pub-grid{display:grid;gap:2rem;}
-    .grid-3{grid-template-columns:repeat(3,1fr);}
-    .doctrine-grid{grid-template-columns:repeat(4,1fr);gap:1.5rem;}
-    .courses-grid{grid-template-columns:repeat(3,1fr);}
-    .pub-grid{grid-template-columns:repeat(3,1fr);}
-    .card-institution{
-      background:var(--glass-bg);
-      backdrop-filter:blur(8px);
-      border:1px solid var(--border-gold);
-      border-radius:28px;
-      padding:2rem 1.8rem;
-      transition:var(--transition);
-      position:relative;
-    }
-    .card-institution:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:var(--shadow-md);}
-    .card-icon{font-size:2.3rem;color:var(--gold);margin-bottom:1.2rem;}
-    .card-institution h3{font-size:1.5rem;margin-bottom:0.7rem;}
-    .doctrine-card{
-      background:rgba(17,24,39,0.65);
-      border:1px solid rgba(198,161,91,0.2);
-      border-radius:20px;
-      padding:1.8rem 1rem;
-      text-align:center;
-      transition:0.25s;
-      backdrop-filter:blur(4px);
-    }
-    .doctrine-card:hover{border-color:var(--gold);background:rgba(30,41,59,0.8);transform:scale(1.02);}
-    .doctrine-card h4{font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:0.4rem;}
-    .doctrine-card p{font-family:'Roboto Mono',monospace;font-size:0.7rem;text-transform:uppercase;letter-spacing:1px;color:var(--gold);}
-    .module-card{
-      background:linear-gradient(145deg,#111827,#0f1722);
-      border-radius:28px;
-      border:1px solid rgba(198,161,91,0.2);
-      padding:1.8rem;
-      transition:var(--transition);
-    }
-    .module-card:hover{border-color:var(--gold);transform:translateY(-5px);box-shadow:var(--shadow-md);}
-    .module-number{
-      font-family:'Roboto Mono',monospace;
-      font-size:0.7rem;
-      color:var(--gold);
-      border-bottom:1px solid var(--border-gold);
-      display:inline-block;
-      padding-bottom:0.3rem;
-      margin-bottom:1.2rem;
-    }
-    .track-status{margin-top:1.5rem;display:flex;align-items:center;gap:0.8rem;font-size:0.75rem;}
-    .progress-bar{flex:1;height:3px;background:#2d3748;border-radius:4px;}
-    .progress-fill{height:100%;background:var(--gold);border-radius:4px;width:0%;}
-    .pub-card{
-      background:rgba(0,0,0,0.4);
-      border-radius:24px;
-      border:1px solid rgba(198,161,91,0.2);
-      padding:1.5rem;
-      backdrop-filter:blur(4px);
-      transition:var(--transition);
-      text-decoration:none;
-      display:block;
-      color:inherit;
-    }
-    .pub-card:hover{border-color:var(--gold);transform:translateY(-6px);}
-    .pub-cover{
-      height:210px;
-      background:linear-gradient(145deg,#141c2c,#0a0f1a);
-      border-radius:18px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      margin-bottom:1.2rem;
-      border:1px solid rgba(198,161,91,0.4);
-      box-shadow:inset 0 2px 6px rgba(0,0,0,0.4),0 8px 14px rgba(0,0,0,0.2);
-    }
-    .pub-cover i{font-size:3rem;color:var(--gold);opacity:0.8;}
-    .pub-meta{font-family:'Roboto Mono',monospace;font-size:0.7rem;color:var(--gold);margin-top:0.8rem;}
-    .library-link{text-align:center;margin-top:2.8rem;}
-    .library-link a{color:var(--gold);text-decoration:none;font-family:'Roboto Mono',monospace;border-bottom:1px solid var(--gold);padding-bottom:4px;transition:0.2s;}
-    .library-link a:hover{color:#e2c28b;border-bottom-color:#e2c28b;}
-    .principles-showcase{display:flex;flex-direction:column;gap:2.8rem;margin:2rem 0;}
-    .principle-item{border-left:3px solid var(--gold);padding-left:2rem;}
-    .principle-quote{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,2.6rem);font-weight:600;line-height:1.2;color:var(--ivory);}
-    .principle-item p{margin-top:0.8rem;color:#cbd5e6;}
-    .governance-links{
-      margin-top:3rem;
-      padding-top:2rem;
-      border-top:1px solid var(--border-gold);
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:1.5rem;
-    }
-    .governance-links a{
-      color:var(--gold);
-      text-decoration:none;
-      font-family:'Roboto Mono',monospace;
-      font-size:0.75rem;
-      letter-spacing:0.04em;
-      transition:0.2s;
-    }
+    .section-subhead{color:#b9c2d0;max-width:820px;margin-top:0.75rem;}
+
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;}
+    .card{background:var(--glass-bg);backdrop-filter:blur(8px);border:1px solid var(--border-gold);border-radius:28px;padding:2rem 1.8rem;transition:var(--transition);position:relative;}
+    .card:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:var(--shadow-md);}
+    .card-icon{font-size:2.15rem;color:var(--gold);margin-bottom:1.15rem;}
+    .card h3{margin-bottom:0.7rem;}
+    .mini-card{background:rgba(17,24,39,0.65);border:1px solid rgba(198,161,91,0.2);border-radius:20px;padding:1.4rem;transition:0.25s;backdrop-filter:blur(4px);}
+    .mini-card:hover{border-color:var(--gold);background:rgba(30,41,59,0.8);transform:scale(1.02);}
+    .mini-card h4{font-family:'Playfair Display',serif;font-size:1.14rem;margin-bottom:0.45rem;color:var(--ivory);}
+    .mini-card p{font-size:0.82rem;}
+    .service-card{background:linear-gradient(145deg,#111827,#0f1722);border-radius:28px;border:1px solid rgba(198,161,91,0.2);padding:1.8rem;transition:var(--transition);}
+    .service-card:hover{border-color:var(--gold);transform:translateY(-5px);box-shadow:var(--shadow-md);}
+    .service-label{font-family:'Roboto Mono',monospace;font-size:0.68rem;color:var(--gold);border-bottom:1px solid var(--border-gold);display:inline-block;padding-bottom:0.3rem;margin-bottom:1.1rem;letter-spacing:0.08em;text-transform:uppercase;}
+    .list{list-style:none;margin-top:1rem;display:grid;gap:0.55rem;}
+    .list li{font-size:0.88rem;color:#cbd5e1;padding-left:1.25rem;position:relative;}
+    .list li::before{content:'•';position:absolute;left:0;color:var(--gold);}
+    .process{counter-reset:step;display:grid;gap:1rem;}
+    .process-item{display:grid;grid-template-columns:60px 1fr;gap:1.2rem;align-items:start;border:1px solid rgba(198,161,91,0.18);background:rgba(17,24,39,0.58);border-radius:22px;padding:1.35rem;}
+    .process-num{counter-increment:step;width:48px;height:48px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Roboto Mono',monospace;color:var(--gold);}
+    .process-num::before{content:counter(step, decimal-leading-zero);}
+    .quote-band{border-left:3px solid var(--gold);padding-left:2rem;margin-top:2rem;}
+    .quote-band .quote{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,4vw,2.55rem);font-weight:650;line-height:1.2;color:var(--ivory);}
+    .icp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;}
+    .cta-panel{background:linear-gradient(145deg,rgba(198,161,91,0.13),rgba(17,24,39,0.88));border:1px solid var(--border-gold);border-radius:32px;padding:3rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;box-shadow:var(--shadow-md);}
+    .governance-links{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border-gold);display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;}
+    .governance-links a{color:var(--gold);text-decoration:none;font-family:'Roboto Mono',monospace;font-size:0.75rem;letter-spacing:0.04em;transition:0.2s;}
     .governance-links a:hover{color:#e2c28b;text-decoration:underline;}
     footer{background:#030711;border-top:1px solid var(--border-gold);padding:3rem 0 2rem;margin-top:2rem;}
     .footer-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2rem;}
     .footer-col h4{font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:0.8rem;}
-    .monogram-seal{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width:56px;
-      height:56px;
-      border:1px solid var(--gold);
-      border-radius:50%;
-      font-family:'Playfair Display',serif;
-      font-weight:700;
-      font-size:1.4rem;
-      color:var(--gold);
-      margin-bottom:0.8rem;
-      background:rgba(198,161,91,0.05);
-      transition:0.2s;
-    }
+    .monogram-seal{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border:1px solid var(--gold);border-radius:50%;font-family:'Playfair Display',serif;font-weight:700;font-size:1.4rem;color:var(--gold);margin-bottom:0.8rem;background:rgba(198,161,91,0.05);}
     .footer-links{display:flex;gap:3rem;flex-wrap:wrap;}
     .footer-links a{display:block;color:#9ca3af;text-decoration:none;font-size:0.8rem;margin-bottom:0.6rem;transition:0.2s;}
     .footer-links a:hover{color:var(--gold);}
     .gold-divider{height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin:2rem 0 1.5rem;}
     .copyright{text-align:center;font-size:0.7rem;color:#6c7a91;}
-    @media(max-width:1000px){
-      .doctrine-grid,.grid-3,.courses-grid,.pub-grid{grid-template-columns:repeat(2,1fr);}
-    }
-    @media(max-width:680px){
-      .container{padding:0 1.5rem;}
-      .doctrine-grid,.grid-3,.courses-grid,.pub-grid{grid-template-columns:1fr;}
-      .nav{flex-direction:column;text-align:center;}
-      .nav-links{justify-content:center;gap:1.2rem;}
-      .hero{min-height:70vh;text-align:center;padding:2rem 0;}
-      .hero p{margin-left:auto;margin-right:auto;}
-      .office-badge{margin-left:auto;margin-right:auto;}
-      .btn-group{justify-content:center;}
-      section{padding:3rem 0;}
-      .principle-item{padding-left:1rem;}
-    }
+
+    @media(max-width:1050px){.hero-grid{grid-template-columns:1fr;}.problem-strip,.grid-4{grid-template-columns:repeat(2,1fr);}.grid-3{grid-template-columns:repeat(2,1fr);}.cta-panel{grid-template-columns:1fr;}.diagnostic-card{max-width:640px;}}
+    @media(max-width:680px){.container{padding:0 1.5rem;}.problem-strip,.grid-3,.grid-4,.icp-grid{grid-template-columns:1fr;}.nav{flex-direction:column;text-align:center;}.nav-links{justify-content:center;gap:1.1rem;}.hero{min-height:70vh;text-align:center;padding:3rem 0;}.hero p{margin-left:auto;margin-right:auto;}.btn-group{justify-content:center;}section{padding:3rem 0;}.quote-band{padding-left:1rem;}.process-item{grid-template-columns:1fr;text-align:left;}.cta-panel{padding:2rem;}}
     .fade-up{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease;}
     .fade-up.visible{opacity:1;transform:translateY(0);}
-  </style>
-</head>
-
-<body>
-
+  </style></head><body>
 <header>
   <div class="container">
     <div class="nav">
       <div class="logo">KELLY LEGACY <span>INSTITUTE</span></div>
       <div class="nav-links">
-        <a href="#trust">AUTHORITY</a>
-        <a href="#doctrine">DOCTRINE</a>
-        <a href="#courses">TRAINING</a>
-        <a href="#publications">PUBLICATIONS</a>
-        <a href="#governance">PRINCIPLES</a>
+        <a href="#services">SERVICES</a>
+        <a href="#method">METHOD</a>
+        <a href="#ai-governance">AI GOVERNANCE</a>
+        <a href="#clients">CLIENTS</a>
+        <a href="#pilot">PILOT</a>
         <a href="execution-framework.html">EXECUTION</a>
       </div>
     </div>
   </div>
-</header>
-
-<main>
-  <div class="hero">
+</header><main>
+  <section class="hero">
     <div class="container">
-      <div class="hero-content fade-up">
-        <div class="hero-badge">OFFICIAL GOVERNANCE TRUST · EST. 2026</div>
-        <h1>Institutional Fiduciary Education <br><span class="gold-text">& Governance</span></h1>
-        <p>Structured instruction in fiduciary literacy, procedural discipline, trust administration, and institutional governance. Administered under Kelly Legacy Estates Living Trust.</p>
-
-        <div class="office-badge">
-          <i class="fa-solid fa-building-columns"></i>
-          Office of the Fiduciary | Kelly Legacy Estates Living Trust
-        </div>
-
-        <div class="btn-group">
-          <a href="curriculum-portal.html" class="btn btn-primary">
-            <i class="fa-solid fa-building-columns"></i>
-            Enter the Institute
-          </a>
-
-          <a href="https://kellylegacypub.gumroad.com/l/xwwfdd?section=ExRmXpeNSYzFRP7sfAKgoA==#ExRmXpeNSYzFRP7sfAKgoA==" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-            <i class="fa-solid fa-book-open"></i>
-            Access Publications
-          </a>
-        </div>
-      </div>
+      <div class="hero-grid">
+        <div class="hero-content fade-up">
+          <div class="hero-badge">Operational Governance · Workflow Systems · AI Accountability</div>
+          <h1>Structure reduces <span class="gold-text">operational chaos.</span></h1>
+          <p>Kelly Legacy Institute helps nonprofits, workforce programs, and small institutions identify workflow fragmentation, documentation gaps, onboarding disorder, and unmanaged AI-use risk.</p>
+          <p class="muted">We do not coach. We build operational systems that make work documented, repeatable, auditable, and transferable.</p>
+          <div class="btn-group">
+            <a href="mailto:kellylegacyestatesllc@gmail.com?subject=KLI%20Operational%20Workflow%20Review%20Inquiry" class="btn btn-primary"><i class="fa-solid fa-clipboard-check"></i> Request Workflow Review</a>
+            <a href="#services" class="btn btn-outline"><i class="fa-solid fa-diagram-project"></i> View Services</a>
+          </div>
+          <div class="problem-strip">
+            <div class="problem-pill"><i class="fa-solid fa-file-circle-xmark"></i> Undocumented tasks</div>
+            <div class="problem-pill"><i class="fa-solid fa-robot"></i> Unmanaged AI use</div>
+            <div class="problem-pill"><i class="fa-solid fa-user-clock"></i> Slow onboarding</div>
+            <div class="problem-pill"><i class="fa-solid fa-folder-tree"></i> Scattered records</div>
+          </div>
+        </div><div class="diagnostic-card fade-up" aria-label="KLI operational diagnostic scorecard preview">
+      <div class="score-title">Operational Diagnostic Preview</div>
+      <div class="score-row"><span>Documentation Completeness</span><span>0–4 Score</span></div>
+      <div class="score-row"><span>Workflow Clarity</span><span>0–4 Score</span></div>
+      <div class="score-row"><span>Onboarding Structure</span><span>0–4 Score</span></div>
+      <div class="score-row"><span>AI Governance</span><span>0–4 Score</span></div>
+      <div class="score-row"><span>Continuity Planning</span><span>0–4 Score</span></div>
+      <p style="margin-top:1.4rem;position:relative;z-index:2;">Every review produces findings, risk observations, and a 30/60/90-day implementation roadmap.</p>
     </div>
   </div>
+</div>
 
-  <section id="trust">
+  </section>  <section id="services">
     <div class="container">
       <div class="section-header fade-up">
-        <h2>Trust Authority <span class="gold-text">· Institutional Hierarchy</span></h2>
-        <p class="section-subhead">Governance framework administered under Kelly Legacy Estates Living Trust.</p>
+        <h2>Service Architecture <span class="gold-text">· Implementation First</span></h2>
+        <p class="section-subhead">KLI services are designed for organizational procurement, operational review, and measurable implementation.</p>
       </div>
-
       <div class="grid-3">
-        <div class="card-institution fade-up">
-          <div class="card-icon"><i class="fa-solid fa-building-columns"></i></div>
-          <h3>Kelly Legacy Estates Living Trust</h3>
-          <p>Parent trust providing governance, institutional standing, and administrative oversight for all educational materials and fiduciary standards.</p>
+        <div class="service-card fade-up">
+          <div class="service-label">Flagship · 2–3 Weeks</div>
+          <h3>Operational Workflow Review</h3>
+          <p>A diagnostic review of how work actually happens versus how it is documented.</p>
+          <ul class="list">
+            <li>Workflow analysis</li>
+            <li>Documentation review</li>
+            <li>Onboarding gap review</li>
+            <li>AI-use inventory</li>
+            <li>Findings report + roadmap</li>
+          </ul>
         </div>
-
-        <div class="card-institution fade-up">
-          <div class="card-icon"><i class="fa-solid fa-scale-balanced"></i></div>
-          <h3>Kelly Legacy Institute</h3>
-          <p>Educational program delivering structured instruction in fiduciary literacy, equity jurisprudence, procedural discipline, and record accountability.</p>
+        <div class="service-card fade-up">
+          <div class="service-label">Execution · 3–6 Months</div>
+          <h3>Implementation Retainer</h3>
+          <p>Ongoing execution support to build and deploy SOPs, policies, onboarding systems, and review cadences.</p>
+          <ul class="list">
+            <li>SOP development</li>
+            <li>Role-based onboarding</li>
+            <li>AI-use policy deployment</li>
+            <li>Documentation standards</li>
+            <li>Staff training support</li>
+          </ul>
         </div>
-
-        <div class="card-institution fade-up">
-          <div class="card-icon"><i class="fa-solid fa-book"></i></div>
-          <h3>Kelly Legacy Publications</h3>
-          <p>Issues doctrine manuals, governance frameworks, and institutional materials for serious students and administrators.</p>
+        <div class="service-card fade-up">
+          <div class="service-label">Validation · 4 Weeks</div>
+          <h3>Governance Certification</h3>
+          <p>An organizational self-audit and validation pathway for documented workflows and internal accountability standards.</p>
+          <ul class="list">
+            <li>Operational pillars review</li>
+            <li>Internal audit kit</li>
+            <li>Governance scorecard</li>
+            <li>Corrective action plan</li>
+            <li>KLI Operational Seal pathway</li>
+          </ul>
         </div>
       </div>
     </div>
-  </section>
-
-  <section id="doctrine">
+  </section>  <section id="method">
     <div class="container">
       <div class="section-header fade-up">
-        <h2>Core Doctrine <span class="gold-text">· Institutional Categories</span></h2>
-        <p class="section-subhead">Foundational pillars of fiduciary governance and procedural literacy.</p>
+        <h2>Workflow Review Methodology <span class="gold-text">· How We Assess</span></h2>
+        <p class="section-subhead">The review converts undocumented practice into visible operational evidence.</p>
       </div>
-
-      <div class="doctrine-grid">
-        <div class="doctrine-card fade-up"><h4>Status</h4><p>Institutional recognition</p></div>
-        <div class="doctrine-card fade-up"><h4>Standing</h4><p>Authority to act</p></div>
-        <div class="doctrine-card fade-up"><h4>Capacity</h4><p>Competence & limits</p></div>
-        <div class="doctrine-card fade-up"><h4>Jurisdiction</h4><p>Scope of power</p></div>
-        <div class="doctrine-card fade-up"><h4>Evidence</h4><p>Record & proof</p></div>
-        <div class="doctrine-card fade-up"><h4>Fiduciary Duty</h4><p>Loyalty, care, good faith</p></div>
-        <div class="doctrine-card fade-up"><h4>Administrative Record</h4><p>Verifiable documentation</p></div>
-        <div class="doctrine-card fade-up"><h4>Remedies & Recourse</h4><p>Equitable procedures</p></div>
+      <div class="process">
+        <div class="process-item fade-up"><div class="process-num"></div><div><h3>Discovery</h3><p>Document inventory, staff interviews, shared drive review, tool audit, role clarification, and recurring task capture.</p></div></div>
+        <div class="process-item fade-up"><div class="process-num"></div><div><h3>Mapping</h3><p>Current-state workflow diagrams, decision-point identification, handoff analysis, and unwritten rules capture.</p></div></div>
+        <div class="process-item fade-up"><div class="process-num"></div><div><h3>Gap Analysis</h3><p>Comparison against KLI standards for documentation, workflow clarity, onboarding structure, AI governance, and continuity planning.</p></div></div>
+        <div class="process-item fade-up"><div class="process-num"></div><div><h3>Risk Scoring</h3><p>Each finding is scored for continuity risk, compliance exposure, training inefficiency, and error propagation.</p></div></div>
+        <div class="process-item fade-up"><div class="process-num"></div><div><h3>Implementation Roadmap</h3><p>Final report includes priority findings, top operational risks, corrective recommendations, and 30/60/90-day action steps.</p></div></div>
       </div>
     </div>
-  </section>
-
-  <section id="courses">
+  </section>  <section id="ai-governance">
     <div class="container">
       <div class="section-header fade-up">
-        <h2>Elite Training <span class="gold-text">· Institutional Curriculum</span></h2>
-        <p class="section-subhead">Secure academy-style modules designed for trustees, officers, and administrators.</p>
+        <h2>AI Governance <span class="gold-text">· Organizational Accountability</span></h2>
+        <p class="section-subhead">AI tools are already inside many organizations. The issue is whether their use is visible, governed, and reviewed.</p>
       </div>
-
-      <div class="courses-grid">
-        <div class="module-card fade-up">
-          <div class="module-number">MODULE I — FIDUCIARY FOUNDATIONS</div>
-          <h3>Status, Standing & Capacity</h3>
-          <p>Procedural reasoning, institutional structure, and record discipline.</p>
-          <div class="track-status"><span>Track status</span><div class="progress-bar"><div class="progress-fill" style="width:78%"></div></div></div>
-        </div>
-
-        <div class="module-card fade-up">
-          <div class="module-number">MODULE II — PROCEDURAL DISCIPLINE</div>
-          <h3>Remedies & Recourse</h3>
-          <p>Equitable remedies, notice procedures, cure opportunities, breach analysis.</p>
-          <div class="track-status"><span>Access level</span><div class="progress-bar"><div class="progress-fill" style="width:42%"></div></div></div>
-        </div>
-
-        <div class="module-card fade-up">
-          <div class="module-number">MODULE III — TRUST ADMINISTRATION</div>
-          <h3>Governance Systems</h3>
-          <p>Trustee duties, fiduciary obligations, institutional accountability, record integrity.</p>
-          <div class="track-status"><span>Curriculum stage</span><div class="progress-bar"><div class="progress-fill" style="width:12%"></div></div></div>
-        </div>
+      <div class="grid-4">
+        <div class="mini-card fade-up"><h4>Acceptable Use</h4><p>Defines permitted and prohibited AI uses by role, function, and data type.</p></div>
+        <div class="mini-card fade-up"><h4>Data Boundaries</h4><p>Prevents confidential, client, grant, personnel, or sensitive data from being pasted into unmanaged tools.</p></div>
+        <div class="mini-card fade-up"><h4>Human Review</h4><p>Requires human verification before AI-assisted outputs are used operationally.</p></div>
+        <div class="mini-card fade-up"><h4>Version Control</h4><p>Identifies AI-assisted documents, drafts, policies, and procedures for audit visibility.</p></div>
+      </div>
+      <div class="quote-band fade-up">
+        <div class="quote">“If AI use is invisible, AI risk is unmanaged.”</div>
+        <p>KLI converts informal AI use into documented operational procedure.</p>
       </div>
     </div>
-  </section>
-
-  <section id="publications">
+  </section>  <section id="clients">
     <div class="container">
       <div class="section-header fade-up">
-        <h2>Issued by Kelly Legacy <span class="gold-text">Publications</span></h2>
-        <p class="section-subhead">Authoritative doctrine manuals, governance templates, and institutional frameworks.</p>
+        <h2>Ideal Clients <span class="gold-text">· Where KLI Fits</span></h2>
+        <p class="section-subhead">The strongest fit is with mission-driven organizations that have grown faster than their internal systems.</p>
       </div>
-
-      <div class="pub-grid">
-        <a href="https://amzn.to/3Ra0FC9" target="_blank" rel="noopener noreferrer" class="pub-card fade-up">
-          <div class="pub-cover"><i class="fa-solid fa-crown"></i></div>
-          <h4>Status, Standing & Capacity</h4>
-          <p class="pub-meta">Doctrine Manual · Vol. I · 2026</p>
-          <div style="font-size:0.7rem; margin-top:10px;">Kelly Legacy Estates Collection</div>
-        </a>
-
-        <div class="pub-card fade-up">
-          <div class="pub-cover"><i class="fa-solid fa-scale-balanced"></i></div>
-          <h4>Remedies & Recourse</h4>
-          <p class="pub-meta">Procedural Framework · 2nd Ed.</p>
-          <div style="font-size:0.7rem; margin-top:10px;">Governance Treatises</div>
-        </div>
-
-        <div class="pub-card fade-up">
-          <div class="pub-cover"><i class="fa-solid fa-folder-open"></i></div>
-          <h4>Fiduciary Trust System</h4>
-          <p class="pub-meta">Governance Framework · 2026</p>
-          <div style="font-size:0.7rem; margin-top:10px;">Record Integrity Series</div>
-        </div>
-      </div>
-
-      <div class="library-link fade-up">
-        <a href="https://kellylegacypub.gumroad.com/l/xwwfdd?section=ExRmXpeNSYzFRP7sfAKgoA==#ExRmXpeNSYzFRP7sfAKgoA==" target="_blank" rel="noopener noreferrer">
-          <i class="fa-solid fa-bookmark"></i>
-          Browse Full Publications Library →
-        </a>
+      <div class="icp-grid">
+        <div class="card fade-up"><div class="card-icon"><i class="fa-solid fa-hand-holding-heart"></i></div><h3>Founder-Led Nonprofits</h3><p>Growing programs where operational knowledge sits inside the founder or senior staff instead of documented systems.</p></div>
+        <div class="card fade-up"><div class="card-icon"><i class="fa-solid fa-briefcase"></i></div><h3>Workforce Development Organizations</h3><p>Grant-funded teams with reporting pressure, staff turnover, multiple programs, and workflow inconsistency.</p></div>
+        <div class="card fade-up"><div class="card-icon"><i class="fa-solid fa-school"></i></div><h3>Small Educational Institutions</h3><p>Schools, training providers, and community education programs needing stronger administrative procedure.</p></div>
+        <div class="card fade-up"><div class="card-icon"><i class="fa-solid fa-people-arrows"></i></div><h3>Administrative Teams</h3><p>New leadership teams inheriting fragmented folders, informal workflows, and no AI-use policy.</p></div>
       </div>
     </div>
-  </section>
-
-  <section id="governance">
+  </section>  <section id="pilot">
     <div class="container">
-      <div class="section-header fade-up">
-        <h2>Institutional <span class="gold-text">Principles</span></h2>
-        <p class="section-subhead">Maxims that govern procedure, record, consequence, and remedy.</p>
-      </div>
+      <div class="cta-panel fade-up">
+        <div>
+          <div class="hero-badge">Pilot Availability</div>
+          <h2>KLI Operational Baseline Project</h2>
+          <p>A 6-week reduced-rate pilot for qualified organizations seeking workflow visibility, documentation standards, onboarding clarity, and AI-use governance. Pilot participants receive a baseline report, top 10 corrective recommendations, and a 30/60/90-day implementation roadmap.</p>
+        </div>
+        <div class="btn-group" style="margin-top:0;">
+          <a href="mailto:kellylegacyestatesllc@gmail.com?subject=KLI%20Operational%20Baseline%20Pilot" class="btn btn-primary"><i class="fa-solid fa-calendar-check"></i> Discuss Pilot</a>
+        </div>
+      </div><div class="governance-links fade-up">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Use</a>
+    <a href="record-policy.html">Record Policy</a>
+    <a href="ip-policy.html">IP & Licensing</a>
+    <a href="transparency.html">Transparency Statement</a>
+    <a href="execution-framework.html">Execution Framework</a>
+  </div>
+</div>
 
-      <div class="principles-showcase">
-        <div class="principle-item fade-up"><div class="principle-quote">“No Structure = No Case”</div><p>Procedural form determines access to remedy. Discipline precedes relief.</p></div>
-        <div class="principle-item fade-up"><div class="principle-quote">“Capacity Determines Consequence”</div><p>Legal capacity, standing, and authority define the scope of obligation and liability.</p></div>
-        <div class="principle-item fade-up"><div class="principle-quote">“Record Determines Outcome”</div><p>Without a verified administrative record, protection and remedy are unavailable.</p></div>
-      </div>
-
-      <div class="office-badge" style="margin-top:2rem;border:none;background:none;justify-content:center;gap:0.8rem;">
-        <i class="fa-solid fa-pen-to-square"></i>
-        Structure determines outcome · Record precedes recognition · Procedure precedes remedy
-      </div>
-      
-      <div class="governance-links fade-up">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Use</a>
-        <a href="record-policy.html">Record Policy</a>
-        <a href="ip-policy.html">IP & Licensing</a>
-        <a href="transparency.html">Transparency Statement</a>
-        <a href="checklist.html">Fiduciary Checklist</a>
-      </div>
-    </div>
   </section>
-</main>
-
-<footer>
+</main><footer>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
-        <div class="monogram-seal" aria-label="Institutional monogram KLE">KLE</div>
-        <h4>Kelly Legacy Estates Living Trust</h4>
-        <p style="font-size:0.8rem;max-width:260px;">Institutional fiduciary governance & educational administration.</p>
+        <div class="monogram-seal" aria-label="Institutional monogram KLI">KLI</div>
+        <h4>Kelly Legacy Institute</h4>
+        <p style="font-size:0.8rem;max-width:300px;">Operational governance, workflow standardization, AI-use accountability, and documentation continuity systems for organizations.</p>
       </div>
-
       <div class="footer-links">
+        <div>
+          <a href="#services">Services</a>
+          <a href="#method">Methodology</a>
+          <a href="#ai-governance">AI Governance</a>
+          <a href="#pilot">Pilot Program</a>
+        </div>
         <div>
           <a href="privacy.html">Privacy Policy</a>
           <a href="terms.html">Terms of Use</a>
           <a href="record-policy.html">Record Policy</a>
           <a href="ip-policy.html">IP & Licensing</a>
         </div>
-
         <div>
-          <a href="transparency.html">Transparency Statement</a>
-          <a href="checklist.html">Fiduciary Checklist</a>
-          <a href="execution-framework.html">Execution Framework</a>
-        </div>
-
-        <div>
-          <a href="https://www.linkedin.com/in/delonte-kelly-01961b3b4" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> Institutional LinkedIn</a>
-          <a href="mailto:kellylegacyestatesllc@gmail.com"><i class="fa-solid fa-envelope"></i> Trust Inquiry</a>
+          <a href="https://www.linkedin.com/in/delonte-kelly-01961b3b4" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <a href="mailto:kellylegacyestatesllc@gmail.com"><i class="fa-solid fa-envelope"></i> Contact KLI</a>
         </div>
       </div>
     </div>
-
     <div class="gold-divider" aria-hidden="true"></div>
-
     <div class="copyright">
-      © 2026 Kelly Legacy Estates Living Trust — All educational materials are provided for institutional governance literacy. No legal advice, no financial advisory.<br>
-      Kelly Legacy Institute is an educational program administered under strict fiduciary governance. Structure determines outcome. Record precedes recognition.
+      © 2026 Kelly Legacy Institute. Educational, operational, and administrative materials are provided for organizational governance literacy and implementation support. No legal, financial, medical, or tax advice.<br />
+      Structure reduces operational chaos. Documentation preserves continuity. Human review governs AI-assisted work.
     </div>
   </div>
-</footer>
-
-<script>
+</footer><script>
   const faders = document.querySelectorAll('.fade-up');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -568,7 +379,5 @@
       }
     });
   });
-</script>
-
-</body>
+</script></body>
 </html>
