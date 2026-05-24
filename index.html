@@ -133,9 +133,6 @@
     .quote-band .quote{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,4vw,2.55rem);font-weight:650;line-height:1.2;color:var(--ivory);}
     .icp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;}
     .cta-panel{background:linear-gradient(145deg,rgba(198,161,91,0.13),rgba(17,24,39,0.88));border:1px solid var(--border-gold);border-radius:32px;padding:3rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;box-shadow:var(--shadow-md);}
-    .governance-links{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border-gold);display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;}
-    .governance-links a{color:var(--gold);text-decoration:none;font-family:'Roboto Mono',monospace;font-size:0.75rem;letter-spacing:0.04em;transition:0.2s;}
-    .governance-links a:hover{color:#e2c28b;text-decoration:underline;}
     footer{background:#030711;border-top:1px solid var(--border-gold);padding:3rem 0 2rem;margin-top:2rem;}
     .footer-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2rem;}
     .footer-col h4{font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:0.8rem;}
@@ -191,6 +188,15 @@
       color: var(--gold);
       margin-bottom: 1.2rem;
     }
+    .authority-block {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      line-height: 1.5;
+      color: #9CA3AF;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
     @media (max-width: 780px) {
       .google-form-embed { min-height: 900px; }
     }
@@ -198,21 +204,22 @@
 </head>
 <body>
 <header>
-<div class="container">
-  <div class="governance-links">
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms of Use</a>
-    <a href="record-policy.html">Record Policy</a>
-    <a href="ip-policy.html">IP & Licensing</a>
-    <a href="transparency.html">Transparency Statement</a>
-    <a href="execution-framework.html">Execution Framework</a>
-  </div>
-</div>
+  <div class="container">
+    <div class="nav">
+      <div class="logo">Kelly Legacy Institute</div>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#method">Methodology</a>
+        <a href="#ai-governance">AI Governance</a>
+        <a href="#clients">Ideal Clients</a>
+        <a href="#intake-section">Intake</a>
+      </div>
+    </div>
   </div>
 </header>
 
 <main>
-  <!-- Hero section identical to original branding -->
+  <!-- Hero section -->
   <section class="hero">
     <div class="container hero-grid">
       <div class="fade-up">
@@ -232,17 +239,17 @@
       </div>
       <div class="diagnostic-card fade-up">
         <div class="score-title">Operational Diagnostic Preview</div>
-        <div class="score-row"><span>Documentation Completeness</span><span>0–4 Score</span></div>
-        <div class="score-row"><span>Workflow Clarity</span><span>0–4 Score</span></div>
-        <div class="score-row"><span>Onboarding Structure</span><span>0–4 Score</span></div>
-        <div class="score-row"><span>AI Governance</span><span>0–4 Score</span></div>
-        <div class="score-row"><span>Continuity Planning</span><span>0–4 Score</span></div>
+        <div class="score-row"><span>Documentation Completeness</span><span>Review Required</span></div>
+        <div class="score-row"><span>Workflow Clarity</span><span>Administrative Assessment</span></div>
+        <div class="score-row"><span>Onboarding Structure</span><span>Pending Intake Review</span></div>
+        <div class="score-row"><span>AI Governance</span><span>Continuity Review Required</span></div>
+        <div class="score-row"><span>Continuity Planning</span><span>Governance Assessment Pending</span></div>
         <div class="quote-band" style="margin-top:1.5rem"><div class="quote" style="font-size:0.9rem">Every review produces findings, risk observations, and a 30/60/90-day implementation roadmap.</div></div>
       </div>
     </div>
   </section>
 
-  <!-- Service Architecture section (id="services") -->
+  <!-- Service Architecture section -->
   <section id="services">
     <div class="container">
       <div class="section-header fade-up"><h2>Service Architecture · Implementation First</h2><div class="section-subhead">KLI services are designed for organizational procurement, operational review, and measurable implementation.</div></div>
@@ -254,7 +261,7 @@
     </div>
   </section>
 
-  <!-- Workflow Review Methodology (id="method") -->
+  <!-- Methodology -->
   <section id="method">
     <div class="container">
       <div class="section-header fade-up"><h2>Workflow Review Methodology</h2><div class="section-subhead">The review converts undocumented practice into visible operational evidence.</div></div>
@@ -268,7 +275,7 @@
     </div>
   </section>
 
-  <!-- AI Governance (id="ai-governance") -->
+  <!-- AI Governance -->
   <section id="ai-governance">
     <div class="container">
       <div class="section-header fade-up"><h2>AI Governance · Organizational Accountability</h2><div class="section-subhead">AI tools are already inside many organizations. The issue is whether their use is visible, governed, and reviewed.</div></div>
@@ -282,7 +289,7 @@
     </div>
   </section>
 
-  <!-- Ideal Clients (id="clients") -->
+  <!-- Ideal Clients -->
   <section id="clients">
     <div class="container">
       <div class="section-header fade-up"><h2>Ideal Clients · Where KLI Fits</h2><div class="section-subhead">The strongest fit is with mission-driven organizations that have grown faster than their internal systems.</div></div>
@@ -295,7 +302,7 @@
     </div>
   </section>
 
-  <!-- *** INTAKE SECTION – UPDATED IFRAME (NEW GOOGLE FORM) *** -->
+  <!-- Intake Section with updated language -->
   <section id="intake-section" style="scroll-margin-top: 90px;">
     <div class="container">
       <div class="section-header fade-up">
@@ -307,9 +314,9 @@
           <span>✧ KLI PILOT ELIGIBILITY ✧</span>
           <span>— CONFIDENTIAL INTAKE FORM</span>
         </div>
-        <p style="margin-bottom: 1.5rem; font-size: 0.95rem;">Complete the confidential intake below to start your Operational Baseline Project. We review every submission and respond with next steps, including a preliminary diagnostic call and roadmap discussion. Your information remains protected under KLI’s data privacy standards.</p>
+        <p style="margin-bottom: 1rem; font-size: 0.95rem;">Complete the confidential intake below to start your Operational Baseline Project. We review every submission and respond with next steps, including a preliminary diagnostic call and roadmap discussion.</p>
+        <p style="margin-bottom: 1.5rem; font-size: 0.85rem; background: rgba(198,161,91,0.08); padding: 0.75rem; border-radius: 16px; border-left: 3px solid var(--gold);">All intake submissions are reviewed for operational-fit assessment and handled according to KLI’s posted Privacy Policy and Record Policy.</p>
         <div class="intake-iframe-container">
-          <!-- UPDATED IFRAME SRC with the correct Google Form link -->
           <iframe 
             class="google-form-embed" 
             src="https://docs.google.com/forms/d/e/1FAIpQLSfTcf6efnbXJbkKC6TJyEHlDMuhIorSDlRIr3JoiKu7Nz4x5A/viewform?embedded=true" 
@@ -327,7 +334,7 @@
     </div>
   </section>
 
-  <!-- Pilot Availability original block integrated but aligned -->
+  <!-- Pilot CTA -->
   <section style="padding-top: 1rem;">
     <div class="container">
       <div class="cta-panel fade-up">
@@ -336,13 +343,6 @@
       </div>
     </div>
   </section>
-
-  <!-- governance links (placeholder - to be replaced later) -->
-  <div class="container">
-    <div class="governance-links">
-      <a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Record Policy</a><a href="#">IP & Licensing</a><a href="#">Transparency Statement</a><a href="#">Execution Framework</a>
-    </div>
-  </div>
 </main>
 
 <footer>
@@ -370,20 +370,20 @@
           <div>
             <a href="#intake-section">Pilot Program</a>
             <a href="#intake-section">Intake Form</a>
-            <a href="execution-framework.html">Execution Framework</a>
-            <a href="record-policy.html">Record Policy</a>
           </div>
         </div>
       </div>
 
       <div class="footer-col">
-        <h4>Governance</h4>
+        <h4>Governance & Policies</h4>
         <div class="footer-links">
           <div>
             <a href="privacy.html">Privacy Policy</a>
             <a href="terms.html">Terms of Use</a>
+            <a href="record-policy.html">Record Policy</a>
             <a href="ip-policy.html">IP & Licensing</a>
             <a href="transparency.html">Transparency Statement</a>
+            <a href="execution-framework.html">Execution Framework</a>
           </div>
         </div>
       </div>
@@ -402,6 +402,13 @@
 
     <div class="gold-divider"></div>
 
+    <!-- Authority block added above copyright -->
+    <div class="authority-block">
+      KELLY LEGACY INSTITUTE<br>
+      OFFICE OF THE FIDUCIARY<br>
+      OPERATIONAL GOVERNANCE & AI SYSTEMS DIVISION
+    </div>
+
     <div class="copyright">
       © 2026 Kelly Legacy Institute. Educational, operational, and administrative materials are provided for organizational governance literacy and implementation support. No legal, financial, medical, or tax advice.<br>
       Structure reduces operational chaos. Documentation preserves continuity. Human review governs AI-assisted work.
@@ -410,7 +417,6 @@
 </footer>
 
 <script>
-  // Intersection observer for fade-up animation
   (function() {
     const faders = document.querySelectorAll('.fade-up');
     const observer = new IntersectionObserver((entries) => {
@@ -424,7 +430,6 @@
     faders.forEach(el => observer.observe(el));
   })();
 
-  // Smooth anchor scroll is handled by CSS scroll-behavior: smooth plus preventing default only for internal consistency
   document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
