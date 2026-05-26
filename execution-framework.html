@@ -16,266 +16,315 @@
   <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.umd.min.js"></script>
 
   <style>
+    /* ---------- PREMIUM EXECUTIVE INSTITUTIONAL DESIGN ---------- */
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    
     :root {
-      --matte-black: #0A0F1A;
-      --deep-charcoal: #0B1120;
-      --platinum: #D1D5DB;
-      --ivory: #F3F4F6;
-      --gold: #D4AF37;
-      --gold-light: #E8D5A3;
-      --gold-dark: #996F1F;
-      --border-gold: rgba(212, 175, 55, 0.3);
-      --border-gold-glow: rgba(212, 175, 55, 0.6);
-      --glass-bg: rgba(11, 17, 32, 0.92);
-      --shadow-md: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 1px 2px 0 rgba(212, 175, 55, 0.1) inset;
-      --shadow-gold: 0 20px 40px -15px rgba(212, 175, 55, 0.2);
-      --transition-smooth: all 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      --black-deep: #050505;
+      --black-matte: #0A0A0C;
+      --black-charcoal: #111113;
+      --black-glass: rgba(8, 8, 12, 0.82);
+      --black-glass-solid: rgba(5, 5, 8, 0.96);
+      --gold-muted: #C9A66B;
+      --gold-desat: #B89A5E;
+      --gold-ultra-desat: #8B7355;
+      --platinum: #E8E8EC;
+      --silver-muted: #9CA3AF;
+      --border-glass-light: rgba(255, 255, 255, 0.04);
+      --border-glass-gold: rgba(201, 166, 107, 0.12);
+      --border-gold-active: rgba(201, 166, 107, 0.32);
+      --shadow-deep: 0 30px 60px -20px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+      --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(255, 255, 255, 0.02) inset;
+      --shadow-lift: 0 25px 45px -18px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(201, 166, 107, 0.08) inset;
+      --transition-exec: all 0.35s cubic-bezier(0.215, 0.61, 0.355, 1);
     }
+    
     body {
-      background-color: var(--matte-black);
-      background-image: radial-gradient(ellipse at 30% 20%, rgba(212, 175, 55, 0.08) 0%, #050A12 95%);
+      background: var(--black-deep);
       color: var(--platinum);
-      font-family: 'Inter', sans-serif;
-      line-height: 1.55;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.65;
       scroll-behavior: smooth;
+      min-height: 100vh;
+      position: relative;
     }
+    
+    /* Atmospheric depth layers */
     body::before {
       content: '';
       position: fixed;
       inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='1'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
-      opacity: 0.5;
+      background: radial-gradient(ellipse at 40% 30%, rgba(201, 166, 107, 0.025) 0%, transparent 65%);
       pointer-events: none;
       z-index: 0;
     }
-    .container { max-width: 1280px; margin: 0 auto; padding: 0 36px; position: relative; z-index: 5; }
     
-    /* Refined Header */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.018'/%3E%3C/svg%3E");
+      opacity: 0.4;
+      pointer-events: none;
+      z-index: 0;
+    }
+    
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 48px;
+      position: relative;
+      z-index: 5;
+    }
+    
+    /* Refined Header — Sovereign Glass */
     header {
       position: sticky;
       top: 0;
       z-index: 100;
-      backdrop-filter: blur(20px);
-      background: rgba(10, 15, 26, 0.75);
-      border-bottom: 1px solid var(--border-gold);
-      transition: var(--transition-smooth);
+      backdrop-filter: blur(24px);
+      background: rgba(5, 5, 8, 0.72);
+      border-bottom: 1px solid var(--border-glass-light);
+      transition: var(--transition-exec);
     }
-    .nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 0; flex-wrap: wrap; gap: 1rem; }
+    
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 0;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
     .logo {
       font-family: 'Playfair Display', serif;
-      font-size: 1.45rem;
-      font-weight: 800;
-      border-left: 3px solid var(--gold);
-      padding-left: 18px;
-      background: linear-gradient(135deg, #FFFFFF 0%, var(--gold-light) 70%, var(--gold) 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      letter-spacing: -0.3px;
-    }
-    .nav-links { display: flex; gap: 2.5rem; flex-wrap: wrap; }
-    .nav-links a { 
-      font-family: 'Roboto Mono', monospace; 
-      font-size: 0.7rem; 
-      letter-spacing: 0.2em; 
-      text-decoration: none; 
-      color: var(--platinum); 
-      transition: 0.3s; 
+      font-size: 1.35rem;
       font-weight: 500;
-      text-transform: uppercase;
-      position: relative;
+      letter-spacing: -0.2px;
+      color: var(--platinum);
+      text-decoration: none;
+      opacity: 0.88;
+      transition: opacity 0.2s;
     }
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -6px;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background: var(--gold);
-      transition: width 0.3s ease;
-    }
-    .nav-links a:hover::after { width: 100%; }
-    .nav-links a:hover { color: var(--gold); }
     
-    /* Executive Gate Overlay — Private Suite Entrance */
+    .logo span {
+      color: var(--gold-muted);
+      font-weight: 600;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      flex-wrap: wrap;
+    }
+    
+    .nav-links a {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-decoration: none;
+      color: var(--silver-muted);
+      transition: var(--transition-exec);
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+    
+    .nav-links a:hover {
+      color: var(--gold-muted);
+      letter-spacing: 0.2em;
+    }
+    
+    /* Executive Gate Overlay — Sovereign Entrance */
     .gate-overlay {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(5, 10, 18, 0.98);
-      backdrop-filter: blur(24px);
+      background: rgba(3, 3, 5, 0.98);
+      backdrop-filter: blur(28px);
       z-index: 1000;
       display: flex;
       align-items: center;
       justify-content: center;
       transition: opacity 0.6s ease, visibility 0.6s ease;
     }
+    
     .gate-overlay.hidden {
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
     }
+    
     .gate-card {
-      max-width: 580px;
+      max-width: 560px;
       width: 90%;
-      background: linear-gradient(145deg, rgba(15, 22, 36, 0.98), rgba(8, 12, 22, 0.96));
-      border: 1px solid var(--border-gold-glow);
+      background: var(--black-glass-solid);
+      border: 1px solid var(--border-glass-gold);
       border-radius: 48px;
-      padding: 3rem 2.5rem;
+      padding: 3rem 2.8rem;
       text-align: center;
-      box-shadow: var(--shadow-md), 0 0 40px rgba(212, 175, 55, 0.1);
-      animation: fadeInScale 0.5s ease;
-      position: relative;
-      overflow: hidden;
+      box-shadow: var(--shadow-deep), 0 0 0 1px rgba(201, 166, 107, 0.05) inset;
+      animation: fadeInGate 0.55s ease;
     }
-    .gate-card::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(212,175,55,0.05) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    @keyframes fadeInScale {
-      from { opacity: 0; transform: scale(0.96); }
+    
+    @keyframes fadeInGate {
+      from { opacity: 0; transform: scale(0.97); }
       to { opacity: 1; transform: scale(1); }
     }
+    
     .gate-badge {
       display: inline-flex;
       gap: 12px;
-      background: rgba(212,175,55,0.1);
-      padding: 0.6rem 1.5rem;
-      border-radius: 80px;
+      background: rgba(201, 166, 107, 0.06);
+      padding: 0.5rem 1.2rem;
+      border-radius: 100px;
       font-family: 'Roboto Mono', monospace;
-      font-size: 0.7rem;
-      letter-spacing: 0.12em;
-      color: var(--gold-light);
-      margin-bottom: 1.8rem;
-      border: 1px solid var(--border-gold);
-      backdrop-filter: blur(4px);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      color: var(--gold-muted);
+      margin-bottom: 2rem;
+      border: 1px solid var(--border-glass-gold);
     }
+    
     .gate-card h2 {
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
-      background: linear-gradient(135deg, #fff, var(--gold-light));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: -0.3px;
+      color: var(--platinum);
+      margin-bottom: 0.75rem;
     }
+    
     .gate-status {
       font-family: 'Roboto Mono', monospace;
-      background: rgba(212,175,55,0.06);
+      background: rgba(10, 10, 14, 0.8);
       padding: 1rem 1.2rem;
-      border-radius: 28px;
-      margin-top: 1.8rem;
-      font-size: 0.75rem;
+      border-radius: 24px;
+      margin-top: 2rem;
+      font-size: 0.72rem;
       line-height: 1.7;
-      border: 1px solid rgba(212,175,55,0.15);
+      border: 1px solid var(--border-glass-light);
+      color: var(--silver-muted);
     }
-    .btn-group { display: flex; flex-wrap: wrap; gap: 1.2rem; margin-top: 2rem; justify-content: center; }
+    
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.7rem;
-      padding: 0.9rem 1.8rem;
-      border-radius: 60px;
+      gap: 0.6rem;
+      padding: 0.85rem 1.8rem;
+      border-radius: 44px;
       font-family: 'Inter', sans-serif;
-      font-weight: 600;
-      font-size: 0.8rem;
-      letter-spacing: 0.06em;
+      font-weight: 480;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
       text-decoration: none;
-      transition: all 0.35s ease;
+      transition: var(--transition-exec);
       border: 1px solid transparent;
       cursor: pointer;
       text-transform: uppercase;
-    }
-    .btn-primary {
-      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-      color: #0A0F1A;
-      box-shadow: 0 6px 20px rgba(212,175,55,0.3);
-    }
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 30px rgba(212,175,55,0.35);
-      filter: brightness(1.05);
+      background: transparent;
+      border: 1px solid var(--border-glass-gold);
+      color: var(--platinum);
     }
     
-    /* Protected Content — Executive Suite */
+    .btn-primary {
+      background: rgba(201, 166, 107, 0.08);
+      border-color: var(--border-gold-active);
+      color: var(--gold-muted);
+    }
+    
+    .btn-primary:hover {
+      background: rgba(201, 166, 107, 0.18);
+      transform: translateY(-2px);
+      border-color: var(--gold-muted);
+      letter-spacing: 0.12em;
+    }
+    
+    /* Protected Content — Sovereign Executive Suite */
     .protected-content { display: none; }
     .protected-content.visible { display: block; animation: suiteReveal 0.7s ease; }
+    
     @keyframes suiteReveal {
-      from { opacity: 0; transform: translateY(30px); }
+      from { opacity: 0; transform: translateY(28px); }
       to { opacity: 1; transform: translateY(0); }
     }
     
-    /* Elegant Suite Header */
+    /* Executive Header — Chamber Aesthetic */
     .executive-suite {
-      padding: 4rem 0 1.5rem;
-      border-bottom: 2px solid var(--border-gold);
-      margin-bottom: 2.5rem;
+      padding: 5rem 0 2rem;
+      border-bottom: 1px solid var(--border-glass-light);
+      margin-bottom: 3rem;
       position: relative;
     }
+    
     .executive-suite::after {
       content: '';
       position: absolute;
-      bottom: -2px;
+      bottom: -1px;
       left: 0;
-      width: 120px;
-      height: 2px;
-      background: var(--gold);
-      box-shadow: 0 0 12px var(--gold);
-    }
-    .suite-badge {
-      font-family: 'Roboto Mono', monospace;
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      color: var(--gold);
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-    }
-    .executive-suite h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.8rem;
-      font-weight: 700;
-      color: var(--ivory);
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-    }
-    .executive-suite .sub {
-      font-family: 'Roboto Mono', monospace;
-      color: var(--gold-light);
-      margin-top: 0.8rem;
-      letter-spacing: 1px;
-      font-size: 0.9rem;
-    }
-    .suite-description {
-      max-width: 800px;
-      margin-top: 1.5rem;
-      color: #cbd5e6;
-      border-left: 3px solid var(--gold);
-      padding-left: 1.5rem;
-      font-size: 1rem;
+      width: 90px;
+      height: 1px;
+      background: var(--gold-muted);
+      opacity: 0.6;
     }
     
-    /* Refined Modules */
+    .suite-badge {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.28em;
+      color: var(--gold-desat);
+      margin-bottom: 1.2rem;
+      text-transform: uppercase;
+    }
+    
+    .executive-suite h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.6rem;
+      font-weight: 550;
+      color: var(--platinum);
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+    }
+    
+    .executive-suite .sub {
+      font-family: 'Roboto Mono', monospace;
+      color: var(--silver-muted);
+      margin-top: 0.9rem;
+      letter-spacing: 0.5px;
+      font-size: 0.8rem;
+    }
+    
+    .suite-description {
+      max-width: 780px;
+      margin-top: 1.8rem;
+      color: #b0b8c5;
+      border-left: 2px solid var(--gold-ultra-desat);
+      padding-left: 1.6rem;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      font-weight: 350;
+    }
+    
+    /* Sovereign Glass Modules */
     .module {
-      background: var(--glass-bg);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--border-gold);
+      background: var(--black-glass);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--border-glass-light);
       border-radius: 32px;
       margin-bottom: 1.8rem;
       overflow: hidden;
-      transition: 0.3s;
+      transition: var(--transition-exec);
     }
-    .module:hover { border-color: var(--border-gold-glow); box-shadow: var(--shadow-gold); }
+    
+    .module:hover {
+      border-color: var(--border-glass-gold);
+      box-shadow: var(--shadow-lift);
+    }
+    
     .module-header {
-      background: rgba(0,0,0,0.35);
+      background: rgba(2, 2, 4, 0.6);
       padding: 1.2rem 2rem;
       cursor: pointer;
       display: flex;
@@ -283,115 +332,168 @@
       align-items: center;
       transition: background 0.2s;
     }
-    .module-header:hover { background: rgba(212,175,55,0.08); }
+    
+    .module-header:hover {
+      background: rgba(201, 166, 107, 0.04);
+    }
+    
     .module-header h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.6rem;
-      font-weight: 600;
-      color: var(--gold-light);
+      font-size: 1.45rem;
+      font-weight: 480;
+      color: var(--platinum);
       margin: 0;
+      letter-spacing: -0.3px;
     }
-    .toggle-icon { font-size: 1.2rem; color: var(--gold); transition: transform 0.2s; }
+    
+    .toggle-icon {
+      font-size: 1rem;
+      color: var(--gold-desat);
+      transition: transform 0.2s;
+    }
+    
     .module-content {
-      padding: 1.8rem 2rem;
+      padding: 1.6rem 2rem;
       display: none;
-      border-top: 1px solid rgba(212,175,55,0.12);
+      border-top: 1px solid var(--border-glass-light);
     }
-    .module-content.open { display: block; animation: slideFade 0.3s ease; }
+    
+    .module-content.open {
+      display: block;
+      animation: slideFade 0.25s ease;
+    }
+    
     @keyframes slideFade {
-      from { opacity: 0; transform: translateY(-8px); }
+      from { opacity: 0; transform: translateY(-6px); }
       to { opacity: 1; transform: translateY(0); }
     }
+    
     .principle-block {
-      margin-bottom: 1.8rem;
+      margin-bottom: 1.6rem;
       padding-bottom: 1rem;
-      border-bottom: 1px dashed rgba(212,175,55,0.15);
+      border-bottom: 1px solid rgba(201, 166, 107, 0.08);
     }
+    
     .principle-block strong {
       display: block;
       font-family: 'Roboto Mono', monospace;
-      font-size: 0.7rem;
-      letter-spacing: 2px;
-      color: var(--gold);
-      margin-bottom: 0.4rem;
+      font-size: 0.65rem;
+      letter-spacing: 2.5px;
+      color: var(--gold-desat);
+      margin-bottom: 0.5rem;
       text-transform: uppercase;
-    }
-    .principle-block p, .principle-block ul {
-      color: #e2e8f0;
-      font-size: 0.92rem;
-      line-height: 1.6;
-      margin-left: 0.5rem;
+      font-weight: 450;
     }
     
-    /* Elegant Closing */
+    .principle-block p,
+    .principle-block ul {
+      color: #c8cfdb;
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin-left: 0.2rem;
+    }
+    
+    /* Closing Statement */
     .closing-statement {
-      margin-top: 2.5rem;
+      margin-top: 2.8rem;
       padding: 2rem;
-      background: linear-gradient(145deg, rgba(0,0,0,0.4), rgba(212,175,55,0.03));
-      border-left: 4px solid var(--gold);
+      background: rgba(0, 0, 0, 0.4);
+      border-left: 3px solid var(--gold-desat);
       border-radius: 24px;
     }
     
-    /* Footer Refined */
+    /* Footer — Absolute Discretion */
     footer {
-      background: #030711;
-      border-top: 1px solid var(--border-gold);
+      background: #020204;
+      border-top: 1px solid var(--border-glass-light);
       padding: 3rem 0 2rem;
-      margin-top: 3rem;
+      margin-top: 4rem;
     }
-    .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; }
+    
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2.5rem;
+    }
+    
     .monogram-seal {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 60px;
-      height: 60px;
-      border: 1px solid var(--gold);
+      width: 48px;
+      height: 48px;
+      border: 1px solid var(--gold-ultra-desat);
       border-radius: 50%;
       font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      font-size: 1.5rem;
-      color: var(--gold);
+      font-weight: 500;
+      font-size: 1.2rem;
+      color: var(--gold-desat);
       margin-bottom: 1rem;
-      background: rgba(212,175,55,0.05);
-      transition: 0.3s;
+      background: rgba(201, 166, 107, 0.03);
     }
-    .footer-links { display: flex; gap: 3rem; flex-wrap: wrap; }
-    .footer-links a { display: block; color: #9ca3af; text-decoration: none; font-size: 0.8rem; margin-bottom: 0.6rem; transition: 0.2s; }
-    .footer-links a:hover { color: var(--gold); transform: translateX(3px); }
-    .gold-divider { height: 1px; background: linear-gradient(90deg, var(--gold), transparent); margin: 2rem 0 1.5rem; }
-    .copyright { text-align: center; font-size: 0.7rem; color: #6c7a91; line-height: 1.5; }
     
-    @media (max-width: 680px) {
-      .container { padding: 0 1.5rem; }
-      .nav { flex-direction: column; text-align: center; }
+    .footer-links {
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    
+    .footer-links a {
+      display: block;
+      color: #6b7280;
+      text-decoration: none;
+      font-size: 0.72rem;
+      margin-bottom: 0.6rem;
+      transition: var(--transition-exec);
+      letter-spacing: 0.3px;
+    }
+    
+    .footer-links a:hover {
+      color: var(--gold-muted);
+      transform: translateX(2px);
+    }
+    
+    .gold-divider {
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold-ultra-desat), transparent);
+      margin: 2rem 0 1.5rem;
+      opacity: 0.3;
+    }
+    
+    .copyright {
+      text-align: center;
+      font-size: 0.65rem;
+      color: #4a4f5e;
+      line-height: 1.6;
+      letter-spacing: 0.3px;
+    }
+    
+    @media (max-width: 768px) {
+      .container { padding: 0 24px; }
       .executive-suite h1 { font-size: 2.4rem; }
       .module-header h2 { font-size: 1.2rem; }
+      .module-header { padding: 1rem 1.2rem; }
       .module-content { padding: 1rem; }
-      .gate-card { padding: 1.8rem; }
+      .gate-card { padding: 2rem 1.5rem; }
+      .nav-links { gap: 1rem; }
     }
   </style>
 </head>
 <body>
 
-<!-- Private Executive Gate Overlay -->
+<!-- Sovereign Gate Overlay -->
 <div id="klatGateOverlay" class="gate-overlay">
   <div class="gate-card">
-    <div class="gate-badge">
-      <span>✧ PRIVATE EXECUTIVE SUITE ✧</span>
-      <span>— KLAT GATED ACCESS</span>
-    </div>
+    <div class="gate-badge"><span>✧ PRIVATE EXECUTIVE SUITE ✧</span><span>— KLAT GATED ACCESS</span></div>
     <h2>Credential Authority Required</h2>
-    <p style="margin: 0.5rem 0 1rem;">Access to the <strong style="color: var(--gold);">Office of the Fiduciary</strong> execution framework requires verified KLAT credential authority.</p>
-    <div class="btn-group">
-      <button id="verifyGateBtn" class="btn btn-primary">⟡ Verify KLAT Authority & Enter Suite</button>
-    </div>
-    <div id="gateStatusMsg" class="gate-status">⏣ Ready. Connect wallet to verify KLAT credential authority (≥100 KLAT on Polygon Mainnet).</div>
-    <p style="margin-top: 1.2rem; font-size: 0.68rem; color: #7a859e; letter-spacing: 0.3px;">Restricted to verified governance credential holders. KLAT tokens are the exclusive institutional credential.</p>
+    <p style="margin: 0.5rem 0 0; font-size: 0.85rem; color: #b0b8c5;">Access to the Office of the Fiduciary execution framework requires verified KLAT credential authority.</p>
+    <div class="btn-group"><button id="verifyGateBtn" class="btn btn-primary">⟡ Verify KLAT Authority</button></div>
+    <div id="gateStatusMsg" class="gate-status">⏣ Ready. Connect wallet to verify KLAT credential authority (≥100 KLAT on Polygon).</div>
   </div>
 </div>
 
-<!-- Executive Suite Protected Content -->
+<!-- Protected Executive Suite Content -->
 <div class="protected-content" id="protectedContent">
   <header>
     <div class="container">
@@ -412,57 +514,28 @@
       <div class="suite-badge">OFFICE OF THE FIDUCIARY — RESTRICTED ACCESS</div>
       <h1>Execution Framework</h1>
       <div class="sub">Operational Manual · Administrative Procedure · Fiduciary Governance</div>
-      <div class="suite-description">
-        Institutional procedures for administrative notices, record discipline, fiduciary accountability, and lawful enforcement mechanisms. Grounded in statutory authority, procedural rules, and equitable doctrine. Authorized personnel only.
-      </div>
+      <div class="suite-description">Institutional procedures for administrative notices, record discipline, fiduciary accountability, and lawful enforcement mechanisms. Grounded in statutory authority, procedural rules, and equitable doctrine. Authorized personnel only.</div>
     </div>
 
     <!-- MODULE 1 -->
-    <div class="module">
-      <div class="module-header"><h2>I. Administrative Notice & Demand Procedure</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div>
-      <div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>Notice is the procedural trigger that creates record, imposes response obligations, and establishes default if ignored. Demand defines the specific action required.</p></div><div class="principle-block"><strong>GOVERNING RULE</strong><p>Under administrative law, written notice properly served and documented shifts the burden to the recipient to respond within a defined period. Failure to respond constitutes acquiescence or default.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Draft notice on letterhead with: date, recipient, factual statement, specific demand, statutory authority, response deadline (min 14 days), signature block. Send certified mail return receipt requested AND first-class mail.</p></div><div class="principle-block"><strong>REQUIRED RECORD</strong><p>Copy of notice, USPS tracking, signed return receipt, affidavit of service, chronological log entry.</p></div></div>
-    </div>
-    <div class="module">
-      <div class="module-header"><h2>II. Cure Opportunity & Administrative Default</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div>
-      <div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>Before declaring default, the opposing party must be given a reasonable opportunity to cure the alleged breach or deficiency.</p></div><div class="principle-block"><strong>PROCEDURAL FUNCTION</strong><p>Cure process: notice of breach → demand to cure → response window → cure or failure → default declaration.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Issue "Notice of Breach and Opportunity to Cure" specifying defect, corrective action, cure period (14‑30 days). After period expires without cure, issue "Declaration of Default."</p></div></div>
-    </div>
-    <div class="module">
-      <div class="module-header"><h2>III. Administrative Record & Evidence Preservation</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div>
-      <div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>Record precedes recognition. The administrative record is the exclusive foundation for enforcement, review, and remedy.</p></div><div class="principle-block"><strong>GOVERNING RULE</strong><p>The record must be contemporaneous, complete, unaltered, and accessible to all parties.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Maintain bound log or digital file with version control. Never delete entries; add supplements.</p></div></div>
-    </div>
-    <div class="module">
-      <div class="module-header"><h2>IV. Standing, Capacity & Jurisdictional Posture</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div>
-      <div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>The capacity to act and standing to enforce must be established and documented before any procedural move.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Prepare "Standing and Capacity Affidavit" listing legal name, basis of authority, proof of capacity. Insert jurisdictional statement in every notice.</p></div></div>
-    </div>
-    <div class="module">
-      <div class="module-header"><h2>V. Fiduciary Breach, Liability & Surcharge</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div>
-      <div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>A fiduciary who breaches duty of loyalty, care, disclosure, or accounting is personally liable for losses (surcharge) and may be removed.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Gather records, calculate losses, issue "Notice of Breach and Demand for Surcharge" with 21 days to cure.</p></div></div>
-    </div>
-    <div class="module">
-      <div class="module-header"><h2>VI. Statutory Execution Tools (FDCPA, FCRA, RESPA)</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div>
-      <div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>Consumer protection statutes provide fixed procedures, deadlines, and remedies that shift power to diligent claimants.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>FDCPA validation letter within 30 days. FCRA dispute to bureaus. RESPA QWR to servicer. Escalate to CFPB complaint.</p></div></div>
-    </div>
-    <div class="module">
-      <div class="module-header"><h2>VII. Accounting Demands & Asset Recovery</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div>
-      <div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>A fiduciary must provide a full accounting of all assets, receipts, disbursements, and distributions upon proper demand.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Send "Demand for Accounting" via certified mail. Allow 30 days. If deficient, file petition for accounting and surcharge.</p></div></div>
-    </div>
-    <div class="module">
-      <div class="module-header"><h2>VIII. Procedural Due Process & Administrative Hearings</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div>
-      <div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>Before any deprivation of property or right, the state must afford notice and meaningful opportunity to be heard.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Upon adverse agency action, request hearing in writing within deadline. Submit evidence. If agency rules against you, appeal to court.</p></div></div>
-    </div>
+    <div class="module"><div class="module-header"><h2>I. Administrative Notice & Demand Procedure</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div><div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>Notice is the procedural trigger that creates record, imposes response obligations, and establishes default if ignored. Demand defines the specific action required.</p></div><div class="principle-block"><strong>GOVERNING RULE</strong><p>Under administrative law, written notice properly served and documented shifts the burden to the recipient to respond within a defined period.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Draft notice on letterhead: date, recipient, factual statement, specific demand, statutory authority, response deadline (min 14 days). Send certified mail return receipt requested AND first-class mail.</p></div><div class="principle-block"><strong>REQUIRED RECORD</strong><p>Copy of notice, USPS tracking, signed return receipt, affidavit of service, chronological log entry.</p></div></div></div>
+    <div class="module"><div class="module-header"><h2>II. Cure Opportunity & Administrative Default</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div><div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>Before declaring default, the opposing party must be given a reasonable opportunity to cure the alleged breach.</p></div><div class="principle-block"><strong>PROCEDURAL FUNCTION</strong><p>Cure process: notice of breach → demand to cure → response window → cure or failure → default declaration.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Issue "Notice of Breach and Opportunity to Cure" specifying defect, corrective action, cure period (14‑30 days). Then issue "Declaration of Default."</p></div></div></div>
+    <div class="module"><div class="module-header"><h2>III. Administrative Record & Evidence Preservation</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div><div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>Record precedes recognition. The administrative record is the exclusive foundation for enforcement, review, and remedy.</p></div><div class="principle-block"><strong>GOVERNING RULE</strong><p>The record must be contemporaneous, complete, unaltered, and accessible to all parties.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Maintain bound log or digital file with version control. Never delete entries; add supplements.</p></div></div></div>
+    <div class="module"><div class="module-header"><h2>IV. Standing, Capacity & Jurisdictional Posture</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div><div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>The capacity to act and standing to enforce must be established and documented before any procedural move.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Prepare "Standing and Capacity Affidavit" listing legal name, basis of authority, proof of capacity. Insert jurisdictional statement in every notice.</p></div></div></div>
+    <div class="module"><div class="module-header"><h2>V. Fiduciary Breach, Liability & Surcharge</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div><div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>A fiduciary who breaches duty of loyalty, care, disclosure, or accounting is personally liable for losses (surcharge) and may be removed.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Gather records, calculate losses, issue "Notice of Breach and Demand for Surcharge" with 21 days to cure.</p></div></div></div>
+    <div class="module"><div class="module-header"><h2>VI. Statutory Execution Tools (FDCPA, FCRA, RESPA)</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div><div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>Consumer protection statutes provide fixed procedures, deadlines, and remedies that shift power to diligent claimants.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>FDCPA validation letter within 30 days. FCRA dispute to bureaus. RESPA QWR to servicer. Escalate to CFPB complaint.</p></div></div></div>
+    <div class="module"><div class="module-header"><h2>VII. Accounting Demands & Asset Recovery</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div><div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>A fiduciary must provide a full accounting of all assets, receipts, disbursements, and distributions upon proper demand.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Send "Demand for Accounting" via certified mail. Allow 30 days. If deficient, file petition for accounting and surcharge.</p></div></div></div>
+    <div class="module"><div class="module-header"><h2>VIII. Procedural Due Process & Administrative Hearings</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div><div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>Before any deprivation of property or right, the state must afford notice and meaningful opportunity to be heard.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Upon adverse agency action, request hearing in writing within deadline. Submit evidence. If agency rules against you, appeal to court.</p></div></div></div>
 
     <div class="closing-statement">
-      <p style="font-family: 'Roboto Mono', monospace; font-size: 0.85rem; letter-spacing: 0.5px; color: var(--gold);">Procedure precedes remedy. Record precedes enforcement. Capacity determines consequence. Structure determines outcome.</p>
-      <p style="margin-top: 1rem; font-size: 0.85rem; color: #b9c2d0;">This execution framework is an educational resource issued by the Office of the Fiduciary, Kelly Legacy Estates Living Trust & Kelly Legacy Institute. Authorized access only. Not legal advice.</p>
+      <p style="font-family: 'Roboto Mono', monospace; font-size: 0.75rem; letter-spacing: 1px; color: var(--gold-desat);">Procedure precedes remedy. Record precedes enforcement. Capacity determines consequence. Structure determines outcome.</p>
+      <p style="margin-top: 1rem; font-size: 0.8rem; color: #9ba3b5;">This execution framework is an educational resource issued by the Office of the Fiduciary, Kelly Legacy Estates Living Trust & Kelly Legacy Institute. Authorized access only. Not legal advice.</p>
     </div>
   </main>
 
   <footer>
     <div class="container">
-      <div class="footer-grid">
-        <div><div class="monogram-seal">KLE</div><h4 style="font-family:'Playfair Display'; color:var(--ivory);">Kelly Legacy Estates Living Trust</h4><p style="font-size:0.8rem;">Institutional fiduciary governance & educational administration.</p></div>
-        <div class="footer-links"><div><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="record-policy.html">Record Policy</a><a href="ip-policy.html">IP & Licensing</a></div><div><a href="transparency.html">Transparency Statement</a><a href="checklist.html">Fiduciary Checklist</a><a href="execution-framework.html">Execution Framework</a></div><div><a href="https://www.linkedin.com/in/delonte-kelly-01961b3b4" target="_blank"><i class="fa-brands fa-linkedin"></i> Institutional LinkedIn</a><a href="mailto:kellylegacyestatesllc@gmail.com"><i class="fa-solid fa-envelope"></i> Trust Inquiry</a></div></div>
-      </div>
+      <div class="footer-grid"><div><div class="monogram-seal">KLE</div><h4 style="font-family:'Playfair Display'; font-weight:450; color:var(--platinum);">Kelly Legacy Estates Living Trust</h4><p style="font-size:0.75rem;">Institutional fiduciary governance & educational administration.</p></div><div class="footer-links"><div><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="record-policy.html">Record Policy</a><a href="ip-policy.html">IP & Licensing</a></div><div><a href="transparency.html">Transparency Statement</a><a href="checklist.html">Fiduciary Checklist</a><a href="execution-framework.html">Execution Framework</a></div><div><a href="https://www.linkedin.com/in/delonte-kelly-01961b3b4" target="_blank"><i class="fa-brands fa-linkedin"></i> Institutional LinkedIn</a><a href="mailto:kellylegacyestatesllc@gmail.com"><i class="fa-solid fa-envelope"></i> Trust Inquiry</a></div></div></div>
       <div class="gold-divider"></div>
       <div class="copyright">© 2026 Kelly Legacy Estates Living Trust — Educational materials for institutional governance literacy. No legal advice.<br>Kelly Legacy Institute is administered under strict fiduciary governance. Structure determines outcome. Record precedes recognition.</div>
     </div>
@@ -470,7 +543,6 @@
 </div>
 
 <script>
-  // KLAT Contract Configuration
   const KLAT_CONTRACT = "0x0eC422119173558541BED4BF2f0Ef4807D66A4f4";
   const POLYGON_CHAIN_ID = "0x89";
   const MIN_KLAT = 100;
@@ -481,22 +553,15 @@
   const verifyBtn = document.getElementById('verifyGateBtn');
   const statusMsg = document.getElementById('gateStatusMsg');
 
-  // Initialize modules with duplicate listener prevention
   function initModules() {
-    const modules = document.querySelectorAll('#protectedContent .module');
-    modules.forEach(module => {
-      // Prevent duplicate event listeners
+    document.querySelectorAll('#protectedContent .module').forEach(module => {
       if (module.dataset.initialized === "true") return;
       module.dataset.initialized = "true";
-      
       const header = module.querySelector('.module-header');
       const content = module.querySelector('.module-content');
       const icon = header?.querySelector('.toggle-icon i');
-      
-      // Initially closed
       if (content) content.classList.remove('open');
       if (icon) icon.className = 'fa-solid fa-chevron-right';
-      
       header?.addEventListener('click', () => {
         const isOpen = content.classList.contains('open');
         if (isOpen) {
@@ -510,7 +575,6 @@
     });
   }
 
-  // Check session storage for existing verification
   if (sessionStorage.getItem('kli_execution_granted') === 'true') {
     if (overlay) overlay.classList.add('hidden');
     if (protectedContent) protectedContent.classList.add('visible');
@@ -520,59 +584,31 @@
   async function verifyAndUnlock() {
     if (!statusMsg) return;
     try {
-      if (!window.ethereum) { 
-        statusMsg.innerHTML = "❌ Web3 wallet not detected. Please install MetaMask (Polygon Mainnet)."; 
-        return; 
-      }
-      try { 
-        await window.ethereum.request({ method: "wallet_switchEthereumChain", params: [{ chainId: POLYGON_CHAIN_ID }] }); 
-      } catch (switchErr) { 
-        if (switchErr.code === 4902) { 
-          statusMsg.innerHTML = "⚠️ Polygon Mainnet not added. Add network via chainlist."; 
-          return; 
-        } 
-        throw switchErr; 
-      }
+      if (!window.ethereum) { statusMsg.innerHTML = "❌ Web3 wallet not detected."; return; }
+      try { await window.ethereum.request({ method: "wallet_switchEthereumChain", params: [{ chainId: POLYGON_CHAIN_ID }] }); } 
+      catch (switchErr) { if (switchErr.code === 4902) { statusMsg.innerHTML = "⚠️ Polygon Mainnet not added."; return; } throw switchErr; }
       
       const provider = new ethers.BrowserProvider(window.ethereum);
       const accounts = await provider.send("eth_requestAccounts", []);
       const walletAddress = accounts[0];
       const contract = new ethers.Contract(KLAT_CONTRACT, ERC20_ABI, provider);
-      const [rawBalance, decimals, symbol] = await Promise.all([
-        contract.balanceOf(walletAddress), 
-        contract.decimals(), 
-        contract.symbol()
-      ]);
+      const [rawBalance, decimals, symbol] = await Promise.all([contract.balanceOf(walletAddress), contract.decimals(), contract.symbol()]);
       const formattedBalance = Number(ethers.formatUnits(rawBalance, decimals));
       
       if (formattedBalance >= MIN_KLAT) {
         sessionStorage.setItem('kli_execution_granted', 'true');
-        statusMsg.innerHTML = `✅ VERIFIED — Access granted. Entering Executive Suite...`;
+        statusMsg.innerHTML = `✅ VERIFIED — Access granted. Entering Executive Suite.`;
         if (overlay) overlay.classList.add('hidden');
         if (protectedContent) protectedContent.classList.add('visible');
         initModules();
       } else {
-        statusMsg.innerHTML = `⛔ ACCESS DENIED — Insufficient KLAT credential authority.<br>Wallet: ${walletAddress.slice(0,8)}...${walletAddress.slice(-6)}<br>Balance: ${formattedBalance.toLocaleString()} ${symbol}<br>Required: ${MIN_KLAT} ${symbol}.`;
+        statusMsg.innerHTML = `⛔ ACCESS DENIED — Insufficient KLAT credential authority.<br>Balance: ${formattedBalance.toLocaleString()} ${symbol}<br>Required: ${MIN_KLAT} ${symbol}.`;
       }
     } catch (error) {
-      let errorMsg = "Verification failed. Ensure Polygon Mainnet.";
-      if (error.code === 4001) errorMsg = "Connection rejected.";
-      statusMsg.innerHTML = `⚠️ ${errorMsg}`;
+      statusMsg.innerHTML = `⚠️ Verification failed. Ensure Polygon Mainnet.`;
     }
   }
-  
   if (verifyBtn) verifyBtn.addEventListener('click', verifyAndUnlock);
-
-  // Observer for when content becomes visible (fallback for dynamic visibility)
-  const observer = new MutationObserver((mutations) => {
-    mutations.forEach((m) => { 
-      if (m.target.classList?.contains('visible')) { 
-        initModules(); 
-        observer.disconnect(); 
-      } 
-    });
-  });
-  if (protectedContent) observer.observe(protectedContent, { attributes: true, attributeFilter: ['class'] });
 </script>
 </body>
 </html>
