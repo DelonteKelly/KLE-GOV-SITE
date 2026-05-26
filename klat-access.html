@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>KLAT COMMAND TERMINAL™ | Classified Governance Verification Interface</title>
-  <meta name="description" content="Classified executive governance terminal. Credential verification. Contribution-based access infrastructure.">
+  <title>KLAT ACCESS TERMINAL™ | Classified Governance Verification Interface</title>
+  <meta name="description" content="Institutional governance operating environment. Credential verification. Mission progression. Continuity command system.">
   
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.umd.min.js"></script>
   
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; user-select: none; }
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
     
     :root {
       --mil-green: #1A3A2A;
@@ -38,7 +38,6 @@
       position: relative;
     }
 
-    /* Scanline effect */
     body::before {
       content: '';
       position: fixed;
@@ -63,7 +62,6 @@
       pointer-events: none;
     }
 
-    /* Tactical Grid Overlay */
     .grid-overlay {
       position: fixed;
       inset: 0;
@@ -75,15 +73,22 @@
       z-index: 0;
     }
 
-    .container {
-      max-width: 1440px;
-      margin: 0 auto;
-      padding: 0 32px;
-      position: relative;
-      z-index: 10;
+    .radar-sweep {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 50%, transparent, rgba(212, 175, 55, 0.02));
+      pointer-events: none;
+      animation: radarPulse 4s infinite;
+      z-index: 0;
     }
 
-    /* Header - Military Grade */
+    @keyframes radarPulse { 0% { opacity: 0.3; transform: scale(1); } 100% { opacity: 0; transform: scale(2); } }
+
+    .container { max-width: 1440px; margin: 0 auto; padding: 0 32px; position: relative; z-index: 10; }
+
     header {
       position: sticky;
       top: 0;
@@ -91,16 +96,9 @@
       backdrop-filter: blur(12px);
       background: rgba(5, 10, 13, 0.9);
       border-bottom: 2px solid var(--border-tactical);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
     }
 
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.8rem 0;
-      flex-wrap: wrap;
-    }
+    .nav { display: flex; justify-content: space-between; align-items: center; padding: 0.8rem 0; flex-wrap: wrap; gap: 1rem; }
 
     .logo {
       font-family: 'Playfair Display', serif;
@@ -115,19 +113,9 @@
       padding-left: 14px;
     }
 
-    .logo small {
-      font-size: 0.6rem;
-      letter-spacing: 1px;
-      color: var(--amber-dim);
-      display: block;
-    }
+    .logo small { font-size: 0.6rem; color: var(--amber-dim); display: block; }
 
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-    }
-
+    .nav-links { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; }
     .nav-links a {
       font-family: 'Roboto Mono', monospace;
       font-size: 0.65rem;
@@ -135,40 +123,21 @@
       text-decoration: none;
       color: #8A9B9F;
       transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
-
     .nav-links a:hover { color: var(--amber); text-shadow: 0 0 5px var(--amber); }
 
-    /* Bloomberg-style Ticker - Removed price, replaced with governance status */
-    .ticker-bar {
-      background: #030608;
-      border-bottom: 1px solid var(--border-tactical);
-      padding: 0.3rem 0;
-      overflow: hidden;
-      white-space: nowrap;
-    }
+    .ticker-bar { background: #030608; border-bottom: 1px solid var(--border-tactical); padding: 0.3rem 0; overflow: hidden; white-space: nowrap; }
+    .ticker-content { display: inline-block; animation: tickerScroll 30s linear infinite; font-family: 'Roboto Mono', monospace; font-size: 0.65rem; color: var(--cyan-tactical); }
+    @keyframes tickerScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-    .ticker-content {
-      display: inline-block;
-      animation: tickerScroll 30s linear infinite;
-      font-family: 'Roboto Mono', monospace;
-      font-size: 0.65rem;
-      color: var(--cyan-tactical);
-    }
+    .status-strip { display: flex; justify-content: space-between; gap: 1rem; padding: 0.45rem 1rem; background: rgba(0,0,0,0.45); border-bottom: 1px solid rgba(212,175,55,0.08); font-family: 'Roboto Mono', monospace; font-size: 0.58rem; letter-spacing: 0.08em; color: #7f9398; flex-wrap: wrap; }
+    .pulse-dot { width: 7px; height: 7px; background: #72ff72; border-radius: 50%; display: inline-block; margin-right: 6px; animation: pulseDot 1.5s infinite; }
+    @keyframes pulseDot { 0% { opacity: .4; transform: scale(.9); } 100% { opacity: 1; transform: scale(1.2); } }
 
-    @keyframes tickerScroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    /* Hero Command Section */
-    .command-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 2rem;
-      padding: 2rem 0 3rem;
-    }
-
+    .command-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2rem; padding: 2rem 0 3rem; scroll-margin-top: 100px; }
     .hud-card {
       background: var(--glass-ops);
       backdrop-filter: blur(12px);
@@ -176,9 +145,7 @@
       border-radius: 12px;
       padding: 1.5rem;
       box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-      position: relative;
     }
-
     .hud-header {
       font-family: 'Roboto Mono', monospace;
       font-size: 0.55rem;
@@ -191,45 +158,9 @@
       justify-content: space-between;
     }
 
-    .status-badge {
-      background: rgba(212, 175, 55, 0.15);
-      padding: 0.2rem 0.6rem;
-      border-radius: 4px;
-      font-size: 0.6rem;
-    }
+    .rank-progress { background: #0A1215; border-radius: 4px; height: 6px; margin: 0.8rem 0; overflow: hidden; }
+    .rank-fill { background: linear-gradient(90deg, var(--amber), var(--cyan-tactical)); width: 0%; height: 100%; transition: width 0.5s; }
 
-    /* Rank Progress - Contribution-based */
-    .rank-progress {
-      background: #0A1215;
-      border-radius: 4px;
-      height: 6px;
-      margin: 0.8rem 0;
-      overflow: hidden;
-    }
-
-    .rank-fill {
-      background: linear-gradient(90deg, var(--amber), var(--cyan-tactical));
-      width: 0%;
-      height: 100%;
-      transition: width 0.5s;
-    }
-
-    /* Data Tables - Administrative Ledger */
-    .data-table {
-      width: 100%;
-      font-family: 'Roboto Mono', monospace;
-      font-size: 0.7rem;
-      border-collapse: collapse;
-    }
-
-    .data-table td {
-      padding: 0.4rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .data-table td:last-child { text-align: right; color: var(--amber); }
-
-    /* Tactical Buttons */
     .btn-tactical {
       background: rgba(212, 175, 55, 0.1);
       border: 1px solid var(--border-tactical);
@@ -243,82 +174,86 @@
       transition: all 0.2s;
       text-transform: uppercase;
     }
+    .btn-tactical:hover { background: rgba(212, 175, 55, 0.25); box-shadow: 0 0 12px var(--shadow-tactical); transform: translateY(-1px); }
 
-    .btn-tactical:hover {
-      background: rgba(212, 175, 55, 0.25);
-      box-shadow: 0 0 12px var(--shadow-tactical);
-      transform: translateY(-1px);
-    }
+    .mission-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; scroll-margin-top: 100px; }
+    .mission-card { background: rgba(0,0,0,0.5); border-left: 3px solid var(--amber); padding: 1rem; border-radius: 0 8px 8px 0; cursor: pointer; transition: all 0.2s; }
+    .mission-card:hover { transform: translateX(4px); border-left-color: var(--cyan-tactical); }
 
-    /* Mission Grid - CoD Style */
-    .mission-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin: 1.5rem 0;
-    }
+    /* Credential Archive Grid */
+    .credential-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 1rem; scroll-margin-top: 100px; }
+    .credential-card { background: rgba(0,0,0,0.45); border: 1px solid rgba(212,175,55,0.15); border-radius: 10px; padding: 1rem; cursor: pointer; transition: .2s; }
+    .credential-card:hover { border-color: var(--amber); transform: translateY(-2px); box-shadow: 0 0 12px rgba(212,175,55,0.15); }
+    .credential-id { font-family: 'Roboto Mono', monospace; font-size: 0.58rem; color: var(--amber); margin-bottom: .5rem; }
+    .credential-name { font-size: .75rem; font-weight: 700; letter-spacing: .05em; }
 
-    .mission-card {
-      background: rgba(0,0,0,0.5);
-      border-left: 3px solid var(--amber);
-      padding: 1rem;
-      border-radius: 0 8px 8px 0;
-    }
+    /* Portal Grid - Token Gated */
+    .portal-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 1.5rem 0; scroll-margin-top: 100px; }
+    .portal-card { background: rgba(0,0,0,0.45); border: 1px solid rgba(212,175,55,0.15); border-radius: 12px; padding: 1.2rem; text-align: center; transition: all 0.2s; position: relative; }
+    .portal-card.locked { opacity: 0.6; filter: blur(1px); cursor: not-allowed; }
+    .portal-card.locked::after { content: '🔒 RESTRICTED'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.8); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.55rem; font-family: monospace; color: var(--amber); white-space: nowrap; }
+    .portal-card.unlocked { cursor: pointer; }
+    .portal-card.unlocked:hover { transform: translateY(-4px); border-color: var(--amber); box-shadow: var(--shadow-tactical); }
+    .portal-icon { font-size: 2rem; margin-bottom: 0.5rem; color: var(--amber-dim); }
+    .portal-card.unlocked .portal-icon { color: var(--amber); }
 
-    /* Wallet Terminal */
-    .wallet-terminal {
-      background: #030608;
-      border-radius: 8px;
-      padding: 1rem;
-      font-family: 'Roboto Mono', monospace;
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.95);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
     }
+    .modal.active { display: flex; animation: modalFade 0.2s ease; }
+    @keyframes modalFade { from { opacity: 0; } to { opacity: 1; } }
+    .modal-content {
+      background: var(--glass-ops);
+      border: 2px solid var(--border-tactical);
+      border-radius: 16px;
+      max-width: 500px;
+      width: 90%;
+      padding: 2rem;
+      text-align: center;
+    }
+    .verification-seal { font-size: 3rem; margin-bottom: 1rem; animation: sealPulse 1s infinite; }
+    @keyframes sealPulse { 0% { text-shadow: 0 0 0 var(--amber); } 100% { text-shadow: 0 0 20px var(--amber); } }
 
-    .terminal-line {
-      display: flex;
-      justify-content: space-between;
-      margin: 0.4rem 0;
-    }
+    .profile-card { background: rgba(0,0,0,0.5); border-radius: 12px; padding: 1rem; margin: 1rem 0; }
+    footer { background: #020408; border-top: 1px solid var(--border-tactical); padding: 1.5rem 0; margin-top: 3rem; }
 
-    footer {
-      background: #020408;
-      border-top: 1px solid var(--border-tactical);
-      padding: 1.5rem 0;
-      margin-top: 3rem;
-    }
-
-    @media (max-width: 900px) {
-      .command-grid { grid-template-columns: 1fr; }
-      .mission-grid { grid-template-columns: 1fr; }
-      .container { padding: 0 20px; }
-    }
+    @media (max-width: 900px) { .command-grid { grid-template-columns: 1fr; } .mission-grid { grid-template-columns: 1fr; } .credential-grid { grid-template-columns: repeat(2, 1fr); } .portal-grid { grid-template-columns: repeat(2, 1fr); } .container { padding: 0 20px; } }
   </style>
 </head>
 <body>
 
 <div class="grid-overlay"></div>
+<div class="radar-sweep"></div>
 
-<!-- Governance Status Ticker - No prices, no speculation -->
-<div class="ticker-bar">
-  <div class="ticker-content">
-    <span style="margin-right: 2rem;">◆ KLAT STATUS: GOVERNANCE CREDENTIAL</span>
-    <span style="margin-right: 2rem;">◆ POLYGON MAINNET | CREDENTIAL VERIFICATION LAYER</span>
-    <span style="margin-right: 2rem;">◆ ACCESS METHOD: CONTRIBUTION VERIFIED</span>
-    <span style="margin-right: 2rem;">◆ KLI GOV CREDENTIALS: 4 SERIES</span>
-    <span style="margin-right: 2rem;">◆ EXECUTIVE SUITE | CLASSIFIED</span>
-    <span style="margin-right: 2rem;">◆ KLAT STATUS: GOVERNANCE CREDENTIAL</span>
-    <span style="margin-right: 2rem;">◆ POLYGON MAINNET | CREDENTIAL VERIFICATION LAYER</span>
-  </div>
+<div class="ticker-bar"><div class="ticker-content"><span style="margin-right: 2rem;">◆ KLAT STATUS: GOVERNANCE CREDENTIAL</span><span style="margin-right: 2rem;">◆ POLYGON MAINNET | CREDENTIAL VERIFICATION LAYER</span><span style="margin-right: 2rem;">◆ ACCESS METHOD: CONTRIBUTION VERIFIED</span><span style="margin-right: 2rem;">◆ KLI GOV CREDENTIALS: 4 SERIES</span><span style="margin-right: 2rem;">◆ EXECUTIVE SUITE | CLASSIFIED</span></div></div>
+
+<div class="status-strip">
+  <span><span class="pulse-dot"></span> GOVERNANCE NETWORK ACTIVE</span>
+  <span><i class="fa-regular fa-circle-check"></i> MISSION PROTOCOLS: ONLINE</span>
+  <span><i class="fa-solid fa-shield"></i> CONTINUITY STATUS: STABLE</span>
+  <span><i class="fa-solid fa-fingerprint"></i> VERIFICATION LAYER: SECURE</span>
 </div>
 
 <header>
   <div class="container">
     <div class="nav">
-      <div class="logo">KLAT COMMAND TERMINAL™<small>CLASSIFIED GOVERNANCE VERIFICATION INTERFACE</small></div>
+      <div class="logo">KLAT ACCESS TERMINAL™<small>CLASSIFIED GOVERNANCE VERIFICATION INTERFACE</small></div>
       <div class="nav-links">
-        <a href="#">DASHBOARD</a>
-        <a href="#">MISSIONS</a>
-        <a href="#">CREDENTIALS</a>
-        <a href="#">ARCHIVE</a>
+        <a href="index.html"><i class="fa-solid fa-house"></i> HOME</a>
+        <a href="#dashboard">DASHBOARD</a>
+        <a href="#missions">MISSIONS</a>
+        <a href="#credentials">CREDENTIALS</a>
+        <a href="#archive">ARCHIVE</a>
         <button id="walletBtn" class="btn-tactical" style="padding: 0.3rem 1rem;"><i class="fa-solid fa-key"></i> VERIFY</button>
       </div>
     </div>
@@ -327,85 +262,98 @@
 
 <main>
   <div class="container">
-    <!-- Command Grid -->
-    <div class="command-grid">
-      <!-- Left - HUD Dashboard -->
+    <!-- Dashboard Section -->
+    <div class="command-grid" id="dashboard">
       <div class="hud-card">
-        <div class="hud-header">
-          <span><i class="fa-solid fa-shield-haltered"></i> AUTHORIZATION STATUS</span>
-          <span class="status-badge" id="authBadge">PENDING VERIFICATION</span>
-        </div>
-        <div>
-          <div style="font-size: 1.8rem; font-weight: 800;" id="tierDisplay">OBSERVER</div>
-          <div class="rank-progress"><div class="rank-fill" id="rankFill" style="width: 0%;"></div></div>
-          <div style="display: flex; justify-content: space-between; font-size: 0.65rem;"><span>→ NEXT CLASSIFICATION: VERIFIED CONTRIBUTOR</span><span id="nextTierReq">100 KLAT</span></div>
-        </div>
-        <div style="margin-top: 1.5rem;">
-          <div class="hud-header"><span>VERIFICATION LOG</span><span>CLASSIFIED</span></div>
-          <div id="liveFeed" style="font-family: monospace; font-size: 0.7rem; height: 80px; overflow-y: auto; color: #8A9B9F;">
-            > Awaiting wallet connection...
-          </div>
-        </div>
+        <div class="hud-header"><span><i class="fa-solid fa-shield-haltered"></i> AUTHORIZATION STATUS</span><span class="status-badge" id="authBadge">PENDING VERIFICATION</span></div>
+        <div><div style="font-size: 1.8rem; font-weight: 800;" id="tierDisplay">OBSERVER</div>
+        <div class="rank-progress"><div class="rank-fill" id="rankFill" style="width: 0%;"></div></div>
+        <div style="display: flex; justify-content: space-between; font-size: 0.65rem;"><span>→ NEXT CLASSIFICATION: VERIFIED CONTRIBUTOR</span><span id="nextTierReq">100 KLAT</span></div></div>
+        <div class="profile-card" id="profileCard" style="display: none;"><div class="hud-header"><span>EXECUTIVE PROFILE</span><span>CLASSIFIED</span></div><div id="profileData">Loading profile...</div></div>
+        <div style="margin-top: 1rem;"><div class="hud-header"><span>VERIFICATION LOG</span><span>CLASSIFIED</span></div><div id="liveFeed" style="font-family: monospace; font-size: 0.7rem; height: 80px; overflow-y: auto; color: #8A9B9F;">> Awaiting wallet connection...</div></div>
       </div>
 
-      <!-- Right - Wallet Terminal -->
       <div class="hud-card">
         <div class="hud-header"><span>VERIFICATION TERMINAL</span><span>v2.0</span></div>
-        <div class="wallet-terminal">
-          <div class="terminal-line"><span>WALLET STATUS:</span><span id="walletStatus">NOT CONNECTED</span></div>
-          <div class="terminal-line"><span>ADDRESS:</span><span id="walletAddr">—</span></div>
-          <div class="terminal-line"><span>KLAT BALANCE:</span><span id="klatBal">0.00</span></div>
-          <div class="terminal-line"><span>CREDENTIAL COUNT:</span><span id="credCount">0</span></div>
-          <div class="terminal-line"><span>AUTHORITY TIER:</span><span id="tierVal">OBSERVER</span></div>
+        <div class="wallet-terminal" style="background:#030608;border-radius:8px;padding:1rem;font-family:monospace;">
+          <div class="terminal-line" style="display:flex;justify-content:space-between;margin:0.4rem 0;"><span>WALLET STATUS:</span><span id="walletStatus">NOT CONNECTED</span></div>
+          <div class="terminal-line" style="display:flex;justify-content:space-between;margin:0.4rem 0;"><span>ADDRESS:</span><span id="walletAddr">—</span></div>
+          <div class="terminal-line" style="display:flex;justify-content:space-between;margin:0.4rem 0;"><span>KLAT BALANCE:</span><span id="klatBal">0.00</span></div>
+          <div class="terminal-line" style="display:flex;justify-content:space-between;margin:0.4rem 0;"><span>CREDENTIAL COUNT:</span><span id="credCount">0</span></div>
+          <div class="terminal-line" style="display:flex;justify-content:space-between;margin:0.4rem 0;"><span>AUTHORITY TIER:</span><span id="tierVal">OBSERVER</span></div>
+          <div class="terminal-line" style="display:flex;justify-content:space-between;margin:0.4rem 0;"><span>CONTRIBUTION SCORE:</span><span id="contribScore">0</span></div>
+          <div class="terminal-line" style="display:flex;justify-content:space-between;margin:0.4rem 0;"><span>BLOCK:</span><span id="blockNumber">—</span></div>
+          <div class="terminal-line" style="display:flex;justify-content:space-between;margin:0.4rem 0;"><span>GAS:</span><span id="gasPrice">—</span></div>
         </div>
         <button id="verifyTerminalBtn" class="btn-tactical" style="margin-top: 1rem; width: 100%;"><i class="fa-solid fa-fingerprint"></i> INITIATE VERIFICATION PROTOCOL</button>
       </div>
     </div>
 
-    <!-- Missions Grid - CoD Style -->
-    <div style="margin: 2rem 0;">
-      <div class="hud-header"><span>◉ ACTIVE GOVERNANCE MISSIONS</span><span>CONTRIBUTION PROGRESSION</span></div>
-      <div class="mission-grid">
-        <div class="mission-card"><div style="color: var(--amber); font-size: 0.7rem;">MISSION 01</div><div style="font-weight: 700;">Complete Governance Orientation</div><div style="font-size: 0.65rem;">+50 Contribution Score</div></div>
-        <div class="mission-card"><div style="color: var(--amber); font-size: 0.7rem;">MISSION 02</div><div style="font-weight: 700;">Verify Wallet Authority</div><div style="font-size: 0.65rem;">Unlocks: Tier II</div></div>
-        <div class="mission-card"><div style="color: var(--amber); font-size: 0.7rem;">MISSION 03</div><div style="font-weight: 700;">Complete Fiduciary Curriculum</div><div style="font-size: 0.65rem;">+100 Contribution Score</div></div>
+    <!-- Token-Gated Portals -->
+    <div class="portal-grid" id="portals">
+      <div class="portal-card locked" data-required-tier="100" data-link="curriculum-portal.html"><div class="portal-icon"><i class="fa-solid fa-building-columns"></i></div><h4>Curriculum Portal</h4><p style="font-size:0.65rem;">Governance Education</p></div>
+      <div class="portal-card locked" data-required-tier="500" data-link="execution-framework.html"><div class="portal-icon"><i class="fa-solid fa-scale-balanced"></i></div><h4>Execution Framework</h4><p style="font-size:0.65rem;">Operational Manual</p></div>
+      <div class="portal-card locked" data-required-tier="1000" data-link="governance-archive.html"><div class="portal-icon"><i class="fa-solid fa-archive"></i></div><h4>Governance Archive</h4><p style="font-size:0.65rem;">Classified Records</p></div>
+      <div class="portal-card locked" data-required-tier="5000" data-link="continuity-vault.html"><div class="portal-icon"><i class="fa-solid fa-vault"></i></div><h4>Continuity Vault</h4><p style="font-size:0.65rem;">Executive Clearance Only</p></div>
+    </div>
+
+    <!-- Credentials Section -->
+    <div style="margin: 2rem 0;" id="credentials">
+      <div class="hud-header"><span>CREDENTIAL ARCHIVE</span><span>EXECUTIVE RECORDS</span></div>
+      <div class="credential-grid">
+        <div class="credential-card" onclick="openCredentialModal('KLI-GOV-001', 'Foundation Governance Credential', 'STATUS: VERIFIED<br>CLASSIFICATION: TIER I<br>AUTHORITY: FOUNDATIONAL GOVERNANCE ACCESS<br>ISSUED: OFFICE OF THE FIDUCIARY')">
+          <div class="credential-id">KLI-GOV-001</div><div class="credential-name">FOUNDATION GOVERNANCE</div>
+        </div>
+        <div class="credential-card" onclick="openCredentialModal('KLI-GOV-002', 'Verification Authority Credential', 'STATUS: VERIFIED<br>CLASSIFICATION: TIER II<br>AUTHORITY: WALLET VERIFICATION AUTHORITY<br>REQUIREMENT: 100 KLAT')">
+          <div class="credential-id">KLI-GOV-002</div><div class="credential-name">VERIFICATION AUTHORITY</div>
+        </div>
+        <div class="credential-card" onclick="openCredentialModal('KLI-GOV-003', 'Executive Verification Credential', 'STATUS: CLASSIFIED<br>CLASSIFICATION: TIER III<br>AUTHORITY: EXECUTIVE GOVERNANCE ACCESS<br>REQUIREMENT: 500 KLAT')">
+          <div class="credential-id">KLI-GOV-003</div><div class="credential-name">EXECUTIVE VERIFICATION</div>
+        </div>
+        <div class="credential-card" onclick="openCredentialModal('KLI-GOV-004', 'Continuity Authority Credential', 'STATUS: RESTRICTED<br>CLASSIFICATION: TIER IV<br>AUTHORITY: CONTINUITY CLEARANCE<br>REQUIREMENT: 1000 KLAT')">
+          <div class="credential-id">KLI-GOV-004</div><div class="credential-name">CONTINUITY AUTHORITY</div>
+        </div>
       </div>
     </div>
 
-    <!-- Administrative Ledger Tables - No fake metrics -->
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0;">
-      <div class="hud-card">
-        <div class="hud-header"><span>GOVERNANCE LEDGER</span><span>ADMINISTRATIVE RECORD</span></div>
-        <table class="data-table">
-          <tr><td>Credential Records: Internal Archive</td><td id="credRecords">—</td></tr>
-          <tr><td>Active Session: Local Verification</td><td id="activeSession">—</td></tr>
-          <tr><td>Governance Credential Series</td><td>4 Active Series</td></tr>
-          <tr><td>Contribution Score Required for Tier V</td><td>10,000 Points</td></tr>
-        </table>
+    <!-- Missions Section -->
+    <div style="margin: 2rem 0;" id="missions">
+      <div class="hud-header"><span>◉ ACTIVE GOVERNANCE MISSIONS</span><span>CONTRIBUTION PROGRESSION</span></div>
+      <div class="mission-grid">
+        <div class="mission-card" data-mission="orientation"><div style="color: var(--amber); font-size: 0.7rem;">MISSION 01</div><div style="font-weight: 700;">Complete Governance Orientation</div><div style="font-size: 0.65rem;">+50 Contribution Score</div><div class="mission-status" style="font-size:0.6rem;color:#6b8f5e;"></div></div>
+        <div class="mission-card" data-mission="verify"><div style="color: var(--amber); font-size: 0.7rem;">MISSION 02</div><div style="font-weight: 700;">Verify Wallet Authority</div><div style="font-size: 0.65rem;">Unlocks: Tier II</div><div class="mission-status" style="font-size:0.6rem;color:#6b8f5e;"></div></div>
+        <div class="mission-card" data-mission="curriculum"><div style="color: var(--amber); font-size: 0.7rem;">MISSION 03</div><div style="font-weight: 700;">Complete Fiduciary Curriculum</div><div style="font-size: 0.65rem;">+100 Contribution Score</div><div class="mission-status" style="font-size:0.6rem;color:#6b8f5e;"></div></div>
       </div>
-      <div class="hud-card">
-        <div class="hud-header"><span>CONTINUITY METRICS</span><span>CLASSIFIED</span></div>
-        <table class="data-table">
-          <tr><td>Governance Standing</td><td id="govStanding">PENDING</td></tr>
-          <tr><td>Record Integrity Score</td><td id="recordIntegrity">—</td></tr>
-          <tr><td>Continuity Rank</td><td id="contRank">—</td></tr>
-          <tr><td>Access Classification</td><td id="accessClass">UNVERIFIED</td></tr>
-        </table>
+    </div>
+
+    <!-- Archive Section -->
+    <div id="archive" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0;">
+      <div class="hud-card"><div class="hud-header"><span>GOVERNANCE LEDGER</span><span>ADMINISTRATIVE RECORD</span></div>
+        <table class="data-table" style="width:100%;font-family:monospace;font-size:0.7rem;"><tr><td>Credential Records:</td><td id="credRecords" style="color:var(--amber);">—</td></tr>
+        <tr><td>Active Session:</td><td id="activeSession" style="color:var(--amber);">Local Terminal</td></tr>
+        <tr><td>Governance Credential Series:</td><td style="color:var(--amber);">4 Active Series</td></tr>
+        <tr><td>Contribution Score Required for Tier V:</td><td style="color:var(--amber);">10,000 Points</td></tr></table>
+      </div>
+      <div class="hud-card"><div class="hud-header"><span>CONTINUITY METRICS</span><span>CLASSIFIED</span></div>
+        <table class="data-table" style="width:100%;font-family:monospace;font-size:0.7rem;"><tr><td>Governance Standing:</td><td id="govStanding" style="color:var(--amber);">PENDING</td></tr>
+        <tr><td>Record Integrity Score:</td><td id="recordIntegrity" style="color:var(--amber);">98.4%</td></tr>
+        <tr><td>Continuity Rank:</td><td id="contRank" style="color:var(--amber);">—</td></tr>
+        <tr><td>Access Classification:</td><td id="accessClass" style="color:var(--amber);">UNVERIFIED</td></tr></table>
       </div>
     </div>
   </div>
 </main>
 
 <footer>
-  <div class="container">
-    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-size: 0.65rem;">
-      <span><i class="fa-solid fa-building-columns"></i> OFFICE OF THE FIDUCIARY</span>
-      <span><i class="fa-solid fa-shield"></i> KLAT GOVERNANCE INFRASTRUCTURE</span>
-      <span><i class="fa-solid fa-fingerprint"></i> POLYGON MAINNET | CREDENTIAL VERIFICATION LAYER</span>
-    </div>
-    <div style="text-align: center; margin-top: 1rem; font-size: 0.55rem; color: #4A5F5F;">Structure determines outcome. Contribution determines access. Governance preserves continuity.</div>
+  <div class="container"><div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-size: 0.65rem;">
+    <span><i class="fa-solid fa-building-columns"></i> OFFICE OF THE FIDUCIARY</span>
+    <span><i class="fa-solid fa-shield"></i> KLAT GOVERNANCE INFRASTRUCTURE</span>
+    <span><i class="fa-solid fa-fingerprint"></i> POLYGON MAINNET | CREDENTIAL VERIFICATION LAYER</span>
   </div>
+  <div style="text-align: center; margin-top: 1rem; font-size: 0.55rem; color: #4A5F5F;">Structure determines outcome. Contribution determines access. Governance preserves continuity.</div></div>
 </footer>
+
+<div id="credentialModal" class="modal"><div class="modal-content"><div class="verification-seal"><i class="fa-solid fa-circle-check"></i></div><h2 id="modalTitle">Governance Credential</h2><p id="modalDesc">Verification dossier</p><div id="modalMeta" style="font-family: monospace; margin: 1rem 0;"></div><button onclick="closeModal()" class="btn-tactical">CLOSE DOSSIER</button></div></div>
 
 <script>
   const KLAT_CONTRACT = "0x0eC422119173558541BED4BF2f0Ef4807D66A4f4";
@@ -413,34 +361,31 @@
   const MIN_KLAT = 100;
   const ERC20_ABI = ["function balanceOf(address account) view returns (uint256)", "function decimals() view returns (uint8)", "function symbol() view returns (string)"];
 
-  let walletAddress = null;
-  let currentBalance = 0;
+  let walletAddress = null, currentBalance = 0, contributionScore = 0;
+  let completedMissions = JSON.parse(localStorage.getItem('kli_missions') || '{}');
+
+  async function fetchPolygonData() {
+    try { const provider = new ethers.JsonRpcProvider("https://polygon-rpc.com"); const block = await provider.getBlockNumber(); const feeData = await provider.getFeeData(); document.getElementById("blockNumber").innerText = block; document.getElementById("gasPrice").innerText = Math.round(Number(ethers.formatUnits(feeData.gasPrice, "gwei"))) + " GWEI"; } catch(e) { console.warn("Polygon RPC error"); }
+  }
+
+  function addFeed(msg) { const feed = document.getElementById('liveFeed'); if(feed){ const p = document.createElement('div'); p.innerHTML = `> ${msg}`; feed.prepend(p); if(feed.children.length > 6) feed.removeChild(feed.lastChild); } }
+  function playSound(type) { if(type === 'verify') addFeed('🔔 VERIFICATION PING'); else if(type === 'auth') addFeed('✅ AUTHORIZATION CONFIRMATION'); }
+
+  function updatePortals(balance) {
+    document.querySelectorAll('.portal-card').forEach(card => {
+      const required = parseInt(card.dataset.requiredTier);
+      if(balance >= required) {
+        card.classList.remove('locked');
+        card.classList.add('unlocked');
+        card.addEventListener('click', (e) => { if(card.classList.contains('unlocked')) window.location.href = card.dataset.link; });
+      } else {
+        card.classList.add('locked');
+        card.classList.remove('unlocked');
+      }
+    });
+  }
 
   async function connectAndVerify() {
-    const statusDiv = document.getElementById("walletStatus");
-    const addrSpan = document.getElementById("walletAddr");
-    const balSpan = document.getElementById("klatBal");
-    const credSpan = document.getElementById("credCount");
-    const tierSpan = document.getElementById("tierVal");
-    const tierDisplay = document.getElementById("tierDisplay");
-    const rankFill = document.getElementById("rankFill");
-    const nextTierReq = document.getElementById("nextTierReq");
-    const authBadge = document.getElementById("authBadge");
-    const govStanding = document.getElementById("govStanding");
-    const contRank = document.getElementById("contRank");
-    const accessClass = document.getElementById("accessClass");
-    const liveFeed = document.getElementById("liveFeed");
-    const credRecords = document.getElementById("credRecords");
-    const activeSession = document.getElementById("activeSession");
-    const recordIntegrity = document.getElementById("recordIntegrity");
-
-    function addFeed(msg) {
-      const p = document.createElement("div");
-      p.innerHTML = `> ${msg}`;
-      liveFeed.prepend(p);
-      if(liveFeed.children.length > 6) liveFeed.removeChild(liveFeed.lastChild);
-    }
-
     try {
       if(!window.ethereum) { addFeed("ERROR: Web3 wallet not detected"); return; }
       addFeed("INITIATING VERIFICATION PROTOCOL...");
@@ -448,90 +393,48 @@
       const provider = new ethers.BrowserProvider(window.ethereum);
       const accounts = await provider.send("eth_requestAccounts", []);
       walletAddress = accounts[0];
-      addrSpan.innerText = walletAddress.slice(0,8)+"..."+walletAddress.slice(-6);
-      statusDiv.innerText = "VERIFIED";
+      document.getElementById("walletAddr").innerText = walletAddress.slice(0,8)+"..."+walletAddress.slice(-6);
+      document.getElementById("walletStatus").innerText = "VERIFIED";
       
       const contract = new ethers.Contract(KLAT_CONTRACT, ERC20_ABI, provider);
       const [rawBalance, decimals, symbol] = await Promise.all([contract.balanceOf(walletAddress), contract.decimals(), contract.symbol()]);
       currentBalance = Number(ethers.formatUnits(rawBalance, decimals));
-      balSpan.innerText = currentBalance.toFixed(2) + " " + symbol;
+      document.getElementById("klatBal").innerText = currentBalance.toFixed(2) + " " + symbol;
       
-      let tier = "OBSERVER";
-      let cred = 0;
-      let rankPercent = 0;
-      let nextReq = "100 KLAT";
-      let standing = "PENDING";
-      let rank = "UNRANKED";
-      let classification = "UNVERIFIED";
-      let credRecordVal = "No Credentials";
-      let sessionVal = "Local Terminal";
-      let integrityVal = "98.4%";
+      let tier = "OBSERVER", cred = 0, rankPercent = 0, standing = "PENDING", rank = "UNRANKED", classification = "UNVERIFIED", credRecordVal = "No Credentials";
+      if(currentBalance >= MIN_KLAT) { tier = "VERIFIED CONTRIBUTOR"; cred = 1; rankPercent = 20; standing = "PROVISIONAL"; rank = "CONTRIBUTOR"; classification = "VERIFIED"; credRecordVal = "1 Credential Archived"; addFeed("✓ VERIFIED: Governance credentials detected."); playSound('verify'); }
+      if(currentBalance >= 500) { tier = "GOVERNANCE OPERATOR"; cred = 2; rankPercent = 50; standing = "OPERATOR"; rank = "OPERATOR"; classification = "OPERATOR CLEARANCE"; credRecordVal = "2 Credentials Archived"; addFeed("✓ GOVERNANCE OPERATOR: Advanced access granted."); playSound('auth'); }
+      if(currentBalance >= 1000) { tier = "EXECUTIVE FIDUCIARY"; cred = 3; rankPercent = 80; standing = "EXECUTIVE"; rank = "EXECUTIVE"; classification = "EXECUTIVE CLEARANCE"; credRecordVal = "3 Credentials Archived"; addFeed("✓ EXECUTIVE FIDUCIARY: Full governance access."); }
+      if(currentBalance >= 5000) { tier = "CONTINUITY AUTHORITY"; cred = 4; rankPercent = 100; standing = "AUTHORITY"; rank = "CONTINUITY"; classification = "CONTINUITY CLEARANCE"; credRecordVal = "4 Credentials Archived"; addFeed("✓ CONTINUITY AUTHORITY: Executive continuity clearance granted."); }
       
-      if(currentBalance >= MIN_KLAT) {
-        tier = "VERIFIED CONTRIBUTOR";
-        cred = 1;
-        rankPercent = 20;
-        standing = "PROVISIONAL";
-        rank = "CONTRIBUTOR";
-        classification = "VERIFIED";
-        credRecordVal = "1 Credential Archived";
-        addFeed("✓ VERIFIED: Governance credentials detected.");
-      }
-      if(currentBalance >= 500) {
-        tier = "GOVERNANCE OPERATOR";
-        cred = 2;
-        rankPercent = 50;
-        standing = "OPERATOR";
-        rank = "OPERATOR";
-        classification = "OPERATOR CLEARANCE";
-        credRecordVal = "2 Credentials Archived";
-        addFeed("✓ GOVERNANCE OPERATOR: Advanced access granted.");
-      }
-      if(currentBalance >= 1000) {
-        tier = "EXECUTIVE FIDUCIARY";
-        cred = 3;
-        rankPercent = 80;
-        standing = "EXECUTIVE";
-        rank = "EXECUTIVE";
-        classification = "EXECUTIVE CLEARANCE";
-        credRecordVal = "3 Credentials Archived";
-        addFeed("✓ EXECUTIVE FIDUCIARY: Full governance access.");
-      }
-      if(currentBalance >= 5000) {
-        tier = "CONTINUITY AUTHORITY";
-        cred = 4;
-        rankPercent = 100;
-        standing = "AUTHORITY";
-        rank = "CONTINUITY";
-        classification = "CONTINUITY AUTHORITY";
-        credRecordVal = "4 Credentials Archived";
-        addFeed("✓ CONTINUITY AUTHORITY: Sovereign governance rank.");
-      }
+      contributionScore = Math.floor(currentBalance / 10) + (Object.keys(completedMissions).length * 50);
+      document.getElementById("tierDisplay").innerText = tier; document.getElementById("tierVal").innerText = tier; document.getElementById("credCount").innerText = cred;
+      document.getElementById("rankFill").style.width = rankPercent + "%"; document.getElementById("contribScore").innerText = contributionScore;
+      document.getElementById("authBadge").innerText = tier; document.getElementById("govStanding").innerText = standing; document.getElementById("contRank").innerText = rank;
+      document.getElementById("accessClass").innerText = classification; document.getElementById("credRecords").innerText = credRecordVal;
       
-      tierDisplay.innerText = tier;
-      tierSpan.innerText = tier;
-      credSpan.innerText = cred;
-      rankFill.style.width = rankPercent + "%";
-      nextTierReq.innerText = currentBalance < 100 ? "100 KLAT" : currentBalance < 500 ? "500 KLAT" : currentBalance < 1000 ? "1000 KLAT" : "MAX RANK";
-      authBadge.innerText = tier;
-      govStanding.innerText = standing;
-      contRank.innerText = rank;
-      accessClass.innerText = classification;
-      credRecords.innerText = credRecordVal;
-      activeSession.innerText = sessionVal;
-      recordIntegrity.innerText = integrityVal;
-      
+      const profileDiv = document.getElementById('profileData'); if(profileDiv) profileDiv.innerHTML = `<div>Governance Score: ${contributionScore}</div><div>Contribution History: ${Object.keys(completedMissions).length} Missions Completed</div><div>Rank Insignia: ${tier}</div><div>Continuity Standing: ${standing}</div>`;
+      document.getElementById('profileCard').style.display = 'block';
+      updateMissionStatus();
+      updatePortals(currentBalance);
+      fetchPolygonData();
       addFeed("AUTHORIZATION COMPLETE. GOVERNANCE ACCESS GRANTED.");
-    } catch(e) {
-      addFeed("ERROR: Verification failed. Ensure Polygon Mainnet.");
-      console.error(e);
-    }
+    } catch(e) { addFeed("ERROR: Verification failed. Ensure Polygon Mainnet."); console.error(e); }
   }
+
+  function updateMissionStatus() { document.querySelectorAll('.mission-card').forEach(card => { const mission = card.dataset.mission; if(completedMissions[mission]) card.querySelector('.mission-status').innerHTML = '✓ COMPLETED'; else card.querySelector('.mission-status').innerHTML = '⨯ INCOMPLETE'; }); }
+  function completeMission(missionId, points) { if(!completedMissions[missionId]) { completedMissions[missionId] = true; localStorage.setItem('kli_missions', JSON.stringify(completedMissions)); contributionScore += points; document.getElementById("contribScore").innerText = contributionScore; addFeed(`MISSION COMPLETE: +${points} Contribution Score`); updateMissionStatus(); } }
+
+  document.querySelectorAll('.mission-card').forEach(card => { card.addEventListener('click', () => { const mission = card.dataset.mission; if(mission === 'orientation') completeMission('orientation', 50); else if(mission === 'verify') { if(walletAddress) completeMission('verify', 0); else addFeed('Connect wallet first.'); } else if(mission === 'curriculum') completeMission('curriculum', 100); }); });
+
+  function openCredentialModal(title, desc, meta) { const modal = document.getElementById('credentialModal'); document.getElementById('modalTitle').innerText = title; document.getElementById('modalDesc').innerText = desc; document.getElementById('modalMeta').innerHTML = meta; modal.classList.add('active'); playSound('verify'); }
+  function closeModal() { document.getElementById('credentialModal').classList.remove('active'); }
+  window.openCredentialModal = openCredentialModal; window.closeModal = closeModal;
 
   document.getElementById("walletBtn")?.addEventListener("click", connectAndVerify);
   document.getElementById("verifyTerminalBtn")?.addEventListener("click", connectAndVerify);
-  
-  // No simulated metrics — only real verification data
+  fetchPolygonData();
+  setInterval(fetchPolygonData, 30000);
 </script>
 </body>
 </html>
