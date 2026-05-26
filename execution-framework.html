@@ -3,436 +3,338 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Office of the Fiduciary – Execution Framework | Kelly Legacy Institute</title>
-  <meta name="description" content="Institutional execution framework for administrative procedure, notice, record discipline, fiduciary accountability, and lawful enforcement mechanisms.">
-  <link rel="icon" type="image/png" href="kli-favicon.png">
-  <meta property="og:title" content="Office of the Fiduciary – Execution Framework">
-  <meta property="og:description" content="Structured administrative execution system: notices, demands, records, default, and fiduciary governance.">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+  <title>Kelly Legacy Institute | Governance · Workflow · AI Accountability</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    :root {
-      --matte-black: #0A0F1A;
-      --deep-charcoal: #111827;
-      --platinum: #D1D5DB;
-      --ivory: #F3F4F6;
-      --gold: #C6A15B;
-      --border-gold: rgba(198, 161, 91, 0.35);
-      --glass-bg: rgba(17, 24, 39, 0.85);
-      --shadow-md: 0 25px 40px -14px rgba(0, 0, 0, 0.5), 0 1px 2px 0 rgba(255, 255, 255, 0.03) inset;
-    }
-    body {
-      background-color: var(--matte-black);
-      background-image: radial-gradient(ellipse at 30% 20%, rgba(51, 65, 85, 0.2) 0%, #050A12 90%);
-      color: var(--platinum);
-      font-family: 'Inter', sans-serif;
-      line-height: 1.55;
-    }
-    body::before {
-      content: '';
+    /* ---------- YOUR EXISTING CSS (PRESERVED FULLY) ---------- */
+    *{margin:0;padding:0;box-sizing:border-box;}
+    :root{ --matte-black:#0A0F1A; --deep-charcoal:#111827; --platinum:#D1D5DB; --ivory:#F3F4F6; --gold:#C6A15B; --gold-soft:rgba(198,161,91,0.14); --border-gold:rgba(198,161,91,0.35); --glass-bg:rgba(17,24,39,0.72); --blue-slate:#94A3B8; --danger:#F59E0B; --shadow-md:0 25px 40px -14px rgba(0,0,0,0.5),0 1px 2px 0 rgba(255,255,255,0.03) inset; --transition:all 0.35s cubic-bezier(0.2,0.9,0.4,1.1); }
+    body{ background-color:var(--matte-black); background-image:radial-gradient(ellipse at 30% 20%,rgba(51,65,85,0.28) 0%,#050A12 90%); color:var(--platinum); font-family:'Inter',sans-serif; line-height:1.55; scroll-behavior:smooth; position:relative; }
+    body::after{ content:"KLI"; position:fixed; bottom:8%; right:-3%; font-family:'Playfair Display',serif; font-size:clamp(12rem,22vw,20rem); font-weight:800; color:rgba(198,161,91,0.025); pointer-events:none; z-index:0; user-select:none; white-space:nowrap; }
+    body::before{ content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='1'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); opacity:0.35; pointer-events:none; z-index:1; }
+    .container{max-width:1280px;margin:0 auto;padding:0 36px;position:relative;z-index:5;}
+    h1,h2,h3,.serif{font-family:'Playfair Display',serif;font-weight:600;letter-spacing:-0.02em;color:var(--ivory);}
+    h1{font-size:clamp(2.65rem,6vw,5.35rem);line-height:1.06;font-weight:750;max-width:980px;}
+    h2{font-size:clamp(2rem,4vw,2.9rem);margin-bottom:1rem;}
+    h3{font-size:1.45rem;}
+    p{color:#cbd5e1;}
+    .gold-text{color:var(--gold);}
+    .muted{color:#9CA3AF;}
+    .mono{font-family:'Roboto Mono',monospace;}
+    .btn-group{display:flex;flex-wrap:wrap;gap:1.1rem;margin-top:2rem;}
+    .btn{ display:inline-flex; align-items:center; gap:0.7rem; padding:0.92rem 1.7rem; border-radius:48px; font-family:'Inter',sans-serif; font-weight:650; font-size:0.82rem; letter-spacing:0.04em; text-decoration:none; transition:var(--transition); border:1px solid transparent; cursor:pointer; text-transform:uppercase; }
+    .btn-primary{background:var(--gold);color:#0A0F1A;box-shadow:0 6px 14px rgba(198,161,91,0.25);}
+    .btn-primary:hover{background:#b38f47;transform:translateY(-3px);box-shadow:0 12px 22px rgba(198,161,91,0.3);}
+    .btn-outline{border:1px solid var(--gold);color:var(--ivory);background:rgba(0,0,0,0.35);backdrop-filter:blur(4px);}
+    .btn-outline:hover{background:rgba(198,161,91,0.12);transform:translateY(-3px);border-color:var(--gold);}
+    .btn:focus-visible,.nav-links a:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:4px;}
+    header{position:sticky;top:0;z-index:100;backdrop-filter:blur(16px);background:rgba(10,15,26,0.86);border-bottom:1px solid var(--border-gold);}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 0;flex-wrap:wrap;gap:1rem;}
+    .logo{font-family:'Playfair Display',serif;font-size:1.32rem;font-weight:750;letter-spacing:-0.3px;border-left:3px solid var(--gold);padding-left:18px;background:linear-gradient(135deg,#fff,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent;}
+    .logo span{color:var(--gold);background:none;-webkit-background-clip:unset;}
+    .nav-links{display:flex;gap:1.55rem;flex-wrap:wrap;align-items:center;}
+    .nav-links a{font-family:'Roboto Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;text-decoration:none;color:var(--platinum);transition:0.2s;font-weight:600;}
+    .nav-links a:hover{color:var(--gold);}
+    .hero{min-height:88vh;display:flex;align-items:center;position:relative;padding:4rem 0 5rem;background:radial-gradient(circle at 80% 20%,rgba(198,161,91,0.12),transparent 70%);}
+    .hero-grid{display:grid;grid-template-columns:1.05fr 0.75fr;gap:3rem;align-items:center;}
+    .hero-badge{display:inline-block;font-family:'Roboto Mono',monospace;font-size:0.68rem;letter-spacing:0.2em;padding:0.4rem 1rem;background:rgba(198,161,91,0.08);border-left:3px solid var(--gold);margin-bottom:1.4rem;text-transform:uppercase;}
+    .hero p{font-size:1.13rem;max-width:730px;margin:1.35rem 0 0.5rem;color:#e2e8f0;}
+    .problem-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0.85rem;margin-top:2rem;max-width:920px;}
+    .problem-pill{border:1px solid rgba(198,161,91,0.22);background:rgba(17,24,39,0.58);border-radius:16px;padding:0.9rem;font-size:0.78rem;color:#d8dee8;}
+    .problem-pill i{color:var(--gold);margin-right:0.45rem;}
+    .diagnostic-card{background:linear-gradient(145deg,rgba(17,24,39,0.92),rgba(3,7,17,0.88));border:1px solid var(--border-gold);border-radius:30px;padding:2rem;box-shadow:var(--shadow-md);position:relative;overflow:hidden;}
+    .diagnostic-card::before{content:'';position:absolute;top:-40%;right:-30%;width:260px;height:260px;background:radial-gradient(circle,rgba(198,161,91,0.18),transparent 70%);}
+    .score-row{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid rgba(198,161,91,0.16);padding:0.9rem 0;position:relative;z-index:2;}
+    .score-row span:first-child{color:#cbd5e1;}
+    .score-row span:last-child{font-family:'Roboto Mono',monospace;color:var(--gold);font-size:0.78rem;}
+    .score-title{font-family:'Roboto Mono',monospace;font-size:0.72rem;color:var(--gold);letter-spacing:0.16em;text-transform:uppercase;margin-bottom:1rem;position:relative;z-index:2;}
+    section{padding:5rem 0;border-bottom:1px solid rgba(198,161,91,0.1);scroll-margin-top: 90px;}
+    .section-header{margin-bottom:3rem;}
+    .section-header h2{display:inline-block;position:relative;}
+    .section-header h2::after{content:'';position:absolute;bottom:-12px;left:0;width:70px;height:2px;background:var(--gold);}
+    .section-subhead{color:#b9c2d0;max-width:820px;margin-top:0.75rem;}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;}
+    .card{background:var(--glass-bg);backdrop-filter:blur(8px);border:1px solid var(--border-gold);border-radius:28px;padding:2rem 1.8rem;transition:var(--transition);position:relative;}
+    .card:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:var(--shadow-md);}
+    .card-icon{font-size:2.15rem;color:var(--gold);margin-bottom:1.15rem;}
+    .card h3{margin-bottom:0.7rem;}
+    .mini-card{background:rgba(17,24,39,0.65);border:1px solid rgba(198,161,91,0.2);border-radius:20px;padding:1.4rem;transition:0.25s;backdrop-filter:blur(4px);}
+    .mini-card:hover{border-color:var(--gold);background:rgba(30,41,59,0.8);transform:scale(1.02);}
+    .mini-card h4{font-family:'Playfair Display',serif;font-size:1.14rem;margin-bottom:0.45rem;color:var(--ivory);}
+    .mini-card p{font-size:0.82rem;}
+    .service-card{background:linear-gradient(145deg,#111827,#0f1722);border-radius:28px;border:1px solid rgba(198,161,91,0.2);padding:1.8rem;transition:var(--transition);}
+    .service-card:hover{border-color:var(--gold);transform:translateY(-5px);box-shadow:var(--shadow-md);}
+    .service-label{font-family:'Roboto Mono',monospace;font-size:0.68rem;color:var(--gold);border-bottom:1px solid var(--border-gold);display:inline-block;padding-bottom:0.3rem;margin-bottom:1.1rem;letter-spacing:0.08em;text-transform:uppercase;}
+    .list{list-style:none;margin-top:1rem;display:grid;gap:0.55rem;}
+    .list li{font-size:0.88rem;color:#cbd5e1;padding-left:1.25rem;position:relative;}
+    .list li::before{content:'•';position:absolute;left:0;color:var(--gold);}
+    .process{counter-reset:step;display:grid;gap:1rem;}
+    .process-item{display:grid;grid-template-columns:60px 1fr;gap:1.2rem;align-items:start;border:1px solid rgba(198,161,91,0.18);background:rgba(17,24,39,0.58);border-radius:22px;padding:1.35rem;}
+    .process-num{counter-increment:step;width:48px;height:48px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Roboto Mono',monospace;color:var(--gold);}
+    .process-num::before{content:counter(step, decimal-leading-zero);}
+    .quote-band{border-left:3px solid var(--gold);padding-left:2rem;margin-top:2rem;}
+    .quote-band .quote{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,4vw,2.55rem);font-weight:650;line-height:1.2;color:var(--ivory);}
+    .icp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;}
+    .cta-panel{background:linear-gradient(145deg,rgba(198,161,91,0.13),rgba(17,24,39,0.88));border:1px solid var(--border-gold);border-radius:32px;padding:3rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;box-shadow:var(--shadow-md);}
+    footer{background:#030711;border-top:1px solid var(--border-gold);padding:3rem 0 2rem;margin-top:2rem;}
+    .footer-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2rem;}
+    .footer-col h4{font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:0.8rem;}
+    .monogram-seal{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border:1px solid var(--gold);border-radius:50%;font-family:'Playfair Display',serif;font-weight:700;font-size:1.4rem;color:var(--gold);margin-bottom:0.8rem;background:rgba(198,161,91,0.05);}
+    .footer-links{display:flex;gap:3rem;flex-wrap:wrap;}
+    .footer-links a{display:block;color:#9ca3af;text-decoration:none;font-size:0.8rem;margin-bottom:0.6rem;transition:0.2s;}
+    .footer-links a:hover{color:var(--gold);}
+    .gold-divider{height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin:2rem 0 1.5rem;}
+    .copyright{text-align:center;font-size:0.7rem;color:#6c7a91;}
+    @media(max-width:1050px){.hero-grid{grid-template-columns:1fr;}.problem-strip,.grid-4{grid-template-columns:repeat(2,1fr);}.grid-3{grid-template-columns:repeat(2,1fr);}.cta-panel{grid-template-columns:1fr;}.diagnostic-card{max-width:640px;}}
+    @media(max-width:680px){.container{padding:0 1.5rem;}.problem-strip,.grid-3,.grid-4,.icp-grid{grid-template-columns:1fr;}.nav{flex-direction:column;text-align:center;}.nav-links{justify-content:center;gap:1.1rem;}.hero{min-height:70vh;text-align:center;padding:3rem 0;}.hero p{margin-left:auto;margin-right:auto;}.btn-group{justify-content:center;}section{padding:3rem 0;}.quote-band{padding-left:1rem;}.process-item{grid-template-columns:1fr;text-align:left;}.cta-panel{padding:2rem;}}
+    .fade-up{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease;}
+    .fade-up.visible{opacity:1;transform:translateY(0);}
+    .intake-card { background: linear-gradient(145deg, rgba(17,24,39,0.96), rgba(3,7,17,0.92)); border: 1px solid var(--border-gold); border-radius: 32px; padding: 2.2rem; backdrop-filter: blur(8px); transition: var(--transition); }
+    .intake-card:hover { border-color: var(--gold); box-shadow: var(--shadow-md); }
+    .intake-iframe-container { border-radius: 24px; overflow: hidden; box-shadow: 0 20px 35px -12px rgba(0,0,0,0.5); margin-top: 1rem; background: rgba(0,0,0,0.3); border: 1px solid rgba(198,161,91,0.25); }
+    .google-form-embed { width: 100%; min-height: 780px; border: none; background: #0A0F1A; transition: all 0.2s; }
+    .intake-badge { display: inline-flex; align-items: center; gap: 12px; background: rgba(198,161,91,0.12); padding: 0.5rem 1.3rem; border-radius: 60px; font-family: 'Roboto Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; color: var(--gold); margin-bottom: 1.2rem; }
+    .authority-block { font-family: 'Roboto Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; line-height: 1.5; color: #9CA3AF; text-align: center; margin-bottom: 1.5rem; }
+    @media (max-width: 780px) { .google-form-embed { min-height: 900px; } }
+    
+    /* ---------- GATE MODAL STYLES ---------- */
+    .gate-overlay {
       position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='1'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-      opacity: 0.35;
-      pointer-events: none;
-      z-index: 0;
-    }
-    .container { max-width: 1280px; margin: 0 auto; padding: 0 36px; position: relative; z-index: 5; }
-    header {
-      position: sticky;
       top: 0;
-      z-index: 100;
-      backdrop-filter: blur(16px);
-      background: rgba(10, 15, 26, 0.9);
-      border-bottom: 1px solid var(--border-gold);
-    }
-    .nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 0; flex-wrap: wrap; gap: 1rem; }
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.35rem;
-      font-weight: 700;
-      border-left: 3px solid var(--gold);
-      padding-left: 18px;
-      background: linear-gradient(135deg, #fff, var(--gold));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-    .nav-links { display: flex; gap: 2rem; flex-wrap: wrap; }
-    .nav-links a { font-family: 'Roboto Mono', monospace; font-size: 0.7rem; letter-spacing: 0.12em; text-decoration: none; color: var(--platinum); transition: 0.2s; }
-    .nav-links a:hover { color: var(--gold); }
-    .execution-header {
-      padding: 3rem 0 1rem;
-      border-bottom: 1px solid var(--border-gold);
-      margin-bottom: 2rem;
-    }
-    .execution-header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      color: var(--ivory);
-    }
-    .execution-header .sub {
-      font-family: 'Roboto Mono', monospace;
-      color: var(--gold);
-      margin-top: 0.5rem;
-      letter-spacing: 1px;
-    }
-
-    /* Collapsible modules */
-    .module {
-      background: var(--glass-bg);
-      backdrop-filter: blur(8px);
-      border: 1px solid var(--border-gold);
-      border-radius: 28px;
-      margin-bottom: 1.5rem;
-      overflow: hidden;
-      transition: 0.2s;
-    }
-    .module-header {
-      background: rgba(0,0,0,0.4);
-      padding: 1.2rem 2rem;
-      cursor: pointer;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 15, 26, 0.96);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid rgba(198,161,91,0.2);
-      transition: background 0.2s;
-    }
-    .module-header:hover { background: rgba(198,161,91,0.1); }
-    .module-header h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.6rem;
-      color: var(--gold);
-      margin: 0;
-    }
-    .toggle-icon {
-      font-size: 1.2rem;
-      color: var(--gold);
-      transition: transform 0.2s;
-    }
-    .module-content {
-      padding: 1.8rem 2rem;
-      display: none;
-      border-top: 1px solid rgba(198,161,91,0.1);
-    }
-    .module-content.open { display: block; }
-    .principle-block {
-      margin-bottom: 1.8rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px dashed rgba(198,161,91,0.2);
-    }
-    .principle-block strong {
-      display: block;
-      font-family: 'Roboto Mono', monospace;
-      font-size: 0.75rem;
-      letter-spacing: 1px;
-      color: var(--gold);
-      margin-bottom: 0.3rem;
-    }
-    .principle-block p, .principle-block ul {
-      color: #cbd5e6;
-      font-size: 0.9rem;
-      margin-left: 1rem;
-    }
-    .principle-block ul { margin-top: 0.5rem; padding-left: 1.2rem; }
-    .principle-block li { margin-bottom: 0.3rem; }
-
-    /* Footer */
-    footer {
-      background: #030711;
-      border-top: 1px solid var(--border-gold);
-      padding: 3rem 0 2rem;
-      margin-top: 3rem;
-    }
-    .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; }
-    .monogram-seal {
-      display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 56px;
-      height: 56px;
-      border: 1px solid var(--gold);
-      border-radius: 50%;
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      font-size: 1.4rem;
+      transition: all 0.4s ease;
+    }
+    .gate-overlay.hidden {
+      display: none;
+    }
+    .gate-card {
+      max-width: 550px;
+      width: 90%;
+      background: linear-gradient(145deg, rgba(17,24,39,0.98), rgba(3,7,17,0.96));
+      border: 1px solid var(--border-gold);
+      border-radius: 36px;
+      padding: 2.5rem;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      animation: fadeInScale 0.4s ease;
+    }
+    @keyframes fadeInScale {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .gate-badge {
+      display: inline-flex;
+      gap: 12px;
+      background: rgba(198,161,91,0.12);
+      padding: 0.5rem 1.3rem;
+      border-radius: 60px;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
       color: var(--gold);
-      margin-bottom: 0.8rem;
-      background: rgba(198,161,91,0.05);
+      margin-bottom: 1.5rem;
     }
-    .footer-links { display: flex; gap: 3rem; flex-wrap: wrap; }
-    .footer-links a {
-      display: block;
-      color: #9ca3af;
-      text-decoration: none;
-      font-size: 0.8rem;
-      margin-bottom: 0.6rem;
-      transition: 0.2s;
-    }
-    .footer-links a:hover { color: var(--gold); }
-    .gold-divider { height: 1px; background: linear-gradient(90deg, var(--gold), transparent); margin: 2rem 0 1.5rem; }
-    .copyright { text-align: center; font-size: 0.7rem; color: #6c7a91; }
-
-    @media (max-width: 680px) {
-      .container { padding: 0 1.5rem; }
-      .nav { flex-direction: column; text-align: center; }
-      .module-header h2 { font-size: 1.3rem; }
-      .module-content { padding: 1rem; }
-      .footer-grid { flex-direction: column; }
-      .footer-links { gap: 1.5rem; }
+    .gate-status {
+      font-family: 'Roboto Mono', monospace;
+      background: rgba(198,161,91,0.08);
+      padding: 1rem;
+      border-radius: 20px;
+      margin-top: 1.5rem;
+      font-size: 0.75rem;
+      line-height: 1.6;
     }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.umd.min.js"></script>
 </head>
 <body>
+
+<!-- GATE OVERLAY (appears before allowing navigation to execution-framework.html) -->
+<div id="executionGateOverlay" class="gate-overlay">
+  <div class="gate-card">
+    <div class="gate-badge">
+      <span>✧ KLI EXECUTION FRAMEWORK ✧</span>
+      <span>— KLAT GATED ACCESS</span>
+    </div>
+    <h2 style="font-size: 1.8rem;">Credential Verification Required</h2>
+    <p style="margin: 1rem 0;">Access to the Execution Framework & Institutional Curriculum requires <strong class="gold-text">verified KLAT credential authority (≥100 KLAT on Polygon Mainnet)</strong>.</p>
+    <div class="btn-group" style="justify-content: center;">
+      <button id="gateVerifyBtn" class="btn btn-primary">⟡ Verify KLAT & Continue</button>
+    </div>
+    <div id="gateStatusMsg" class="gate-status">⏣ Connect wallet to verify KLAT credential authority.</div>
+    <p style="margin-top: 1.2rem; font-size: 0.7rem; color: #6c7a91;">This page is restricted. KLAT tokens are the governance credential for the Kelly Legacy Institute.</p>
+  </div>
+</div>
 
 <header>
   <div class="container">
     <div class="nav">
       <div class="logo">KELLY LEGACY <span>INSTITUTE</span></div>
       <div class="nav-links">
-        <a href="index.html">HOME</a>
-        <a href="curriculum-portal.html">CURRICULUM</a>
-        <a href="execution-framework.html">EXECUTION</a>
-        <a href="index.html#governance">GOVERNANCE</a>
+        <a href="#services">Services</a>
+        <a href="#method">Methodology</a>
+        <a href="#ai-governance">AI Governance</a>
+        <a href="#clients">Ideal Clients</a>
+        <a href="#intake-section">Intake</a>
+        <a href="execution-framework.html" id="executionFrameworkLink">Execution Portal</a>
       </div>
     </div>
   </div>
 </header>
 
-<main class="container">
-  <div class="execution-header">
-    <h1>Execution Framework</h1>
-    <div class="sub">Office of the Fiduciary – Operational Manual</div>
-    <p style="margin-top: 1rem; max-width: 800px;">Institutional procedures for administrative notices, record discipline, fiduciary accountability, and lawful enforcement mechanisms. Grounded in statutory authority, procedural rules, and equitable doctrine. Not legal advice – educational framework for serious administrators.</p>
+<!-- Hero Section -->
+<div class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div><div class="hero-badge">Operational Governance · Workflow Systems · AI Accountability</div><h1>Structure reduces<br>operational chaos.</h1><p>Kelly Legacy Institute helps nonprofits, workforce programs, and small institutions identify workflow fragmentation, documentation gaps, onboarding disorder, and unmanaged AI-use risk. We do not coach. We build operational systems that make work documented, repeatable, auditable, and transferable.</p><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfTcf6efnbXJbkKC6TJyEHlDMuhIorSDlRIr3JoiKu7Nz4x5A/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Request Workflow Review →</a><a href="#services" class="btn btn-outline">View Services</a></div><div class="problem-strip"><div class="problem-pill"><i>⎯</i> Undocumented tasks</div><div class="problem-pill"><i>⚡</i> Unmanaged AI use</div><div class="problem-pill"><i>⏳</i> Slow onboarding</div><div class="problem-pill"><i>📂</i> Scattered records</div></div></div>
+      <div class="diagnostic-card"><div class="score-title">Operational Diagnostic Preview</div><div class="score-row"><span>Documentation Completeness</span><span>Review Required</span></div><div class="score-row"><span>Workflow Clarity</span><span>Administrative Assessment</span></div><div class="score-row"><span>Onboarding Structure</span><span>Pending Intake Review</span></div><div class="score-row"><span>AI Governance</span><span>Continuity Review Required</span></div><div class="score-row"><span>Continuity Planning</span><span>Governance Assessment Pending</span></div><p class="muted" style="margin-top:1.2rem; font-size:0.7rem;">Every review produces findings, risk observations, and a 30/60/90-day implementation roadmap.</p></div>
+    </div>
   </div>
+</div>
 
-  <!-- MODULE 1 -->
-  <div class="module">
-    <div class="module-header">
-      <h2>I. Administrative Notice & Demand Procedure</h2>
-      <span class="toggle-icon"><i class="fa-regular fa-chevron-right"></i></span>
-    </div>
-    <div class="module-content">
-      <div class="principle-block"><strong>PRINCIPLE</strong><p>Notice is the procedural trigger that creates record, imposes response obligations, and establishes default if ignored. Demand defines the specific action required.</p></div>
-      <div class="principle-block"><strong>GOVERNING RULE</strong><p>Under administrative law, written notice properly served and documented shifts the burden to the recipient to respond within a defined period. Failure to respond constitutes acquiescence or default, admissible as evidence of notice and opportunity to cure.</p></div>
-      <div class="principle-block"><strong>PROCEDURAL FUNCTION</strong><p>Notice initiates a formal administrative sequence: alert → response opportunity → cure or explanation → determination → remedy. It preserves due process rights for the issuing party and creates a contemporaneous record for judicial review.</p></div>
-      <div class="principle-block"><strong>EXECUTION METHOD</strong><p>Draft notice on letterhead or blank paper with: date, recipient name/address, subject line, factual statement, specific demand, statutory or contractual authority, response deadline (minimum 14 days), and signature block. Send via certified mail return receipt requested AND first‑class mail. Retain originals, receipts, and proof of mailing.</p></div>
-      <div class="principle-block"><strong>REQUIRED RECORD</strong><p>Copy of notice, USPS tracking number, signed return receipt (green card), proof of mailing (certificate of mailing), affidavit of service, chronological log entry, and any subsequent correspondence.</p></div>
-      <div class="principle-block"><strong>COMMON FAILURE POINTS</strong><p>Incomplete address, insufficient deadline, failure to retain receipt, no second method of mailing, unclear demand, omission of governing authority (statute or contract provision).</p></div>
-      <div class="principle-block"><strong>ADMINISTRATIVE CONSEQUENCES</strong><p>Improper notice voids the default. Proper notice establishes the record that will control any later judicial or administrative proceeding.</p></div>
-      <div class="principle-block"><strong>ENFORCEMENT POSITIONING</strong><p>After notice and demand, the issuing party holds a documented position: “Demand was made, response was (or was not) received within the prescribed period.” This supports motions for default, summary judgment, or administrative orders.</p></div>
-      <div class="principle-block"><strong>EQUITABLE CONSIDERATIONS</strong><p>Courts require strict compliance with notice provisions. Equity demands that the recipient receive actual notice and reasonable opportunity to respond before adverse action.</p></div>
-      <div class="principle-block"><strong>INSTITUTIONAL RATIONALE</strong><p>Notice is the cornerstone of due process. Institutions rely on a verifiable notice record to prove they afforded procedural rights. Without it, enforcement fails.</p></div>
-    </div>
-  </div>
+<div class="container">
+  <section id="services"><div class="section-header"><h2>Service Architecture · Implementation First</h2><div class="section-subhead">KLI services are designed for organizational procurement, operational review, and measurable implementation.</div></div><div class="grid-3"><div class="service-card"><div class="service-label">Flagship · 2–3 Weeks</div><h3>Operational Workflow Review</h3><p>A diagnostic review of how work actually happens versus how it is documented.</p><ul class="list"><li>Workflow analysis</li><li>Documentation review</li><li>Onboarding gap review</li><li>AI-use inventory</li><li>Findings report + roadmap</li></ul></div><div class="service-card"><div class="service-label">Execution · 3–6 Months</div><h3>Implementation Retainer</h3><p>Ongoing execution support to build and deploy SOPs, policies, onboarding systems.</p><ul class="list"><li>SOP development</li><li>Role-based onboarding</li><li>AI-use policy deployment</li><li>Documentation standards</li><li>Staff training support</li></ul></div><div class="service-card"><div class="service-label">Validation · 4 Weeks</div><h3>Governance Certification</h3><p>Organizational self-audit and validation pathway for documented workflows.</p><ul class="list"><li>Operational pillars review</li><li>Internal audit kit</li><li>Governance scorecard</li><li>KLI Operational Seal pathway</li></ul></div></div></section>
 
-  <!-- MODULE 2 -->
-  <div class="module">
-    <div class="module-header">
-      <h2>II. Cure Opportunity & Administrative Default</h2>
-      <span class="toggle-icon"><i class="fa-regular fa-chevron-right"></i></span>
-    </div>
-    <div class="module-content">
-      <div class="principle-block"><strong>PRINCIPLE</strong><p>Before declaring default, the opposing party must be given a reasonable opportunity to cure the alleged breach or deficiency.</p></div>
-      <div class="principle-block"><strong>GOVERNING RULE</strong><p>Contract law, UCC § 2‑508, and many regulatory frameworks require a cure notice specifying the defect and a reasonable time to remedy. Default without cure period may be voidable.</p></div>
-      <div class="principle-block"><strong>PROCEDURAL FUNCTION</strong><p>Cure process: notice of breach → demand to cure → response window → cure or failure → default declaration. This sequence demonstrates good faith and satisfies prerequisites for enforcement.</p></div>
-      <div class="principle-block"><strong>EXECUTION METHOD</strong><p>Issue “Notice of Breach and Opportunity to Cure” detailing the specific act/omission, required corrective action, and cure period (14‑30 days). After period expires without cure, issue “Declaration of Default” reciting prior notices, lack of cure, and intention to pursue remedies.</p></div>
-      <div class="principle-block"><strong>REQUIRED RECORD</strong><p>Cure notice, proof of service, log of any responses, declaration of default, and if cure was attempted, evidence of partial or inadequate cure.</p></div>
-      <div class="principle-block"><strong>COMMON FAILURE POINTS</strong><p>Unreasonably short cure period, ambiguous description of required cure, failure to allow for written response, no acknowledgment of partial cure.</p></div>
-      <div class="principle-block"><strong>ADMINISTRATIVE CONSEQUENCES</strong><p>Default declared without proper cure opportunity may be overturned, and the declaring party may be sanctioned.</p></div>
-      <div class="principle-block"><strong>ENFORCEMENT POSITIONING</strong><p>A properly documented cure‑then‑default sequence is nearly dispositive in administrative hearings and court proceedings. It shifts the burden to the defaulted party to explain why cure was impossible.</p></div>
-      <div class="principle-block"><strong>EQUITABLE CONSIDERATIONS</strong><p>Equity requires that a party be given a “second chance” before severe remedies are imposed. The cure period satisfies that equitable requirement.</p></div>
-      <div class="principle-block"><strong>INSTITUTIONAL RATIONALE</strong><p>Default procedures must be unassailable. A documented cure opportunity is the strongest defense against later claims of unfairness or lack of due process.</p></div>
-    </div>
-  </div>
+  <section id="method"><div class="section-header"><h2>Workflow Review Methodology</h2><div class="section-subhead">The review converts undocumented practice into visible operational evidence.</div></div><div class="process"><div class="process-item"><div class="process-num"></div><div><strong>Discovery</strong><br>Document inventory, staff interviews, shared drive review, tool audit, role clarification, and recurring task capture.</div></div><div class="process-item"><div class="process-num"></div><div><strong>Mapping</strong><br>Current-state workflow diagrams, decision-point identification, handoff analysis, and unwritten rules capture.</div></div><div class="process-item"><div class="process-num"></div><div><strong>Gap Analysis</strong><br>Comparison against KLI standards for documentation, workflow clarity, onboarding structure, AI governance, and continuity planning.</div></div><div class="process-item"><div class="process-num"></div><div><strong>Risk Scoring</strong><br>Each finding is scored for continuity risk, compliance exposure, training inefficiency, and error propagation.</div></div><div class="process-item"><div class="process-num"></div><div><strong>Implementation Roadmap</strong><br>Final report includes priority findings, top operational risks, corrective recommendations, and 30/60/90-day action steps.</div></div></div></section>
 
-  <!-- MODULE 3 -->
-  <div class="module">
-    <div class="module-header">
-      <h2>III. Administrative Record & Evidence Preservation</h2>
-      <span class="toggle-icon"><i class="fa-regular fa-chevron-right"></i></span>
-    </div>
-    <div class="module-content">
-      <div class="principle-block"><strong>PRINCIPLE</strong><p>Record precedes recognition. The administrative record is the exclusive foundation for enforcement, review, and remedy.</p></div>
-      <div class="principle-block"><strong>GOVERNING RULE</strong><p>Under administrative procedure acts and evidentiary rules, the record must be contemporaneous, complete, unaltered, and accessible to all parties. Hearsay exceptions apply to regularly kept records.</p></div>
-      <div class="principle-block"><strong>PROCEDURAL FUNCTION</strong><p>Every action, decision, communication, and transaction must be recorded with date, description, authority, and supporting documents. The record is a chronological log that serves as the sole source of facts for any subsequent review.</p></div>
-      <div class="principle-block"><strong>EXECUTION METHOD</strong><p>Maintain a bound log or digital file (with version control). For each entry: date, person, action, authority (statute/contract section), persons notified, outcome, and location of supporting exhibits. Store exhibits (emails, receipts, photos) with cross‑references. Never delete or overwrite entries; add supplements.</p></div>
-      <div class="principle-block"><strong>REQUIRED RECORD</strong><p>Administrative log, all originals of notices, demands, responses, receipts, affidavits, exhibits, and a chain of custody for physical evidence.</p></div>
-      <div class="principle-block"><strong>COMMON FAILURE POINTS</strong><p>Missing dates, no exhibit cross‑reference, deletions, failure to record verbal communications, relying on memory instead of contemporaneous notes.</p></div>
-      <div class="principle-block"><strong>ADMINISTRATIVE CONSEQUENCES</strong><p>Gaps or contradictions in the record will be construed against the party who controls the record. Incomplete records may be deemed inadmissible or result in adverse inferences.</p></div>
-      <div class="principle-block"><strong>ENFORCEMENT POSITIONING</strong><p>A complete, dated, signed record creates a presumption of regularity. Opposing parties cannot dispute what is clearly documented.</p></div>
-      <div class="principle-block"><strong>EQUITABLE CONSIDERATIONS</strong><p>Courts rely on the record. No testimony can contradict a contemporaneous written record that is admitted without objection.</p></div>
-      <div class="principle-block"><strong>INSTITUTIONAL RATIONALE</strong><p>Trusts, fiduciaries, and agencies are judged by their records. Discipline in recordkeeping is the single most reliable predictor of successful enforcement.</p></div>
-    </div>
-  </div>
+  <section id="ai-governance"><div class="section-header"><h2>AI Governance · Organizational Accountability</h2><div class="section-subhead">AI tools are already inside many organizations. The issue is whether their use is visible, governed, and reviewed.</div></div><div class="grid-4"><div class="mini-card"><h4>Acceptable Use</h4><p>Defines permitted and prohibited AI uses by role, function, and data type.</p></div><div class="mini-card"><h4>Data Boundaries</h4><p>Prevents confidential, client, grant, personnel, or sensitive data from being pasted into unmanaged tools.</p></div><div class="mini-card"><h4>Human Review</h4><p>Requires human verification before AI-assisted outputs are used operationally.</p></div><div class="mini-card"><h4>Version Control</h4><p>Identifies AI-assisted documents, drafts, policies, and procedures for audit visibility.</p></div></div><div class="quote-band"><div class="quote">“If AI use is invisible, AI risk is unmanaged.”</div><p style="margin-top:0.8rem;">KLI converts informal AI use into documented operational procedure.</p></div></section>
 
-  <!-- MODULE 4 -->
-  <div class="module">
-    <div class="module-header">
-      <h2>IV. Standing, Capacity & Jurisdictional Posture</h2>
-      <span class="toggle-icon"><i class="fa-regular fa-chevron-right"></i></span>
-    </div>
-    <div class="module-content">
-      <div class="principle-block"><strong>PRINCIPLE</strong><p>The capacity to act and standing to enforce must be established and documented before any procedural move.</p></div>
-      <div class="principle-block"><strong>GOVERNING RULE</strong><p>Capacity refers to legal ability (age, mental competence, entity status). Standing requires a concrete injury, causation, and redressability. Jurisdiction requires authority over subject matter and parties.</p></div>
-      <div class="principle-block"><strong>PROCEDURAL FUNCTION</strong><p>Asserting a claim or defense without proper standing or jurisdiction will be dismissed. The opposing party may challenge jurisdiction at any time.</p></div>
-      <div class="principle-block"><strong>EXECUTION METHOD</strong><p>Before issuing any demand, prepare a “Standing and Capacity Affidavit” listing: legal name of actor, basis of authority (trust instrument, agency agreement, statute), proof of capacity, and relationship to subject matter. Attach supporting documents. Insert jurisdictional statement in every notice: “This notice is issued pursuant to [statute/contract], and any dispute shall be resolved in [named court or forum].”</p></div>
-      <div class="principle-block"><strong>REQUIRED RECORD</strong><p>Document establishing authority (trust, power of attorney, corporate resolution), proof of legal existence (registration, charter), and any court order recognizing standing.</p></div>
-      <div class="principle-block"><strong>COMMON FAILURE POINTS</strong><p>Claiming authority without exhibit, using incorrect legal name, assuming capacity without evidence, failing to specify jurisdiction in notices.</p></div>
-      <div class="principle-block"><strong>ADMINISTRATIVE CONSEQUENCES</strong><p>Without documented standing, all subsequent actions may be void ab initio.</p></div>
-      <div class="principle-block"><strong>ENFORCEMENT POSITIONING</strong><p>Submit the standing affidavit and exhibits with any complaint or administrative filing. Pre‑emptively defeat jurisdiction challenges.</p></div>
-      <div class="principle-block"><strong>EQUITABLE CONSIDERATIONS</strong><p>Equity requires that a party seeking relief must come with clean hands and proper standing. Lack of standing is an absolute bar.</p></div>
-      <div class="principle-block"><strong>INSTITUTIONAL RATIONALE</strong><p>Government agencies, courts, and fiduciaries constantly verify standing. Having a standing packet prepared in advance eliminates wasted time and procedural dismissals.</p></div>
-    </div>
-  </div>
+  <section id="clients"><div class="section-header"><h2>Ideal Clients · Where KLI Fits</h2><div class="section-subhead">The strongest fit is with mission-driven organizations that have grown faster than their internal systems.</div></div><div class="icp-grid"><div class="mini-card"><h4>Founder-Led Nonprofits</h4><p>Growing programs where operational knowledge sits inside the founder or senior staff instead of documented systems.</p></div><div class="mini-card"><h4>Workforce Development Organizations</h4><p>Grant-funded teams with reporting pressure, staff turnover, multiple programs, and workflow inconsistency.</p></div><div class="mini-card"><h4>Small Educational Institutions</h4><p>Schools, training providers, and community education programs needing stronger administrative procedure.</p></div><div class="mini-card"><h4>Administrative Teams</h4><p>New leadership teams inheriting fragmented folders, informal workflows, and no AI-use policy.</p></div></div></section>
 
-  <!-- MODULE 5 -->
-  <div class="module">
-    <div class="module-header">
-      <h2>V. Fiduciary Breach, Liability & Surcharge</h2>
-      <span class="toggle-icon"><i class="fa-regular fa-chevron-right"></i></span>
-    </div>
-    <div class="module-content">
-      <div class="principle-block"><strong>PRINCIPLE</strong><p>A fiduciary who breaches the duty of loyalty, care, disclosure, or accounting is personally liable for losses (surcharge) and may be removed.</p></div>
-      <div class="principle-block"><strong>GOVERNING RULE</strong><p>Trust law and agency law impose surcharge – the fiduciary must restore any loss caused by breach, disgorge any profits, and compensate for attorney fees.</p></div>
-      <div class="principle-block"><strong>PROCEDURAL FUNCTION</strong><p>Breach must be documented with specific facts, notice provided, cure opportunity offered, and if uncured, demand made for surcharge and removal.</p></div>
-      <div class="principle-block"><strong>EXECUTION METHOD</strong><p>Gather all records showing the act/omission, calculate losses, issue “Notice of Breach and Demand for Surcharge” with 21 days to cure. If not cured, file a petition in appropriate court or administrative body seeking accounting, surcharge, removal, and appointment of successor fiduciary.</p></div>
-      <div class="principle-block"><strong>REQUIRED RECORD</strong><p>Trust instrument or agency agreement, accounting records, notice of breach, cure notice, responses (or lack thereof), evidence of loss, and prior written demands.</p></div>
-      <div class="principle-block"><strong>COMMON FAILURE POINTS</strong><p>Failure to give notice, not documenting the loss precisely, not providing a cure opportunity, seeking removal without evidence of persistent breach.</p></div>
-      <div class="principle-block"><strong>ADMINISTRATIVE CONSEQUENCES</strong><p>A fiduciary found in breach may be surcharged personally, lose compensation, be removed, and be barred from future fiduciary appointments.</p></div>
-      <div class="principle-block"><strong>ENFORCEMENT POSITIONING</strong><p>The documented notice and cure sequence is powerful evidence that the fiduciary was given every chance to rectify, and the beneficiaries exhausted extrajudicial remedies.</p></div>
-      <div class="principle-block"><strong>EQUITABLE CONSIDERATIONS</strong><p>Equity will not permit a fiduciary to benefit from a breach. Constructive trusts and equitable liens are standard remedies.</p></div>
-      <div class="principle-block"><strong>INSTITUTIONAL RATIONALE</strong><p>Fiduciary accountability depends on procedural discipline. Clear breach documentation ensures that courts and agencies can act swiftly to protect trust assets.</p></div>
-    </div>
-  </div>
-
-  <!-- MODULE 6 -->
-  <div class="module">
-    <div class="module-header">
-      <h2>VI. Statutory Execution Tools (FDCPA, FCRA, RESPA, Complaint Escalation)</h2>
-      <span class="toggle-icon"><i class="fa-regular fa-chevron-right"></i></span>
-    </div>
-    <div class="module-content">
-      <div class="principle-block"><strong>PRINCIPLE</strong><p>Consumer protection and administrative statutes provide fixed procedures, deadlines, and remedies that shift power to diligent claimants.</p></div>
-      <div class="principle-block"><strong>GOVERNING RULE</strong><p>Fair Debt Collection Practices Act (FDCPA) 15 USC §1692, Fair Credit Reporting Act (FCRA) 15 USC §1681, Real Estate Settlement Procedures Act (RESPA) 12 USC §2605, and CFPB complaint rules require specific responses within defined periods.</p></div>
-      <div class="principle-block"><strong>PROCEDURAL FUNCTION</strong><p>Initiate by sending a qualified written request or debt validation letter. If ignored or inadequately answered, escalate to agency complaint (CFPB, FTC, state AG), then to private right of action.</p></div>
-      <div class="principle-block"><strong>EXECUTION METHOD</strong><p>Draft validation letter under FDCPA §1692g within 30 days of first collection communication. Demand verification and dispute. For credit reports, send FCRA dispute to credit bureau and data furnisher simultaneously, track 30‑day investigation period. For mortgages, send RESPA qualified written request (QWR) to servicer, demanding explanation and documents. After 30 days non‑response, file CFPB complaint online with all documentary exhibits. CFPB must forward to company and track response. If no resolution, initiate private lawsuit for statutory damages ($1,000 per violation, plus costs and fees).</p></div>
-      <div class="principle-block"><strong>REQUIRED RECORD</strong><p>Copy of each notice, certified mail receipts, response (or none), log of days, complaint confirmation, and company’s response to agency.</p></div>
-      <div class="principle-block"><strong>COMMON FAILURE POINTS</strong><p>Missing the 30‑day dispute window, sending to wrong address, not using certified mail, not following up, failing to document agency complaint.</p></div>
-      <div class="principle-block"><strong>ADMINISTRATIVE CONSEQUENCES</strong><p>Failure to respond to a proper FDCPA validation request requires cessation of collection; continued collection is a violation. FCRA non‑compliance results in liability for actual damages plus punitive.</p></div>
-      <div class="principle-block"><strong>ENFORCEMENT POSITIONING</strong><p>A complete record of demands and agency complaints can be used in court to prove willful non‑compliance and to request treble damages or attorney fees.</p></div>
-      <div class="principle-block"><strong>EQUITABLE CONSIDERATIONS</strong><p>courts favor consumers who follow the statutory dispute process before filing suit – it signals good faith and exhaustion of administrative remedies.</p></div>
-      <div class="principle-block"><strong>INSTITUTIONAL RATIONALE</strong><p>Statutory execution tools are the most efficient way to force institutions to comply with the law. They create a low‑cost, high‑leverage enforcement path.</p></div>
-    </div>
-  </div>
-
-  <!-- MODULE 7 -->
-  <div class="module">
-    <div class="module-header">
-      <h2>VII. Accounting Demands & Asset Recovery</h2>
-      <span class="toggle-icon"><i class="fa-regular fa-chevron-right"></i></span>
-    </div>
-    <div class="module-content">
-      <div class="principle-block"><strong>PRINCIPLE</strong><p>A fiduciary or bailee must provide a full accounting of all assets, receipts, disbursements, and distributions upon proper demand.</p></div>
-      <div class="principle-block"><strong>GOVERNING RULE</strong><p>Trust law, probate code, and agency law impose a duty to account. Failure to account is a per se breach, grounds for surcharge and removal.</p></div>
-      <div class="principle-block"><strong>PROCEDURAL FUNCTION</strong><p>Demand for accounting → response period → if inadequate, petition court for formal accounting and surcharge.</p></div>
-      <div class="principle-block"><strong>EXECUTION METHOD</strong><p>Send “Demand for Accounting” via certified mail, specifying the period, assets to be accounted for, and required format (schedule of principal, income, gains, losses, and distributions). Allow 30 days. If no response or incomplete response, file a petition for accounting and surcharge in the appropriate court, attaching the demand, proof of service, and the deficient response or lack thereof. Seek court order compelling accounting and awarding fees.</p></div>
-      <div class="principle-block"><strong>REQUIRED RECORD</strong><p>Demand, proof of service, any accounting produced, a point‑by‑point list of deficiencies, and a calculation of missing assets or profits.</p></div>
-      <div class="principle-block"><strong>COMMON FAILURE POINTS</strong><p>Not specifying the accounting period or asset categories, allowing too long before court action, not itemizing deficiencies.</p></div>
-      <div class="principle-block"><strong>ADMINISTRATIVE CONSEQUENCES</strong><p>Court may order the fiduciary to pay the costs of the accounting proceeding and award attorney fees to the prevailing party.</p></div>
-      <div class="principle-block"><strong>ENFORCEMENT POSITIONING</strong><p>A court order compelling accounting shifts the burden. If the fiduciary still fails, contempt and surcharge follow quickly.</p></div>
-      <div class="principle-block"><strong>EQUITABLE CONSIDERATIONS</strong><p>Equity demands that every fiduciary open their books. Secrecy is incompatible with fiduciary office.</p></div>
-      <div class="principle-block"><strong>INSTITUTIONAL RATIONALE</strong><p>Accounting demands are the most effective tool to uncover self‑dealing and mismanagement. Without an accounting, no remedy can be properly calculated.</p></div>
-    </div>
-  </div>
-
-  <!-- MODULE 8 -->
-  <div class="module">
-    <div class="module-header">
-      <h2>VIII. Procedural Due Process & Administrative Hearings</h2>
-      <span class="toggle-icon"><i class="fa-regular fa-chevron-right"></i></span>
-    </div>
-    <div class="module-content">
-      <div class="principle-block"><strong>PRINCIPLE</strong><p>Before any deprivation of property, liberty, or right, the state (or its delegate) must afford notice and a meaningful opportunity to be heard.</p></div>
-      <div class="principle-block"><strong>GOVERNING RULE</strong><p>Fifth and Fourteenth Amendments; Administrative Procedure Act (APA) 5 USC §554; state analogs. Requires notice, statement of facts/legal basis, opportunity to present evidence, and impartial decision‑maker.</p></div>
-      <div class="principle-block"><strong>PROCEDURAL FUNCTION</strong><p>Administrative hearings are a less formal alternative to court. They require timely request for hearing after agency action. The record built during hearing is reviewable by a court.</p></div>
-      <div class="principle-block"><strong>EXECUTION METHOD</strong><p>Upon receiving a notice of adverse agency action, immediately request a hearing in writing, within the prescribed deadline (often 30 days). Submit all documentary evidence and witness affidavits before the hearing. At hearing, present the administrative record, cross‑examine agency witnesses, and make legal arguments. If the agency rules against you, appeal to state or federal court.</p></div>
-      <div class="principle-block"><strong>REQUIRED RECORD</strong><p>Initial agency notice, hearing request, pre‑hearing submissions, hearing transcript (if available), agency decision, and notice of appeal if needed.</p></div>
-      <div class="principle-block"><strong>COMMON FAILURE POINTS</strong><p>Missing the hearing request deadline, failing to submit evidence in advance, not preserving the record for appeal, waiving procedural objections.</p></div>
-      <div class="principle-block"><strong>ADMINISTRATIVE CONSEQUENCES</strong><p>Failure to timely request a hearing may waive all objections and make the agency decision final.</p></div>
-      <div class="principle-block"><strong>ENFORCEMENT POSITIONING</strong><p>A complete hearing record with preserved objections is the foundation for a successful court appeal. Agencies are bound by their own regulations; use that to your advantage.</p></div>
-      <div class="principle-block"><strong>EQUITABLE CONSIDERATIONS</strong><p>Due process is the most fundamental equitable principle. Courts will set aside any decision made without proper notice and hearing.</p></div>
-      <div class="principle-block"><strong>INSTITUTIONAL RATIONALE</strong><p>Administrative hearings are where most government and institutional disputes are resolved. Knowing how to navigate them is essential for any serious fiduciary or litigant.</p></div>
-    </div>
-  </div>
-
-  <!-- Closing Statement -->
-  <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0,0,0,0.3); border-left: 3px solid var(--gold); border-radius: 12px;">
-    <p style="font-family: 'Roboto Mono'; font-size: 0.8rem; color: var(--gold);">Procedure precedes remedy. Record precedes enforcement. Capacity determines consequence. Structure determines outcome.</p>
-    <p style="margin-top: 0.8rem; font-size: 0.85rem;">This execution framework is an educational resource issued by the Office of the Fiduciary, Kelly Legacy Estates Living Trust & Kelly Legacy Institute. No legal advice is given. Each individual remains responsible for consulting qualified counsel for their specific situation.</p>
-  </div>
-</main>
+  <section id="intake-section"><div class="cta-panel"><div><h3>Pilot Intake · Operational Baseline Project</h3><p>Apply for the 6-week reduced-rate pilot. Qualified organizations receive workflow visibility, documentation standards, onboarding clarity, and AI-use governance baseline.</p><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfTcf6efnbXJbkKC6TJyEHlDMuhIorSDlRIr3JoiKu7Nz4x5A/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Discuss Pilot →</a></div></div><div><div class="monogram-seal">KLI</div></div></div></section>
+</div>
 
 <footer>
   <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="monogram-seal">KLE</div>
-        <h4 style="font-family: 'Playfair Display', serif; color: var(--ivory);">Kelly Legacy Estates Living Trust</h4>
-        <p style="font-size:0.8rem; max-width:260px;">Institutional fiduciary governance & educational administration.</p>
-      </div>
-      <div class="footer-links">
-        <div>
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Use</a>
-          <a href="record-policy.html">Record Policy</a>
-          <a href="ip-policy.html">IP & Licensing</a>
-        </div>
-        <div>
-          <a href="transparency.html">Transparency Statement</a>
-          <a href="checklist.html">Fiduciary Checklist</a>
-          <a href="execution-framework.html">Execution Framework</a>
-        </div>
-        <div>
-          <a href="https://www.linkedin.com/in/delonte-kelly-01961b3b4" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> Institutional LinkedIn</a>
-          <a href="mailto:kellylegacyestatesllc@gmail.com"><i class="fa-solid fa-envelope"></i> Trust Inquiry</a>
-        </div>
-      </div>
-    </div>
+    <div class="footer-grid"><div class="footer-col"><h4>Navigate</h4><div class="footer-links"><div><a href="#services">Services</a><a href="#method">Methodology</a><a href="#ai-governance">AI Governance</a><a href="#clients">Ideal Clients</a></div><div><a href="#intake-section">Pilot Program</a><a href="#intake-section">Intake Form</a><a href="execution-framework.html">Execution Portal</a></div></div></div><div class="footer-col"><h4>Governance & Policies</h4><div class="footer-links"><div><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="record-policy.html">Record Policy</a><a href="ip-policy.html">IP & Licensing</a><a href="transparency.html">Transparency Statement</a><a href="execution-framework.html">Execution Framework</a></div></div></div><div class="footer-col"><h4>Connect</h4><div class="footer-links"><div><a href="https://www.linkedin.com/in/delonte-kelly-01961b3b4" target="_blank">LinkedIn</a><a href="mailto:kellylegacyestatesllc@gmail.com">Contact KLI</a></div></div></div></div>
     <div class="gold-divider"></div>
-    <div class="copyright">
-      © 2026 Kelly Legacy Estates Living Trust — All educational materials are provided for institutional governance literacy. No legal advice, no financial advisory.<br>
-      Kelly Legacy Institute is an educational program administered under strict fiduciary governance. Structure determines outcome. Record precedes recognition.
-    </div>
+    <div class="authority-block">KELLY LEGACY INSTITUTE<br> OFFICE OF THE FIDUCIARY<br> OPERATIONAL GOVERNANCE & AI SYSTEMS DIVISION</div>
+    <div class="copyright">© 2026 Kelly Legacy Institute. Educational, operational, and administrative materials are provided for organizational governance literacy and implementation support. No legal, financial, medical, or tax advice.<br> Structure reduces operational chaos. Documentation preserves continuity. Human review governs AI-assisted work.</div>
   </div>
 </footer>
 
 <script>
-  // Make all modules collapsible
-  const modules = document.querySelectorAll('.module');
-  modules.forEach(module => {
-    const header = module.querySelector('.module-header');
-    const content = module.querySelector('.module-content');
-    const icon = header.querySelector('.toggle-icon i');
-    // Initially all closed
-    content.classList.remove('open');
-    if (icon) icon.className = 'fa-regular fa-chevron-right';
-    header.addEventListener('click', () => {
-      const isOpen = content.classList.contains('open');
-      if (isOpen) {
-        content.classList.remove('open');
-        if (icon) icon.className = 'fa-regular fa-chevron-right';
-      } else {
-        content.classList.add('open');
-        if (icon) icon.className = 'fa-regular fa-chevron-down';
+  // preserve existing fade-up and smooth scroll behavior
+  (function() {
+    const faders = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
+    faders.forEach(el => observer.observe(el));
+    document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === "#" || !targetId) return;
+        const target = document.querySelector(targetId);
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); target.setAttribute('tabindex', '-1'); target.focus({ preventScroll: false }); }
+      });
+    });
+  })();
+
+  // ---------- KLAT GATE FOR EXECUTION FRAMEWORK PAGE ----------
+  const KLAT_CONTRACT = "0x0eC422119173558541BED4BF2f0Ef4807D66A4f4";
+  const POLYGON_CHAIN_ID = "0x89";
+  const MIN_KLAT = 100;
+  const ERC20_ABI = ["function balanceOf(address account) view returns (uint256)", "function decimals() view returns (uint8)", "function symbol() view returns (string)"];
+
+  let gateVerified = false;
+  const targetUrl = "execution-framework.html";
+
+  // Check sessionStorage for existing verification
+  if (sessionStorage.getItem('kli_execution_granted') === 'true') {
+    gateVerified = true;
+  }
+
+  const overlay = document.getElementById('executionGateOverlay');
+  const gateBtn = document.getElementById('gateVerifyBtn');
+  const gateStatus = document.getElementById('gateStatusMsg');
+  const executionLink = document.getElementById('executionFrameworkLink');
+
+  // If already verified, hide overlay immediately
+  if (gateVerified && overlay) {
+    overlay.classList.add('hidden');
+  }
+
+  // Intercept clicks on the Execution Portal link
+  if (executionLink) {
+    executionLink.addEventListener('click', function(e) {
+      if (!gateVerified) {
+        e.preventDefault();
+        overlay.classList.remove('hidden');
+      }
+    });
+  }
+
+  // Also intercept any other links that point to execution-framework.html
+  document.querySelectorAll('a[href="execution-framework.html"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      if (!gateVerified) {
+        e.preventDefault();
+        overlay.classList.remove('hidden');
       }
     });
   });
+
+  async function verifyAndGrantAccess() {
+    if (!gateStatus) return;
+
+    try {
+      if (!window.ethereum) {
+        gateStatus.innerHTML = "❌ Web3 wallet not detected. Please install MetaMask or a compatible wallet (Polygon Mainnet).";
+        return;
+      }
+
+      try {
+        await window.ethereum.request({ method: "wallet_switchEthereumChain", params: [{ chainId: POLYGON_CHAIN_ID }] });
+      } catch (switchErr) {
+        if (switchErr.code === 4902) {
+          gateStatus.innerHTML = "⚠️ Polygon Mainnet not added. Please add the network via chainlist.org or your wallet settings.";
+          return;
+        }
+        throw switchErr;
+      }
+
+      const provider = new ethers.BrowserProvider(window.ethereum);
+      const accounts = await provider.send("eth_requestAccounts", []);
+      const walletAddress = accounts[0];
+      const contract = new ethers.Contract(KLAT_CONTRACT, ERC20_ABI, provider);
+      const [rawBalance, decimals, symbol] = await Promise.all([
+        contract.balanceOf(walletAddress),
+        contract.decimals(),
+        contract.symbol()
+      ]);
+      const formattedBalance = Number(ethers.formatUnits(rawBalance, decimals));
+
+      if (formattedBalance >= MIN_KLAT) {
+        // Grant access
+        gateVerified = true;
+        sessionStorage.setItem('kli_execution_granted', 'true');
+        gateStatus.innerHTML = `✅ VERIFIED — Access granted. Redirecting to Execution Framework...`;
+        if (overlay) overlay.classList.add('hidden');
+        // Redirect to the execution framework page
+        window.location.href = targetUrl;
+      } else {
+        gateStatus.innerHTML = `⛔ ACCESS DENIED — Insufficient KLAT credential authority.<br>Wallet: ${walletAddress.slice(0,8)}...${walletAddress.slice(-6)}<br>Balance: ${formattedBalance.toLocaleString()} ${symbol}<br>Required: ${MIN_KLAT} ${symbol}. Access requires verified KLAT authority under KLI administrative policy.`;
+      }
+    } catch (error) {
+      console.error(error);
+      let errorMsg = "Verification failed. Ensure you are on Polygon Mainnet (chainId 137).";
+      if (error.code === 4001) errorMsg = "Connection rejected. Please approve wallet connection.";
+      gateStatus.innerHTML = `⚠️ ${errorMsg}<br>Details: ${error.message?.slice(0,100) || "unknown"}`;
+    }
+  }
+
+  if (gateBtn) {
+    gateBtn.addEventListener('click', verifyAndGrantAccess);
+  }
 </script>
 </body>
 </html>
