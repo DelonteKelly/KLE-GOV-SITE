@@ -126,6 +126,7 @@
       display: flex;
       gap: 2rem;
       flex-wrap: wrap;
+      align-items: center;
     }
 
     .nav-links a {
@@ -141,6 +142,48 @@
     .nav-links a:hover {
       color: var(--gold-muted);
       letter-spacing: 0.2em;
+    }
+
+    /* ACCESS Link Special Styling */
+    .access-link {
+      color: var(--gold-muted) !important;
+      border: 1px solid var(--border-gold-active);
+      border-radius: 40px;
+      padding: 0.35rem 0.85rem;
+      background: rgba(201, 166, 107, 0.05);
+    }
+
+    .access-link:hover {
+      background: rgba(201, 166, 107, 0.15);
+      box-shadow: 0 0 12px rgba(201, 166, 107, 0.2);
+    }
+
+    /* Status Strip - Tactical Command */
+    .status-strip {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.45rem 1rem;
+      background: rgba(0,0,0,0.45);
+      border-bottom: 1px solid rgba(212,175,55,0.08);
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.08em;
+      color: #7f9398;
+      flex-wrap: wrap;
+    }
+    .pulse-dot {
+      width: 7px;
+      height: 7px;
+      background: #72ff72;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 6px;
+      animation: pulseDot 1.5s infinite;
+    }
+    @keyframes pulseDot {
+      0% { opacity: .4; transform: scale(.9); }
+      100% { opacity: 1; transform: scale(1.2); }
     }
 
     /* Hero Section */
@@ -576,7 +619,6 @@
       transform: translateY(0);
     }
 
-    /* Responsive Fixes — Explicit */
     @media (max-width: 1050px) {
       .hero-grid {
         grid-template-columns: 1fr !important;
@@ -605,6 +647,13 @@
 </head>
 <body>
 
+<div class="status-strip">
+  <span><span class="pulse-dot"></span> GOVERNANCE NETWORK ACTIVE</span>
+  <span><i class="fa-regular fa-circle-check"></i> OPERATIONAL PROTOCOLS: ONLINE</span>
+  <span><i class="fa-solid fa-shield"></i> CONTINUITY STATUS: STABLE</span>
+  <span><i class="fa-solid fa-fingerprint"></i> VERIFICATION LAYER: SECURE</span>
+</div>
+
 <header>
   <div class="container">
     <div class="nav">
@@ -615,7 +664,7 @@
         <a href="#ai-governance">AI GOVERNANCE</a>
         <a href="#clients">CLIENTS</a>
         <a href="#intake-section">INTAKE</a>
-        <a href="klat-access.html">ACCESS</a>
+        <a href="klat-access.html" class="access-link">ACCESS</a>
         <a href="curriculum-portal.html">CURRICULUM</a>
         <a href="execution-framework.html">EXECUTION</a>
       </div>
@@ -631,7 +680,7 @@
         <h1>Structure reduces<br>operational chaos.</h1>
         <p>Kelly Legacy Institute helps nonprofits, workforce programs, and small institutions identify workflow fragmentation, documentation gaps, onboarding disorder, and unmanaged AI-use risk. We do not coach. We build operational systems that make work documented, repeatable, auditable, and transferable.</p>
         <div class="btn-group">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTcf6efnbXJbkKC6TJyEHlDMuhIorSDlRIr3JoiKu7Nz4x5A/viewform" target="_blank" class="btn btn-primary">REQUEST REVIEW →</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTcf6efnbXJbkKC6TJyEHlDMuhIorSDlRIr3JoiKu7Nz4x5A/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-primary">REQUEST REVIEW →</a>
           <a href="#services" class="btn btn-outline">VIEW SERVICES</a>
         </div>
         <div class="problem-strip">
@@ -698,7 +747,7 @@
 
   <section id="intake-section">
     <div class="cta-panel fade-up">
-      <div><h3 style="font-size:1.5rem;">Pilot Intake · Operational Baseline Project</h3><p>Apply for the 6-week reduced-rate pilot. Qualified organizations receive workflow visibility, documentation standards, onboarding clarity, and AI-use governance baseline.</p><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfTcf6efnbXJbkKC6TJyEHlDMuhIorSDlRIr3JoiKu7Nz4x5A/viewform" target="_blank" class="btn btn-outline">DISCUSS PILOT →</a></div></div>
+      <div><h3 style="font-size:1.5rem;">Pilot Intake · Operational Baseline Project</h3><p>Apply for the 6-week reduced-rate pilot. Qualified organizations receive workflow visibility, documentation standards, onboarding clarity, and AI-use governance baseline.</p><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfTcf6efnbXJbkKC6TJyEHlDMuhIorSDlRIr3JoiKu7Nz4x5A/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-outline">DISCUSS PILOT →</a></div></div>
       <div><div class="monogram-seal">KLI</div></div>
     </div>
   </section>
@@ -710,17 +759,17 @@
       <p style="max-width: 760px; margin-bottom: 2rem;">For operational governance inquiries, institutional coordination, curriculum access, implementation reviews, administrative correspondence, or continuity infrastructure discussions.</p>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
         <div class="mini-card" style="text-align:center;"><div style="font-size:1.8rem;">✉</div><h4>Administrative Correspondence</h4><p style="font-family:'Roboto Mono';font-size:0.75rem;"><a href="mailto:kellylegacyestatesllc@gmail.com" style="color:var(--gold-desat);text-decoration:none;">kellylegacyestatesllc@gmail.com</a></p></div>
-        <div class="mini-card" style="text-align:center;"><div style="font-size:1.8rem;">⌘</div><h4>Executive Network</h4><p style="font-size:0.75rem;"><a href="https://www.linkedin.com/in/delonte-kelly-01961b3b4" target="_blank" style="color:var(--gold-desat);text-decoration:none;">Delonte Kelly</a></p></div>
+        <div class="mini-card" style="text-align:center;"><div style="font-size:1.8rem;">⌘</div><h4>Executive Network</h4><p style="font-size:0.75rem;"><a href="https://www.linkedin.com/in/delonte-kelly-01961b3b4" target="_blank" rel="noopener noreferrer" style="color:var(--gold-desat);text-decoration:none;">Delonte Kelly</a></p></div>
         <div class="mini-card" style="text-align:center;">
           <div style="font-size:1.8rem;">◫</div>
           <h4>Governance Repository</h4>
           <p style="font-size:0.75rem;">
-            <a href="https://github.com/DelonteKelly/KLY-landing" target="_blank" style="color:var(--gold-desat);text-decoration:none;">
+            <a href="https://github.com/DelonteKelly/KLY-landing" target="_blank" rel="noopener noreferrer" style="color:var(--gold-desat);text-decoration:none;">
               KLI Public Infrastructure
             </a>
           </p>
         </div>
-        <div class="mini-card" style="text-align:center;"><div style="font-size:1.8rem;">⬢</div><h4>Governance Credentials</h4><p style="font-size:0.75rem;"><a href="https://opensea.io/collection/kli-governance-credential-series" target="_blank" style="color:var(--gold-desat);text-decoration:none;">KLI Credential Archive</a></p></div>
+        <div class="mini-card" style="text-align:center;"><div style="font-size:1.8rem;">⬢</div><h4>Governance Credentials</h4><p style="font-size:0.75rem;"><a href="https://opensea.io/collection/kli-governance-credential-series" target="_blank" rel="noopener noreferrer" style="color:var(--gold-desat);text-decoration:none;">KLI Credential Archive</a></p></div>
       </div>
       <div class="gold-divider" style="margin: 1.5rem 0 1rem;"></div>
       <div class="authority-block"><strong>Official Administrative Notice</strong><br>Kelly Legacy Institute™<br>Office of the Fiduciary<br>Operational Governance & AI Systems Division<br><br>All institutional communications through documented written correspondence.<br><span style="font-size:0.6rem;">No legal, tax, financial, or investment advice.</span></div>
@@ -732,7 +781,7 @@
   <div class="container">
     <div class="footer-grid">
       <div><div class="monogram-seal">KLI</div><h4>Kelly Legacy Institute</h4><p style="font-size:0.75rem;">Institutional governance & operational systems.</p></div>
-      <div class="footer-links"><div><a href="#services">Services</a><a href="#method">Methodology</a><a href="#ai-governance">AI Governance</a><a href="#clients">Ideal Clients</a></div><div><a href="#intake-section">Pilot Program</a><a href="klat-command.html">Access Command</a><a href="curriculum-portal.html">Curriculum Portal</a><a href="execution-framework.html">Execution Portal</a><a href="#contact-section">Contact</a></div><div><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="record-policy.html">Record Policy</a><a href="transparency.html">Transparency</a></div></div>
+      <div class="footer-links"><div><a href="#services">Services</a><a href="#method">Methodology</a><a href="#ai-governance">AI Governance</a><a href="#clients">Ideal Clients</a></div><div><a href="#intake-section">Pilot Program</a><a href="klat-access.html">Access Command</a><a href="curriculum-portal.html">Curriculum Portal</a><a href="execution-framework.html">Execution Portal</a><a href="#contact-section">Contact</a></div><div><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="record-policy.html">Record Policy</a><a href="transparency.html">Transparency</a></div></div>
     </div>
     <div class="gold-divider"></div>
     <div class="authority-block">KELLY LEGACY INSTITUTE — OFFICE OF THE FIDUCIARY</div>
