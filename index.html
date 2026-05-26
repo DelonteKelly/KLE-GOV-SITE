@@ -126,11 +126,11 @@
   </div>
 </header>
 
-<!-- Hero Section (full width, no extra container wrap to preserve original spacing) -->
+<!-- Hero Section with corrected CTA pointing to intake-section -->
 <div class="hero">
   <div class="container">
     <div class="hero-grid">
-      <div><div class="hero-badge">Operational Governance · Workflow Systems · AI Accountability</div><h1>Structure reduces<br>operational chaos.</h1><p>Kelly Legacy Institute helps nonprofits, workforce programs, and small institutions identify workflow fragmentation, documentation gaps, onboarding disorder, and unmanaged AI-use risk. We do not coach. We build operational systems that make work documented, repeatable, auditable, and transferable.</p><div class="btn-group"><a href="#" class="btn btn-primary">Request Workflow Review →</a><a href="#services" class="btn btn-outline">View Services</a></div><div class="problem-strip"><div class="problem-pill"><i>⎯</i> Undocumented tasks</div><div class="problem-pill"><i>⚡</i> Unmanaged AI use</div><div class="problem-pill"><i>⏳</i> Slow onboarding</div><div class="problem-pill"><i>📂</i> Scattered records</div></div></div>
+      <div><div class="hero-badge">Operational Governance · Workflow Systems · AI Accountability</div><h1>Structure reduces<br>operational chaos.</h1><p>Kelly Legacy Institute helps nonprofits, workforce programs, and small institutions identify workflow fragmentation, documentation gaps, onboarding disorder, and unmanaged AI-use risk. We do not coach. We build operational systems that make work documented, repeatable, auditable, and transferable.</p><div class="btn-group"><a href="#intake-section" class="btn btn-primary">Request Workflow Review →</a><a href="#services" class="btn btn-outline">View Services</a></div><div class="problem-strip"><div class="problem-pill"><i>⎯</i> Undocumented tasks</div><div class="problem-pill"><i>⚡</i> Unmanaged AI use</div><div class="problem-pill"><i>⏳</i> Slow onboarding</div><div class="problem-pill"><i>📂</i> Scattered records</div></div></div>
       <div class="diagnostic-card"><div class="score-title">Operational Diagnostic Preview</div><div class="score-row"><span>Documentation Completeness</span><span>Review Required</span></div><div class="score-row"><span>Workflow Clarity</span><span>Administrative Assessment</span></div><div class="score-row"><span>Onboarding Structure</span><span>Pending Intake Review</span></div><div class="score-row"><span>AI Governance</span><span>Continuity Review Required</span></div><div class="score-row"><span>Continuity Planning</span><span>Governance Assessment Pending</span></div><p class="muted" style="margin-top:1.2rem; font-size:0.7rem;">Every review produces findings, risk observations, and a 30/60/90-day implementation roadmap.</p></div>
     </div>
   </div>
@@ -149,7 +149,7 @@
   <!-- Ideal Clients -->
   <section id="clients"><div class="section-header"><h2>Ideal Clients · Where KLI Fits</h2><div class="section-subhead">The strongest fit is with mission-driven organizations that have grown faster than their internal systems.</div></div><div class="icp-grid"><div class="mini-card"><h4>Founder-Led Nonprofits</h4><p>Growing programs where operational knowledge sits inside the founder or senior staff instead of documented systems.</p></div><div class="mini-card"><h4>Workforce Development Organizations</h4><p>Grant-funded teams with reporting pressure, staff turnover, multiple programs, and workflow inconsistency.</p></div><div class="mini-card"><h4>Small Educational Institutions</h4><p>Schools, training providers, and community education programs needing stronger administrative procedure.</p></div><div class="mini-card"><h4>Administrative Teams</h4><p>New leadership teams inheriting fragmented folders, informal workflows, and no AI-use policy.</p></div></div></section>
 
-  <!-- ========== KLAT-GATED EXECUTION PORTAL (UPDATED TEXT) ========== -->
+  <!-- ========== KLAT-GATED EXECUTION PORTAL ========== -->
   <section id="execution-gate" style="scroll-margin-top: 100px;">
     <div class="gate-panel-extended">
       <div class="intake-badge" style="margin-bottom: 0.75rem;">🔐 KLI EXECUTION PORTAL · KLAT GATED</div>
@@ -217,7 +217,7 @@
     });
   })();
 
-  // ---------- KLAT GATE LOGIC (MIN 100 KLAT on Polygon) with REQUIRED TEXT UPDATES ----------
+  // ---------- KLAT GATE LOGIC (MIN 100 KLAT on Polygon) ----------
   const KLAT_CONTRACT = "0x0eC422119173558541BED4BF2f0Ef4807D66A4f4";
   const POLYGON_CHAIN_ID = "0x89";
   const MIN_KLAT = 100;
@@ -234,7 +234,6 @@
         protectedDiv.classList.remove("active");
         return;
       }
-      // request switch to Polygon Mainnet
       try {
         await window.ethereum.request({ method: "wallet_switchEthereumChain", params: [{ chainId: POLYGON_CHAIN_ID }] });
       } catch (switchErr) {
@@ -264,7 +263,6 @@
         protectedDiv.scrollIntoView({ behavior: "smooth", block: "start" });
       } else {
         protectedDiv.classList.remove("active");
-        // UPDATED TEXT per requirement
         statusDiv.innerHTML = `⛔ ACCESS DENIED — Insufficient KLAT credential authority.<br>Wallet: ${walletAddress.slice(0,8)}...${walletAddress.slice(-6)}<br>Balance: ${formattedBalance.toLocaleString()} ${symbol}<br>Required: ${MIN_KLAT} ${symbol}. Access requires verified KLAT authority under KLI administrative policy.`;
       }
     } catch (error) {
