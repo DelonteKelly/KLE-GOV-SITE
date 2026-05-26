@@ -1,1418 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-
-  <title>Kelly Legacy Institute | Family Governance Infrastructure</title>
-
-  <meta
-    name="description"
-    content="Institutional governance infrastructure for fiduciary administration, continuity systems, and multi-generational family governance."
-  />
-
-  <link rel="icon" type="image/png" href="kli-favicon.png" />
-  <link rel="apple-touch-icon" href="kli-favicon.png" />
-
-  <meta property="og:title" content="Kelly Legacy Institute | Family Governance Infrastructure" />
-  <meta
-    property="og:description"
-    content="Institutional governance infrastructure for fiduciary administration, continuity systems, and multi-generational family governance."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://kellylegacyinstitute.org" />
-  <meta property="og:image" content="https://kellylegacyinstitute.org/og-image.jpg" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@400;500;600&display=swap"
-    rel="stylesheet"
-  />
-
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-  />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Family Governance Curriculum | Kelly Legacy Institute</title>
+  <meta name="description" content="Institutional family governance curriculum covering trust structure, fiduciary duties, continuity systems, and multi-generational governance.">
+  <link rel="icon" type="image/png" href="kli-favicon.png">
+  <meta property="og:title" content="Family Governance Curriculum | Kelly Legacy Institute">
+  <meta property="og:description" content="Structured educational curriculum for family trust governance, fiduciary administration, and continuity infrastructure.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --black-deep: #050505;
+      --black-matte: #0A0A0C;
+      --black-charcoal: #111113;
+      --black-glass: rgba(8, 8, 12, 0.82);
+      --gold-muted: #C9A66B;
+      --gold-desat: #B89A5E;
+      --gold-ultra-desat: #8B7355;
+      --platinum: #E8E8EC;
+      --silver-muted: #9CA3AF;
+      --border-glass-light: rgba(255, 255, 255, 0.04);
+      --border-glass-gold: rgba(201, 166, 107, 0.12);
+      --border-gold-active: rgba(201, 166, 107, 0.32);
+      --shadow-deep: 0 30px 60px -20px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+      --shadow-lift: 0 25px 45px -18px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(201, 166, 107, 0.08) inset;
+      --transition-exec: all 0.35s cubic-bezier(0.215, 0.61, 0.355, 1);
     }
-
-    :root{
-      --matte-black:#0A0F1A;
-      --deep-charcoal:#111827;
-      --platinum:#D1D5DB;
-      --ivory:#F3F4F6;
-      --gold:#C6A15B;
-      --gold-light:rgba(198,161,91,0.12);
-      --border-gold:rgba(198,161,91,0.22);
-      --glass-bg:rgba(17,24,39,0.72);
-
-      --shadow-md:
-        0 25px 40px -14px rgba(0,0,0,0.4),
-        0 1px 2px 0 rgba(255,255,255,0.02) inset;
-
-      --transition:
-        all 0.35s cubic-bezier(0.2,0.9,0.4,1.1);
+    body {
+      background-color: var(--black-deep);
+      background-image: radial-gradient(ellipse at 30% 20%, rgba(201, 166, 107, 0.025) 0%, #020204 95%);
+      color: var(--platinum);
+      font-family: 'Inter', system-ui, sans-serif;
+      line-height: 1.65;
+      position: relative;
+      min-height: 100vh;
     }
-
-    html{
-      scroll-behavior:smooth;
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.018'/%3E%3C/svg%3E");
+      opacity: 0.4;
+      pointer-events: none;
+      z-index: 0;
     }
-
-    body{
-      background-color:var(--matte-black);
-
-      background-image:
-        radial-gradient(
-          ellipse at 30% 20%,
-          rgba(51,65,85,0.25) 0%,
-          #050A12 90%
-        );
-
-      color:var(--platinum);
-
-      font-family:'Inter',sans-serif;
-
-      line-height:1.55;
-
-      position:relative;
-
-      overflow-x:hidden;
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 48px; position: relative; z-index: 5; }
+    
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(24px);
+      background: rgba(5, 5, 8, 0.72);
+      border-bottom: 1px solid var(--border-glass-light);
     }
-
-    body::after{
-      content:"KLE";
-
-      position:fixed;
-
-      bottom:8%;
-      right:-3%;
-
-      font-family:'Playfair Display',serif;
-
-      font-size:clamp(12rem,22vw,20rem);
-
-      font-weight:800;
-
-      color:rgba(198,161,91,0.015);
-
-      pointer-events:none;
-
-      z-index:0;
-
-      user-select:none;
-
-      white-space:nowrap;
+    .nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 0; flex-wrap: wrap; gap: 1rem; }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 500;
+      letter-spacing: -0.3px;
+      border-left: 2px solid var(--gold-muted);
+      padding-left: 18px;
+      color: var(--platinum);
     }
-
-    body::before{
-      content:'';
-
-      position:fixed;
-
-      inset:0;
-
-      background-image:
-        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='1'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
-
-      opacity:0.3;
-
-      pointer-events:none;
-
-      z-index:1;
+    .logo span { color: var(--gold-muted); }
+    .nav-links { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .nav-links a {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-decoration: none;
+      color: var(--silver-muted);
+      transition: var(--transition-exec);
+      text-transform: uppercase;
     }
-
-    .container{
-      max-width:1320px;
-
-      margin:0 auto;
-
-      padding:0 44px;
-
-      position:relative;
-
-      z-index:5;
+    .nav-links a:hover { color: var(--gold-muted); letter-spacing: 0.2em; }
+    
+    .curriculum-header {
+      padding: 4rem 0 2rem;
+      border-bottom: 1px solid var(--border-glass-light);
+      margin-bottom: 2.5rem;
     }
-
-    h1,h2,h3,.serif{
-      font-family:'Playfair Display',serif;
-
-      font-weight:600;
-
-      letter-spacing:-0.02em;
-
-      color:var(--ivory);
+    .curriculum-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      font-weight: 500;
+      color: var(--platinum);
+      line-height: 1.12;
+      letter-spacing: -0.02em;
     }
-
-    h1{
-      font-size:clamp(2.8rem,6vw,5rem);
-
-      line-height:1.05;
-
-      font-weight:700;
+    .curriculum-header .sub {
+      font-family: 'Roboto Mono', monospace;
+      color: var(--gold-muted);
+      margin-top: 0.8rem;
+      letter-spacing: 1px;
+      font-size: 0.8rem;
     }
-
-    h2{
-      font-size:clamp(2rem,4vw,2.8rem);
-
-      margin-bottom:1rem;
+    .curriculum-description {
+      max-width: 780px;
+      margin-top: 1.5rem;
+      color: #b0b8c5;
+      border-left: 2px solid var(--gold-ultra-desat);
+      padding-left: 1.5rem;
+      font-size: 0.95rem;
+      line-height: 1.7;
     }
-
-    .gold-text{
-      color:var(--gold);
+    
+    .module {
+      background: var(--black-glass);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--border-glass-light);
+      border-radius: 32px;
+      margin-bottom: 1.8rem;
+      overflow: hidden;
+      transition: var(--transition-exec);
     }
-
-    .btn-group{
-      display:flex;
-
-      flex-wrap:wrap;
-
-      gap:1.2rem;
-
-      margin-top:2rem;
+    .module:hover { border-color: var(--border-glass-gold); box-shadow: var(--shadow-lift); }
+    .module-header {
+      background: rgba(2, 2, 4, 0.6);
+      padding: 1.2rem 2rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s;
     }
-
-    .btn{
-      display:inline-flex;
-
-      align-items:center;
-
-      justify-content:center;
-
-      gap:0.7rem;
-
-      padding:0.9rem 2rem;
-
-      border-radius:48px;
-
-      font-family:'Inter',sans-serif;
-
-      font-weight:500;
-
-      font-size:0.85rem;
-
-      letter-spacing:0.04em;
-
-      text-decoration:none;
-
-      transition:var(--transition);
-
-      border:1px solid transparent;
-
-      cursor:pointer;
+    .module-header:hover { background: rgba(201, 166, 107, 0.04); }
+    .module-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      font-weight: 480;
+      color: var(--platinum);
+      margin: 0;
+      letter-spacing: -0.3px;
     }
-
-    .btn-primary{
-      background:var(--gold);
-
-      color:#0A0F1A;
-
-      box-shadow:
-        0 6px 14px rgba(198,161,91,0.2);
+    .toggle-icon { font-size: 1rem; color: var(--gold-desat); transition: transform 0.2s; }
+    .module-content {
+      padding: 1.6rem 2rem;
+      display: none;
+      border-top: 1px solid var(--border-glass-light);
     }
-
-    .btn-primary:hover{
-      background:#b38f47;
-
-      transform:translateY(-2px);
-
-      box-shadow:
-        0 12px 22px rgba(198,161,91,0.25);
+    .module-content.open { display: block; animation: slideFade 0.25s ease; }
+    @keyframes slideFade {
+      from { opacity: 0; transform: translateY(-6px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-
-    .btn-outline{
-      border:1px solid var(--gold);
-
-      color:var(--ivory);
-
-      background:rgba(0,0,0,0.3);
-
-      backdrop-filter:blur(4px);
+    .principle-block {
+      margin-bottom: 1.6rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(201, 166, 107, 0.08);
     }
-
-    .btn-outline:hover{
-      background:rgba(198,161,91,0.08);
-
-      transform:translateY(-2px);
-
-      border-color:var(--gold);
+    .principle-block strong {
+      display: block;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 2.5px;
+      color: var(--gold-desat);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
     }
-
-    header{
-      position:sticky;
-
-      top:0;
-
-      z-index:100;
-
-      backdrop-filter:blur(16px);
-
-      background:rgba(10,15,26,0.85);
-
-      border-bottom:1px solid var(--border-gold);
+    .principle-block p, .principle-block ul {
+      color: #c8cfdb;
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin-left: 0.2rem;
     }
-
-    .nav{
-      display:flex;
-
-      justify-content:space-between;
-
-      align-items:center;
-
-      padding:1.2rem 0;
-
-      flex-wrap:wrap;
-
-      gap:1rem;
+    .closing-statement {
+      margin-top: 2.8rem;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.4);
+      border-left: 3px solid var(--gold-desat);
+      border-radius: 24px;
     }
-
-    .logo{
-      font-family:'Playfair Display',serif;
-
-      font-size:1.35rem;
-
-      font-weight:700;
-
-      letter-spacing:-0.3px;
-
-      border-left:3px solid var(--gold);
-
-      padding-left:18px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #fff,
-          var(--gold)
-        );
-
-      -webkit-background-clip:text;
-
-      background-clip:text;
-
-      color:transparent;
+    
+    footer {
+      background: #020204;
+      border-top: 1px solid var(--border-glass-light);
+      padding: 3rem 0 2rem;
+      margin-top: 3rem;
     }
-
-    .logo span{
-      color:var(--gold);
-
-      background:none;
+    .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; }
+    .monogram-seal {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border: 1px solid var(--gold-ultra-desat);
+      border-radius: 50%;
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+      font-size: 1.2rem;
+      color: var(--gold-desat);
+      background: rgba(201, 166, 107, 0.03);
+      margin-bottom: 0.8rem;
     }
-
-    .nav-links{
-      display:flex;
-
-      gap:2rem;
-
-      flex-wrap:wrap;
-    }
-
-    .nav-links a{
-      font-family:'Roboto Mono',monospace;
-
-      font-size:0.7rem;
-
-      letter-spacing:0.12em;
-
-      text-decoration:none;
-
-      color:var(--platinum);
-
-      transition:0.2s;
-
-      font-weight:500;
-    }
-
-    .nav-links a:hover{
-      color:var(--gold);
-    }
-
-    .hero{
-      min-height:85vh;
-
-      display:grid;
-
-      grid-template-columns:1fr 1fr;
-
-      align-items:center;
-
-      gap:4rem;
-
-      padding:2rem 0 5rem;
-
-      position:relative;
-    }
-
-    .hero::before{
-      content:'';
-
-      position:absolute;
-
-      inset:0;
-
-      background:
-        radial-gradient(
-          circle at 78% 30%,
-          rgba(198,161,91,0.08),
-          transparent 35%
-        ),
-        radial-gradient(
-          circle at 20% 50%,
-          rgba(255,255,255,0.02),
-          transparent 40%
-        );
-
-      pointer-events:none;
-    }
-
-    .hero-badge{
-      display:inline-block;
-
-      font-family:'Roboto Mono',monospace;
-
-      font-size:0.7rem;
-
-      letter-spacing:0.2em;
-
-      padding:0.4rem 1rem;
-
-      background:rgba(198,161,91,0.06);
-
-      border-left:2px solid var(--gold);
-
-      margin-bottom:1.5rem;
-    }
-
-    .office-badge{
-      display:inline-flex;
-
-      align-items:center;
-
-      gap:0.6rem;
-
-      font-family:'Roboto Mono',monospace;
-
-      font-size:0.7rem;
-
-      color:var(--gold);
-
-      border:1px solid var(--border-gold);
-
-      border-radius:40px;
-
-      padding:0.4rem 1.2rem;
-
-      background:rgba(0,0,0,0.3);
-
-      backdrop-filter:blur(4px);
-
-      margin-top:1rem;
-    }
-
-    .private-note{
-      margin-top:1rem;
-
-      font-size:0.72rem;
-
-      font-family:'Roboto Mono', monospace;
-
-      color:#7b8797;
-
-      letter-spacing:0.08em;
-    }
-
-    .hero-visual{
-      background:var(--glass-bg);
-
-      border:1px solid var(--border-gold);
-
-      border-radius:28px;
-
-      padding:2rem;
-
-      backdrop-filter:blur(8px);
-
-      text-align:center;
-
-      position:relative;
-
-      overflow:hidden;
-    }
-
-    .governance-hierarchy{
-      display:flex;
-
-      flex-direction:column;
-
-      gap:1rem;
-    }
-
-    .hierarchy-level{
-      background:rgba(0,0,0,0.3);
-
-      border-left:2px solid var(--gold);
-
-      padding:0.9rem;
-
-      text-align:left;
-
-      font-family:'Roboto Mono',monospace;
-
-      font-size:0.72rem;
-
-      position:relative;
-    }
-
-    .hierarchy-level::after{
-      content:'';
-
-      position:absolute;
-
-      left:18px;
-
-      top:100%;
-
-      width:1px;
-
-      height:18px;
-
-      background:rgba(198,161,91,0.22);
-    }
-
-    .hierarchy-level:last-child::after{
-      display:none;
-    }
-
-    section{
-      padding:5rem 0;
-
-      border-bottom:1px solid rgba(198,161,91,0.08);
-    }
-
-    .section-header{
-      margin-bottom:3rem;
-    }
-
-    .section-header h2{
-      display:inline-block;
-
-      position:relative;
-    }
-
-    .section-header h2::after{
-      content:'';
-
-      position:absolute;
-
-      bottom:-12px;
-
-      left:0;
-
-      width:70px;
-
-      height:2px;
-
-      background:var(--gold);
-    }
-
-    .section-subhead{
-      color:#b9c2d0;
-
-      max-width:720px;
-
-      margin-top:0.75rem;
-    }
-
-    .governance-grid{
-      display:grid;
-
-      gap:2rem;
-
-      grid-template-columns:repeat(3,1fr);
-    }
-
-    .step-grid{
-      display:grid;
-
-      grid-template-columns:repeat(3,1fr);
-
-      gap:1.5rem;
-
-      margin:2rem 0;
-    }
-
-    .governance-card,
-    .step-card{
-      background:var(--glass-bg);
-
-      backdrop-filter:blur(8px);
-
-      border:1px solid var(--border-gold);
-
-      border-radius:28px;
-
-      padding:1.8rem;
-
-      transition:var(--transition);
-    }
-
-    .governance-card:hover,
-    .step-card:hover{
-      transform:translateY(-4px);
-
-      border-color:var(--gold);
-
-      box-shadow:var(--shadow-md);
-    }
-
-    .governance-card i,
-    .step-card i{
-      font-size:2rem;
-
-      color:var(--gold);
-
-      margin-bottom:1rem;
-    }
-
-    .governance-card h3,
-    .step-card h3{
-      font-size:1.4rem;
-
-      margin-bottom:0.5rem;
-    }
-
-    .cinematic-statement{
-      position:relative;
-
-      text-align:center;
-
-      padding:7rem 0;
-
-      background:
-        linear-gradient(
-          90deg,
-          transparent,
-          rgba(198,161,91,0.05),
-          transparent
-        );
-
-      overflow:hidden;
-    }
-
-    .cinematic-statement::before{
-      content:'GOVERNANCE';
-
-      position:absolute;
-
-      inset:0;
-
-      display:flex;
-
-      align-items:center;
-
-      justify-content:center;
-
-      font-size:12vw;
-
-      font-family:'Playfair Display', serif;
-
-      color:rgba(198,161,91,0.015);
-
-      letter-spacing:0.08em;
-
-      pointer-events:none;
-    }
-
-    .quote{
-      font-family:'Playfair Display',serif;
-
-      font-size:clamp(2rem,5vw,3.8rem);
-
-      font-weight:600;
-
-      color:var(--ivory);
-
-      max-width:1100px;
-
-      margin:0 auto;
-
-      line-height:1.15;
-
-      letter-spacing:-0.04em;
-
-      position:relative;
-
-      z-index:2;
-    }
-
-    .principle-wall{
-      display:grid;
-
-      grid-template-columns:
-        repeat(auto-fill,minmax(280px,1fr));
-
-      gap:1rem;
-
-      margin:2rem 0;
-    }
-
-    .principle-item{
-      background:rgba(0,0,0,0.3);
-
-      border-left:2px solid var(--gold);
-
-      padding:1rem 1.2rem;
-
-      font-family:'Roboto Mono',monospace;
-
-      font-size:0.85rem;
-    }
-
-    .governance-cta{
-      background:var(--glass-bg);
-
-      backdrop-filter:blur(12px);
-
-      border:1px solid var(--border-gold);
-
-      border-radius:32px;
-
-      padding:2.5rem;
-
-      text-align:center;
-    }
-
-    .authority-strip{
-      text-align:center;
-
-      padding:2rem 0;
-
-      border-top:1px solid var(--border-gold);
-
-      border-bottom:1px solid var(--border-gold);
-
-      margin:2rem 0;
-    }
-
-    footer{
-      background:#030711;
-
-      border-top:1px solid var(--border-gold);
-
-      padding:3rem 0 2rem;
-
-      margin-top:2rem;
-    }
-
-    .footer-grid{
-      display:flex;
-
-      flex-wrap:wrap;
-
-      justify-content:space-between;
-
-      gap:2rem;
-    }
-
-    .monogram-seal{
-      display:inline-flex;
-
-      align-items:center;
-
-      justify-content:center;
-
-      width:56px;
-
-      height:56px;
-
-      border:1px solid var(--gold);
-
-      border-radius:50%;
-
-      font-family:'Playfair Display',serif;
-
-      font-weight:700;
-
-      font-size:1.4rem;
-
-      color:var(--gold);
-
-      background:rgba(198,161,91,0.04);
-
-      margin-bottom:0.8rem;
-    }
-
-    .footer-links{
-      display:flex;
-
-      gap:2.5rem;
-
-      flex-wrap:wrap;
-    }
-
-    .footer-links a{
-      display:block;
-
-      color:#9ca3af;
-
-      text-decoration:none;
-
-      font-size:0.8rem;
-
-      margin-bottom:0.6rem;
-
-      transition:0.2s;
-    }
-
-    .footer-links a:hover{
-      color:var(--gold);
-    }
-
-    .gold-divider{
-      height:1px;
-
-      background:
-        linear-gradient(
-          90deg,
-          var(--gold),
-          transparent
-        );
-
-      margin:2rem 0 1.5rem;
-    }
-
-    .copyright{
-      text-align:center;
-
-      font-size:0.7rem;
-
-      color:#6c7a91;
-    }
-
-    .fade-up{
-      opacity:0;
-
-      transform:translateY(24px);
-
-      transition:
-        opacity 0.7s ease,
-        transform 0.7s ease;
-    }
-
-    .fade-up.visible{
-      opacity:1;
-
-      transform:translateY(0);
-    }
-
-    @media(max-width:1100px){
-
-      .governance-grid{
-        grid-template-columns:repeat(2,1fr);
-      }
-
-      .step-grid{
-        grid-template-columns:repeat(2,1fr);
-      }
-    }
-
-    @media(max-width:800px){
-
-      .container{
-        padding:0 24px;
-      }
-
-      .hero{
-        grid-template-columns:1fr;
-
-        gap:2rem;
-
-        min-height:auto;
-
-        text-align:center;
-
-        padding:2rem 0;
-      }
-
-      .governance-grid,
-      .step-grid{
-        grid-template-columns:1fr;
-      }
-
-      .nav{
-        flex-direction:column;
-
-        text-align:center;
-      }
-
-      .nav-links{
-        justify-content:center;
-
-        gap:1.2rem;
-      }
-
-      .btn-group{
-        justify-content:center;
-      }
-
-      section{
-        padding:3rem 0;
-      }
-
-      .office-badge{
-        margin-left:auto;
-        margin-right:auto;
-      }
+    .footer-links { display: flex; gap: 2.5rem; flex-wrap: wrap; }
+    .footer-links a { display: block; color: #6b7280; text-decoration: none; font-size: 0.72rem; margin-bottom: 0.6rem; transition: var(--transition-exec); }
+    .footer-links a:hover { color: var(--gold-muted); transform: translateX(2px); }
+    .gold-divider { height: 1px; background: linear-gradient(90deg, var(--gold-ultra-desat), transparent); margin: 2rem 0 1.5rem; opacity: 0.3; }
+    .copyright { text-align: center; font-size: 0.65rem; color: #4a4f5e; line-height: 1.6; }
+    
+    @media (max-width: 768px) {
+      .container { padding: 0 24px; }
+      .curriculum-header h1 { font-size: 2.2rem; }
+      .module-header h2 { font-size: 1.2rem; }
+      .module-header { padding: 1rem 1.2rem; }
+      .module-content { padding: 1rem; }
+      .nav { flex-direction: column; text-align: center; }
+      .nav-links { justify-content: center; gap: 1rem; }
     }
   </style>
 </head>
-
 <body>
 
 <header>
   <div class="container">
-
     <div class="nav">
-
-      <div class="logo">
-        KELLY LEGACY <span>INSTITUTE</span>
-      </div>
-
+      <div class="logo">KELLY LEGACY <span>INSTITUTE</span></div>
       <div class="nav-links">
-        <a href="#governance-systems">SYSTEMS</a>
-        <a href="#guided-implementation">INFRASTRUCTURE</a>
-        <a href="#instruments">ARCHIVE</a>
-        <a href="#principles">PRINCIPLES</a>
-        <a href="governance-portal.html">PORTAL</a>
+        <a href="index.html">HOME</a>
+        <a href="curriculum-portal.html">CURRICULUM</a>
+        <a href="execution-framework.html">EXECUTION</a>
+        <a href="index.html#contact-section">CONTACT</a>
       </div>
-
     </div>
-
   </div>
 </header>
 
-<main>
-
-  <!-- HERO -->
-
-  <div class="container">
-
-    <div class="hero">
-
-      <div class="hero-content fade-up">
-
-        <div class="hero-badge">
-          OFFICE OF THE FIDUCIARY · FAMILY GOVERNANCE
-        </div>
-
-        <h1>
-          Family Governance
-          <span class="gold-text">Infrastructure</span>
-        </h1>
-
-        <p
-          style="
-            font-size:1.1rem;
-            margin:1.5rem 0 0.5rem;
-            max-width:650px;
-          "
-        >
-          Institutional governance infrastructure for fiduciary administration,
-          continuity systems, and multi-generational family governance.
-        </p>
-
-        <div class="office-badge">
-          <i class="fa-solid fa-building-columns"></i>
-          Kelly Legacy Estates Living Trust · Office of the Fiduciary
-        </div>
-
-        <div class="btn-group">
-
-          <a
-            href="#guided-implementation"
-            class="btn btn-primary"
-          >
-            <i class="fa-solid fa-building-columns"></i>
-            Enter Governance Environment
-          </a>
-
-          <a
-            href="#governance-systems"
-            class="btn btn-outline"
-          >
-            <i class="fa-solid fa-scale-balanced"></i>
-            Explore Systems
-          </a>
-
-        </div>
-
-        <p class="private-note">
-          Private governance implementation environment · Structured institutional access
-        </p>
-
-      </div>
-
-      <div class="hero-visual fade-up">
-
-        <div class="governance-hierarchy">
-
-          <div class="hierarchy-level">
-            <strong>Settlor / Founder</strong><br>
-            Authority · Purpose · Initial Trust Property
-          </div>
-
-          <div class="hierarchy-level">
-            <strong>Trustee</strong><br>
-            Fiduciary Duty · Administration · Recordkeeping
-          </div>
-
-          <div class="hierarchy-level">
-            <strong>Trust Protector</strong><br>
-            Oversight · Modification · Trustee Removal
-          </div>
-
-          <div class="hierarchy-level">
-            <strong>Family Council</strong><br>
-            Communication · Policy · Continuity
-          </div>
-
-          <div class="hierarchy-level">
-            <strong>Beneficiaries</strong><br>
-            Equitable Title · Information Rights · Enforcement
-          </div>
-
-        </div>
-
-        <p
-          style="
-            margin-top:1rem;
-            font-family:'Roboto Mono';
-            font-size:0.7rem;
-            color:#6c7a91;
-          "
-        >
-          Governance Hierarchy · Layered Authority Structure
-        </p>
-
-      </div>
-
+<main class="container">
+  <div class="curriculum-header">
+    <h1>Family Governance Curriculum</h1>
+    <div class="sub">Office of the Fiduciary – Educational Series</div>
+    <div class="curriculum-description">
+      Structured educational curriculum for family trust governance, fiduciary administration, 
+      continuity infrastructure, and multi-generational governance doctrine. Authorized 
+      personnel only — institutional governance literacy.
     </div>
-
   </div>
 
-  <!-- STRUCTURE SECTION -->
-
-  <section>
-
-    <div class="container">
-
-      <div class="section-header fade-up">
-
-        <h2>
-          Governance Begins
-          <span class="gold-text">With Structure</span>
-        </h2>
-
-        <p class="section-subhead">
-          Without structure, authority fragments, records disappear,
-          and continuity fails.
-        </p>
-
-      </div>
-
-      <div class="step-grid">
-
-        <div class="step-card fade-up">
-          <i class="fa-solid fa-building-columns"></i>
-          <h3>Establish Trust Structure</h3>
-          <p>Formal trust instrument, documented authority, lawful purpose.</p>
-        </div>
-
-        <div class="step-card fade-up">
-          <i class="fa-solid fa-users"></i>
-          <h3>Define Fiduciary Roles</h3>
-          <p>Settlor, trustee, protector, beneficiaries – clear duties and succession.</p>
-        </div>
-
-        <div class="step-card fade-up">
-          <i class="fa-solid fa-folder-open"></i>
-          <h3>Create Administrative Record</h3>
-          <p>Chronological log, document retention, verifiable audit trail.</p>
-        </div>
-
-        <div class="step-card fade-up">
-          <i class="fa-solid fa-gear"></i>
-          <h3>Implement Governance Procedures</h3>
-          <p>Accounting, notices, meetings, resolutions, distribution protocols.</p>
-        </div>
-
-        <div class="step-card fade-up">
-          <i class="fa-solid fa-scale-balanced"></i>
-          <h3>Maintain Accountability</h3>
-          <p>Annual reviews, fiduciary compliance, independent oversight.</p>
-        </div>
-
-        <div class="step-card fade-up">
-          <i class="fa-solid fa-people-arrows"></i>
-          <h3>Preserve Multi-Generational Continuity</h3>
-          <p>Successor training, transition protocols, institutional memory.</p>
-        </div>
-
-      </div>
-
+  <!-- MODULE 1 -->
+  <div class="module">
+    <div class="module-header"><h2>I. Family Trust Formation & Authority</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div>
+    <div class="module-content">
+      <div class="principle-block"><strong>PRINCIPLE</strong><p>Trust formation requires lawful purpose, documented authority, and intentional structure. The trust instrument establishes the governance framework.</p></div>
+      <div class="principle-block"><strong>CORE ELEMENTS</strong><p>Settlor, trustee, trust property, lawful purpose, and identifiable beneficiaries. Each element creates obligations and enforceable rights.</p></div>
+      <div class="principle-block"><strong>EXECUTION METHOD</strong><p>Draft trust instrument with: identification of parties, statement of intent, trust property schedule, distribution provisions, trustee powers, and amendment procedures. Execute with formalities required by governing law.</p></div>
     </div>
-
-  </section>
-
-  <!-- GOVERNANCE SYSTEMS -->
-
-  <section id="governance-systems">
-
-    <div class="container">
-
-      <div class="section-header fade-up">
-
-        <h2>
-          Governance
-          <span class="gold-text">Infrastructure</span>
-        </h2>
-
-        <p class="section-subhead">
-          Structured systems for family trust formation,
-          trustee administration, and continuity planning.
-        </p>
-
-      </div>
-
-      <div class="governance-grid">
-
-        <div class="governance-card fade-up">
-          <i class="fa-solid fa-building-columns"></i>
-          <h3>Family Trust Formation</h3>
-          <p>Structured process for creating lawful family trusts with documented authority.</p>
-        </div>
-
-        <div class="governance-card fade-up">
-          <i class="fa-solid fa-handshake"></i>
-          <h3>Trustee Administration</h3>
-          <p>Fiduciary duties, accounting, recordkeeping, and governance procedures.</p>
-        </div>
-
-        <div class="governance-card fade-up">
-          <i class="fa-solid fa-archive"></i>
-          <h3>Administrative Record Systems</h3>
-          <p>Document retention, chronological logs, audit trails, and record integrity.</p>
-        </div>
-
-        <div class="governance-card fade-up">
-          <i class="fa-solid fa-scale-balanced"></i>
-          <h3>Fiduciary Accountability</h3>
-          <p>Duty of loyalty, duty of care, impartiality, and equitable enforcement.</p>
-        </div>
-
-        <div class="governance-card fade-up">
-          <i class="fa-solid fa-people-arrows"></i>
-          <h3>Succession & Continuity Planning</h3>
-          <p>Successor trustee transition, incapacity procedures, multi-generational governance.</p>
-        </div>
-
-        <div class="governance-card fade-up">
-          <i class="fa-solid fa-envelope"></i>
-          <h3>Beneficiary Communications</h3>
-          <p>Notice procedures, disclosure requirements, and information rights.</p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- CINEMATIC STATEMENT -->
-
-  <div class="cinematic-statement">
-
-    <div class="container">
-
-      <div class="quote fade-up">
-        “Families rarely lose wealth first.<br>
-        They lose governance first.”
-      </div>
-
-    </div>
-
   </div>
 
-  <!-- IMPLEMENTATION -->
-
-  <section id="guided-implementation">
-
-    <div class="container">
-
-      <div class="governance-cta fade-up">
-
-        <i
-          class="fa-solid fa-building-columns"
-          style="
-            font-size:2.5rem;
-            color:var(--gold);
-            margin-bottom:1rem;
-          "
-        ></i>
-
-        <h2 style="font-size:1.8rem;">
-          Guided Governance Environment
-        </h2>
-
-        <p
-          style="
-            max-width:680px;
-            margin:1rem auto;
-            color:var(--platinum);
-          "
-        >
-          Structured implementation environment for fiduciary administration,
-          governance procedures, continuity systems,
-          and institutional discipline.
-        </p>
-
-        <div
-          class="governance-grid"
-          style="margin:2rem 0;"
-        >
-
-          <div class="governance-card">
-            <i class="fa-solid fa-handshake"></i>
-            <h3>Trustee Administration Systems</h3>
-          </div>
-
-          <div class="governance-card">
-            <i class="fa-solid fa-diagram-project"></i>
-            <h3>Governance Walkthroughs</h3>
-          </div>
-
-          <div class="governance-card">
-            <i class="fa-solid fa-archive"></i>
-            <h3>Fiduciary Recordkeeping</h3>
-          </div>
-
-          <div class="governance-card">
-            <i class="fa-solid fa-people-arrows"></i>
-            <h3>Continuity Planning</h3>
-          </div>
-
-          <div class="governance-card">
-            <i class="fa-solid fa-gear"></i>
-            <h3>Administrative Procedures</h3>
-          </div>
-
-          <div class="governance-card">
-            <i class="fa-solid fa-folder-open"></i>
-            <h3>Governance Instrument Archive</h3>
-          </div>
-
-        </div>
-
-        <div class="btn-group" style="justify-content:center;">
-
-          <a
-            href="https://www.skool.com/kelly-legacy-institute-9231/about?ref=eaac86290c9a4c12b9f1f6f2b33547e5"
-            target="_blank"
-            class="btn btn-primary"
-          >
-            Enter Governance Environment
-          </a>
-
-        </div>
-
-      </div>
-
+  <!-- MODULE 2 -->
+  <div class="module">
+    <div class="module-header"><h2>II. Fiduciary Duties & Trustee Obligations</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div>
+    <div class="module-content">
+      <div class="principle-block"><strong>PRINCIPLE</strong><p>Fiduciary duty comprises loyalty, care, impartiality, and disclosure. These duties are non-waivable and enforceable by beneficiaries.</p></div>
+      <div class="principle-block"><strong>DUTY OF LOYALTY</strong><p>Act solely in interest of beneficiaries, avoid self-dealing, refrain from conflicts of interest. Any transaction with trust must be transparent and fair.</p></div>
+      <div class="principle-block"><strong>DUTY OF CARE</strong><p>Prudent administration, investment oversight, recordkeeping, and professional standards. Delegation requires careful selection and supervision.</p></div>
     </div>
-
-  </section>
-
-  <!-- PRINCIPLES -->
-
-  <section id="principles">
-
-    <div class="container">
-
-      <div class="section-header fade-up">
-
-        <h2>
-          Governance
-          <span class="gold-text">Principles</span>
-        </h2>
-
-        <p class="section-subhead">
-          The maxims that govern fiduciary administration
-          and institutional continuity.
-        </p>
-
-      </div>
-
-      <div class="principle-wall fade-up">
-
-        <div class="principle-item">Procedure precedes remedy.</div>
-        <div class="principle-item">Record precedes enforcement.</div>
-        <div class="principle-item">Capacity determines consequence.</div>
-        <div class="principle-item">Structure determines outcome.</div>
-        <div class="principle-item">Fiduciary duty governs entrusted authority.</div>
-        <div class="principle-item">Governance requires accountability.</div>
-        <div class="principle-item">Continuity requires records.</div>
-        <div class="principle-item">Good faith governs fiduciary conduct.</div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- AUTHORITY -->
-
-  <div class="container">
-
-    <div class="authority-strip">
-
-      <p>ISSUED UNDER STRUCTURED GOVERNANCE AUTHORITY</p>
-
-      <p>
-        <strong>Kelly Legacy Estates Living Trust</strong><br>
-        Office of the Fiduciary<br>
-        Kelly Legacy Institute
-      </p>
-
-    </div>
-
   </div>
 
+  <!-- MODULE 3 -->
+  <div class="module">
+    <div class="module-header"><h2>III. Administrative Record & Continuity Systems</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div>
+    <div class="module-content">
+      <div class="principle-block"><strong>PRINCIPLE</strong><p>Record precedes recognition. The administrative record is the exclusive foundation for accountability, enforcement, and generational continuity.</p></div>
+      <div class="principle-block"><strong>REQUIRED RECORDS</strong><p>Chronological trust log, asset schedules, distribution records, tax filings, beneficiary communications, meeting minutes, and trustee decisions.</p></div>
+      <div class="principle-block"><strong>EXECUTION METHOD</strong><p>Maintain bound log or digital archive with version control, date stamping, and audit trail. Never delete entries; add supplements and corrections.</p></div>
+    </div>
+  </div>
+
+  <!-- MODULE 4 -->
+  <div class="module">
+    <div class="module-header"><h2>IV. Succession & Multi-Generational Continuity</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div>
+    <div class="module-content">
+      <div class="principle-block"><strong>PRINCIPLE</strong><p>Continuity requires documented succession protocols, trained successor fiduciaries, and institutional memory preservation.</p></div>
+      <div class="principle-block"><strong>SUCCESSION PLANNING</strong><p>Identify successor trustees, define transition triggers (incapacity, resignation, removal), establish training period, and document institutional knowledge transfer.</p></div>
+      <div class="principle-block"><strong>FAMILY COUNCIL</strong><p>Structured communication body for beneficiaries to participate in governance, receive information, and provide input on non-distributive matters.</p></div>
+    </div>
+  </div>
+
+  <!-- MODULE 5 -->
+  <div class="module">
+    <div class="module-header"><h2>V. Beneficiary Rights & Information Access</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div>
+    <div class="module-content">
+      <div class="principle-block"><strong>PRINCIPLE</strong><p>Beneficiaries hold equitable title and possess information rights, accounting demands, and enforcement remedies.</p></div>
+      <div class="principle-block"><strong>INFORMATION RIGHTS</strong><p>Trustee must provide trust instrument, annual accountings, tax returns, and material information upon reasonable request.</p></div>
+      <div class="principle-block"><strong>REMEDIES FOR BREACH</strong><p>Beneficiaries may demand accounting, surcharge the trustee for losses, seek removal, or enforce specific performance of trust terms.</p></div>
+    </div>
+  </div>
+
+  <!-- MODULE 6 -->
+  <div class="module">
+    <div class="module-header"><h2>VI. Tax, Compliance & Regulatory Posture</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div>
+    <div class="module-content">
+      <div class="principle-block"><strong>PRINCIPLE</strong><p>Trust administration must comply with tax filing obligations, reporting requirements, and applicable regulatory frameworks.</p></div>
+      <div class="principle-block"><strong>TAX OBLIGATIONS</strong><p>File Form 1041 for estates and trusts, issue Schedule K-1 to beneficiaries, pay estimated taxes, maintain tax records for minimum seven years.</p></div>
+      <div class="principle-block"><strong>COMPLIANCE STRUCTURE</strong><p>Engage qualified tax preparer, maintain separate EIN, segregate trust assets from personal assets, and document all financial transactions.</p></div>
+    </div>
+  </div>
+
+  <!-- MODULE 7 -->
+  <div class="module">
+    <div class="module-header"><h2>VII. Trust Protector & Oversight Mechanisms</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div>
+    <div class="module-content">
+      <div class="principle-block"><strong>PRINCIPLE</strong><p>Trust protector provides independent oversight, modification authority, and trustee removal power as defined in trust instrument.</p></div>
+      <div class="principle-block"><strong>PROTECTOR POWERS</strong><p>Remove and appoint trustees, modify administrative provisions, consent to distributions, and resolve disputes between fiduciaries and beneficiaries.</p></div>
+      <div class="principle-block"><strong>QUALIFICATIONS</strong><p>Protector should be independent, possess fiduciary experience, and act in good faith for all beneficiaries impartially.</p></div>
+    </div>
+  </div>
+
+  <!-- MODULE 8 -->
+  <div class="module">
+    <div class="module-header"><h2>VIII. Dispute Resolution & Equitable Enforcement</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div>
+    <div class="module-content">
+      <div class="principle-block"><strong>PRINCIPLE</strong><p>Trust disputes require equitable remedies — surcharge, constructive trust, accounting, or removal — rather than legal damages.</p></div>
+      <div class="principle-block"><strong>ENFORCEMENT MECHANISMS</strong><p>Beneficiary demand for accounting, court petition for surcharge, motion to remove trustee, or action to construe trust terms.</p></div>
+      <div class="principle-block"><strong>ALTERNATIVE RESOLUTION</strong><p>Mediation, arbitration, or family council resolution before litigation to preserve relationships and reduce costs.</p></div>
+    </div>
+  </div>
+
+  <div class="closing-statement">
+    <p style="font-family: 'Roboto Mono', monospace; font-size: 0.75rem; letter-spacing: 1px; color: var(--gold-desat);">Governance begins with structure. Structure requires discipline. Discipline preserves continuity. Continuity serves beneficiaries.</p>
+    <p style="margin-top: 1rem; font-size: 0.8rem; color: #9ba3b5;">This curriculum is an educational resource issued by the Office of the Fiduciary, Kelly Legacy Estates Living Trust & Kelly Legacy Institute. For institutional governance literacy only. Not legal advice.</p>
+  </div>
 </main>
 
 <footer>
-
   <div class="container">
-
     <div class="footer-grid">
-
       <div>
-
         <div class="monogram-seal">KLE</div>
-
-        <h4>Kelly Legacy Estates Living Trust</h4>
-
-        <p style="font-size:0.8rem;">
-          Executive family governance & fiduciary administration.
-        </p>
-
+        <h4 style="font-family:'Playfair Display'; font-weight:450;">Kelly Legacy Estates Living Trust</h4>
+        <p style="font-size:0.75rem;">Institutional fiduciary governance & educational administration.</p>
       </div>
-
       <div class="footer-links">
-
         <div>
           <a href="privacy.html">Privacy Policy</a>
           <a href="terms.html">Terms of Use</a>
           <a href="record-policy.html">Record Policy</a>
           <a href="ip-policy.html">IP & Licensing</a>
         </div>
-
         <div>
-          <a href="transparency.html">Transparency</a>
+          <a href="transparency.html">Transparency Statement</a>
           <a href="checklist.html">Fiduciary Checklist</a>
           <a href="execution-framework.html">Governance Framework</a>
         </div>
-
         <div>
-          <a
-            href="https://www.linkedin.com/in/delonte-kelly-01961b3b4"
-            target="_blank"
-          >
-            <i class="fa-brands fa-linkedin"></i>
-            LinkedIn
-          </a>
-
-          <a href="mailto:kellylegacyestatesllc@gmail.com">
-            <i class="fa-solid fa-envelope"></i>
-            Trust Inquiry
-          </a>
+          <a href="https://www.linkedin.com/in/delonte-kelly-01961b3b4" target="_blank"><i class="fa-brands fa-linkedin"></i> Institutional LinkedIn</a>
+          <a href="mailto:kellylegacyestatesllc@gmail.com"><i class="fa-solid fa-envelope"></i> Trust Inquiry</a>
         </div>
-
       </div>
-
     </div>
-
     <div class="gold-divider"></div>
-
-    <div class="copyright">
-      © 2026 Kelly Legacy Estates Living Trust —
-      Educational governance systems issued under institutional administrative standards.
-      Structure determines outcome.
-    </div>
-
+    <div class="copyright">© 2026 Kelly Legacy Estates Living Trust — Educational family governance curriculum for institutional literacy. No legal advice.<br>Structure determines outcome. Record precedes recognition.</div>
   </div>
-
 </footer>
 
 <script>
-
-  const faders = document.querySelectorAll('.fade-up');
-
-  const observer = new IntersectionObserver(
-
-    (entries) => {
-
-      entries.forEach(entry => {
-
-        if(entry.isIntersecting){
-          entry.target.classList.add('visible');
-        }
-
-      });
-
-    },
-
-    {
-      threshold:0.1,
-      rootMargin:'0px 0px -20px 0px'
-    }
-
-  );
-
-  faders.forEach(el => observer.observe(el));
-
-  document
-    .querySelectorAll('a[href^="#"]:not([href="#"])')
-    .forEach(anchor => {
-
-      anchor.addEventListener('click', function(e){
-
-        const targetId = this.getAttribute('href');
-
-        const target = document.querySelector(targetId);
-
-        if(target){
-
-          e.preventDefault();
-
-          target.scrollIntoView({
-            behavior:'smooth',
-            block:'start'
-          });
-
-        }
-
-      });
-
+  // Collapsible modules
+  document.querySelectorAll('.module').forEach(module => {
+    const header = module.querySelector('.module-header');
+    const content = module.querySelector('.module-content');
+    const icon = header?.querySelector('.toggle-icon i');
+    if (content) content.classList.remove('open');
+    if (icon) icon.className = 'fa-solid fa-chevron-right';
+    header?.addEventListener('click', () => {
+      const isOpen = content.classList.contains('open');
+      if (isOpen) {
+        content.classList.remove('open');
+        if (icon) icon.className = 'fa-solid fa-chevron-right';
+      } else {
+        content.classList.add('open');
+        if (icon) icon.className = 'fa-solid fa-chevron-down';
+      }
     });
+  });
 
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === "#" || !targetId) return;
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
 </script>
-
 </body>
 </html>
