@@ -97,16 +97,7 @@
     .intake-badge { display: inline-flex; align-items: center; gap: 12px; background: rgba(198,161,91,0.12); padding: 0.5rem 1.3rem; border-radius: 60px; font-family: 'Roboto Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; color: var(--gold); margin-bottom: 1.2rem; }
     .authority-block { font-family: 'Roboto Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; line-height: 1.5; color: #9CA3AF; text-align: center; margin-bottom: 1.5rem; }
     @media (max-width: 780px) { .google-form-embed { min-height: 900px; } }
-    
-    /* ---------- GATED PORTAL STYLES (non-conflicting) ---------- */
-    .gate-panel-extended { background: linear-gradient(145deg, rgba(17,24,39,0.96), rgba(3,7,17,0.92)); border: 1px solid var(--border-gold); border-radius: 32px; padding: 2rem; margin: 2rem 0; }
-    .kli-protected-area { display: none; }
-    .kli-protected-area.active { display: block; animation: fadeSlide 0.5s ease; }
-    @keyframes fadeSlide { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    .execution-module { background: rgba(17,24,39,0.65); border-radius: 28px; padding: 2rem; margin-top: 1.5rem; border: 1px solid rgba(198,161,91,0.25); }
-    .status-message { font-family: 'Roboto Mono', monospace; background: rgba(198,161,91,0.08); padding: 1rem; border-radius: 20px; margin: 1rem 0; }
   </style>
-  <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.umd.min.js"></script>
 </head>
 <body>
 
@@ -120,13 +111,14 @@
         <a href="#ai-governance">AI Governance</a>
         <a href="#clients">Ideal Clients</a>
         <a href="#intake-section">Intake</a>
-        <a href="#execution-gate">Execution Portal</a>
+        <a href="curriculum-portal.html">Curriculum Portal</a>
+        <a href="execution-framework.html">Execution Portal</a>
       </div>
     </div>
   </div>
 </header>
 
-<!-- Hero Section with live Google Form button -->
+<!-- Hero Section -->
 <div class="hero">
   <div class="container">
     <div class="hero-grid">
@@ -137,62 +129,20 @@
 </div>
 
 <div class="container">
-  <!-- Service Architecture -->
   <section id="services"><div class="section-header"><h2>Service Architecture · Implementation First</h2><div class="section-subhead">KLI services are designed for organizational procurement, operational review, and measurable implementation.</div></div><div class="grid-3"><div class="service-card"><div class="service-label">Flagship · 2–3 Weeks</div><h3>Operational Workflow Review</h3><p>A diagnostic review of how work actually happens versus how it is documented.</p><ul class="list"><li>Workflow analysis</li><li>Documentation review</li><li>Onboarding gap review</li><li>AI-use inventory</li><li>Findings report + roadmap</li></ul></div><div class="service-card"><div class="service-label">Execution · 3–6 Months</div><h3>Implementation Retainer</h3><p>Ongoing execution support to build and deploy SOPs, policies, onboarding systems.</p><ul class="list"><li>SOP development</li><li>Role-based onboarding</li><li>AI-use policy deployment</li><li>Documentation standards</li><li>Staff training support</li></ul></div><div class="service-card"><div class="service-label">Validation · 4 Weeks</div><h3>Governance Certification</h3><p>Organizational self-audit and validation pathway for documented workflows.</p><ul class="list"><li>Operational pillars review</li><li>Internal audit kit</li><li>Governance scorecard</li><li>KLI Operational Seal pathway</li></ul></div></div></section>
 
-  <!-- Methodology -->
   <section id="method"><div class="section-header"><h2>Workflow Review Methodology</h2><div class="section-subhead">The review converts undocumented practice into visible operational evidence.</div></div><div class="process"><div class="process-item"><div class="process-num"></div><div><strong>Discovery</strong><br>Document inventory, staff interviews, shared drive review, tool audit, role clarification, and recurring task capture.</div></div><div class="process-item"><div class="process-num"></div><div><strong>Mapping</strong><br>Current-state workflow diagrams, decision-point identification, handoff analysis, and unwritten rules capture.</div></div><div class="process-item"><div class="process-num"></div><div><strong>Gap Analysis</strong><br>Comparison against KLI standards for documentation, workflow clarity, onboarding structure, AI governance, and continuity planning.</div></div><div class="process-item"><div class="process-num"></div><div><strong>Risk Scoring</strong><br>Each finding is scored for continuity risk, compliance exposure, training inefficiency, and error propagation.</div></div><div class="process-item"><div class="process-num"></div><div><strong>Implementation Roadmap</strong><br>Final report includes priority findings, top operational risks, corrective recommendations, and 30/60/90-day action steps.</div></div></div></section>
 
-  <!-- AI Governance -->
   <section id="ai-governance"><div class="section-header"><h2>AI Governance · Organizational Accountability</h2><div class="section-subhead">AI tools are already inside many organizations. The issue is whether their use is visible, governed, and reviewed.</div></div><div class="grid-4"><div class="mini-card"><h4>Acceptable Use</h4><p>Defines permitted and prohibited AI uses by role, function, and data type.</p></div><div class="mini-card"><h4>Data Boundaries</h4><p>Prevents confidential, client, grant, personnel, or sensitive data from being pasted into unmanaged tools.</p></div><div class="mini-card"><h4>Human Review</h4><p>Requires human verification before AI-assisted outputs are used operationally.</p></div><div class="mini-card"><h4>Version Control</h4><p>Identifies AI-assisted documents, drafts, policies, and procedures for audit visibility.</p></div></div><div class="quote-band"><div class="quote">“If AI use is invisible, AI risk is unmanaged.”</div><p style="margin-top:0.8rem;">KLI converts informal AI use into documented operational procedure.</p></div></section>
 
-  <!-- Ideal Clients -->
   <section id="clients"><div class="section-header"><h2>Ideal Clients · Where KLI Fits</h2><div class="section-subhead">The strongest fit is with mission-driven organizations that have grown faster than their internal systems.</div></div><div class="icp-grid"><div class="mini-card"><h4>Founder-Led Nonprofits</h4><p>Growing programs where operational knowledge sits inside the founder or senior staff instead of documented systems.</p></div><div class="mini-card"><h4>Workforce Development Organizations</h4><p>Grant-funded teams with reporting pressure, staff turnover, multiple programs, and workflow inconsistency.</p></div><div class="mini-card"><h4>Small Educational Institutions</h4><p>Schools, training providers, and community education programs needing stronger administrative procedure.</p></div><div class="mini-card"><h4>Administrative Teams</h4><p>New leadership teams inheriting fragmented folders, informal workflows, and no AI-use policy.</p></div></div></section>
 
-  <!-- ========== KLAT-GATED EXECUTION PORTAL ========== -->
-  <section id="execution-gate" style="scroll-margin-top: 100px;">
-    <div class="gate-panel-extended">
-      <div class="intake-badge" style="margin-bottom: 0.75rem;">🔐 KLI EXECUTION PORTAL · KLAT GATED</div>
-      <h2 style="font-size: 1.9rem;">Execution Framework & Implementation Toolkit</h2>
-      <p>Access the complete KLI Execution Framework, including SOP templates, AI governance playbooks, onboarding systems, and continuity planning modules. <strong class="gold-text">Minimum 100 KLAT credential authority required on Polygon Mainnet.</strong></p>
-      <div class="btn-group">
-        <button id="klatGateButton" class="btn btn-primary">⟡ Verify KLAT Balance & Unlock Portal</button>
-      </div>
-      <div id="klatStatusMessage" class="status-message" style="margin-top: 1.2rem;">⏣ Ready. Connect wallet to verify KLAT credential authority (≥100 KLAT).</div>
-    </div>
-
-    <!-- Hidden Protected Content (Execution Portal) -->
-    <div id="executionPortalContent" class="kli-protected-area">
-      <div class="execution-module">
-        <div class="intake-badge">✧ AUTHORIZED ACCESS · KLI EXECUTION FRAMEWORK v2.0</div>
-        <h3>30/60/90-Day Implementation Roadmap</h3>
-        <div class="grid-3" style="margin-top: 1.5rem;">
-          <div class="mini-card"><h4>First 30 Days</h4><p>Discovery audit, workflow mapping, AI inventory, documentation baseline.</p><ul class="list"><li>Process capture</li><li>Risk register draft</li><li>Toolchain review</li></ul></div>
-          <div class="mini-card"><h4>Days 30–60</h4><p>SOP drafting, role-based onboarding design, AI policy deployment.</p><ul class="list"><li>Policy templates</li><li>Staff training modules</li><li>Continuity checklists</li></ul></div>
-          <div class="mini-card"><h4>Days 60–90</h4><p>Governance certification, internal audit, KLI Operational Seal submission.</p><ul class="list"><li>Scorecard validation</li><li>Documentation sign-off</li><li>Continuity handoff</li></ul></div>
-        </div>
-        <div class="gold-divider" style="margin: 1.5rem 0;"></div>
-        <div><span class="service-label">EXECUTIVE TOOLKIT INCLUDES</span>
-          <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1rem;">
-            <span class="gold-text">📄 SOP Library (12 templates)</span>
-            <span class="gold-text">🤖 AI Acceptable Use Policy</span>
-            <span class="gold-text">📋 Onboarding Sequence Maps</span>
-            <span class="gold-text">⚠️ Risk Scoring Matrix</span>
-            <span class="gold-text">🏛️ Governance Audit Kit</span>
-          </div>
-        </div>
-        <div class="authority-block" style="margin-top: 2rem;">This portal is restricted to verified KLAT credential authority. All materials are proprietary and licensed for authorized institutional use only.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pilot Intake Section with live Google Form button -->
   <section id="intake-section"><div class="cta-panel"><div><h3>Pilot Intake · Operational Baseline Project</h3><p>Apply for the 6-week reduced-rate pilot. Qualified organizations receive workflow visibility, documentation standards, onboarding clarity, and AI-use governance baseline.</p><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfTcf6efnbXJbkKC6TJyEHlDMuhIorSDlRIr3JoiKu7Nz4x5A/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Discuss Pilot →</a></div></div><div><div class="monogram-seal">KLI</div></div></div></section>
 </div>
 
 <footer>
   <div class="container">
-    <div class="footer-grid"><div class="footer-col"><h4>Navigate</h4><div class="footer-links"><div><a href="#services">Services</a><a href="#method">Methodology</a><a href="#ai-governance">AI Governance</a><a href="#clients">Ideal Clients</a></div><div><a href="#intake-section">Pilot Program</a><a href="#intake-section">Intake Form</a><a href="#execution-gate">Execution Portal</a></div></div></div><div class="footer-col"><h4>Governance & Policies</h4><div class="footer-links"><div><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Record Policy</a><a href="#">IP & Licensing</a><a href="#">Transparency Statement</a><a href="#">Execution Framework</a></div></div></div><div class="footer-col"><h4>Connect</h4><div class="footer-links"><div><a href="https://www.linkedin.com/in/delonte-kelly-01961b3b4" target="_blank">LinkedIn</a><a href="mailto:kellylegacyestatesllc@gmail.com">Contact KLI</a><a href="mailto:kellylegacyestatesllc@gmail.com">kellylegacyestatesllc@gmail.com</a></div></div></div></div>
+    <div class="footer-grid"><div class="footer-col"><h4>Navigate</h4><div class="footer-links"><div><a href="#services">Services</a><a href="#method">Methodology</a><a href="#ai-governance">AI Governance</a><a href="#clients">Ideal Clients</a></div><div><a href="#intake-section">Pilot Program</a><a href="#intake-section">Intake Form</a><a href="curriculum-portal.html">Curriculum Portal</a><a href="execution-framework.html">Execution Portal</a></div></div></div><div class="footer-col"><h4>Governance & Policies</h4><div class="footer-links"><div><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="record-policy.html">Record Policy</a><a href="ip-policy.html">IP & Licensing</a><a href="transparency.html">Transparency Statement</a><a href="execution-framework.html">Execution Framework</a></div></div></div><div class="footer-col"><h4>Connect</h4><div class="footer-links"><div><a href="https://www.linkedin.com/in/delonte-kelly-01961b3b4" target="_blank">LinkedIn</a><a href="mailto:kellylegacyestatesllc@gmail.com">Contact KLI</a></div></div></div></div>
     <div class="gold-divider"></div>
     <div class="authority-block">KELLY LEGACY INSTITUTE<br> OFFICE OF THE FIDUCIARY<br> OPERATIONAL GOVERNANCE & AI SYSTEMS DIVISION</div>
     <div class="copyright">© 2026 Kelly Legacy Institute. Educational, operational, and administrative materials are provided for organizational governance literacy and implementation support. No legal, financial, medical, or tax advice.<br> Structure reduces operational chaos. Documentation preserves continuity. Human review governs AI-assisted work.</div>
@@ -200,7 +150,7 @@
 </footer>
 
 <script>
-  // preserve existing fade-up and smooth scroll behavior
+  // preserve existing fade-up and smooth scroll behavior (no gate logic)
   (function() {
     const faders = document.querySelectorAll('.fade-up');
     const observer = new IntersectionObserver((entries) => {
@@ -216,65 +166,6 @@
       });
     });
   })();
-
-  // ---------- KLAT GATE LOGIC (MIN 100 KLAT on Polygon) ----------
-  const KLAT_CONTRACT = "0x0eC422119173558541BED4BF2f0Ef4807D66A4f4";
-  const POLYGON_CHAIN_ID = "0x89";
-  const MIN_KLAT = 100;
-  const ERC20_ABI = ["function balanceOf(address account) view returns (uint256)", "function decimals() view returns (uint8)", "function symbol() view returns (string)"];
-
-  async function verifyAndUnlockExecutionPortal() {
-    const statusDiv = document.getElementById("klatStatusMessage");
-    const protectedDiv = document.getElementById("executionPortalContent");
-    if (!statusDiv) return;
-
-    try {
-      if (!window.ethereum) {
-        statusDiv.innerHTML = "❌ Web3 wallet not detected. Please install MetaMask or a compatible wallet (Polygon Mainnet).";
-        protectedDiv.classList.remove("active");
-        return;
-      }
-      try {
-        await window.ethereum.request({ method: "wallet_switchEthereumChain", params: [{ chainId: POLYGON_CHAIN_ID }] });
-      } catch (switchErr) {
-        if (switchErr.code === 4902) {
-          statusDiv.innerHTML = "⚠️ Polygon Mainnet not added. Please add the network via chainlist or your wallet settings.";
-        } else {
-          throw switchErr;
-        }
-        protectedDiv.classList.remove("active");
-        return;
-      }
-
-      const provider = new ethers.BrowserProvider(window.ethereum);
-      const accounts = await provider.send("eth_requestAccounts", []);
-      const walletAddress = accounts[0];
-      const contract = new ethers.Contract(KLAT_CONTRACT, ERC20_ABI, provider);
-      const [rawBalance, decimals, symbol] = await Promise.all([
-        contract.balanceOf(walletAddress),
-        contract.decimals(),
-        contract.symbol()
-      ]);
-      const formattedBalance = Number(ethers.formatUnits(rawBalance, decimals));
-      
-      if (formattedBalance >= MIN_KLAT) {
-        protectedDiv.classList.add("active");
-        statusDiv.innerHTML = `✅ ACCESS GRANTED — Execution Portal Unlocked.<br>Wallet: ${walletAddress.slice(0,8)}...${walletAddress.slice(-6)}<br>KLAT Balance: ${formattedBalance.toLocaleString()} ${symbol} (≥100 threshold).<br>You now have full access to KLI Execution Framework.`;
-        protectedDiv.scrollIntoView({ behavior: "smooth", block: "start" });
-      } else {
-        protectedDiv.classList.remove("active");
-        statusDiv.innerHTML = `⛔ ACCESS DENIED — Insufficient KLAT credential authority.<br>Wallet: ${walletAddress.slice(0,8)}...${walletAddress.slice(-6)}<br>Balance: ${formattedBalance.toLocaleString()} ${symbol}<br>Required: ${MIN_KLAT} ${symbol}. Access requires verified KLAT authority under KLI administrative policy.`;
-      }
-    } catch (error) {
-      console.error("KLAT Gate Error:", error);
-      let errorMsg = "Verification failed. Ensure you are on Polygon Mainnet (chainId 137) and that the wallet is connected.";
-      if (error.code === 4001) errorMsg = "Connection rejected. Please approve wallet connection.";
-      statusDiv.innerHTML = `⚠️ ${errorMsg}<br>Details: ${error.message?.slice(0,100) || "unknown"}`;
-      protectedDiv.classList.remove("active");
-    }
-  }
-
-  document.getElementById("klatGateButton")?.addEventListener("click", verifyAndUnlockExecutionPortal);
 </script>
 </body>
 </html>
