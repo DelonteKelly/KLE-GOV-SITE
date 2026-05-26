@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>KLAT ACCESS COMMAND CENTER™ | Governance Infrastructure</title>
+  <meta name="description" content="Contribution-based governance access infrastructure for credential verification, continuity systems, and operational coordination.">
+  <link rel="icon" type="image/png" href="kli-favicon.png">
+  
+  <meta property="og:title" content="KLAT ACCESS COMMAND CENTER™">
+  <meta property="og:description" content="Contribution-based governance infrastructure.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.umd.min.js"></script>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --black-deep: #050505;
+      --black-matte: #0A0A0C;
+      --black-glass: rgba(6, 6, 10, 0.85);
+      --black-glass-solid: rgba(3, 3, 6, 0.98);
+      --gold-command: #C9A66B;
+      --gold-desat: #A0844A;
+      --gold-ultra: #6B5B3E;
+      --platinum: #E8E8EC;
+      --silver-classified: #8A8F9E;
+      --redacted: #4A3020;
+      --border-classified: rgba(201, 166, 107, 0.15);
+      --border-executive: rgba(255, 255, 255, 0.04);
+      --shadow-command: 0 20px 40px -15px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(201, 166, 107, 0.05) inset;
+      --transition-command: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    }
+
+    body {
+      background: var(--black-deep);
+      background-image: radial-gradient(ellipse at 30% 20%, rgba(201, 166, 107, 0.03) 0%, #010101 95%);
+      color: var(--platinum);
+      font-family: 'Inter', system-ui, sans-serif;
+      line-height: 1.65;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: 'CLASSIFIED // GOVERNANCE TERMINAL';
+      position: fixed;
+      bottom: 12px;
+      left: 20px;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      color: var(--gold-ultra);
+      opacity: 0.4;
+      z-index: 100;
+      pointer-events: none;
+    }
+
+    body::after {
+      content: 'KLI // OFFICE OF THE FIDUCIARY';
+      position: fixed;
+      bottom: 12px;
+      right: 20px;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      color: var(--gold-ultra);
+      opacity: 0.4;
+      z-index: 100;
+      pointer-events: none;
+    }
+
+    .container { max-width: 1400px; margin: 0 auto; padding: 0 48px; position: relative; z-index: 5; }
+
+    /* Executive Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(20px);
+      background: rgba(3, 3, 6, 0.85);
+      border-bottom: 1px solid var(--border-executive);
+    }
+
+    .nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; flex-wrap: wrap; gap: 1rem; }
+    .logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 500; letter-spacing: -0.2px; border-left: 2px solid var(--gold-command); padding-left: 16px; color: var(--platinum); }
+    .logo span { color: var(--gold-command); letter-spacing: 0.5px; }
+    .nav-links { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .nav-links a { font-family: 'Roboto Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-decoration: none; color: var(--silver-classified); transition: var(--transition-command); text-transform: uppercase; }
+    .nav-links a:hover { color: var(--gold-command); }
+
+    /* Hero Section */
+    .hero { padding: 5rem 0 3rem; position: relative; }
+    .hero-badge { display: inline-block; font-family: 'Roboto Mono', monospace; font-size: 0.6rem; letter-spacing: 0.25em; padding: 0.3rem 0.8rem; background: rgba(201, 166, 107, 0.08); border-left: 2px solid var(--gold-command); margin-bottom: 1.5rem; color: var(--gold-desat); }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 550; letter-spacing: -0.02em; color: var(--platinum); }
+    .hero-grid { display: grid; grid-template-columns: 1fr 0.9fr; gap: 3rem; align-items: center; }
+    .hero p { font-size: 0.95rem; margin: 1.2rem 0; color: #b0b8c5; max-width: 550px; }
+
+    /* Command Dashboard Card */
+    .command-card { background: var(--black-glass); backdrop-filter: blur(16px); border: 1px solid var(--border-classified); border-radius: 24px; padding: 1.5rem; box-shadow: var(--shadow-command); }
+    .command-header { font-family: 'Roboto Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; color: var(--gold-desat); border-bottom: 1px solid var(--border-classified); padding-bottom: 0.8rem; margin-bottom: 1rem; display: flex; justify-content: space-between; }
+    .command-row { display: flex; justify-content: space-between; padding: 0.7rem 0; border-bottom: 1px solid var(--border-executive); font-size: 0.75rem; }
+    .command-label { color: #8a8f9e; font-family: 'Roboto Mono', monospace; }
+    .command-value { color: var(--gold-desat); font-weight: 500; }
+    .status-verified { color: var(--gold-command); }
+    .status-unverified { color: #6b7280; }
+
+    .btn-group { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+    .btn { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.7rem 1.6rem; border-radius: 40px; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 0.7rem; letter-spacing: 0.1em; text-decoration: none; transition: var(--transition-command); border: 1px solid transparent; cursor: pointer; text-transform: uppercase; background: transparent; }
+    .btn-primary { background: rgba(201, 166, 107, 0.08); border-color: var(--border-classified); color: var(--gold-command); }
+    .btn-primary:hover { background: rgba(201, 166, 107, 0.18); transform: translateY(-2px); border-color: var(--gold-command); }
+    .btn-outline { border: 1px solid var(--border-executive); color: var(--platinum); }
+    .btn-outline:hover { background: rgba(201, 166, 107, 0.05); border-color: var(--gold-desat); }
+
+    /* Section Headers */
+    section { padding: 4rem 0; border-bottom: 1px solid var(--border-executive); }
+    .section-header { margin-bottom: 2.5rem; }
+    .section-header h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 500; display: inline-block; position: relative; }
+    .section-header h2::after { content: ''; position: absolute; bottom: -10px; left: 0; width: 60px; height: 1px; background: var(--gold-command); opacity: 0.5; }
+    .section-subhead { color: #7a7f8e; font-size: 0.8rem; margin-top: 0.5rem; letter-spacing: 0.3px; }
+
+    /* Tier Cards */
+    .tier-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-top: 1rem; }
+    .tier-card { background: rgba(0, 0, 0, 0.4); border: 1px solid var(--border-executive); border-radius: 20px; padding: 1.2rem; transition: var(--transition-command); }
+    .tier-card:hover { border-color: var(--border-classified); background: rgba(201, 166, 107, 0.03); transform: translateY(-3px); }
+    .tier-level { font-family: 'Roboto Mono', monospace; font-size: 0.6rem; color: var(--gold-desat); letter-spacing: 0.15em; }
+    .tier-name { font-size: 1rem; font-weight: 600; margin: 0.5rem 0 0.3rem; color: var(--platinum); }
+    .tier-permissions { font-size: 0.65rem; color: #8a8f9e; margin-top: 0.5rem; }
+
+    /* Mission Cards */
+    .mission-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+    .mission-card { background: rgba(0, 0, 0, 0.35); border: 1px solid var(--border-executive); border-radius: 20px; padding: 1.2rem; transition: var(--transition-command); }
+    .mission-status { font-family: 'Roboto Mono', monospace; font-size: 0.55rem; color: var(--gold-ultra); letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+    .mission-card h4 { font-size: 0.9rem; margin-bottom: 0.3rem; }
+    .mission-reward { font-size: 0.65rem; color: var(--gold-desat); margin-top: 0.6rem; }
+
+    /* Credential Archive */
+    .credential-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .credential-card { background: rgba(0, 0, 0, 0.4); border: 1px solid var(--border-executive); border-radius: 18px; padding: 1rem; text-align: center; }
+    .credential-id { font-family: 'Roboto Mono', monospace; font-size: 0.6rem; color: var(--gold-desat); }
+    .credential-title { font-size: 0.8rem; margin: 0.3rem 0; }
+
+    /* Wallet Terminal */
+    .wallet-terminal { background: var(--black-glass-solid); border: 1px solid var(--border-classified); border-radius: 24px; padding: 1.5rem; margin: 1rem 0; }
+    .terminal-line { display: flex; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px solid var(--border-executive); font-family: 'Roboto Mono', monospace; font-size: 0.7rem; }
+
+    /* Portal Grid */
+    .portal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin: 1.5rem 0; }
+    .portal-card { background: rgba(0, 0, 0, 0.4); border: 1px solid var(--border-executive); border-radius: 20px; padding: 1.2rem; text-align: center; transition: var(--transition-command); }
+    .portal-card:hover { border-color: var(--gold-ultra); transform: translateY(-2px); }
+    .portal-card i { font-size: 1.5rem; color: var(--gold-desat); margin-bottom: 0.5rem; }
+
+    /* Footer Statement */
+    .executive-statement { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border-executive); margin-top: 2rem; }
+    .statement-quote { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 450; color: var(--platinum); letter-spacing: -0.3px; }
+    .statement-authority { font-family: 'Roboto Mono', monospace; font-size: 0.7rem; color: var(--gold-desat); margin-top: 1rem; letter-spacing: 0.2em; }
+
+    footer { background: #020204; padding: 2rem 0; margin-top: 2rem; border-top: 1px solid var(--border-executive); }
+    .copyright { text-align: center; font-size: 0.6rem; color: #4a4f5e; }
+
+    @media (max-width: 1000px) {
+      .container { padding: 0 24px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
+      .hero p { margin-left: auto; margin-right: auto; }
+      .tier-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+      .mission-grid { grid-template-columns: 1fr; }
+      .credential-grid { grid-template-columns: repeat(2, 1fr); }
+      .portal-grid { grid-template-columns: 1fr; }
+      .btn-group { justify-content: center; }
+    }
+
+    @media (max-width: 600px) {
+      .tier-grid { grid-template-columns: 1fr; }
+      .credential-grid { grid-template-columns: 1fr; }
+      .nav { flex-direction: column; }
+      .nav-links { justify-content: center; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="nav">
+      <div class="logo">KLAT <span>ACCESS COMMAND CENTER™</span></div>
+      <div class="nav-links">
+        <a href="#tiers">CLASSIFICATIONS</a>
+        <a href="#missions">MISSIONS</a>
+        <a href="#credentials">CREDENTIALS</a>
+        <a href="#portals">PORTALS</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <!-- HERO SECTION -->
+    <div class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-badge">OFFICE OF THE FIDUCIARY // GOVERNANCE TERMINAL</div>
+          <h1>Governance Access<br>Must Be Verified.</h1>
+          <p>KLAT establishes contribution-based access infrastructure for governance participation, credential verification, continuity systems, and operational coordination. Not an investment. Not a speculative asset. A governance credential.</p>
+          <div class="btn-group">
+            <button id="verifyWalletBtn" class="btn btn-primary"><i class="fa-solid fa-key"></i> VERIFY ACCESS</button>
+            <a href="execution-framework.html" class="btn btn-outline">ENTER GOVERNANCE PORTAL</a>
+          </div>
+        </div>
+        <div class="command-card">
+          <div class="command-header"><span>GOVERNANCE DASHBOARD</span><span>CLASSIFIED</span></div>
+          <div class="command-row"><span class="command-label">Authority Tier</span><span id="tierDisplay" class="command-value">Observer Access</span></div>
+          <div class="command-row"><span class="command-label">Verification Status</span><span id="verifyStatus" class="command-value status-unverified">Unverified</span></div>
+          <div class="command-row"><span class="command-label">Governance Credentials</span><span id="credCount" class="command-value">0</span></div>
+          <div class="command-row"><span class="command-label">Contribution Record</span><span id="contributionRecord" class="command-value">Not Established</span></div>
+          <div class="command-row"><span class="command-label">Access Classification</span><span id="accessClass" class="command-value">PENDING</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACCESS TIER SYSTEM -->
+    <section id="tiers">
+      <div class="section-header"><h2>Governance Classifications</h2><div class="section-subhead">Authority clearances based on verified contribution.</div></div>
+      <div class="tier-grid">
+        <div class="tier-card"><div class="tier-level">TIER I</div><div class="tier-name">Observer Access</div><div class="tier-permissions">Curriculum access · Public governance materials</div></div>
+        <div class="tier-card"><div class="tier-level">TIER II</div><div class="tier-name">Verified Contributor</div><div class="tier-permissions">Mission participation · Credential eligibility</div></div>
+        <div class="tier-card"><div class="tier-level">TIER III</div><div class="tier-name">Governance Operator</div><div class="tier-permissions">Portal access · Record submission authority</div></div>
+        <div class="tier-card"><div class="tier-level">TIER IV</div><div class="tier-name">Executive Fiduciary</div><div class="tier-permissions">Full infrastructure · Continuity oversight</div></div>
+        <div class="tier-card"><div class="tier-level">TIER V</div><div class="tier-name">Continuity Authority</div><div class="tier-permissions">Governance direction · Succession administration</div></div>
+      </div>
+    </section>
+
+    <!-- GOVERNANCE MISSIONS -->
+    <section id="missions">
+      <div class="section-header"><h2>Governance Missions</h2><div class="section-subhead">Contribution-based progression through verified completion.</div></div>
+      <div class="mission-grid">
+        <div class="mission-card"><div class="mission-status">PENDING / AVAILABLE</div><h4>Governance Orientation</h4><p class="mission-reward">Unlocks: Tier II eligibility</p></div>
+        <div class="mission-card"><div class="mission-status">PENDING / AVAILABLE</div><h4>Wallet Authority Verification</h4><p class="mission-reward">Unlocks: Credential verification</p></div>
+        <div class="mission-card"><div class="mission-status">PENDING / AVAILABLE</div><h4>Fiduciary Curriculum</h4><p class="mission-reward">Unlocks: Governance Operator</p></div>
+        <div class="mission-card"><div class="mission-status">PENDING / AVAILABLE</div><h4>Administrative Record Submission</h4><p class="mission-reward">Unlocks: Continuity contribution</p></div>
+        <div class="mission-card"><div class="mission-status">PENDING / AVAILABLE</div><h4>Governance Review Participation</h4><p class="mission-reward">Unlocks: Executive standing</p></div>
+        <div class="mission-card"><div class="mission-status">PENDING / AVAILABLE</div><h4>Continuity Task Execution</h4><p class="mission-reward">Unlocks: Continuity Authority</p></div>
+      </div>
+    </section>
+
+    <!-- GOVERNANCE CREDENTIAL ARCHIVE -->
+    <section id="credentials">
+      <div class="section-header"><h2>Governance Credential Archive</h2><div class="section-subhead">Executive authorization badges — institutional verification records.</div></div>
+      <div class="credential-grid">
+        <div class="credential-card"><div class="credential-id">KLI-GOV-001</div><div class="credential-title">Foundation Governance</div><div class="credential-id">Verification: Required</div></div>
+        <div class="credential-card"><div class="credential-id">KLI-GOV-002</div><div class="credential-title">Verification Authority</div><div class="credential-id">Verification: Required</div></div>
+        <div class="credential-card"><div class="credential-id">KLI-GOV-003</div><div class="credential-title">Executive Verification</div><div class="credential-id">Verification: Required</div></div>
+        <div class="credential-card"><div class="credential-id">KLI-GOV-004</div><div class="credential-title">Continuity Authorization</div><div class="credential-id">Verification: Required</div></div>
+      </div>
+    </section>
+
+    <!-- WALLET VERIFICATION TERMINAL -->
+    <section>
+      <div class="section-header"><h2>Wallet Verification Terminal</h2><div class="section-subhead">Connect and verify governance authority.</div></div>
+      <div class="wallet-terminal" id="walletTerminal">
+        <div class="terminal-line"><span>WALLET STATUS:</span><span id="walletStatus">Not Connected</span></div>
+        <div class="terminal-line"><span>VERIFICATION AUTHORITY:</span><span id="authStatus">Pending</span></div>
+        <div class="terminal-line"><span>CREDENTIAL COUNT:</span><span id="credCountTerminal">0</span></div>
+        <div class="terminal-line"><span>GOVERNANCE TIER:</span><span id="govTier">Observer Access</span></div>
+        <div class="btn-group" style="margin-top: 1rem;"><button id="terminalVerifyBtn" class="btn btn-primary"><i class="fa-solid fa-shield"></i> VERIFY GOVERNANCE ACCESS</button></div>
+      </div>
+    </section>
+
+    <!-- COMMAND PORTALS -->
+    <section id="portals">
+      <div class="section-header"><h2>Command Portals</h2><div class="section-subhead">Authorized access interfaces.</div></div>
+      <div class="portal-grid">
+        <a href="curriculum-portal.html" class="portal-card" style="text-decoration: none; color: inherit;"><i class="fa-solid fa-building-columns"></i><h4>Curriculum Portal</h4><p style="font-size:0.7rem; color:#8a8f9e;">Governance education</p></a>
+        <a href="execution-framework.html" class="portal-card" style="text-decoration: none; color: inherit;"><i class="fa-solid fa-scale-balanced"></i><h4>Execution Framework</h4><p style="font-size:0.7rem; color:#8a8f9e;">Operational manual</p></a>
+        <a href="index.html" class="portal-card" style="text-decoration: none; color: inherit;"><i class="fa-solid fa-archive"></i><h4>Governance Archive</h4><p style="font-size:0.7rem; color:#8a8f9e;">Institutional record</p></a>
+      </div>
+    </section>
+
+    <!-- EXECUTIVE STATEMENT -->
+    <div class="executive-statement">
+      <div class="statement-quote">“Structure Determines Outcome.<br>Contribution Determines Access.<br>Governance Preserves Continuity.”</div>
+      <div class="statement-authority">OFFICE OF THE FIDUCIARY<br>KELLY LEGACY INSTITUTE</div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="copyright">© 2026 Kelly Legacy Institute — KLAT is a governance access credential, not an investment or speculative asset. Contribution-based governance infrastructure.</div>
+  </div>
+</footer>
+
+<script>
+  // KLAT Verification Simulation (Executive Terminal)
+  const KLAT_CONTRACT = "0x0eC422119173558541BED4BF2f0Ef4807D66A4f4";
+  const POLYGON_CHAIN_ID = "0x89";
+  const MIN_KLAT = 100;
+  const ERC20_ABI = ["function balanceOf(address account) view returns (uint256)", "function decimals() view returns (uint8)", "function symbol() view returns (string)"];
+
+  async function verifyGovernanceAccess() {
+    const walletStatus = document.getElementById('walletStatus');
+    const authStatus = document.getElementById('authStatus');
+    const credCountSpan = document.getElementById('credCountTerminal');
+    const govTierSpan = document.getElementById('govTier');
+    const tierDisplay = document.getElementById('tierDisplay');
+    const verifyStatus = document.getElementById('verifyStatus');
+    const credCountDashboard = document.getElementById('credCount');
+    const contributionRecord = document.getElementById('contributionRecord');
+    const accessClass = document.getElementById('accessClass');
+
+    try {
+      if (!window.ethereum) {
+        if(walletStatus) walletStatus.innerHTML = "Wallet not detected";
+        return;
+      }
+      await window.ethereum.request({ method: "wallet_switchEthereumChain", params: [{ chainId: POLYGON_CHAIN_ID }] });
+      const provider = new ethers.BrowserProvider(window.ethereum);
+      const accounts = await provider.send("eth_requestAccounts", []);
+      const walletAddress = accounts[0];
+      const contract = new ethers.Contract(KLAT_CONTRACT, ERC20_ABI, provider);
+      const [rawBalance, decimals, symbol] = await Promise.all([contract.balanceOf(walletAddress), contract.decimals(), contract.symbol()]);
+      const formattedBalance = Number(ethers.formatUnits(rawBalance, decimals));
+      
+      if(walletStatus) walletStatus.innerHTML = `${walletAddress.slice(0,8)}...${walletAddress.slice(-6)} | ${formattedBalance.toLocaleString()} ${symbol}`;
+      
+      let tier = "Observer Access";
+      let auth = "Unverified";
+      let credCount = 0;
+      let contribution = "Not Established";
+      let classLevel = "PENDING";
+      
+      if(formattedBalance >= MIN_KLAT) {
+        auth = "Verified KLAT Authority";
+        credCount = 1;
+        tier = "Governance Operator";
+        contribution = "Verified Contributor";
+        classLevel = "OPERATOR CLEARANCE";
+        if(formattedBalance >= 500) { tier = "Executive Fiduciary"; classLevel = "EXECUTIVE"; }
+        if(formattedBalance >= 1000) { tier = "Continuity Authority"; classLevel = "CONTINUITY CLEARANCE"; }
+      }
+      
+      if(authStatus) authStatus.innerHTML = auth;
+      if(credCountSpan) credCountSpan.innerHTML = credCount;
+      if(govTierSpan) govTierSpan.innerHTML = tier;
+      if(tierDisplay) tierDisplay.innerHTML = tier;
+      if(verifyStatus) verifyStatus.innerHTML = auth === "Verified KLAT Authority" ? "Verified ✓" : "Unverified";
+      if(credCountDashboard) credCountDashboard.innerHTML = credCount;
+      if(contributionRecord) contributionRecord.innerHTML = contribution;
+      if(accessClass) accessClass.innerHTML = classLevel;
+      
+    } catch(e) {
+      console.error(e);
+      if(walletStatus) walletStatus.innerHTML = "Verification failed";
+    }
+  }
+  
+  document.getElementById('terminalVerifyBtn')?.addEventListener('click', verifyGovernanceAccess);
+  document.getElementById('verifyWalletBtn')?.addEventListener('click', verifyGovernanceAccess);
+</script>
+</body>
+</html>
