@@ -14,6 +14,8 @@
   <meta property="og:url" content="https://kellylegacyestates.com/">
   <meta property="og:image" content="https://kellylegacyestates.com/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kelly Legacy Institute | Institutional Governance">
+  <meta name="twitter:description" content="Private institutional governance infrastructure for fiduciary administration and continuity systems.">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -144,12 +146,10 @@
     /* Hero Section */
     .hero {
       min-height: 85vh;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      display: flex;
       align-items: center;
-      gap: 4rem;
-      padding: 3rem 0 5rem;
       position: relative;
+      padding: 3rem 0 5rem;
     }
 
     .hero::before {
@@ -576,7 +576,7 @@
       transform: translateY(0);
     }
 
-    /* Responsive Fixes */
+    /* Responsive Fixes — Explicit */
     @media (max-width: 1050px) {
       .hero-grid {
         grid-template-columns: 1fr !important;
