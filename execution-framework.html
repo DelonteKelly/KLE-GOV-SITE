@@ -3,139 +3,308 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Office of the Fiduciary – Execution Framework | Kelly Legacy Institute</title>
-  <meta name="description" content="Private executive suite for institutional governance, administrative procedure, and fiduciary accountability. KLAT-gated access.">
+  <title>CLASSIFIED // KLI-EXEC-001 // Execution Framework | Kelly Legacy Institute</title>
+  <meta name="description" content="Private executive suite for institutional governance, administrative procedure, and fiduciary accountability. KLAT-gated access. Restricted environment.">
   <link rel="icon" type="image/png" href="kli-favicon.png">
   <meta property="og:title" content="Office of the Fiduciary – Executive Suite">
   <meta property="og:description" content="Restricted institutional governance framework. KLAT credential authority required.">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Share+Tech+Mono&family=Special+Elite&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.umd.min.js"></script>
 
   <style>
-    /* ---------- PREMIUM EXECUTIVE INSTITUTIONAL DESIGN ---------- */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
     :root {
-      --black-deep: #050505;
-      --black-matte: #0A0A0C;
-      --black-charcoal: #111113;
-      --black-glass: rgba(8, 8, 12, 0.82);
-      --black-glass-solid: rgba(5, 5, 8, 0.96);
-      --gold-muted: #C9A66B;
-      --gold-desat: #B89A5E;
-      --gold-ultra-desat: #8B7355;
-      --platinum: #E8E8EC;
-      --silver-muted: #9CA3AF;
-      --border-glass-light: rgba(255, 255, 255, 0.04);
-      --border-glass-gold: rgba(201, 166, 107, 0.12);
-      --border-gold-active: rgba(201, 166, 107, 0.32);
-      --shadow-deep: 0 30px 60px -20px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.02) inset;
-      --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(255, 255, 255, 0.02) inset;
-      --shadow-lift: 0 25px 45px -18px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(201, 166, 107, 0.08) inset;
-      --transition-exec: all 0.35s cubic-bezier(0.215, 0.61, 0.355, 1);
+      --black:       #030304;
+      --black-2:     #080809;
+      --black-3:     #0D0D0F;
+      --black-4:     #131316;
+      --red-class:   #C41E1E;
+      --red-dim:     #8A1515;
+      --red-glow:    rgba(196, 30, 30, 0.18);
+      --amber:       #C89A2A;
+      --amber-dim:   #8A6A1A;
+      --amber-glow:  rgba(200, 154, 42, 0.12);
+      --green-live:  #3A8C3A;
+      --white:       #E8E8E4;
+      --white-dim:   #A8A8A4;
+      --white-mute:  #686866;
+      --border-red:  rgba(196, 30, 30, 0.3);
+      --border-amb:  rgba(200, 154, 42, 0.2);
+      --border-faint:rgba(255,255,255,0.05);
+      --font-mono:   'Share Tech Mono', 'Courier New', monospace;
+      --font-doc:    'Courier Prime', 'Courier New', serif;
+      --font-stamp:  'Special Elite', serif;
+      --font-head:   'Oswald', sans-serif;
     }
-    
+
+    html { scroll-behavior: smooth; }
+
     body {
-      background: var(--black-deep);
-      color: var(--platinum);
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      line-height: 1.65;
-      scroll-behavior: smooth;
+      background: var(--black);
+      background-image: radial-gradient(ellipse at 30% 20%, rgba(196,30,30,0.03) 0%, #010101 95%);
+      color: var(--white);
+      font-family: var(--font-doc);
+      line-height: 1.7;
       min-height: 100vh;
+      overflow-x: hidden;
       position: relative;
+      cursor: crosshair;
     }
-    
-    /* Atmospheric depth layers */
+
+    /* === SCAN LINE OVERLAY === */
     body::before {
       content: '';
       position: fixed;
       inset: 0;
-      background: radial-gradient(ellipse at 40% 30%, rgba(201, 166, 107, 0.025) 0%, transparent 65%);
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.08) 2px,
+        rgba(0,0,0,0.08) 4px
+      );
       pointer-events: none;
-      z-index: 0;
+      z-index: 9999;
     }
-    
+
+    /* === MOVING SCAN LINE === */
     body::after {
       content: '';
       position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.018'/%3E%3C/svg%3E");
-      opacity: 0.4;
+      left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, rgba(196,30,30,0.4), transparent);
+      animation: scanline 8s linear infinite;
       pointer-events: none;
-      z-index: 0;
+      z-index: 9998;
     }
-    
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 48px;
-      position: relative;
-      z-index: 5;
+    @keyframes scanline {
+      0%   { top: -4px; opacity: 0; }
+      5%   { opacity: 1; }
+      95%  { opacity: 1; }
+      100% { top: 100vh; opacity: 0; }
     }
-    
-    /* Refined Header — Sovereign Glass */
+
+    /* === NOISE TEXTURE === */
+    .noise-layer {
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.6;
+    }
+
+    /* === CLASSIFICATION BANNER — Softened Institutional Version === */
+    .class-banner-top,
+    .class-banner-bottom {
+      position: fixed;
+      left: 0; right: 0;
+      z-index: 10000;
+      background: var(--red-class);
+      padding: 5px 0;
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      color: #fff;
+      font-weight: bold;
+    }
+    .class-banner-top { top: 0; border-bottom: 1px solid #8A1515; }
+    .class-banner-bottom { bottom: 0; border-top: 1px solid #8A1515; }
+    .class-banner-top span, .class-banner-bottom span {
+      opacity: 0.5; margin: 0 2rem; font-size: 0.5rem;
+    }
+
+    /* === WATERMARK === */
+    .watermark {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      z-index: 2;
+      overflow: hidden;
+    }
+    .watermark-text {
+      font-family: var(--font-stamp);
+      font-size: 14vw;
+      color: rgba(196, 30, 30, 0.03);
+      transform: rotate(-35deg);
+      white-space: nowrap;
+      letter-spacing: 0.05em;
+      user-select: none;
+    }
+
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 48px; position: relative; z-index: 10; }
+
+    /* === STATUS STRIP === */
+    .status-strip {
+      position: sticky;
+      top: 26px;
+      z-index: 500;
+      background: var(--black-2);
+      border-bottom: 1px solid var(--border-red);
+      border-top: 1px solid var(--border-red);
+      padding: 8px 0;
+    }
+    .status-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      color: var(--white-mute);
+    }
+    .status-inner .live { color: var(--green-live); }
+    .status-inner .amber { color: var(--amber); }
+    .status-inner .red { color: var(--red-class); }
+    .blink {
+      animation: blink 1.2s step-end infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    .pulse-dot {
+      display: inline-block;
+      width: 7px; height: 7px;
+      background: var(--green-live);
+      border-radius: 50%;
+      animation: pulse 2s ease infinite;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(58,140,58,0.6); }
+      50%       { box-shadow: 0 0 0 5px rgba(58,140,58,0); }
+    }
+    .red-dot {
+      display: inline-block;
+      width: 7px; height: 7px;
+      background: var(--red-class);
+      border-radius: 50%;
+      margin-right: 6px;
+      vertical-align: middle;
+      animation: pulse-red 1.8s ease infinite;
+    }
+    @keyframes pulse-red {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(196,30,30,0.6); }
+      50%       { box-shadow: 0 0 0 5px rgba(196,30,30,0); }
+    }
+
+    /* === HEADER === */
     header {
       position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(24px);
-      background: rgba(5, 5, 8, 0.72);
-      border-bottom: 1px solid var(--border-glass-light);
-      transition: var(--transition-exec);
+      top: 47px;
+      z-index: 499;
+      background: rgba(3, 3, 4, 0.92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-faint);
+      padding: 18px 0;
     }
-    
     .nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.2rem 0;
       flex-wrap: wrap;
       gap: 1rem;
     }
-    
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.35rem;
+    .logo-block {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .logo-seal {
+      width: 44px; height: 44px;
+      border: 1px solid var(--border-red);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-head);
+      font-size: 0.75rem;
+      color: var(--red-class);
+      letter-spacing: 0.05em;
+      position: relative;
+    }
+    .logo-seal::before {
+      content: '';
+      position: absolute;
+      inset: 3px;
+      border: 1px dashed rgba(196,30,30,0.2);
+      border-radius: 50%;
+    }
+    .logo-text {
+      font-family: var(--font-head);
+      font-size: 1.05rem;
       font-weight: 500;
-      letter-spacing: -0.2px;
-      color: var(--platinum);
-      text-decoration: none;
-      opacity: 0.88;
-      transition: opacity 0.2s;
+      letter-spacing: 0.12em;
+      color: var(--white);
+      text-transform: uppercase;
     }
-    
-    .logo span {
-      color: var(--gold-muted);
-      font-weight: 600;
+    .logo-text small {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.52rem;
+      color: var(--red-class);
+      letter-spacing: 0.22em;
+      margin-top: 2px;
     }
-    
     .nav-links {
       display: flex;
-      gap: 2.2rem;
+      align-items: center;
+      gap: 1.8rem;
       flex-wrap: wrap;
     }
-    
     .nav-links a {
-      font-family: 'Roboto Mono', monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.18em;
-      text-decoration: none;
-      color: var(--silver-muted);
-      transition: var(--transition-exec);
-      text-transform: uppercase;
-      font-weight: 400;
-    }
-    
-    .nav-links a:hover {
-      color: var(--gold-muted);
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
       letter-spacing: 0.2em;
+      text-decoration: none;
+      color: var(--white-mute);
+      transition: color 0.2s;
+      text-transform: uppercase;
     }
-    
-    /* Executive Gate Overlay — Sovereign Entrance */
+    .nav-links a:hover { color: var(--amber); }
+    .nav-links .access-link {
+      color: var(--red-class) !important;
+      border: 1px solid var(--border-red);
+      padding: 6px 16px;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+    .nav-links .access-link:hover { background: var(--red-glow); }
+
+    /* === DOCUMENT HEADER === */
+    .doc-header {
+      background: var(--black-2);
+      border-bottom: 2px solid var(--red-class);
+      padding: 16px 0;
+      margin-top: 0;
+    }
+    .doc-header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.1em;
+      color: var(--white-mute);
+    }
+    .doc-header-inner .field { margin-bottom: 4px; }
+    .doc-header-inner .field span { color: var(--amber); }
+
+    /* Executive Gate Overlay */
     .gate-overlay {
       position: fixed;
       top: 0;
@@ -150,72 +319,60 @@
       justify-content: center;
       transition: opacity 0.6s ease, visibility 0.6s ease;
     }
-    
-    .gate-overlay.hidden {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-    }
-    
+    .gate-overlay.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
     .gate-card {
       max-width: 560px;
       width: 90%;
-      background: var(--black-glass-solid);
-      border: 1px solid var(--border-glass-gold);
-      border-radius: 48px;
+      background: var(--black-3);
+      border: 1px solid var(--border-red);
+      border-radius: 16px;
       padding: 3rem 2.8rem;
       text-align: center;
-      box-shadow: var(--shadow-deep), 0 0 0 1px rgba(201, 166, 107, 0.05) inset;
       animation: fadeInGate 0.55s ease;
     }
-    
     @keyframes fadeInGate {
       from { opacity: 0; transform: scale(0.97); }
       to { opacity: 1; transform: scale(1); }
     }
-    
     .gate-badge {
       display: inline-flex;
       gap: 12px;
-      background: rgba(201, 166, 107, 0.06);
+      background: rgba(196, 30, 30, 0.1);
       padding: 0.5rem 1.2rem;
-      border-radius: 100px;
-      font-family: 'Roboto Mono', monospace;
+      border-radius: 4px;
+      font-family: var(--font-mono);
       font-size: 0.65rem;
       letter-spacing: 0.15em;
-      color: var(--gold-muted);
+      color: var(--red-class);
       margin-bottom: 2rem;
-      border: 1px solid var(--border-glass-gold);
+      border: 1px solid var(--border-red);
     }
-    
     .gate-card h2 {
-      font-family: 'Playfair Display', serif;
+      font-family: var(--font-head);
       font-size: 2rem;
       font-weight: 500;
-      letter-spacing: -0.3px;
-      color: var(--platinum);
+      letter-spacing: 0.04em;
+      color: var(--white);
       margin-bottom: 0.75rem;
     }
-    
     .gate-status {
-      font-family: 'Roboto Mono', monospace;
-      background: rgba(10, 10, 14, 0.8);
+      font-family: var(--font-mono);
+      background: rgba(0, 0, 0, 0.6);
       padding: 1rem 1.2rem;
-      border-radius: 24px;
+      border-radius: 8px;
       margin-top: 2rem;
       font-size: 0.72rem;
       line-height: 1.7;
-      border: 1px solid var(--border-glass-light);
-      color: var(--silver-muted);
+      border: 1px solid var(--border-faint);
+      color: var(--white-mute);
     }
-    
     .btn {
       display: inline-flex;
       align-items: center;
       gap: 0.6rem;
       padding: 0.85rem 1.8rem;
-      border-radius: 44px;
-      font-family: 'Inter', sans-serif;
+      border-radius: 2px;
+      font-family: var(--font-mono);
       font-weight: 480;
       font-size: 0.75rem;
       letter-spacing: 0.1em;
@@ -225,40 +382,30 @@
       cursor: pointer;
       text-transform: uppercase;
       background: transparent;
-      border: 1px solid var(--border-glass-gold);
-      color: var(--platinum);
+      border: 1px solid var(--border-red);
+      color: var(--white);
     }
-    
     .btn-primary {
-      background: rgba(201, 166, 107, 0.08);
-      border-color: var(--border-gold-active);
-      color: var(--gold-muted);
+      background: rgba(196, 30, 30, 0.1);
+      border-color: var(--border-red);
+      color: var(--red-class);
     }
-    
     .btn-primary:hover {
-      background: rgba(201, 166, 107, 0.18);
+      background: rgba(196, 30, 30, 0.25);
       transform: translateY(-2px);
-      border-color: var(--gold-muted);
-      letter-spacing: 0.12em;
     }
-    
-    /* Protected Content — Sovereign Executive Suite */
+
     .protected-content { display: none; }
     .protected-content.visible { display: block; animation: suiteReveal 0.7s ease; }
-    
-    @keyframes suiteReveal {
-      from { opacity: 0; transform: translateY(28px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    /* Executive Header — Chamber Aesthetic */
+    @keyframes suiteReveal { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* Executive Suite */
     .executive-suite {
       padding: 5rem 0 2rem;
-      border-bottom: 1px solid var(--border-glass-light);
+      border-bottom: 1px solid var(--border-faint);
       margin-bottom: 3rem;
       position: relative;
     }
-    
     .executive-suite::after {
       content: '';
       position: absolute;
@@ -266,228 +413,221 @@
       left: 0;
       width: 90px;
       height: 1px;
-      background: var(--gold-muted);
+      background: var(--red-class);
       opacity: 0.6;
     }
-    
     .suite-badge {
-      font-family: 'Roboto Mono', monospace;
+      font-family: var(--font-mono);
       font-size: 0.65rem;
       letter-spacing: 0.28em;
-      color: var(--gold-desat);
+      color: var(--red-class);
       margin-bottom: 1.2rem;
       text-transform: uppercase;
     }
-    
     .executive-suite h1 {
-      font-family: 'Playfair Display', serif;
+      font-family: var(--font-head);
       font-size: 3.6rem;
-      font-weight: 550;
-      color: var(--platinum);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--white);
       line-height: 1.12;
-      letter-spacing: -0.02em;
     }
-    
     .executive-suite .sub {
-      font-family: 'Roboto Mono', monospace;
-      color: var(--silver-muted);
+      font-family: var(--font-mono);
+      color: var(--white-mute);
       margin-top: 0.9rem;
       letter-spacing: 0.5px;
       font-size: 0.8rem;
     }
-    
     .suite-description {
       max-width: 780px;
       margin-top: 1.8rem;
-      color: #b0b8c5;
-      border-left: 2px solid var(--gold-ultra-desat);
+      color: var(--white-mute);
+      border-left: 2px solid var(--border-red);
       padding-left: 1.6rem;
       font-size: 0.95rem;
       line-height: 1.7;
-      font-weight: 350;
     }
-    
-    /* Sovereign Glass Modules */
+
     .module {
-      background: var(--black-glass);
-      backdrop-filter: blur(20px);
-      border: 1px solid var(--border-glass-light);
-      border-radius: 32px;
+      background: var(--black-3);
+      border: 1px solid var(--border-faint);
+      border-radius: 8px;
       margin-bottom: 1.8rem;
       overflow: hidden;
-      transition: var(--transition-exec);
+      transition: border-color 0.25s;
     }
-    
-    .module:hover {
-      border-color: var(--border-glass-gold);
-      box-shadow: var(--shadow-lift);
-    }
-    
+    .module:hover { border-color: var(--border-red); }
     .module-header {
-      background: rgba(2, 2, 4, 0.6);
+      background: rgba(0, 0, 0, 0.4);
       padding: 1.2rem 2rem;
       cursor: pointer;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      transition: background 0.2s;
     }
-    
-    .module-header:hover {
-      background: rgba(201, 166, 107, 0.04);
-    }
-    
+    .module-header:hover { background: rgba(196, 30, 30, 0.05); }
     .module-header h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.45rem;
-      font-weight: 480;
-      color: var(--platinum);
+      font-family: var(--font-head);
+      font-size: 1.3rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--white);
       margin: 0;
-      letter-spacing: -0.3px;
     }
-    
-    .toggle-icon {
-      font-size: 1rem;
-      color: var(--gold-desat);
-      transition: transform 0.2s;
-    }
-    
+    .toggle-icon { font-size: 1rem; color: var(--amber); }
     .module-content {
       padding: 1.6rem 2rem;
       display: none;
-      border-top: 1px solid var(--border-glass-light);
+      border-top: 1px solid var(--border-faint);
     }
-    
-    .module-content.open {
-      display: block;
-      animation: slideFade 0.25s ease;
-    }
-    
-    @keyframes slideFade {
-      from { opacity: 0; transform: translateY(-6px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
+    .module-content.open { display: block; }
     .principle-block {
       margin-bottom: 1.6rem;
       padding-bottom: 1rem;
-      border-bottom: 1px solid rgba(201, 166, 107, 0.08);
+      border-bottom: 1px solid rgba(196, 30, 30, 0.08);
     }
-    
     .principle-block strong {
       display: block;
-      font-family: 'Roboto Mono', monospace;
+      font-family: var(--font-mono);
       font-size: 0.65rem;
       letter-spacing: 2.5px;
-      color: var(--gold-desat);
+      color: var(--red-class);
       margin-bottom: 0.5rem;
       text-transform: uppercase;
-      font-weight: 450;
     }
-    
-    .principle-block p,
-    .principle-block ul {
-      color: #c8cfdb;
-      font-size: 0.88rem;
-      line-height: 1.7;
-      margin-left: 0.2rem;
-    }
-    
-    /* Closing Statement */
+    .principle-block p { color: var(--white-mute); font-size: 0.88rem; line-height: 1.7; }
+
     .closing-statement {
       margin-top: 2.8rem;
       padding: 2rem;
-      background: rgba(0, 0, 0, 0.4);
-      border-left: 3px solid var(--gold-desat);
-      border-radius: 24px;
+      background: var(--black-2);
+      border-left: 3px solid var(--red-class);
+      border-radius: 8px;
     }
-    
-    /* Footer — Absolute Discretion */
+
     footer {
-      background: #020204;
-      border-top: 1px solid var(--border-glass-light);
+      background: var(--black-2);
+      border-top: 2px solid var(--red-class);
       padding: 3rem 0 2rem;
       margin-top: 4rem;
     }
-    
-    .footer-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 2.5rem;
-    }
-    
+    .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2.5rem; }
     .monogram-seal {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       width: 48px;
       height: 48px;
-      border: 1px solid var(--gold-ultra-desat);
+      border: 1px solid var(--border-red);
       border-radius: 50%;
-      font-family: 'Playfair Display', serif;
+      font-family: var(--font-head);
       font-weight: 500;
       font-size: 1.2rem;
-      color: var(--gold-desat);
-      margin-bottom: 1rem;
-      background: rgba(201, 166, 107, 0.03);
+      color: var(--red-class);
+      background: rgba(196, 30, 30, 0.03);
     }
-    
-    .footer-links {
-      display: flex;
-      gap: 3rem;
-      flex-wrap: wrap;
-    }
-    
-    .footer-links a {
-      display: block;
-      color: #6b7280;
-      text-decoration: none;
-      font-size: 0.72rem;
-      margin-bottom: 0.6rem;
-      transition: var(--transition-exec);
-      letter-spacing: 0.3px;
-    }
-    
-    .footer-links a:hover {
-      color: var(--gold-muted);
-      transform: translateX(2px);
-    }
-    
-    .gold-divider {
-      height: 1px;
-      background: linear-gradient(90deg, var(--gold-ultra-desat), transparent);
-      margin: 2rem 0 1.5rem;
-      opacity: 0.3;
-    }
-    
-    .copyright {
-      text-align: center;
-      font-size: 0.65rem;
-      color: #4a4f5e;
-      line-height: 1.6;
-      letter-spacing: 0.3px;
-    }
-    
+    .footer-links { display: flex; gap: 3rem; flex-wrap: wrap; }
+    .footer-links a { display: block; color: #6b7280; text-decoration: none; font-size: 0.72rem; margin-bottom: 0.6rem; transition: 0.2s; }
+    .footer-links a:hover { color: var(--amber); transform: translateX(2px); }
+    .gold-divider { height: 1px; background: linear-gradient(90deg, var(--red-class), transparent); margin: 2rem 0 1.5rem; opacity: 0.3; }
+    .copyright { text-align: center; font-size: 0.65rem; color: #4a4f5e; line-height: 1.6; }
+
     @media (max-width: 768px) {
       .container { padding: 0 24px; }
       .executive-suite h1 { font-size: 2.4rem; }
-      .module-header h2 { font-size: 1.2rem; }
+      .module-header h2 { font-size: 1.1rem; }
       .module-header { padding: 1rem 1.2rem; }
       .module-content { padding: 1rem; }
       .gate-card { padding: 2rem 1.5rem; }
       .nav-links { gap: 1rem; }
+      .doc-header-inner { flex-direction: column; gap: 0.5rem; }
+      .status-inner { justify-content: center; }
     }
   </style>
 </head>
 <body>
+
+<div class="noise-layer"></div>
+<div class="watermark"><div class="watermark-text">CLASSIFIED</div></div>
+
+<!-- CLASSIFICATION BANNERS — Softened Institutional Version -->
+<div class="class-banner-top">
+  ████ RESTRICTED // EXECUTIVE ACCESS // GOVERNANCE INFRASTRUCTURE ████
+  <span>DOC-REF: KLI-EXEC-001-2026</span>
+  <span>ACCESS CLASSIFICATION: EXECUTIVE</span>
+</div>
+<div class="class-banner-bottom">
+  ████ RESTRICTED // EXECUTIVE ACCESS // GOVERNANCE INFRASTRUCTURE ████
+  <span>HANDLE VIA APPROVED CHANNELS ONLY</span>
+  <span>DISSEMINATION CONTROLLED</span>
+</div>
+
+<!-- STATUS STRIP -->
+<div class="status-strip" style="top: 26px;">
+  <div class="container">
+    <div class="status-inner">
+      <span><span class="pulse-dot"></span> <span class="live">ENVIRONMENT LIVE</span></span>
+      <span class="amber">⌖ OFFICE OF THE FIDUCIARY — EXECUTION FRAMEWORK</span>
+      <span><span class="red-dot"></span> <span class="red">RESTRICTED ACCESS — VERIFICATION REQUIRED <span class="blink">▮</span></span></span>
+      <span>SESSION: <span class="amber">ENCRYPTED</span></span>
+      <span>NODE: <span class="amber">KLI-EXEC-001</span></span>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header style="position: sticky; top: 47px; z-index: 499;">
+  <div class="container">
+    <div class="nav">
+      <div class="logo-block">
+        <div class="logo-seal">KLI</div>
+        <div class="logo-text">
+          Kelly Legacy Institute
+          <small>PRIVATE EXECUTIVE GOVERNANCE // RESTRICTED</small>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="klat-access.html" class="access-link">◈ ACCESS</a>
+        <a href="curriculum-portal.html">CURRICULUM</a>
+        <a href="execution-framework.html">EXECUTION</a>
+        <a href="index.html#contact-section">CONTACT</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- DOCUMENT HEADER -->
+<div class="doc-header">
+  <div class="container">
+    <div class="doc-header-inner">
+      <div>
+        <div class="field">DOCUMENT CLASS: <span>RESTRICTED // EXECUTION // FIDUCIARY</span></div>
+        <div class="field">CASE FILE: <span>KLI-2026-EXECUTION-FRAMEWORK</span></div>
+        <div class="field">AUTHORITY: <span>OFFICE OF THE FIDUCIARY</span></div>
+      </div>
+      <div>
+        <div class="field">ORIGINATED: <span>KELLY LEGACY INSTITUTE™</span></div>
+        <div class="field">DISTRIBUTION: <span>RESTRICTED — VERIFIED KLAT HOLDERS</span></div>
+        <div class="field">REVIEW CYCLE: <span>CONTINUOUS — GOVERNANCE ACTIVE</span></div>
+      </div>
+      <div>
+        <div class="field">NETWORK: <span>POLYGON — VERIFIED</span></div>
+        <div class="field">CREDENTIAL: <span>KLAT ACCESS INFRASTRUCTURE</span></div>
+        <div class="field">STATUS: <span class="blink" style="color: var(--green-live);">● ACTIVE</span></div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Sovereign Gate Overlay -->
 <div id="klatGateOverlay" class="gate-overlay">
   <div class="gate-card">
     <div class="gate-badge"><span>✧ PRIVATE EXECUTIVE SUITE ✧</span><span>— KLAT GATED ACCESS</span></div>
     <h2>Credential Authority Required</h2>
-    <p style="margin: 0.5rem 0 0; font-size: 0.85rem; color: #b0b8c5;">Access to the Office of the Fiduciary execution framework requires verified KLAT credential authority.</p>
+    <p style="margin: 0.5rem 0 0; font-size: 0.85rem; color: var(--white-mute);">Access to the Office of the Fiduciary execution framework requires verified KLAT credential authority.</p>
     <div class="btn-group"><button id="verifyGateBtn" class="btn btn-primary">⟡ Verify KLAT Authority</button></div>
     <div id="gateStatusMsg" class="gate-status">⏣ Ready. Connect wallet to verify KLAT credential authority (≥100 KLAT on Polygon).</div>
   </div>
@@ -495,20 +635,6 @@
 
 <!-- Protected Executive Suite Content -->
 <div class="protected-content" id="protectedContent">
-  <header>
-    <div class="container">
-      <div class="nav">
-        <div class="logo">KELLY LEGACY <span>INSTITUTE</span></div>
-        <div class="nav-links">
-          <a href="index.html">HOME</a>
-          <a href="curriculum-portal.html">CURRICULUM</a>
-          <a href="execution-framework.html">EXECUTION</a>
-          <a href="index.html#contact-section">CONTACT</a>
-        </div>
-      </div>
-    </div>
-  </header>
-
   <main class="container">
     <div class="executive-suite">
       <div class="suite-badge">OFFICE OF THE FIDUCIARY — RESTRICTED ACCESS</div>
@@ -517,7 +643,6 @@
       <div class="suite-description">Institutional procedures for administrative notices, record discipline, fiduciary accountability, and lawful enforcement mechanisms. Grounded in statutory authority, procedural rules, and equitable doctrine. Authorized personnel only.</div>
     </div>
 
-    <!-- MODULE 1 -->
     <div class="module"><div class="module-header"><h2>I. Administrative Notice & Demand Procedure</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div><div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>Notice is the procedural trigger that creates record, imposes response obligations, and establishes default if ignored. Demand defines the specific action required.</p></div><div class="principle-block"><strong>GOVERNING RULE</strong><p>Under administrative law, written notice properly served and documented shifts the burden to the recipient to respond within a defined period.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Draft notice on letterhead: date, recipient, factual statement, specific demand, statutory authority, response deadline (min 14 days). Send certified mail return receipt requested AND first-class mail.</p></div><div class="principle-block"><strong>REQUIRED RECORD</strong><p>Copy of notice, USPS tracking, signed return receipt, affidavit of service, chronological log entry.</p></div></div></div>
     <div class="module"><div class="module-header"><h2>II. Cure Opportunity & Administrative Default</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div><div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>Before declaring default, the opposing party must be given a reasonable opportunity to cure the alleged breach.</p></div><div class="principle-block"><strong>PROCEDURAL FUNCTION</strong><p>Cure process: notice of breach → demand to cure → response window → cure or failure → default declaration.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Issue "Notice of Breach and Opportunity to Cure" specifying defect, corrective action, cure period (14‑30 days). Then issue "Declaration of Default."</p></div></div></div>
     <div class="module"><div class="module-header"><h2>III. Administrative Record & Evidence Preservation</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div><div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>Record precedes recognition. The administrative record is the exclusive foundation for enforcement, review, and remedy.</p></div><div class="principle-block"><strong>GOVERNING RULE</strong><p>The record must be contemporaneous, complete, unaltered, and accessible to all parties.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Maintain bound log or digital file with version control. Never delete entries; add supplements.</p></div></div></div>
@@ -528,16 +653,16 @@
     <div class="module"><div class="module-header"><h2>VIII. Procedural Due Process & Administrative Hearings</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div><div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>Before any deprivation of property or right, the state must afford notice and meaningful opportunity to be heard.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Upon adverse agency action, request hearing in writing within deadline. Submit evidence. If agency rules against you, appeal to court.</p></div></div></div>
 
     <div class="closing-statement">
-      <p style="font-family: 'Roboto Mono', monospace; font-size: 0.75rem; letter-spacing: 1px; color: var(--gold-desat);">Procedure precedes remedy. Record precedes enforcement. Capacity determines consequence. Structure determines outcome.</p>
-      <p style="margin-top: 1rem; font-size: 0.8rem; color: #9ba3b5;">This execution framework is an educational resource issued by the Office of the Fiduciary, Kelly Legacy Estates Living Trust & Kelly Legacy Institute. Authorized access only. Not legal advice.</p>
+      <p style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 1px; color: var(--red-class);">Procedure precedes remedy. Record precedes enforcement. Capacity determines consequence. Structure determines outcome.</p>
+      <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--white-mute);">This execution framework is an educational resource issued by the Office of the Fiduciary, Kelly Legacy Estates Living Trust & Kelly Legacy Institute. Authorized access only. Not legal advice.</p>
     </div>
   </main>
 
   <footer>
     <div class="container">
-      <div class="footer-grid"><div><div class="monogram-seal">KLE</div><h4 style="font-family:'Playfair Display'; font-weight:450; color:var(--platinum);">Kelly Legacy Estates Living Trust</h4><p style="font-size:0.75rem;">Institutional fiduciary governance & educational administration.</p></div><div class="footer-links"><div><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="record-policy.html">Record Policy</a><a href="ip-policy.html">IP & Licensing</a></div><div><a href="transparency.html">Transparency Statement</a><a href="checklist.html">Fiduciary Checklist</a><a href="execution-framework.html">Execution Framework</a></div><div><a href="https://www.linkedin.com/in/delonte-kelly-01961b3b4" target="_blank"><i class="fa-brands fa-linkedin"></i> Institutional LinkedIn</a><a href="mailto:kellylegacyestatesllc@gmail.com"><i class="fa-solid fa-envelope"></i> Trust Inquiry</a></div></div></div>
+      <div class="footer-grid"><div><div class="monogram-seal">KLI</div><h4 style="font-family:var(--font-head); font-weight:450; color:var(--white);">Kelly Legacy Institute</h4><p style="font-size:0.75rem;">Private executive governance infrastructure.</p></div><div class="footer-links"><div><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="record-policy.html">Record Policy</a><a href="ip-policy.html">IP & Licensing</a></div><div><a href="transparency.html">Transparency Statement</a><a href="checklist.html">Fiduciary Checklist</a><a href="execution-framework.html">Execution Framework</a></div><div><a href="https://www.linkedin.com/in/delonte-kelly-01961b3b4" target="_blank"><i class="fa-brands fa-linkedin"></i> Institutional LinkedIn</a><a href="mailto:kellylegacyestatesllc@gmail.com"><i class="fa-solid fa-envelope"></i> Trust Inquiry</a></div></div></div>
       <div class="gold-divider"></div>
-      <div class="copyright">© 2026 Kelly Legacy Estates Living Trust — Educational materials for institutional governance literacy. No legal advice.<br>Kelly Legacy Institute is administered under strict fiduciary governance. Structure determines outcome. Record precedes recognition.</div>
+      <div class="copyright">© 2026 Kelly Legacy Institute. Private executive governance infrastructure. All materials provided for institutional governance literacy.<br>Structure determines outcome. Documentation preserves continuity. Human review governs AI-assisted work.<br><span style="opacity:0.4;">DISTRIBUTION CONTROLLED // HANDLE VIA APPROVED CHANNELS ONLY</span></div>
     </div>
   </footer>
 </div>
