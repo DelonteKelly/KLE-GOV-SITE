@@ -3,483 +3,987 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Kelly Legacy Institute | Private Executive Governance Environment</title>
+  <title>CLASSIFIED // KLI-GOV-ENV-001 // Kelly Legacy Institute</title>
   <meta name="description" content="Private institutional governance infrastructure. Executive fiduciary administration. Continuity systems. Restricted access environment.">
-  <link rel="icon" type="image/png" href="kli-favicon.png">
-  
-  <meta property="og:title" content="Kelly Legacy Institute | Private Executive Governance Environment">
-  <meta property="og:description" content="Institutional governance infrastructure for fiduciary administration, continuity systems, and multi-generational family governance. Restricted access.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://kellylegacyestates.com/">
-  <meta property="og:image" content="https://kellylegacyestates.com/og-image.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Share+Tech+Mono&family=Special+Elite&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
     :root {
-      --black-deep: #050505;
-      --black-matte: #0A0A0C;
-      --black-charcoal: #0E0E12;
-      --black-glass: rgba(6, 6, 10, 0.82);
-      --black-glass-solid: rgba(3, 3, 6, 0.96);
-      --gold-executive: #C9A66B;
-      --gold-desat: #A8844A;
-      --gold-ultra: #6B5B3E;
-      --platinum: #E8E8EC;
-      --silver-muted: #9A9FAD;
-      --border-glass-light: rgba(255, 255, 255, 0.04);
-      --border-glass-gold: rgba(201, 166, 107, 0.12);
-      --border-gold-active: rgba(201, 166, 107, 0.32);
-      --shadow-deep: 0 30px 60px -20px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.02) inset;
-      --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.4);
-      --shadow-lift: 0 25px 45px -18px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(201, 166, 107, 0.06) inset;
-      --transition-exec: all 0.35s cubic-bezier(0.215, 0.61, 0.355, 1);
+      --black:       #030304;
+      --black-2:     #080809;
+      --black-3:     #0D0D0F;
+      --black-4:     #131316;
+      --red-class:   #C41E1E;
+      --red-dim:     #8A1515;
+      --red-glow:    rgba(196, 30, 30, 0.18);
+      --amber:       #C89A2A;
+      --amber-dim:   #8A6A1A;
+      --amber-glow:  rgba(200, 154, 42, 0.12);
+      --green-live:  #3A8C3A;
+      --white:       #E8E8E4;
+      --white-dim:   #A8A8A4;
+      --white-mute:  #686866;
+      --border-red:  rgba(196, 30, 30, 0.3);
+      --border-amb:  rgba(200, 154, 42, 0.2);
+      --border-faint:rgba(255,255,255,0.05);
+      --font-mono:   'Share Tech Mono', 'Courier New', monospace;
+      --font-doc:    'Courier Prime', 'Courier New', serif;
+      --font-stamp:  'Special Elite', serif;
+      --font-head:   'Oswald', sans-serif;
     }
+
+    html { scroll-behavior: smooth; }
 
     body {
-      background: var(--black-deep);
-      background-image: radial-gradient(ellipse at 30% 20%, rgba(201, 166, 107, 0.02) 0%, #010101 95%);
-      color: var(--platinum);
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      line-height: 1.68;
-      scroll-behavior: smooth;
-      position: relative;
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--font-doc);
+      line-height: 1.7;
       min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+      cursor: crosshair;
     }
 
+    /* === SCAN LINE OVERLAY === */
     body::before {
       content: '';
       position: fixed;
       inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.015'/%3E%3C/svg%3E");
-      opacity: 0.4;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.08) 2px,
+        rgba(0,0,0,0.08) 4px
+      );
       pointer-events: none;
-      z-index: 0;
+      z-index: 9999;
     }
 
+    /* === MOVING SCAN LINE === */
     body::after {
-      content: "PRIVATE EXECUTIVE ENVIRONMENT";
+      content: '';
       position: fixed;
-      bottom: 12px;
-      left: 20px;
-      font-family: 'Roboto Mono', monospace;
-      font-size: 0.55rem;
-      letter-spacing: 0.2em;
-      color: var(--gold-ultra);
-      opacity: 0.35;
-      z-index: 100;
+      left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, rgba(196,30,30,0.4), transparent);
+      animation: scanline 8s linear infinite;
       pointer-events: none;
+      z-index: 9998;
+    }
+    @keyframes scanline {
+      0%   { top: -4px; opacity: 0; }
+      5%   { opacity: 1; }
+      95%  { opacity: 1; }
+      100% { top: 100vh; opacity: 0; }
     }
 
+    /* === NOISE TEXTURE === */
+    .noise-layer {
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.6;
+    }
+
+    /* === CLASSIFICATION BANNER — Softened Institutional Version === */
+    .class-banner-top,
+    .class-banner-bottom {
+      position: fixed;
+      left: 0; right: 0;
+      z-index: 10000;
+      background: var(--red-class);
+      padding: 5px 0;
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      color: #fff;
+      font-weight: bold;
+    }
+    .class-banner-top { top: 0; border-bottom: 1px solid #8A1515; }
+    .class-banner-bottom { bottom: 0; border-top: 1px solid #8A1515; }
+    .class-banner-top span, .class-banner-bottom span {
+      opacity: 0.5; margin: 0 2rem; font-size: 0.5rem;
+    }
+
+    /* === WATERMARK === */
+    .watermark {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      z-index: 2;
+      overflow: hidden;
+    }
+    .watermark-text {
+      font-family: var(--font-stamp);
+      font-size: 14vw;
+      color: rgba(196, 30, 30, 0.03);
+      transform: rotate(-35deg);
+      white-space: nowrap;
+      letter-spacing: 0.05em;
+      user-select: none;
+    }
+
+    /* === LAYOUT === */
     .container {
-      max-width: 1320px;
+      max-width: 1240px;
       margin: 0 auto;
       padding: 0 48px;
       position: relative;
-      z-index: 5;
+      z-index: 10;
     }
 
-    header {
+    /* === STATUS STRIP === */
+    .status-strip {
       position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(24px);
-      background: rgba(3, 3, 6, 0.75);
-      border-bottom: 1px solid var(--border-glass-light);
-      transition: var(--transition-exec);
+      top: 26px;
+      z-index: 500;
+      background: var(--black-2);
+      border-bottom: 1px solid var(--border-red);
+      border-top: 1px solid var(--border-red);
+      padding: 8px 0;
+    }
+    .status-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      color: var(--white-mute);
+    }
+    .status-inner .live { color: var(--green-live); }
+    .status-inner .amber { color: var(--amber); }
+    .status-inner .red { color: var(--red-class); }
+    .blink {
+      animation: blink 1.2s step-end infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    .pulse-dot {
+      display: inline-block;
+      width: 7px; height: 7px;
+      background: var(--green-live);
+      border-radius: 50%;
+      animation: pulse 2s ease infinite;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(58,140,58,0.6); }
+      50%       { box-shadow: 0 0 0 5px rgba(58,140,58,0); }
+    }
+    .red-dot {
+      display: inline-block;
+      width: 7px; height: 7px;
+      background: var(--red-class);
+      border-radius: 50%;
+      margin-right: 6px;
+      vertical-align: middle;
+      animation: pulse-red 1.8s ease infinite;
+    }
+    @keyframes pulse-red {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(196,30,30,0.6); }
+      50%       { box-shadow: 0 0 0 5px rgba(196,30,30,0); }
     }
 
+    /* === HEADER === */
+    header {
+      background: rgba(3, 3, 4, 0.92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-faint);
+      padding: 18px 0;
+    }
     .nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 0;
       flex-wrap: wrap;
       gap: 1rem;
     }
-
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      font-weight: 550;
-      letter-spacing: -0.3px;
-      border-left: 2px solid var(--gold-executive);
-      padding-left: 16px;
-      color: var(--platinum);
-    }
-    .logo span { color: var(--gold-executive); }
-    .logo small {
-      display: block;
-      font-size: 0.55rem;
-      font-family: 'Roboto Mono', monospace;
-      letter-spacing: 0.15em;
-      color: var(--gold-ultra);
-      margin-top: 2px;
-    }
-
-    .nav-links {
+    .logo-block {
       display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
       align-items: center;
+      gap: 16px;
     }
-    .nav-links a {
-      font-family: 'Roboto Mono', monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.18em;
-      text-decoration: none;
-      color: var(--silver-muted);
-      transition: var(--transition-exec);
+    .logo-seal {
+      width: 44px; height: 44px;
+      border: 1px solid var(--border-red);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-head);
+      font-size: 0.75rem;
+      color: var(--red-class);
+      letter-spacing: 0.05em;
+      position: relative;
+    }
+    .logo-seal::before {
+      content: '';
+      position: absolute;
+      inset: 3px;
+      border: 1px dashed rgba(196,30,30,0.2);
+      border-radius: 50%;
+    }
+    .logo-text {
+      font-family: var(--font-head);
+      font-size: 1.05rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      color: var(--white);
       text-transform: uppercase;
     }
-    .nav-links a:hover {
-      color: var(--gold-executive);
-      letter-spacing: 0.2em;
+    .logo-text small {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.52rem;
+      color: var(--red-class);
+      letter-spacing: 0.22em;
+      margin-top: 2px;
     }
-
-    .access-link {
-      color: var(--gold-executive) !important;
-      border: 1px solid var(--border-gold-active);
-      border-radius: 40px;
-      padding: 0.35rem 0.85rem;
-      background: rgba(201, 166, 107, 0.04);
-    }
-    .access-link:hover {
-      background: rgba(201, 166, 107, 0.12);
-      box-shadow: 0 0 12px rgba(201, 166, 107, 0.12);
-    }
-
-    .status-strip {
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 0.45rem 1rem;
-      background: rgba(0, 0, 0, 0.45);
-      border-bottom: 1px solid rgba(212, 175, 55, 0.08);
-      font-family: 'Roboto Mono', monospace;
-      font-size: 0.58rem;
-      letter-spacing: 0.08em;
-      color: #7a7f8e;
-      flex-wrap: wrap;
-    }
-    .pulse-dot {
-      width: 6px;
-      height: 6px;
-      background: #6B9E6B;
-      border-radius: 50%;
-      display: inline-block;
-      margin-right: 8px;
-      animation: pulseDot 2s infinite;
-    }
-    @keyframes pulseDot {
-      0% { opacity: 0.4; transform: scale(0.8); }
-      100% { opacity: 1; transform: scale(1.2); }
-    }
-
-    .hero {
-      min-height: 85vh;
+    .nav-links {
       display: flex;
       align-items: center;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-decoration: none;
+      color: var(--white-mute);
+      transition: color 0.2s;
+      text-transform: uppercase;
+    }
+    .nav-links a:hover { color: var(--amber); }
+    .nav-links .access-link {
+      color: var(--red-class) !important;
+      border: 1px solid var(--border-red);
+      padding: 6px 16px;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+    .nav-links .access-link:hover { background: var(--red-glow); }
+
+    /* === DOCUMENT HEADER === */
+    .doc-header {
+      background: var(--black-2);
+      border-bottom: 2px solid var(--red-class);
+      padding: 16px 0;
+      margin-top: 0;
+    }
+    .doc-header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.1em;
+      color: var(--white-mute);
+    }
+    .doc-header-inner .field { margin-bottom: 4px; }
+    .doc-header-inner .field span { color: var(--amber); }
+
+    /* === HERO === */
+    .hero {
+      padding: 6rem 0 5rem;
       position: relative;
-      padding: 3rem 0 5rem;
+      border-bottom: 1px solid var(--border-faint);
     }
     .hero::before {
       content: '';
       position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 70% 30%, rgba(201, 166, 107, 0.04), transparent 45%);
+      top: 0; left: 0; right: 0; bottom: 0;
+      background:
+        radial-gradient(ellipse at 60% 40%, rgba(196,30,30,0.04) 0%, transparent 55%),
+        radial-gradient(ellipse at 20% 80%, rgba(200,154,42,0.03) 0%, transparent 45%);
       pointer-events: none;
-    }
-    .hero-badge {
-      display: inline-block;
-      font-family: 'Roboto Mono', monospace;
-      font-size: 0.62rem;
-      letter-spacing: 0.22em;
-      padding: 0.35rem 1rem;
-      background: rgba(201, 166, 107, 0.04);
-      border-left: 2px solid var(--gold-executive);
-      margin-bottom: 1.8rem;
-      text-transform: uppercase;
-      color: var(--gold-desat);
-    }
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.8rem, 6vw, 5rem);
-      line-height: 1.08;
-      font-weight: 520;
-      letter-spacing: -0.02em;
-      color: var(--platinum);
-    }
-    .hero p {
-      font-size: 1rem;
-      margin: 1.5rem 0 0.5rem;
-      max-width: 580px;
-      color: #b0b8c5;
-      line-height: 1.68;
     }
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 3rem;
-      align-items: center;
-      width: 100%;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .class-tag {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.28em;
+      padding: 5px 14px;
+      background: var(--red-class);
+      color: #fff;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(2.6rem, 5.5vw, 4.5rem);
+      font-weight: 600;
+      line-height: 1.06;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 0.4rem;
+    }
+    .hero h1 .line-red { color: var(--red-class); }
+    .hero-sub {
+      font-family: var(--font-doc);
+      font-size: 0.92rem;
+      color: var(--white-dim);
+      max-width: 520px;
+      margin: 1.4rem 0;
+      line-height: 1.75;
+      border-left: 2px solid var(--border-red);
+      padding-left: 16px;
     }
     .btn-group {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.2rem;
+      gap: 1rem;
       margin-top: 2rem;
     }
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.7rem;
-      padding: 0.85rem 1.8rem;
-      border-radius: 44px;
-      font-family: 'Inter', sans-serif;
-      font-weight: 480;
-      font-size: 0.72rem;
-      letter-spacing: 0.12em;
+      gap: 0.6rem;
+      padding: 12px 28px;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
       text-decoration: none;
-      transition: var(--transition-exec);
+      text-transform: uppercase;
       border: 1px solid transparent;
       cursor: pointer;
-      text-transform: uppercase;
+      transition: all 0.25s ease;
       background: transparent;
+      border-radius: 1px;
     }
-    .btn-primary {
-      background: rgba(201, 166, 107, 0.05);
-      border-color: var(--border-gold-active);
-      color: var(--gold-executive);
+    .btn-red {
+      border-color: var(--red-class);
+      color: var(--red-class);
     }
-    .btn-primary:hover {
-      background: rgba(201, 166, 107, 0.12);
-      transform: translateY(-2px);
-      border-color: var(--gold-executive);
+    .btn-red:hover {
+      background: var(--red-class);
+      color: #fff;
+      box-shadow: 0 0 20px rgba(196,30,30,0.3);
     }
     .btn-outline {
-      border: 1px solid var(--border-glass-light);
-      color: var(--platinum);
+      border-color: var(--border-faint);
+      color: var(--white-mute);
     }
     .btn-outline:hover {
-      background: rgba(201, 166, 107, 0.04);
-      transform: translateY(-2px);
-      border-color: var(--gold-desat);
+      border-color: var(--amber);
+      color: var(--amber);
     }
 
-    .problem-strip {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0.75rem;
-      margin-top: 2rem;
-      max-width: 680px;
-    }
-    .problem-pill {
-      border: 1px solid var(--border-glass-light);
-      background: rgba(0, 0, 0, 0.35);
-      border-radius: 40px;
-      padding: 0.55rem 0.85rem;
-      font-size: 0.68rem;
-      text-align: center;
-      color: #a0a5b2;
-      font-family: 'Roboto Mono', monospace;
-    }
-
-    .diagnostic-card {
-      background: var(--black-glass);
-      backdrop-filter: blur(20px);
-      border: 1px solid var(--border-glass-light);
-      border-radius: 32px;
-      padding: 2rem;
-      box-shadow: var(--shadow-glass);
-    }
-    .score-title {
-      font-family: 'Roboto Mono', monospace;
-      font-size: 0.62rem;
-      letter-spacing: 0.18em;
-      color: var(--gold-desat);
-      margin-bottom: 1.2rem;
-      text-transform: uppercase;
-    }
-    .score-row {
+    /* === PROBLEM PILLS === */
+    .redact-strip {
       display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-      border-bottom: 1px solid var(--border-glass-light);
-      padding: 0.8rem 0;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 2rem;
     }
-    .score-row span:first-child { color: #a5abb8; font-size: 0.82rem; }
-    .score-row span:last-child { font-family: 'Roboto Mono', monospace; color: var(--gold-desat); font-size: 0.72rem; }
-
-    section { padding: 5rem 0; border-bottom: 1px solid var(--border-glass-light); scroll-margin-top: 90px; }
-    .section-header { margin-bottom: 3rem; }
-    .section-header h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 4vw, 2.6rem);
-      font-weight: 520;
-      display: inline-block;
+    .redact-pill {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.14em;
+      padding: 5px 12px;
+      border: 1px solid var(--border-faint);
+      color: var(--white-mute);
+      text-transform: uppercase;
       position: relative;
     }
-    .section-header h2::after {
-      content: '';
+    .redact-pill::before {
+      content: '▸ ';
+      color: var(--red-class);
+    }
+
+    /* === DIAGNOSTIC CARD === */
+    .dossier-card {
+      background: var(--black-3);
+      border: 1px solid var(--border-red);
+      padding: 0;
+      position: relative;
+    }
+    .dossier-card::before {
+      content: 'DOCUMENT — CLASSIFICATION LEVEL ALPHA';
       position: absolute;
-      bottom: -12px;
-      left: 0;
-      width: 70px;
-      height: 1px;
-      background: var(--gold-executive);
-      opacity: 0.6;
+      top: -1px; left: 0; right: 0;
+      background: var(--red-class);
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 0.52rem;
+      letter-spacing: 0.25em;
+      padding: 4px;
+      color: #fff;
     }
-    .section-subhead { color: #8a8f9e; max-width: 720px; margin-top: 1rem; font-size: 0.9rem; }
-
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
-
-    .service-card {
-      background: var(--black-glass);
-      backdrop-filter: blur(16px);
-      border: 1px solid var(--border-glass-light);
-      border-radius: 28px;
-      padding: 1.8rem;
-      transition: var(--transition-exec);
+    .dossier-header {
+      padding: 2.5rem 1.5rem 1rem;
+      border-bottom: 1px solid var(--border-faint);
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      color: var(--amber);
+      letter-spacing: 0.18em;
     }
-    .service-card:hover { transform: translateY(-4px); border-color: var(--border-glass-gold); box-shadow: var(--shadow-lift); }
-    .service-label {
-      font-family: 'Roboto Mono', monospace;
-      font-size: 0.6rem;
-      color: var(--gold-desat);
-      border-bottom: 1px solid var(--border-glass-gold);
-      display: inline-block;
-      padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
-      letter-spacing: 0.12em;
+    .dossier-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 1.5rem;
+      border-bottom: 1px solid var(--border-faint);
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+    }
+    .dossier-row:last-child { border-bottom: none; }
+    .dossier-row .label { color: var(--white-mute); }
+    .dossier-row .value {
+      color: var(--amber);
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+    }
+    .dossier-row .value.red { color: var(--red-class); }
+    .dossier-footer {
+      padding: 1rem 1.5rem;
+      background: rgba(196,30,30,0.04);
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      color: var(--white-mute);
+      border-top: 1px solid var(--border-red);
+    }
+    /* STAMP overlay on card */
+    .stamp {
+      position: absolute;
+      bottom: 18px;
+      right: 18px;
+      font-family: var(--font-stamp);
+      font-size: 1.4rem;
+      color: rgba(196,30,30,0.18);
+      border: 3px solid rgba(196,30,30,0.18);
+      padding: 6px 12px;
+      transform: rotate(-15deg);
+      letter-spacing: 0.08em;
+      pointer-events: none;
+    }
+
+    /* === SECTION SHARED === */
+    section {
+      padding: 5rem 0;
+      border-bottom: 1px solid var(--border-faint);
+      scroll-margin-top: 80px;
+      position: relative;
+      z-index: 10;
+    }
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.3em;
+      color: var(--red-class);
       text-transform: uppercase;
-    }
-    .list { list-style: none; margin-top: 1rem; display: grid; gap: 0.55rem; }
-    .list li { font-size: 0.82rem; color: #b8c0cc; padding-left: 1rem; position: relative; }
-    .list li::before { content: '—'; position: absolute; left: 0; color: var(--gold-desat); }
-
-    .process { display: grid; gap: 1rem; }
-    .process-item {
-      display: grid;
-      grid-template-columns: 56px 1fr;
-      gap: 1.2rem;
-      align-items: start;
-      border: 1px solid var(--border-glass-light);
-      background: rgba(0, 0, 0, 0.3);
-      border-radius: 24px;
-      padding: 1.2rem;
-    }
-    .process-num {
-      width: 44px;
-      height: 44px;
-      border: 1px solid var(--gold-desat);
-      border-radius: 50%;
+      margin-bottom: 0.7rem;
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-family: 'Roboto Mono', monospace;
-      color: var(--gold-desat);
+      gap: 12px;
     }
-
-    .mini-card { background: rgba(0, 0, 0, 0.35); border: 1px solid var(--border-glass-light); border-radius: 20px; padding: 1.2rem; transition: var(--transition-exec); }
-    .mini-card:hover { border-color: var(--border-glass-gold); transform: translateY(-2px); }
-    .icp-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
-    .quote-band { border-left: 2px solid var(--gold-desat); padding-left: 2rem; margin-top: 2rem; }
-    .quote-band .quote { font-family: 'Playfair Display', serif; font-size: clamp(1.4rem, 3.2vw, 2rem); font-weight: 500; color: var(--platinum); }
-
-    .cta-panel {
-      background: linear-gradient(145deg, rgba(201, 166, 107, 0.02), rgba(0, 0, 0, 0.5));
-      border: 1px solid var(--border-glass-light);
-      border-radius: 32px;
-      padding: 2.5rem;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 2rem;
-      align-items: center;
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border-red);
+      max-width: 120px;
     }
-    .intake-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(201, 166, 107, 0.05);
-      padding: 0.35rem 1.2rem;
-      border-radius: 60px;
-      font-family: 'Roboto Mono', monospace;
-      font-size: 0.62rem;
-      letter-spacing: 0.1em;
-      color: var(--gold-desat);
-      margin-bottom: 1rem;
-      border: 1px solid var(--border-glass-light);
-    }
-    .authority-block { font-family: 'Roboto Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; line-height: 1.6; color: #5a5f6e; text-align: center; margin: 1rem 0; }
-
-    footer { background: #020204; border-top: 1px solid var(--border-glass-light); padding: 3rem 0 2rem; margin-top: 2rem; }
-    .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; }
-    .monogram-seal {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 48px;
-      height: 48px;
-      border: 1px solid var(--gold-ultra);
-      border-radius: 50%;
-      font-family: 'Playfair Display', serif;
+    .section-header h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
       font-weight: 500;
-      font-size: 1.1rem;
-      color: var(--gold-desat);
-      background: rgba(201, 166, 107, 0.03);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 0.8rem;
     }
-    .footer-links { display: flex; gap: 2.5rem; flex-wrap: wrap; }
-    .footer-links a { display: block; color: #5a5f6e; text-decoration: none; font-size: 0.68rem; margin-bottom: 0.5rem; transition: var(--transition-exec); }
-    .footer-links a:hover { color: var(--gold-executive); transform: translateX(2px); }
-    .gold-divider { height: 1px; background: linear-gradient(90deg, var(--gold-ultra), transparent); margin: 2rem 0 1.5rem; opacity: 0.3; }
-    .copyright { text-align: center; font-size: 0.6rem; color: #4a4f5e; line-height: 1.6; }
+    .section-sub {
+      font-family: var(--font-doc);
+      font-size: 0.88rem;
+      color: var(--white-mute);
+      max-width: 680px;
+      line-height: 1.75;
+    }
+    .section-header { margin-bottom: 2.5rem; }
 
-    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    /* === ACCESS COMMAND === */
+    .access-panel {
+      background: var(--black-3);
+      border: 1px solid var(--border-red);
+      padding: 0;
+      position: relative;
+    }
+    .access-panel-bar {
+      background: var(--red-class);
+      padding: 10px 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      color: #fff;
+    }
+    .access-body {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 0;
+    }
+    .access-content {
+      padding: 2rem 2rem;
+      border-right: 1px solid var(--border-faint);
+    }
+    .access-content h2 {
+      font-family: var(--font-head);
+      font-size: 1.6rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      color: var(--white);
+    }
+    .access-content p {
+      font-family: var(--font-doc);
+      font-size: 0.88rem;
+      color: var(--white-mute);
+      max-width: 520px;
+      line-height: 1.75;
+    }
+    .access-meta {
+      padding: 2rem 1.5rem;
+    }
+    .access-meta .dossier-header { padding: 0 0 0.8rem; border-bottom: 1px solid var(--border-faint); }
+    .field-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px dashed rgba(255,255,255,0.04);
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+    }
+    .field-row .fk { color: var(--white-mute); }
+    .field-row .fv { color: var(--amber); }
+
+    /* === SERVICE CARDS === */
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; }
+
+    .service-card {
+      background: var(--black-3);
+      border: 1px solid var(--border-faint);
+      padding: 1.8rem;
+      transition: border-color 0.25s;
+      position: relative;
+    }
+    .service-card:hover { border-color: var(--border-red); }
+    .service-card::after {
+      content: attr(data-file);
+      position: absolute;
+      top: 10px; right: 12px;
+      font-family: var(--font-mono);
+      font-size: 0.48rem;
+      color: var(--white-mute);
+      opacity: 0.4;
+      letter-spacing: 0.12em;
+    }
+    .card-class {
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      letter-spacing: 0.22em;
+      color: var(--red-class);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border-red);
+    }
+    .card-title {
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+      color: var(--white);
+    }
+    .card-body {
+      font-family: var(--font-doc);
+      font-size: 0.82rem;
+      color: var(--white-mute);
+      line-height: 1.7;
+    }
+    .dossier-list {
+      list-style: none;
+      margin-top: 1.2rem;
+      display: grid;
+      gap: 6px;
+    }
+    .dossier-list li {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--white-mute);
+      padding-left: 1.2rem;
+      position: relative;
+      letter-spacing: 0.05em;
+    }
+    .dossier-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--amber);
+    }
+
+    /* === PROCESS === */
+    .process-grid { display: grid; gap: 1px; }
+    .process-item {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 1.5rem;
+      align-items: start;
+      background: var(--black-3);
+      border: 1px solid var(--border-faint);
+      padding: 1.5rem;
+      transition: border-color 0.25s;
+    }
+    .process-item:hover { border-color: var(--border-red); }
+    .process-num-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .process-num {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--red-class);
+      line-height: 1;
+      opacity: 0.7;
+    }
+    .process-code {
+      font-family: var(--font-mono);
+      font-size: 0.48rem;
+      color: var(--white-mute);
+      letter-spacing: 0.1em;
+      opacity: 0.5;
+    }
+    .process-title {
+      font-family: var(--font-head);
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 0.5rem;
+    }
+    .process-desc {
+      font-family: var(--font-doc);
+      font-size: 0.84rem;
+      color: var(--white-mute);
+      line-height: 1.7;
+    }
+
+    /* === AI GOVERNANCE MINI CARDS === */
+    .mini-card {
+      background: var(--black-3);
+      border: 1px solid var(--border-faint);
+      padding: 1.4rem;
+      transition: border-color 0.25s;
+    }
+    .mini-card:hover { border-color: var(--border-amb); }
+    .mini-title {
+      font-family: var(--font-head);
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 0.7rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .mini-title::before {
+      content: '//';
+      color: var(--red-class);
+      font-family: var(--font-mono);
+    }
+    .mini-body {
+      font-family: var(--font-doc);
+      font-size: 0.8rem;
+      color: var(--white-mute);
+      line-height: 1.7;
+    }
+
+    /* === QUOTE BAND === */
+    .intel-quote {
+      margin-top: 2.5rem;
+      padding: 2rem;
+      background: var(--black-2);
+      border-left: 3px solid var(--red-class);
+      position: relative;
+    }
+    .intel-quote::before {
+      content: 'FIELD INTELLIGENCE NOTE — UNCLASSIFIED';
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.52rem;
+      letter-spacing: 0.2em;
+      color: var(--red-class);
+      margin-bottom: 0.8rem;
+    }
+    .intel-quote .quote-text {
+      font-family: var(--font-stamp);
+      font-size: clamp(1.2rem, 2.8vw, 1.7rem);
+      color: var(--white);
+      line-height: 1.4;
+    }
+    .intel-quote .quote-sub {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--white-mute);
+      margin-top: 0.8rem;
+      letter-spacing: 0.08em;
+    }
+
+    /* === CTA PANELS === */
+    .command-panel {
+      background: var(--black-3);
+      border: 1px solid var(--border-red);
+    }
+    .command-bar {
+      background: var(--black-2);
+      border-bottom: 1px solid var(--border-red);
+      padding: 10px 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.18em;
+      color: var(--amber);
+    }
+    .command-body {
+      padding: 2rem;
+    }
+    .command-title {
+      font-family: var(--font-head);
+      font-size: 1.3rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+      color: var(--white);
+    }
+    .command-text {
+      font-family: var(--font-doc);
+      font-size: 0.88rem;
+      color: var(--white-mute);
+      max-width: 580px;
+      line-height: 1.75;
+    }
+
+    /* === CONTACT CARDS === */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1px;
+      margin-top: 2rem;
+    }
+    .contact-card {
+      background: var(--black-3);
+      border: 1px solid var(--border-faint);
+      padding: 1.5rem;
+      text-align: center;
+      transition: border-color 0.25s;
+    }
+    .contact-card:hover { border-color: var(--border-red); }
+    .contact-icon {
+      font-size: 1.5rem;
+      color: var(--amber);
+      margin-bottom: 0.8rem;
+      opacity: 0.6;
+    }
+    .contact-title {
+      font-family: var(--font-head);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .contact-link {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--amber);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+    }
+    .contact-link:hover { color: var(--red-class); }
+
+    /* === AUTHORITY BLOCK === */
+    .authority-block {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.12em;
+      line-height: 1.8;
+      color: var(--white-mute);
+      text-align: center;
+      padding: 1.5rem;
+      border: 1px dashed rgba(196,30,30,0.2);
+      margin: 2rem 0;
+    }
+    .authority-block strong { color: var(--amber); }
+
+    /* === RED DIVIDER === */
+    .red-divider {
+      height: 1px;
+      background: linear-gradient(90deg, var(--red-class), var(--red-dim), transparent);
+      margin: 2rem 0;
+      opacity: 0.35;
+    }
+
+    /* === FOOTER === */
+    footer {
+      background: var(--black-2);
+      border-top: 2px solid var(--red-class);
+      padding: 4rem 0 5rem;
+      position: relative;
+      z-index: 10;
+    }
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+    }
+    .footer-logo {
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      letter-spacing: 0.14em;
+      color: var(--white);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .footer-tagline {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      color: var(--white-mute);
+      letter-spacing: 0.12em;
+    }
+    .footer-links a {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      color: var(--white-mute);
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--amber); }
+    .footer-links h4 {
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      letter-spacing: 0.25em;
+      color: var(--red-class);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    .copyright {
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      color: var(--white-mute);
+      opacity: 0.5;
+      letter-spacing: 0.12em;
+      line-height: 1.8;
+    }
+
+    /* === FADE UP === */
+    .fade-up { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
 
-    @media (max-width: 1050px) {
-      .hero-grid { grid-template-columns: 1fr !important; text-align: center; gap: 2rem; }
-      .hero { min-height: auto; padding: 2rem 0; }
-      .hero p { margin-left: auto; margin-right: auto; }
-      .problem-strip { margin-left: auto; margin-right: auto; }
-      .btn-group { justify-content: center; }
-      .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
-      .icp-grid { grid-template-columns: 1fr; }
-      .cta-panel { grid-template-columns: 1fr; text-align: center; }
+    /* === RESPONSIVE === */
+    @media (max-width: 1020px) {
+      .hero-grid { grid-template-columns: 1fr !important; }
+      .access-body { grid-template-columns: 1fr; }
+      .access-content { border-right: none; border-bottom: 1px solid var(--border-faint); }
+      .grid-3 { grid-template-columns: repeat(2, 1fr); }
+      .grid-4 { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 680px) {
       .container { padding: 0 24px; }
       .nav { flex-direction: column; text-align: center; }
       .nav-links { justify-content: center; gap: 1rem; }
-      .problem-strip { grid-template-columns: repeat(2, 1fr); }
       .grid-3, .grid-4 { grid-template-columns: 1fr; }
       section { padding: 3rem 0; }
+      .hero { padding: 4rem 0 3rem; }
+      .process-item { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-<div class="status-strip">
-  <span><span class="pulse-dot"></span> PRIVATE EXECUTIVE ENVIRONMENT</span>
-  <span><i class="fa-regular fa-building"></i> OFFICE OF THE FIDUCIARY</span>
-  <span><i class="fa-solid fa-shield"></i> GOVERNANCE INFRASTRUCTURE ACTIVE</span>
-  <span><i class="fa-solid fa-fingerprint"></i> RESTRICTED ACCESS — VERIFICATION REQUIRED</span>
+<div class="noise-layer"></div>
+<div class="watermark"><div class="watermark-text">CLASSIFIED</div></div>
+
+<!-- CLASSIFICATION BANNERS — Softened Institutional Version -->
+<div class="class-banner-top">
+  ████ RESTRICTED // EXECUTIVE ACCESS // GOVERNANCE INFRASTRUCTURE ████
+  <span>DOC-REF: KLI-GOV-ENV-001-2026</span>
+  <span>ACCESS CLASSIFICATION: EXECUTIVE</span>
+</div>
+<div class="class-banner-bottom">
+  ████ RESTRICTED // EXECUTIVE ACCESS // GOVERNANCE INFRASTRUCTURE ████
+  <span>HANDLE VIA APPROVED CHANNELS ONLY</span>
+  <span>DISSEMINATION CONTROLLED</span>
 </div>
 
-<header>
+<!-- STATUS STRIP -->
+<div class="status-strip" style="top: 26px;">
+  <div class="container">
+    <div class="status-inner">
+      <span><span class="pulse-dot"></span> <span class="live">ENVIRONMENT LIVE</span></span>
+      <span class="amber">⌖ OFFICE OF THE FIDUCIARY — OPERATIONAL</span>
+      <span><span class="red-dot"></span> <span class="red">RESTRICTED ACCESS — VERIFICATION REQUIRED <span class="blink">▮</span></span></span>
+      <span>SESSION: <span class="amber">ENCRYPTED</span></span>
+      <span>NODE: <span class="amber">KLI-GOV-001</span></span>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header style="position: sticky; top: 47px; z-index: 499;">
   <div class="container">
     <div class="nav">
-      <div class="logo">KELLY LEGACY <span>INSTITUTE</span><small>PRIVATE EXECUTIVE GOVERNANCE</small></div>
+      <div class="logo-block">
+        <div class="logo-seal">KLI</div>
+        <div class="logo-text">
+          Kelly Legacy Institute
+          <small>PRIVATE EXECUTIVE GOVERNANCE // RESTRICTED</small>
+        </div>
+      </div>
       <div class="nav-links">
-        <a href="#access-command" class="access-link">ACCESS</a>
+        <a href="#access-command" class="access-link">◈ ACCESS</a>
         <a href="#services">SERVICES</a>
         <a href="#method">METHODOLOGY</a>
         <a href="#ai-governance">AI GOVERNANCE</a>
@@ -491,168 +995,410 @@
   </div>
 </header>
 
-<div class="hero">
+<!-- DOCUMENT HEADER -->
+<div class="doc-header">
   <div class="container">
-    <div class="hero-grid">
-      <div class="fade-up">
-        <div class="hero-badge">PRIVATE EXECUTIVE GOVERNANCE ENVIRONMENT</div>
-        <h1>Institutional Governance<br>Infrastructure</h1>
-        <p>Kelly Legacy Institute is a private executive governance environment for fiduciary administration, continuity systems, and multi-generational family governance. Structure reduces operational chaos. Documentation preserves continuity.</p>
-        <div class="btn-group">
-          <a href="#access-command" class="btn btn-primary">ENTER ACCESS INFRASTRUCTURE →</a>
-<a href="#intake-section" class="btn btn-outline">REQUEST REVIEW</a>
-        </div>
-        <div class="problem-strip">
-          <div class="problem-pill">DOCUMENTATION GAPS</div>
-          <div class="problem-pill">UNMANAGED AI USE</div>
-          <div class="problem-pill">ONBOARDING DISORDER</div>
-          <div class="problem-pill">RECORD FRAGMENTATION</div>
-        </div>
+    <div class="doc-header-inner">
+      <div>
+        <div class="field">DOCUMENT CLASS: <span>RESTRICTED // GOV-EXECUTIVE</span></div>
+        <div class="field">CASE FILE: <span>KLI-2026-FIDUCIARY-ENV</span></div>
+        <div class="field">AUTHORITY: <span>OFFICE OF THE FIDUCIARY</span></div>
       </div>
-      <div class="diagnostic-card fade-up">
-        <div class="score-title">GOVERNANCE DIAGNOSTIC PREVIEW</div>
-        <div class="score-row"><span>Documentation Completeness</span><span>Review Required</span></div>
-        <div class="score-row"><span>Workflow Clarity</span><span>Administrative Assessment</span></div>
-        <div class="score-row"><span>Onboarding Structure</span><span>Pending Intake Review</span></div>
-        <div class="score-row"><span>AI Governance</span><span>Continuity Review Required</span></div>
-        <div class="score-row"><span>Continuity Planning</span><span>Governance Assessment Pending</span></div>
-        <p style="margin-top:1.2rem; font-size:0.65rem; color:#6b7080;">Every review produces findings, risk observations, and a 30/60/90-day implementation roadmap.</p>
+      <div>
+        <div class="field">ORIGINATED: <span>KELLY LEGACY INSTITUTE™</span></div>
+        <div class="field">DISTRIBUTION: <span>RESTRICTED — AUTHORIZED PRINCIPALS ONLY</span></div>
+        <div class="field">REVIEW CYCLE: <span>CONTINUOUS — GOVERNANCE ACTIVE</span></div>
+      </div>
+      <div>
+        <div class="field">NETWORK: <span>POLYGON — VERIFIED</span></div>
+        <div class="field">CREDENTIAL: <span>KLAT ACCESS INFRASTRUCTURE</span></div>
+        <div class="field">STATUS: <span class="blink" style="color: var(--green-live);">● ACTIVE</span></div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="container">
-  <!-- KLAT Access Command Section -->
-  <section id="access-command">
-    <div class="cta-panel fade-up">
-      <div>
-        <div class="intake-badge">
-          <span>✧ KLAT ACCESS INFRASTRUCTURE ✧</span>
-          <span>— GOVERNANCE CREDENTIAL LAYER</span>
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="fade-up">
+        <div class="class-tag">⬛ RESTRICTED // PRIVATE EXECUTIVE GOVERNANCE</div>
+        <h1>
+          Institutional<br>
+          Governance<br>
+          <span class="line-red">Infrastructure</span>
+        </h1>
+        <div class="hero-sub">
+          Kelly Legacy Institute is a private executive governance environment for fiduciary administration, continuity systems, and multi-generational family governance. Structure reduces operational chaos. Documentation preserves continuity.
         </div>
-        <h2>Access Is Governed By Verification</h2>
-        <p>
-          KLAT functions as a contribution-based governance access credential for curriculum access,
-          execution framework review, credential verification, and continuity participation.
-          It is not positioned as an investment, yield instrument, or speculative asset.
-        </p>
         <div class="btn-group">
-          <a href="klat-access.html" class="btn btn-primary">ENTER ACCESS COMMAND →</a>
-          <a href="curriculum-portal.html" class="btn btn-outline">VIEW CURRICULUM</a>
+          <a href="#access-command" class="btn btn-red">⬛ ENTER ACCESS INFRASTRUCTURE →</a>
+          <a href="#intake-section" class="btn btn-outline">REQUEST REVIEW</a>
+        </div>
+        <div class="redact-strip">
+          <div class="redact-pill">DOCUMENTATION GAPS</div>
+          <div class="redact-pill">UNMANAGED AI USE</div>
+          <div class="redact-pill">ONBOARDING DISORDER</div>
+          <div class="redact-pill">RECORD FRAGMENTATION</div>
         </div>
       </div>
-      <div class="diagnostic-card" style="min-width:280px;">
-        <div class="score-title">ACCESS CLASSIFICATION</div>
-        <div class="score-row"><span>Credential Layer</span><span>KLAT</span></div>
-        <div class="score-row"><span>Network</span><span>Polygon</span></div>
-        <div class="score-row"><span>Function</span><span>Governance Access</span></div>
-        <div class="score-row"><span>Basis</span><span>Contribution Verified</span></div>
+
+      <div class="fade-up" style="position:relative;">
+        <div class="dossier-card">
+          <div class="dossier-header">GOVERNANCE DIAGNOSTIC — FIELD ASSESSMENT REPORT</div>
+          <div class="dossier-row">
+            <span class="label">Documentation Completeness</span>
+            <span class="value red">REVIEW REQUIRED</span>
+          </div>
+          <div class="dossier-row">
+            <span class="label">Workflow Clarity</span>
+            <span class="value">ADMIN ASSESSMENT</span>
+          </div>
+          <div class="dossier-row">
+            <span class="label">Onboarding Structure</span>
+            <span class="value red">PENDING INTAKE</span>
+          </div>
+          <div class="dossier-row">
+            <span class="label">AI Governance</span>
+            <span class="value red">CONTINUITY REVIEW REQ.</span>
+          </div>
+          <div class="dossier-row">
+            <span class="label">Continuity Planning</span>
+            <span class="value red">ASSESSMENT PENDING</span>
+          </div>
+          <div class="dossier-footer">
+            ▸ Every review produces findings, risk observations, and a 30/60/90-day implementation roadmap.
+          </div>
+          <div class="stamp">PENDING</div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="services">
-    <div class="section-header fade-up"><h2>Service Architecture</h2><div class="section-subhead">Structured governance infrastructure for institutional procurement, operational review, and measurable implementation.</div></div>
+<!-- ACCESS COMMAND -->
+<section id="access-command">
+  <div class="container">
+    <div class="section-label">ACCESS COMMAND</div>
+    <div class="access-panel fade-up">
+      <div class="access-panel-bar">
+        <span>⬛ KLAT ACCESS INFRASTRUCTURE — GOVERNANCE CREDENTIAL LAYER</span>
+        <span class="blink">▮ CLEARANCE VERIFICATION ACTIVE</span>
+      </div>
+      <div class="access-body">
+        <div class="access-content">
+          <div class="class-tag" style="font-size:0.52rem; margin-bottom:1rem; display:inline-block;">✧ KLAT ACCESS INFRASTRUCTURE ✧ — GOVERNANCE CREDENTIAL LAYER</div>
+          <div class="access-title" style="font-family:var(--font-head);font-size:1.6rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--white);margin-bottom:1rem;">Access Is Governed<br>By Verification</div>
+          <p style="font-family:var(--font-doc);font-size:0.88rem;color:var(--white-mute);max-width:520px;line-height:1.75;">
+            KLAT functions as a contribution-based governance access credential for curriculum access, execution framework review, credential verification, and continuity participation. It is not positioned as an investment, yield instrument, or speculative asset.
+          </p>
+          <div class="btn-group" style="margin-top:1.5rem;">
+            <a href="klat-access.html" class="btn btn-red">⬛ ENTER ACCESS COMMAND →</a>
+            <a href="curriculum-portal.html" class="btn btn-outline">VIEW CURRICULUM</a>
+          </div>
+        </div>
+        <div class="access-meta">
+          <div class="dossier-header" style="padding:0 0 0.8rem;">ACCESS CLASSIFICATION</div>
+          <div class="field-row"><span class="fk">Credential Layer</span><span class="fv">KLAT</span></div>
+          <div class="field-row"><span class="fk">Network</span><span class="fv">Polygon</span></div>
+          <div class="field-row"><span class="fk">Function</span><span class="fv">Governance Access</span></div>
+          <div class="field-row"><span class="fk">Basis</span><span class="fv">Contribution Verified</span></div>
+          <div class="field-row"><span class="fk">Status</span><span class="fv" style="color:var(--green-live);">● Active</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">SERVICE ARCHITECTURE // FILE-SVC</div>
+      <h2>Operational Service Dossiers</h2>
+      <div class="section-sub">Structured governance infrastructure for institutional procurement, operational review, and measurable implementation.</div>
+    </div>
     <div class="grid-3">
-      <div class="service-card fade-up"><div class="service-label">FLAGSHIP · 2–3 WEEKS</div><h3>Operational Workflow Review</h3><p>A diagnostic review of how work actually happens versus how it is documented.</p><ul class="list"><li>Workflow analysis</li><li>Documentation review</li><li>Onboarding gap review</li><li>AI-use inventory</li><li>Findings report + roadmap</li></ul></div>
-      <div class="service-card fade-up"><div class="service-label">EXECUTION · 3–6 MONTHS</div><h3>Implementation Retainer</h3><p>Ongoing execution support to build and deploy SOPs, policies, onboarding systems.</p><ul class="list"><li>SOP development</li><li>Role-based onboarding</li><li>AI-use policy deployment</li><li>Documentation standards</li><li>Staff training support</li></ul></div>
-      <div class="service-card fade-up"><div class="service-label">VALIDATION · 4 WEEKS</div><h3>Governance Certification</h3><p>Organizational self-audit and validation pathway for documented workflows.</p><ul class="list"><li>Operational pillars review</li><li>Internal audit kit</li><li>Governance scorecard</li><li>KLI Operational Seal pathway</li></ul></div>
-    </div>
-  </section>
-
-  <section id="method">
-    <div class="section-header fade-up"><h2>Workflow Review Methodology</h2><div class="section-subhead">Converts undocumented practice into visible operational evidence.</div></div>
-    <div class="process">
-      <div class="process-item fade-up"><div class="process-num">01</div><div><strong>Discovery</strong><br>Document inventory, staff interviews, shared drive review, tool audit, role clarification.</div></div>
-      <div class="process-item fade-up"><div class="process-num">02</div><div><strong>Mapping</strong><br>Current-state workflow diagrams, decision-point identification, handoff analysis.</div></div>
-      <div class="process-item fade-up"><div class="process-num">03</div><div><strong>Gap Analysis</strong><br>Comparison against KLI standards for documentation, workflow clarity, onboarding structure, AI governance.</div></div>
-      <div class="process-item fade-up"><div class="process-num">04</div><div><strong>Risk Scoring</strong><br>Continuity risk, compliance exposure, training inefficiency, error propagation.</div></div>
-      <div class="process-item fade-up"><div class="process-num">05</div><div><strong>Implementation Roadmap</strong><br>Priority findings, top operational risks, corrective recommendations, 30/60/90-day action steps.</div></div>
-    </div>
-  </section>
-
-  <section id="ai-governance">
-    <div class="section-header fade-up"><h2>AI Governance · Organizational Accountability</h2><div class="section-subhead">AI tools are already inside many organizations. The issue is whether their use is visible, governed, and reviewed.</div></div>
-    <div class="grid-4">
-      <div class="mini-card fade-up"><h4>Acceptable Use</h4><p>Defines permitted and prohibited AI uses by role, function, data type.</p></div>
-      <div class="mini-card fade-up"><h4>Data Boundaries</h4><p>Prevents confidential, client, grant, or sensitive data from entering unmanaged tools.</p></div>
-      <div class="mini-card fade-up"><h4>Human Review</h4><p>Requires human verification before AI-assisted outputs are used operationally.</p></div>
-      <div class="mini-card fade-up"><h4>Version Control</h4><p>Identifies AI-assisted documents, drafts, policies, procedures for audit visibility.</p></div>
-    </div>
-    <div class="quote-band fade-up"><div class="quote">“If AI use is invisible, AI risk is unmanaged.”</div><p style="margin-top:0.8rem;">KLI converts informal AI use into documented operational procedure.</p></div>
-  </section>
-
-  <section id="intake-section">
-    <div class="cta-panel fade-up">
-      <div><h3 style="font-size:1.4rem;">Pilot Intake · Operational Baseline Project</h3><p>Apply for the 6-week reduced-rate pilot. Qualified organizations receive workflow visibility, documentation standards, onboarding clarity, and AI-use governance baseline.</p><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfTcf6efnbXJbkKC6TJyEHlDMuhIorSDlRIr3JoiKu7Nz4x5A/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-outline">DISCUSS PILOT →</a></div></div>
-      <div><div class="monogram-seal">KLI</div></div>
-    </div>
-  </section>
-
-  <section id="contact-section" style="scroll-margin-top: 100px;">
-    <div class="cta-panel" style="display: block; padding: 2.5rem;">
-      <div class="intake-badge" style="margin-bottom: 1rem;"><span>✧ OFFICE OF THE FIDUCIARY ✧</span><span>— INSTITUTIONAL CORRESPONDENCE</span></div>
-      <h2 style="margin-bottom: 1rem;">Executive Contact & Governance Access</h2>
-      <p style="max-width: 760px; margin-bottom: 2rem;">For operational governance inquiries, institutional coordination, curriculum access, implementation reviews, or continuity infrastructure discussions.</p>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
-        <div class="mini-card" style="text-align:center;"><div style="font-size:1.6rem;">✉</div><h4>Administrative Correspondence</h4><p style="font-family:'Roboto Mono';font-size:0.7rem;"><a href="mailto:kellylegacyestatesllc@gmail.com" style="color:var(--gold-desat);text-decoration:none;">kellylegacyestatesllc@gmail.com</a></p></div>
-        <div class="mini-card" style="text-align:center;"><div style="font-size:1.6rem;">⌘</div><h4>Executive Network</h4><p style="font-size:0.7rem;"><a href="https://www.linkedin.com/in/delonte-kelly-01961b3b4" target="_blank" rel="noopener noreferrer" style="color:var(--gold-desat);text-decoration:none;">Delonte Kelly</a></p></div>
-        <div class="mini-card" style="text-align:center;"><div style="font-size:1.6rem;">◫</div><h4>Governance Repository</h4><p style="font-size:0.7rem;"><a href="https://github.com/DelonteKelly/KLY-landing" target="_blank" rel="noopener noreferrer" style="color:var(--gold-desat);text-decoration:none;">KLI Public Infrastructure</a></p></div>
-        <div class="mini-card" style="text-align:center;"><div style="font-size:1.6rem;">⬢</div><h4>Governance Credentials</h4><p style="font-size:0.7rem;"><a href="https://opensea.io/collection/kli-governance-credential-series" target="_blank" rel="noopener noreferrer" style="color:var(--gold-desat);text-decoration:none;">KLI Credential Archive</a></p></div>
+      <div class="service-card fade-up" data-file="FILE-SVC-001">
+        <div class="card-class">FLAGSHIP · 2–3 WEEKS</div>
+        <div class="card-title">Operational Workflow Review</div>
+        <div class="card-body">A diagnostic review of how work actually happens versus how it is documented.</div>
+        <ul class="dossier-list">
+          <li>Workflow analysis</li>
+          <li>Documentation review</li>
+          <li>Onboarding gap review</li>
+          <li>AI-use inventory</li>
+          <li>Findings report + roadmap</li>
+        </ul>
       </div>
-      <div class="gold-divider" style="margin: 1.5rem 0 1rem;"></div>
-      <div class="authority-block"><strong>Official Administrative Notice</strong><br>Kelly Legacy Institute™ · Office of the Fiduciary<br>Operational Governance & AI Systems Division<br><br>All institutional communications through documented written correspondence.<br><span style="font-size:0.55rem;">Private executive governance environment. No legal, tax, financial, or investment advice.</span></div>
+      <div class="service-card fade-up" data-file="FILE-SVC-002">
+        <div class="card-class">EXECUTION · 3–6 MONTHS</div>
+        <div class="card-title">Implementation Retainer</div>
+        <div class="card-body">Ongoing execution support to build and deploy SOPs, policies, onboarding systems.</div>
+        <ul class="dossier-list">
+          <li>SOP development</li>
+          <li>Role-based onboarding</li>
+          <li>AI-use policy deployment</li>
+          <li>Documentation standards</li>
+          <li>Staff training support</li>
+        </ul>
+      </div>
+      <div class="service-card fade-up" data-file="FILE-SVC-003">
+        <div class="card-class">VALIDATION · 4 WEEKS</div>
+        <div class="card-title">Governance Certification</div>
+        <div class="card-body">Organizational self-audit and validation pathway for documented workflows.</div>
+        <ul class="dossier-list">
+          <li>Operational pillars review</li>
+          <li>Internal audit kit</li>
+          <li>Governance scorecard</li>
+          <li>KLI Operational Seal pathway</li>
+        </ul>
+      </div>
     </div>
-  </section>
-</div>
+  </div>
+</section>
 
+<!-- METHODOLOGY -->
+<section id="method">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">METHODOLOGY // PROCEDURE-DELTA</div>
+      <h2>Workflow Review Protocol</h2>
+      <div class="section-sub">Converts undocumented practice into visible operational evidence.</div>
+    </div>
+    <div class="process-grid">
+      <div class="process-item fade-up">
+        <div class="process-num-block">
+          <div class="process-num">01</div>
+          <div class="process-code">STEP-ALPHA</div>
+        </div>
+        <div>
+          <div class="process-title">Discovery</div>
+          <div class="process-desc">Document inventory, staff interviews, shared drive review, tool audit, role clarification.</div>
+        </div>
+      </div>
+      <div class="process-item fade-up">
+        <div class="process-num-block">
+          <div class="process-num">02</div>
+          <div class="process-code">STEP-BRAVO</div>
+        </div>
+        <div>
+          <div class="process-title">Mapping</div>
+          <div class="process-desc">Current-state workflow diagrams, decision-point identification, handoff analysis.</div>
+        </div>
+      </div>
+      <div class="process-item fade-up">
+        <div class="process-num-block">
+          <div class="process-num">03</div>
+          <div class="process-code">STEP-CHARLIE</div>
+        </div>
+        <div>
+          <div class="process-title">Gap Analysis</div>
+          <div class="process-desc">Comparison against KLI standards for documentation, workflow clarity, onboarding structure, AI governance.</div>
+        </div>
+      </div>
+      <div class="process-item fade-up">
+        <div class="process-num-block">
+          <div class="process-num">04</div>
+          <div class="process-code">STEP-DELTA</div>
+        </div>
+        <div>
+          <div class="process-title">Risk Scoring</div>
+          <div class="process-desc">Continuity risk, compliance exposure, training inefficiency, error propagation.</div>
+        </div>
+      </div>
+      <div class="process-item fade-up">
+        <div class="process-num-block">
+          <div class="process-num">05</div>
+          <div class="process-code">STEP-ECHO</div>
+        </div>
+        <div>
+          <div class="process-title">Implementation Roadmap</div>
+          <div class="process-desc">Priority findings, top operational risks, corrective recommendations, 30/60/90-day action steps.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI GOVERNANCE -->
+<section id="ai-governance">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">AI GOVERNANCE // FILE-AI-GOV</div>
+      <h2>AI Systems — Organizational Accountability</h2>
+      <div class="section-sub">AI tools are already inside many organizations. The issue is whether their use is visible, governed, and reviewed.</div>
+    </div>
+    <div class="grid-4">
+      <div class="mini-card fade-up">
+        <div class="mini-title">Acceptable Use</div>
+        <div class="mini-body">Defines permitted and prohibited AI uses by role, function, data type.</div>
+      </div>
+      <div class="mini-card fade-up">
+        <div class="mini-title">Data Boundaries</div>
+        <div class="mini-body">Prevents confidential, client, grant, or sensitive data from entering unmanaged tools.</div>
+      </div>
+      <div class="mini-card fade-up">
+        <div class="mini-title">Human Review</div>
+        <div class="mini-body">Requires human verification before AI-assisted outputs are used operationally.</div>
+      </div>
+      <div class="mini-card fade-up">
+        <div class="mini-title">Version Control</div>
+        <div class="mini-body">Identifies AI-assisted documents, drafts, policies, procedures for audit visibility.</div>
+      </div>
+    </div>
+    <div class="intel-quote fade-up">
+      <div class="quote-text">"If AI use is invisible, AI risk is unmanaged."</div>
+      <div class="quote-sub">▸ KLI converts informal AI use into documented operational procedure.</div>
+    </div>
+  </div>
+</section>
+
+<!-- INTAKE -->
+<section id="intake-section">
+  <div class="container">
+    <div class="section-label">PILOT INTAKE // PRIORITY ACCESS</div>
+    <div class="command-panel fade-up">
+      <div class="command-bar">
+        <span>⬛ PILOT INTAKE — OPERATIONAL BASELINE PROJECT</span>
+        <span>CLEARANCE: LIMITED ENROLLMENT</span>
+      </div>
+      <div class="command-body">
+        <div class="command-title">6-Week Reduced-Rate Pilot Program</div>
+        <div class="command-text">Apply for the 6-week reduced-rate pilot. Qualified organizations receive workflow visibility, documentation standards, onboarding clarity, and AI-use governance baseline.</div>
+        <div class="btn-group" style="margin-top:1.5rem;">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTcf6efnbXJbkKC6TJyEHlDMuhIorSDlRIr3JoiKu7Nz4x5A/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-red">⬛ SUBMIT INTAKE REQUEST →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact-section">
+  <div class="container">
+    <div class="section-label">EXECUTIVE CONTACT // INSTITUTIONAL CORRESPONDENCE</div>
+    <div class="command-panel fade-up">
+      <div class="command-bar">
+        <span>✧ OFFICE OF THE FIDUCIARY ✧</span>
+        <span>INSTITUTIONAL CORRESPONDENCE — DOCUMENTED WRITTEN CHANNELS ONLY</span>
+      </div>
+      <div class="command-body">
+        <div class="command-title">Executive Contact & Governance Access</div>
+        <div class="command-text">For operational governance inquiries, institutional coordination, curriculum access, implementation reviews, or continuity infrastructure discussions.</div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-icon">✉</div>
+            <div class="contact-title">Administrative Correspondence</div>
+            <a href="mailto:kellylegacyestatesllc@gmail.com" class="contact-link">kellylegacyestatesllc@gmail.com</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">⌘</div>
+            <div class="contact-title">Executive Network</div>
+            <a href="https://www.linkedin.com/in/delonte-kelly-01961b3b4" target="_blank" rel="noopener noreferrer" class="contact-link">Delonte Kelly</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">◫</div>
+            <div class="contact-title">Governance Repository</div>
+            <a href="https://github.com/DelonteKelly/KLY-landing" target="_blank" rel="noopener noreferrer" class="contact-link">KLI Public Infrastructure</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">⬢</div>
+            <div class="contact-title">Governance Credentials</div>
+            <a href="https://opensea.io/collection/kli-governance-credential-series" target="_blank" rel="noopener noreferrer" class="contact-link">KLI Credential Archive</a>
+          </div>
+        </div>
+        <div class="red-divider"></div>
+        <div class="authority-block">
+          <strong>Official Administrative Notice</strong><br>
+          Kelly Legacy Institute™ · Office of the Fiduciary<br>
+          Operational Governance & AI Systems Division<br><br>
+          All institutional communications through documented written correspondence.<br>
+          <span style="font-size:0.5rem;opacity:0.6;">Private executive governance environment. No legal, tax, financial, or investment advice.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
   <div class="container">
+    <div style="background:var(--red-class);padding:6px 0;text-align:center;font-family:var(--font-mono);font-size:0.55rem;letter-spacing:0.28em;color:#fff;margin-bottom:2rem;">
+      ████ KELLY LEGACY INSTITUTE — OFFICE OF THE FIDUCIARY — PRIVATE EXECUTIVE GOVERNANCE ENVIRONMENT ████
+    </div>
     <div class="footer-grid">
-      <div><div class="monogram-seal">KLI</div><h4>Kelly Legacy Institute</h4><p style="font-size:0.7rem;">Private executive governance infrastructure.</p></div>
-      <div class="footer-links">
-        <div>
-          <a href="#access-command">Access Infrastructure</a>
-          <a href="#method">Methodology</a>
-          <a href="#ai-governance">AI Governance</a>
-        </div>
-        <div>
-          <a href="#intake-section">Pilot Program</a>
-          <a href="klat-access.html">Access Command</a>
-          <a href="curriculum-portal.html">Curriculum Portal</a>
-          <a href="execution-framework.html">Execution Framework</a>
-          <a href="#contact-section">Contact</a>
-        </div>
-        <div>
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Terms</a>
-          <a href="record-policy.html">Record Policy</a>
-          <a href="transparency.html">Transparency</a>
+      <div>
+        <div class="footer-logo">Kelly Legacy Institute</div>
+        <div class="footer-tagline">PRIVATE EXECUTIVE GOVERNANCE INFRASTRUCTURE</div>
+        <div style="margin-top:1rem;font-family:var(--font-mono);font-size:0.55rem;color:var(--white-mute);line-height:1.8;opacity:0.6;">
+          CASE REF: KLI-GOV-ENV-001<br>
+          NODE: KLI-FIDUCIARY-ALPHA<br>
+          STATUS: <span style="color:var(--green-live);">● OPERATIONAL</span>
         </div>
       </div>
+      <div class="footer-links">
+        <h4>Governance</h4>
+        <a href="#access-command">Access Infrastructure</a>
+        <a href="#method">Methodology</a>
+        <a href="#ai-governance">AI Governance</a>
+      </div>
+      <div class="footer-links">
+        <h4>Operations</h4>
+        <a href="#intake-section">Pilot Program</a>
+        <a href="klat-access.html">Access Command</a>
+        <a href="curriculum-portal.html">Curriculum Portal</a>
+        <a href="execution-framework.html">Execution Framework</a>
+        <a href="#contact-section">Contact</a>
+      </div>
+      <div class="footer-links">
+        <h4>Policy & Record</h4>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="record-policy.html">Record Policy</a>
+        <a href="transparency.html">Transparency</a>
+      </div>
     </div>
-    <div class="gold-divider"></div>
-    <div class="authority-block">KELLY LEGACY INSTITUTE — OFFICE OF THE FIDUCIARY — PRIVATE EXECUTIVE GOVERNANCE ENVIRONMENT</div>
-    <div class="copyright">© 2026 Kelly Legacy Institute. Private executive governance infrastructure. All materials provided for institutional governance literacy.<br>Structure determines outcome. Documentation preserves continuity. Human review governs AI-assisted work.</div>
+    <div class="red-divider"></div>
+    <div class="copyright">
+      © 2026 Kelly Legacy Institute. Private executive governance infrastructure. All materials provided for institutional governance literacy.<br>
+      Structure determines outcome. Documentation preserves continuity. Human review governs AI-assisted work.<br>
+      <span style="opacity:0.4;">DISTRIBUTION CONTROLLED // HANDLE VIA APPROVED CHANNELS ONLY // EYES ONLY</span>
+    </div>
   </div>
 </footer>
 
 <script>
+  // Fade-up observer
   const faders = document.querySelectorAll('.fade-up');
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
-  }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
   faders.forEach(el => observer.observe(el));
 
+  // Smooth scroll
   document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
-      if (targetId === "#" || !targetId) return;
       const target = document.querySelector(targetId);
       if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
   });
+
+  // Random glitch on status codes
+  const amberEls = document.querySelectorAll('.amber');
+  setInterval(() => {
+    const el = amberEls[Math.floor(Math.random() * amberEls.length)];
+    if (!el) return;
+    el.style.opacity = '0.3';
+    setTimeout(() => { el.style.opacity = '1'; }, 80);
+  }, 4000);
 </script>
 </body>
 </html>
