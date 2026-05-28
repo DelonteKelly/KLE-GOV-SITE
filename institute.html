@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kelly Legacy Institute | KLI</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--exec-black:#050505;
+--deep-charcoal:#111113;
+--charcoal-card:#16161A;
+--charcoal-border:#23232A;
+--crimson:#9E2A2A;
+--antique-gold:#C8A24C;
+--ivory:#F0EFEA;
+--ivory-dim:#CBC9C1;
+--slate-meta:#7A7A7A;
+--border-faint:rgba(240,239,234,0.06);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:var(--exec-black);
+color:var(--ivory-dim);
+font-family:'Inter',sans-serif;
+line-height:1.7;
+}
+
+.container{
+max-width:1200px;
+margin:0 auto;
+padding:0 32px;
+}
+
+.site-header{
+border-bottom:1px solid var(--border-faint);
+background:rgba(5,5,5,.94);
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.nav-wrapper{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:1.2rem 0;
+gap:1rem;
+flex-wrap:wrap;
+}
+
+.identity-mark h1{
+font-family:'Playfair Display',serif;
+font-size:1.15rem;
+letter-spacing:.12em;
+color:var(--ivory);
+}
+
+.identity-mark p{
+font-family:'JetBrains Mono',monospace;
+font-size:.65rem;
+letter-spacing:.2em;
+color:var(--crimson);
+margin-top:4px;
+}
+
+.nav-links{
+display:flex;
+gap:1.5rem;
+flex-wrap:wrap;
+}
+
+.nav-links a{
+font-family:'JetBrains Mono',monospace;
+font-size:.68rem;
+letter-spacing:.12em;
+text-transform:uppercase;
+text-decoration:none;
+color:var(--ivory-dim);
+}
+
+.nav-links a:hover{
+color:var(--antique-gold);
+}
+
+.access-cta{
+border:1px solid var(--crimson);
+padding:7px 14px;
+color:var(--crimson)!important;
+}
+
+.hero{
+padding:5rem 0 4rem;
+border-bottom:1px solid var(--border-faint);
+}
+
+.label{
+font-family:'JetBrains Mono',monospace;
+font-size:.65rem;
+letter-spacing:.24em;
+color:var(--crimson);
+text-transform:uppercase;
+margin-bottom:1rem;
+}
+
+.hero h2{
+font-family:'Playfair Display',serif;
+font-size:clamp(2.5rem,5vw,4.3rem);
+line-height:1.08;
+text-transform:uppercase;
+color:var(--ivory);
+max-width:980px;
+}
+
+.intro{
+margin-top:1.5rem;
+max-width:860px;
+border-left:2px solid var(--antique-gold);
+padding-left:1.2rem;
+color:var(--ivory-dim);
+}
+
+section{
+padding:4rem 0;
+border-bottom:1px solid var(--border-faint);
+}
+
+.section-title{
+font-family:'Playfair Display',serif;
+font-size:2rem;
+color:var(--ivory);
+margin-bottom:1rem;
+}
+
+.gold-rule{
+width:70px;
+height:2px;
+background:var(--antique-gold);
+margin:1rem 0 2rem;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:1px;
+background:var(--charcoal-border);
+border:1px solid var(--charcoal-border);
+}
+
+.card{
+background:var(--charcoal-card);
+padding:1.7rem;
+}
+
+.code{
+font-family:'JetBrains Mono',monospace;
+font-size:.62rem;
+letter-spacing:.1em;
+color:var(--antique-gold);
+margin-bottom:.7rem;
+}
+
+.card h3{
+color:var(--ivory);
+font-size:1.05rem;
+margin-bottom:.7rem;
+}
+
+.card p{
+font-size:.84rem;
+color:#b5b3aa;
+}
+
+.btn{
+display:inline-block;
+margin-top:1.2rem;
+border:1px solid var(--antique-gold);
+padding:10px 18px;
+font-family:'JetBrains Mono',monospace;
+font-size:.65rem;
+letter-spacing:.12em;
+text-transform:uppercase;
+text-decoration:none;
+color:var(--antique-gold);
+}
+
+.btn:hover{
+background:var(--antique-gold);
+color:var(--exec-black);
+}
+
+.notice{
+background:linear-gradient(145deg,#0A0A0C,#111113);
+border-left:3px solid var(--crimson);
+padding:2rem;
+margin-top:2rem;
+font-family:'JetBrains Mono',monospace;
+font-size:.78rem;
+color:var(--ivory-dim);
+}
+
+.footer{
+padding:2.5rem 0;
+background:var(--deep-charcoal);
+font-family:'JetBrains Mono',monospace;
+font-size:.68rem;
+color:var(--slate-meta);
+}
+
+@media(max-width:700px){
+.container{padding:0 22px;}
+.nav-links{gap:1rem;}
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+<div class="container">
+<div class="nav-wrapper">
+
+<div class="identity-mark">
+<h1>KELLY LEGACY ESTATES</h1>
+<p>OFFICE OF THE FIDUCIARY</p>
+</div>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="governance.html">Governance</a>
+<a href="fiduciary-doctrine.html">Fiduciary Doctrine</a>
+<a href="ai-governance.html">AI Governance</a>
+<a href="publications.html">Publications</a>
+<a href="institute.html">Institute</a>
+<a href="klat-access.html">KLAT Access</a>
+<a href="contact.html" class="access-cta">Contact</a>
+</div>
+
+</div>
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+
+<div class="container">
+
+<div class="label">
+KELLY LEGACY INSTITUTE // GOVERNANCE EDUCATION
+</div>
+
+<h2>
+Education precedes competent governance.
+</h2>
+
+<p class="intro">
+Kelly Legacy Institute™ (KLI) is the educational division of the Kelly Legacy framework focused on fiduciary literacy, governance systems, administrative doctrine, continuity education, institutional structure, and disciplined procedural understanding.
+</p>
+
+</div>
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="label">
+INSTITUTIONAL PURPOSE
+</div>
+
+<div class="section-title">
+The Purpose of KLI
+</div>
+
+<div class="gold-rule"></div>
+
+<p>
+KLI exists to provide structured educational pathways for individuals, families, governance participants, organizational leaders, and continuity-focused learners seeking disciplined understanding of governance, fiduciary administration, administrative procedure, and institutional systems.
+</p>
+
+<div class="notice">
+KLI is educational in nature. Materials are designed for literacy, governance understanding, procedural education, and institutional awareness.
+</div>
+
+</div>
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="label">
+CORE EDUCATIONAL TRACKS
+</div>
+
+<div class="section-title">
+Governance Curriculum Categories
+</div>
+
+<div class="gold-rule"></div>
+
+<div class="grid">
+
+<div class="card">
+<div class="code">TRACK-001</div>
+<h3>Status • Standing • Capacity</h3>
+<p>
+Foundational governance framework covering procedural relationships, representative capacity, standing analysis, and administrative positioning.
+</p>
+</div>
+
+<div class="card">
+<div class="code">TRACK-002</div>
+<h3>Fiduciary Administration</h3>
+<p>
+Duty, accounting, entrusted authority, trust administration, loyalty standards, and continuity-centered fiduciary structure.
+</p>
+</div>
+
+<div class="card">
+<div class="code">TRACK-003</div>
+<h3>Administrative Doctrine</h3>
+<p>
+Notice, procedure, cure, default, records, process control, and governance sequencing principles.
+</p>
+</div>
+
+<div class="card">
+<div class="code">TRACK-004</div>
+<h3>Executive AI Governance</h3>
+<p>
+Human review, institutional oversight, AI workflow governance, continuity protection, and operational accountability systems.
+</p>
+</div>
+
+<div class="card">
+<div class="code">TRACK-005</div>
+<h3>Continuity Systems</h3>
+<p>
+Institutional memory, record preservation, succession structure, governance survivability, and continuity engineering.
+</p>
+</div>
+
+<div class="card">
+<div class="code">TRACK-006</div>
+<h3>KLAT Governance Infrastructure</h3>
+<p>
+Contribution-recognition systems, governance participation infrastructure, verification frameworks, and institutional access structure.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="label">
+INSTITUTE ACCESS
+</div>
+
+<div class="section-title">
+Participation Pathways
+</div>
+
+<div class="gold-rule"></div>
+
+<div class="grid">
+
+<div class="card">
+<div class="code">LEVEL-001</div>
+<h3>Public Observer</h3>
+<p>
+General educational access to public doctrine, governance literacy materials, and institutional publications.
+</p>
+</div>
+
+<div class="card">
+<div class="code">LEVEL-002</div>
+<h3>Governance Participant</h3>
+<p>
+Structured educational participation through contribution, curriculum engagement, and governance-oriented development.
+</p>
+</div>
+
+<div class="card">
+<div class="code">LEVEL-003</div>
+<h3>Executive Access</h3>
+<p>
+Advanced governance participation classifications associated with continuity systems, institutional infrastructure, and executive review environments.
+</p>
+</div>
+
+</div>
+
+<a href="https://www.skool.com/kelly-legacy-institute-9231/about" target="_blank" class="btn">
+Enter Kelly Legacy Institute
+</a>
+
+<div class="notice">
+Participation in KLI does not create fiduciary representation, legal representation, investment advisory relationships, or attorney-client engagement.
+</div>
+
+</div>
+</section>
+
+</main>
+
+<footer class="footer">
+<div class="container">
+© Kelly Legacy Institute™ // Office of the Fiduciary // Governance Education Infrastructure
+</div>
+</footer>
+
+<script>
+(function(){
+if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+window.chatbase=(...arguments)=>{
+if(!window.chatbase.q){window.chatbase.q=[]}
+window.chatbase.q.push(arguments)
+};
+window.chatbase=new Proxy(window.chatbase,{
+get(target,prop){
+if(prop==="q"){return target.q}
+return(...args)=>target(prop,...args)
+}
+})
+}
+const onLoad=function(){
+const script=document.createElement("script");
+script.src="https://www.chatbase.co/embed.min.js";
+script.id="JB7Ysn50O_DpC9tWnoxrh";
+script.domain="www.chatbase.co";
+document.body.appendChild(script)
+};
+if(document.readyState==="complete"){onLoad()}
+else{window.addEventListener("load",onLoad)}
+})();
+</script>
+
+</body>
+</html>
