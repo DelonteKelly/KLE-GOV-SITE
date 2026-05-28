@@ -411,7 +411,7 @@
     }
     .review-modal-content {
       background: var(--deep-charcoal);
-      border: 1px solid var(--border-red, var(--crimson));
+      border: 1px solid var(--crimson);
       border-radius: 4px;
       max-width: 800px;
       width: 90%;
@@ -463,7 +463,7 @@
       flex: 1;
       min-height: 520px;
       border: none;
-      background: var(--black-2, #0a0a0c);
+      background: #0a0a0c;
     }
     .review-modal-footer {
       padding: 1rem 2rem 1.5rem 2rem;
@@ -536,8 +536,8 @@
           <div class="hero-sub">Kelly Legacy Estates provides institutional governance education, fiduciary literacy, continuity systems, and administrative doctrine for individuals, families, organizations, and private governance environments.</div>
           <div class="hero-body">Structure determines outcome. Procedure precedes remedy. Record precedes recognition. Capacity determines consequence.<br><br>Kelly Legacy Estates exists to bring order to governance, documentation, fiduciary literacy, administrative procedure, and continuity planning through disciplined education, institutional frameworks, and private governance infrastructure.</div>
           <div class="btn-inline">
-            <!-- REPLACED: direct link to Replit application -->
-            <a href="https://kelly-legacy-estates--klat-dashboard.replit.app" class="btn-primary">Enter KLI Institutional Access Infrastructure™</a>
+            <!-- ENTER KLI INSTITUTIONAL ACCESS → Access Infrastructure (trailing slash consistency) -->
+            <a href="https://kli-access.replit.app/" class="btn-primary">Enter KLI Institutional Access Infrastructure™</a>
             <a href="fiduciary-doctrine.html" class="btn-primary btn-secondary">Explore Governance Doctrine</a>
             <a href="#" id="requestInstitutionalReviewBtn" class="btn-primary">Request Institutional Review</a>
           </div>
@@ -637,7 +637,8 @@
             </div>
           </div>
           <div>
-            <a href="klat-access.html" class="btn-primary" style="display: inline-block;">Verify Institutional Access →</a>
+            <!-- VERIFY INSTITUTIONAL ACCESS → Access Infrastructure (trailing slash consistency) -->
+            <a href="https://kli-access.replit.app/" class="btn-primary" style="display: inline-block;">Verify Institutional Access →</a>
           </div>
         </div>
         <div style="margin-top: 2rem; padding-top: 1rem; font-size:0.7rem; color:var(--slate-meta); font-family:monospace; border-top:1px solid rgba(200,162,76,0.2);">
@@ -680,7 +681,7 @@
         <div class="ai-card" style="padding: 1.5rem;"><i class="fas fa-microchip"></i><h4 style="color:var(--ivory);">AI Governance Inquiry</h4><p style="font-size:0.75rem;">Executive AI systems and oversight.</p></div>
       </div>
       <div class="access-preview" style="background: none; border: 1px solid var(--charcoal-border); text-align: center; padding: 1.5rem;">
-        <p style="font-family: monospace; font-size:0.75rem;">All correspondence is processed through the Office of the Fiduciary. Formal written requests only. <a href="contact.html" style="color: var(--crimson); text-decoration: none;">Submit institutional review →</a></p>
+        <p style="font-family: monospace; font-size:0.75rem;">All correspondence is processed through the Office of the Fiduciary. Formal written requests only. <a href="#" id="submitInstitutionalReviewInline" style="color: var(--crimson); text-decoration: none;">Submit institutional review →</a></p>
       </div>
     </div>
   </section>
@@ -724,6 +725,7 @@
     // Modal elements
     const modal = document.getElementById('institutionalReviewModal');
     const openBtn = document.getElementById('requestInstitutionalReviewBtn');
+    const inlineReviewBtn = document.getElementById('submitInstitutionalReviewInline');
     const closeBtn = modal?.querySelector('.close-review-modal');
 
     function openModal() {
@@ -740,6 +742,13 @@
 
     if (openBtn) {
       openBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal();
+      });
+    }
+
+    if (inlineReviewBtn) {
+      inlineReviewBtn.addEventListener('click', (e) => {
         e.preventDefault();
         openModal();
       });
@@ -769,7 +778,7 @@
     });
   })();
 </script>
-<!-- Chatbase embed remains, no wallet code -->
+<!-- Chatbase embed only - no wallet code -->
 <script>
 (function(){
 if(!window.chatbase||window.chatbase("getState")!=="initialized"){
