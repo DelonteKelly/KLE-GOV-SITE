@@ -3,18 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>CLASSIFIED // KLI-EXEC-001 // Execution Framework | Kelly Legacy Institute</title>
-  <meta name="description" content="Private executive suite for institutional governance, administrative procedure, and fiduciary accountability. KLAT-gated access. Restricted environment.">
+  <title>EXECUTION FRAMEWORK // KLI-EXEC-001 // Kelly Legacy Institute</title>
+  <meta name="description" content="Private executive suite for institutional governance, administrative procedure, and fiduciary accountability. Authorized governance environment.">
   <link rel="icon" type="image/png" href="kli-favicon.png">
-  <meta property="og:title" content="Office of the Fiduciary – Executive Suite">
-  <meta property="og:description" content="Restricted institutional governance framework. KLAT credential authority required.">
+  <meta property="og:title" content="Office of the Fiduciary – Execution Framework">
+  <meta property="og:description" content="Institutional governance framework. Authorized distribution only.">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Share+Tech+Mono&family=Special+Elite&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.umd.min.js"></script>
-
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -304,102 +302,7 @@
     .doc-header-inner .field { margin-bottom: 4px; }
     .doc-header-inner .field span { color: var(--amber); }
 
-    /* Executive Gate Overlay */
-    .gate-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(3, 3, 5, 0.98);
-      backdrop-filter: blur(28px);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: opacity 0.6s ease, visibility 0.6s ease;
-    }
-    .gate-overlay.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
-    .gate-card {
-      max-width: 560px;
-      width: 90%;
-      background: var(--black-3);
-      border: 1px solid var(--border-red);
-      border-radius: 16px;
-      padding: 3rem 2.8rem;
-      text-align: center;
-      animation: fadeInGate 0.55s ease;
-    }
-    @keyframes fadeInGate {
-      from { opacity: 0; transform: scale(0.97); }
-      to { opacity: 1; transform: scale(1); }
-    }
-    .gate-badge {
-      display: inline-flex;
-      gap: 12px;
-      background: rgba(196, 30, 30, 0.1);
-      padding: 0.5rem 1.2rem;
-      border-radius: 4px;
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      letter-spacing: 0.15em;
-      color: var(--red-class);
-      margin-bottom: 2rem;
-      border: 1px solid var(--border-red);
-    }
-    .gate-card h2 {
-      font-family: var(--font-head);
-      font-size: 2rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      color: var(--white);
-      margin-bottom: 0.75rem;
-    }
-    .gate-status {
-      font-family: var(--font-mono);
-      background: rgba(0, 0, 0, 0.6);
-      padding: 1rem 1.2rem;
-      border-radius: 8px;
-      margin-top: 2rem;
-      font-size: 0.72rem;
-      line-height: 1.7;
-      border: 1px solid var(--border-faint);
-      color: var(--white-mute);
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      padding: 0.85rem 1.8rem;
-      border-radius: 2px;
-      font-family: var(--font-mono);
-      font-weight: 480;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      transition: var(--transition-exec);
-      border: 1px solid transparent;
-      cursor: pointer;
-      text-transform: uppercase;
-      background: transparent;
-      border: 1px solid var(--border-red);
-      color: var(--white);
-    }
-    .btn-primary {
-      background: rgba(196, 30, 30, 0.1);
-      border-color: var(--border-red);
-      color: var(--red-class);
-    }
-    .btn-primary:hover {
-      background: rgba(196, 30, 30, 0.25);
-      transform: translateY(-2px);
-    }
-
-    .protected-content { display: none; }
-    .protected-content.visible { display: block; animation: suiteReveal 0.7s ease; }
-    @keyframes suiteReveal { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
-
-    /* Executive Suite */
+    /* Executive Suite — Content always visible (token gate removed) */
     .executive-suite {
       padding: 5rem 0 2rem;
       border-bottom: 1px solid var(--border-faint);
@@ -540,7 +443,6 @@
       .module-header h2 { font-size: 1.1rem; }
       .module-header { padding: 1rem 1.2rem; }
       .module-content { padding: 1rem; }
-      .gate-card { padding: 2rem 1.5rem; }
       .nav-links { gap: 1rem; }
       .doc-header-inner { flex-direction: column; gap: 0.5rem; }
       .status-inner { justify-content: center; }
@@ -570,7 +472,7 @@
     <div class="status-inner">
       <span><span class="pulse-dot"></span> <span class="live">ENVIRONMENT LIVE</span></span>
       <span class="amber">⌖ OFFICE OF THE FIDUCIARY — EXECUTION FRAMEWORK</span>
-      <span><span class="red-dot"></span> <span class="red">RESTRICTED ACCESS — VERIFICATION REQUIRED <span class="blink">▮</span></span></span>
+      <span><span class="red-dot"></span> <span class="red">RESTRICTED ACCESS — AUTHORIZED PERSONNEL <span class="blink">▮</span></span></span>
       <span>SESSION: <span class="amber">ENCRYPTED</span></span>
       <span>NODE: <span class="amber">KLI-EXEC-001</span></span>
     </div>
@@ -610,78 +512,103 @@
       </div>
       <div>
         <div class="field">ORIGINATED: <span>KELLY LEGACY INSTITUTE™</span></div>
-        <div class="field">DISTRIBUTION: <span>RESTRICTED — VERIFIED KLAT HOLDERS</span></div>
+        <div class="field">DISTRIBUTION: <span>RESTRICTED — GOVERNANCE PARTICIPANTS</span></div>
         <div class="field">REVIEW CYCLE: <span>CONTINUOUS — GOVERNANCE ACTIVE</span></div>
       </div>
       <div>
-        <div class="field">NETWORK: <span>POLYGON — VERIFIED</span></div>
-        <div class="field">CREDENTIAL: <span>KLAT ACCESS INFRASTRUCTURE</span></div>
+        <div class="field">NETWORK: <span>INSTITUTIONAL RECORD</span></div>
+        <div class="field">CREDENTIAL: <span>EXECUTIVE ACCESS</span></div>
         <div class="field">STATUS: <span class="blink" style="color: var(--green-live);">● ACTIVE</span></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Sovereign Gate Overlay -->
-<div id="klatGateOverlay" class="gate-overlay">
-  <div class="gate-card">
-    <div class="gate-badge"><span>✧ PRIVATE EXECUTIVE SUITE ✧</span><span>— KLAT GATED ACCESS</span></div>
-    <h2>Credential Authority Required</h2>
-    <p style="margin: 0.5rem 0 0; font-size: 0.85rem; color: var(--white-mute);">Access to the Office of the Fiduciary execution framework requires verified KLAT credential authority.</p>
-    <div class="btn-group"><button id="verifyGateBtn" class="btn btn-primary">⟡ Verify KLAT Authority</button></div>
-    <div id="gateStatusMsg" class="gate-status">⏣ Ready. Connect wallet to verify KLAT credential authority (≥100 KLAT on Polygon).</div>
+<!-- MAIN EXECUTIVE SUITE CONTENT (No token gate, fully visible) -->
+<main class="container">
+  <div class="executive-suite">
+    <div class="suite-badge">OFFICE OF THE FIDUCIARY — RESTRICTED ACCESS</div>
+    <h1>Execution Framework</h1>
+    <div class="sub">Operational Manual · Administrative Procedure · Fiduciary Governance</div>
+    <div class="suite-description">Institutional procedures for administrative notices, record discipline, fiduciary accountability, and lawful enforcement mechanisms. Grounded in statutory authority, procedural rules, and equitable doctrine. Authorized personnel only.</div>
   </div>
-</div>
 
-<!-- Protected Executive Suite Content -->
-<div class="protected-content" id="protectedContent">
-  <main class="container">
-    <div class="executive-suite">
-      <div class="suite-badge">OFFICE OF THE FIDUCIARY — RESTRICTED ACCESS</div>
-      <h1>Execution Framework</h1>
-      <div class="sub">Operational Manual · Administrative Procedure · Fiduciary Governance</div>
-      <div class="suite-description">Institutional procedures for administrative notices, record discipline, fiduciary accountability, and lawful enforcement mechanisms. Grounded in statutory authority, procedural rules, and equitable doctrine. Authorized personnel only.</div>
+  <div class="module">
+    <div class="module-header"><h2>I. Administrative Notice & Demand Procedure</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div>
+    <div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>Notice is the procedural trigger that creates record, imposes response obligations, and establishes default if ignored. Demand defines the specific action required.</p></div><div class="principle-block"><strong>GOVERNING RULE</strong><p>Under administrative law, written notice properly served and documented shifts the burden to the recipient to respond within a defined period.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Draft notice on letterhead: date, recipient, factual statement, specific demand, statutory authority, response deadline (min 14 days). Send certified mail return receipt requested AND first-class mail.</p></div><div class="principle-block"><strong>REQUIRED RECORD</strong><p>Copy of notice, USPS tracking, signed return receipt, affidavit of service, chronological log entry.</p></div></div>
+  </div>
+  <div class="module">
+    <div class="module-header"><h2>II. Cure Opportunity & Administrative Default</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div>
+    <div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>Before declaring default, the opposing party must be given a reasonable opportunity to cure the alleged breach.</p></div><div class="principle-block"><strong>PROCEDURAL FUNCTION</strong><p>Cure process: notice of breach → demand to cure → response window → cure or failure → default declaration.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Issue "Notice of Breach and Opportunity to Cure" specifying defect, corrective action, cure period (14‑30 days). Then issue "Declaration of Default."</p></div></div>
+  </div>
+  <div class="module">
+    <div class="module-header"><h2>III. Administrative Record & Evidence Preservation</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div>
+    <div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>Record precedes recognition. The administrative record is the exclusive foundation for enforcement, review, and remedy.</p></div><div class="principle-block"><strong>GOVERNING RULE</strong><p>The record must be contemporaneous, complete, unaltered, and accessible to all parties.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Maintain bound log or digital file with version control. Never delete entries; add supplements.</p></div></div>
+  </div>
+  <div class="module">
+    <div class="module-header"><h2>IV. Standing, Capacity & Jurisdictional Posture</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div>
+    <div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>The capacity to act and standing to enforce must be established and documented before any procedural move.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Prepare "Standing and Capacity Affidavit" listing legal name, basis of authority, proof of capacity. Insert jurisdictional statement in every notice.</p></div></div>
+  </div>
+  <div class="module">
+    <div class="module-header"><h2>V. Fiduciary Breach, Liability & Surcharge</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div>
+    <div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>A fiduciary who breaches duty of loyalty, care, disclosure, or accounting is personally liable for losses (surcharge) and may be removed.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Gather records, calculate losses, issue "Notice of Breach and Demand for Surcharge" with 21 days to cure.</p></div></div>
+  </div>
+  <div class="module">
+    <div class="module-header"><h2>VI. Statutory Execution Tools (FDCPA, FCRA, RESPA)</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div>
+    <div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>Consumer protection statutes provide fixed procedures, deadlines, and remedies that shift power to diligent claimants.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>FDCPA validation letter within 30 days. FCRA dispute to bureaus. RESPA QWR to servicer. Escalate to CFPB complaint.</p></div></div>
+  </div>
+  <div class="module">
+    <div class="module-header"><h2>VII. Accounting Demands & Asset Recovery</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div>
+    <div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>A fiduciary must provide a full accounting of all assets, receipts, disbursements, and distributions upon proper demand.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Send "Demand for Accounting" via certified mail. Allow 30 days. If deficient, file petition for accounting and surcharge.</p></div></div>
+  </div>
+  <div class="module">
+    <div class="module-header"><h2>VIII. Procedural Due Process & Administrative Hearings</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div>
+    <div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>Before any deprivation of property or right, the state must afford notice and meaningful opportunity to be heard.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Upon adverse agency action, request hearing in writing within deadline. Submit evidence. If agency rules against you, appeal to court.</p></div></div>
+  </div>
+
+  <div class="closing-statement">
+    <p style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 1px; color: var(--red-class);">Procedure precedes remedy. Record precedes enforcement. Capacity determines consequence. Structure determines outcome.</p>
+    <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--white-mute);">This execution framework is an educational resource issued by the Office of the Fiduciary, Kelly Legacy Estates Living Trust & Kelly Legacy Institute. Authorized access only. Not legal advice.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="monogram-seal">KLI</div>
+        <h4 style="font-family:var(--font-head); font-weight:450; color:var(--white);">Kelly Legacy Institute</h4>
+        <p style="font-size:0.75rem;">Private executive governance infrastructure.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+          <a href="record-policy.html">Record Policy</a>
+          <a href="ip-policy.html">IP & Licensing</a>
+        </div>
+        <div>
+          <a href="transparency.html">Transparency Statement</a>
+          <a href="checklist.html">Fiduciary Checklist</a>
+          <a href="execution-framework.html">Execution Framework</a>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/delonte-kelly-01961b3b4" target="_blank"><i class="fa-brands fa-linkedin"></i> Institutional LinkedIn</a>
+          <a href="mailto:kellylegacyestatesllc@gmail.com"><i class="fa-solid fa-envelope"></i> Trust Inquiry</a>
+        </div>
+      </div>
     </div>
+    <div class="gold-divider"></div>
+    <div class="copyright">© 2026 Kelly Legacy Institute. Private executive governance infrastructure. All materials provided for institutional governance literacy.<br>Structure determines outcome. Documentation preserves continuity. Human review governs AI-assisted work.<br><span style="opacity:0.4;">DISTRIBUTION CONTROLLED // HANDLE VIA APPROVED CHANNELS ONLY</span></div>
+  </div>
+</footer>
 
-    <div class="module"><div class="module-header"><h2>I. Administrative Notice & Demand Procedure</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div><div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>Notice is the procedural trigger that creates record, imposes response obligations, and establishes default if ignored. Demand defines the specific action required.</p></div><div class="principle-block"><strong>GOVERNING RULE</strong><p>Under administrative law, written notice properly served and documented shifts the burden to the recipient to respond within a defined period.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Draft notice on letterhead: date, recipient, factual statement, specific demand, statutory authority, response deadline (min 14 days). Send certified mail return receipt requested AND first-class mail.</p></div><div class="principle-block"><strong>REQUIRED RECORD</strong><p>Copy of notice, USPS tracking, signed return receipt, affidavit of service, chronological log entry.</p></div></div></div>
-    <div class="module"><div class="module-header"><h2>II. Cure Opportunity & Administrative Default</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div><div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>Before declaring default, the opposing party must be given a reasonable opportunity to cure the alleged breach.</p></div><div class="principle-block"><strong>PROCEDURAL FUNCTION</strong><p>Cure process: notice of breach → demand to cure → response window → cure or failure → default declaration.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Issue "Notice of Breach and Opportunity to Cure" specifying defect, corrective action, cure period (14‑30 days). Then issue "Declaration of Default."</p></div></div></div>
-    <div class="module"><div class="module-header"><h2>III. Administrative Record & Evidence Preservation</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div><div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>Record precedes recognition. The administrative record is the exclusive foundation for enforcement, review, and remedy.</p></div><div class="principle-block"><strong>GOVERNING RULE</strong><p>The record must be contemporaneous, complete, unaltered, and accessible to all parties.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Maintain bound log or digital file with version control. Never delete entries; add supplements.</p></div></div></div>
-    <div class="module"><div class="module-header"><h2>IV. Standing, Capacity & Jurisdictional Posture</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div><div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>The capacity to act and standing to enforce must be established and documented before any procedural move.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Prepare "Standing and Capacity Affidavit" listing legal name, basis of authority, proof of capacity. Insert jurisdictional statement in every notice.</p></div></div></div>
-    <div class="module"><div class="module-header"><h2>V. Fiduciary Breach, Liability & Surcharge</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div><div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>A fiduciary who breaches duty of loyalty, care, disclosure, or accounting is personally liable for losses (surcharge) and may be removed.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Gather records, calculate losses, issue "Notice of Breach and Demand for Surcharge" with 21 days to cure.</p></div></div></div>
-    <div class="module"><div class="module-header"><h2>VI. Statutory Execution Tools (FDCPA, FCRA, RESPA)</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div><div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>Consumer protection statutes provide fixed procedures, deadlines, and remedies that shift power to diligent claimants.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>FDCPA validation letter within 30 days. FCRA dispute to bureaus. RESPA QWR to servicer. Escalate to CFPB complaint.</p></div></div></div>
-    <div class="module"><div class="module-header"><h2>VII. Accounting Demands & Asset Recovery</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div><div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>A fiduciary must provide a full accounting of all assets, receipts, disbursements, and distributions upon proper demand.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Send "Demand for Accounting" via certified mail. Allow 30 days. If deficient, file petition for accounting and surcharge.</p></div></div></div>
-    <div class="module"><div class="module-header"><h2>VIII. Procedural Due Process & Administrative Hearings</h2><span class="toggle-icon"><i class="fa-solid fa-chevron-right"></i></span></div><div class="module-content"><div class="principle-block"><strong>PRINCIPLE</strong><p>Before any deprivation of property or right, the state must afford notice and meaningful opportunity to be heard.</p></div><div class="principle-block"><strong>EXECUTION METHOD</strong><p>Upon adverse agency action, request hearing in writing within deadline. Submit evidence. If agency rules against you, appeal to court.</p></div></div></div>
-
-    <div class="closing-statement">
-      <p style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 1px; color: var(--red-class);">Procedure precedes remedy. Record precedes enforcement. Capacity determines consequence. Structure determines outcome.</p>
-      <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--white-mute);">This execution framework is an educational resource issued by the Office of the Fiduciary, Kelly Legacy Estates Living Trust & Kelly Legacy Institute. Authorized access only. Not legal advice.</p>
-    </div>
-  </main>
-
-  <footer>
-    <div class="container">
-      <div class="footer-grid"><div><div class="monogram-seal">KLI</div><h4 style="font-family:var(--font-head); font-weight:450; color:var(--white);">Kelly Legacy Institute</h4><p style="font-size:0.75rem;">Private executive governance infrastructure.</p></div><div class="footer-links"><div><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="record-policy.html">Record Policy</a><a href="ip-policy.html">IP & Licensing</a></div><div><a href="transparency.html">Transparency Statement</a><a href="checklist.html">Fiduciary Checklist</a><a href="execution-framework.html">Execution Framework</a></div><div><a href="https://www.linkedin.com/in/delonte-kelly-01961b3b4" target="_blank"><i class="fa-brands fa-linkedin"></i> Institutional LinkedIn</a><a href="mailto:kellylegacyestatesllc@gmail.com"><i class="fa-solid fa-envelope"></i> Trust Inquiry</a></div></div></div>
-      <div class="gold-divider"></div>
-      <div class="copyright">© 2026 Kelly Legacy Institute. Private executive governance infrastructure. All materials provided for institutional governance literacy.<br>Structure determines outcome. Documentation preserves continuity. Human review governs AI-assisted work.<br><span style="opacity:0.4;">DISTRIBUTION CONTROLLED // HANDLE VIA APPROVED CHANNELS ONLY</span></div>
-    </div>
-  </footer>
-</div>
-
+<!-- Pure JavaScript for interactive modules only (no gate logic) -->
 <script>
-  const KLAT_CONTRACT = "0x0eC422119173558541BED4BF2f0Ef4807D66A4f4";
-  const POLYGON_CHAIN_ID = "0x89";
-  const MIN_KLAT = 100;
-  const ERC20_ABI = ["function balanceOf(address account) view returns (uint256)", "function decimals() view returns (uint8)", "function symbol() view returns (string)"];
-
-  const overlay = document.getElementById('klatGateOverlay');
-  const protectedContent = document.getElementById('protectedContent');
-  const verifyBtn = document.getElementById('verifyGateBtn');
-  const statusMsg = document.getElementById('gateStatusMsg');
-
-  function initModules() {
-    document.querySelectorAll('#protectedContent .module').forEach(module => {
-      if (module.dataset.initialized === "true") return;
-      module.dataset.initialized = "true";
+  (function() {
+    // Initialize all collapsible modules
+    const modules = document.querySelectorAll('.module');
+    modules.forEach(module => {
       const header = module.querySelector('.module-header');
       const content = module.querySelector('.module-content');
       const icon = header?.querySelector('.toggle-icon i');
@@ -698,42 +625,7 @@
         }
       });
     });
-  }
-
-  if (sessionStorage.getItem('kli_execution_granted') === 'true') {
-    if (overlay) overlay.classList.add('hidden');
-    if (protectedContent) protectedContent.classList.add('visible');
-    initModules();
-  }
-
-  async function verifyAndUnlock() {
-    if (!statusMsg) return;
-    try {
-      if (!window.ethereum) { statusMsg.innerHTML = "❌ Web3 wallet not detected."; return; }
-      try { await window.ethereum.request({ method: "wallet_switchEthereumChain", params: [{ chainId: POLYGON_CHAIN_ID }] }); } 
-      catch (switchErr) { if (switchErr.code === 4902) { statusMsg.innerHTML = "⚠️ Polygon Mainnet not added."; return; } throw switchErr; }
-      
-      const provider = new ethers.BrowserProvider(window.ethereum);
-      const accounts = await provider.send("eth_requestAccounts", []);
-      const walletAddress = accounts[0];
-      const contract = new ethers.Contract(KLAT_CONTRACT, ERC20_ABI, provider);
-      const [rawBalance, decimals, symbol] = await Promise.all([contract.balanceOf(walletAddress), contract.decimals(), contract.symbol()]);
-      const formattedBalance = Number(ethers.formatUnits(rawBalance, decimals));
-      
-      if (formattedBalance >= MIN_KLAT) {
-        sessionStorage.setItem('kli_execution_granted', 'true');
-        statusMsg.innerHTML = `✅ VERIFIED — Access granted. Entering Executive Suite.`;
-        if (overlay) overlay.classList.add('hidden');
-        if (protectedContent) protectedContent.classList.add('visible');
-        initModules();
-      } else {
-        statusMsg.innerHTML = `⛔ ACCESS DENIED — Insufficient KLAT credential authority.<br>Balance: ${formattedBalance.toLocaleString()} ${symbol}<br>Required: ${MIN_KLAT} ${symbol}.`;
-      }
-    } catch (error) {
-      statusMsg.innerHTML = `⚠️ Verification failed. Ensure Polygon Mainnet.`;
-    }
-  }
-  if (verifyBtn) verifyBtn.addEventListener('click', verifyAndUnlock);
+  })();
 </script>
 </body>
 </html>
