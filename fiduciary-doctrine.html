@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiduciary Doctrine | Kelly Legacy Estates</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--exec-black:#050505;
+--deep-charcoal:#111113;
+--charcoal-card:#16161A;
+--charcoal-border:#23232A;
+--crimson:#9E2A2A;
+--antique-gold:#C8A24C;
+--ivory:#F0EFEA;
+--ivory-dim:#CBC9C1;
+--slate-meta:#7A7A7A;
+--border-faint:rgba(240,239,234,0.06);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:var(--exec-black);
+color:var(--ivory-dim);
+font-family:'Inter',sans-serif;
+line-height:1.7;
+}
+
+.container{
+max-width:1200px;
+margin:0 auto;
+padding:0 32px;
+}
+
+.site-header{
+border-bottom:1px solid var(--border-faint);
+background:rgba(5,5,5,.94);
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.nav-wrapper{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:1.2rem 0;
+gap:1rem;
+flex-wrap:wrap;
+}
+
+.identity-mark h1{
+font-family:'Playfair Display',serif;
+font-size:1.15rem;
+letter-spacing:.12em;
+color:var(--ivory);
+}
+
+.identity-mark p{
+font-family:'JetBrains Mono',monospace;
+font-size:.65rem;
+letter-spacing:.2em;
+color:var(--crimson);
+margin-top:4px;
+}
+
+.nav-links{
+display:flex;
+gap:1.5rem;
+flex-wrap:wrap;
+}
+
+.nav-links a{
+font-family:'JetBrains Mono',monospace;
+font-size:.68rem;
+letter-spacing:.12em;
+text-transform:uppercase;
+text-decoration:none;
+color:var(--ivory-dim);
+}
+
+.nav-links a:hover{
+color:var(--antique-gold);
+}
+
+.access-cta{
+border:1px solid var(--crimson);
+padding:7px 14px;
+color:var(--crimson)!important;
+}
+
+.hero{
+padding:5rem 0 4rem;
+border-bottom:1px solid var(--border-faint);
+}
+
+.label{
+font-family:'JetBrains Mono',monospace;
+font-size:.65rem;
+letter-spacing:.24em;
+color:var(--crimson);
+text-transform:uppercase;
+margin-bottom:1rem;
+}
+
+.hero h2{
+font-family:'Playfair Display',serif;
+font-size:clamp(2.5rem,5vw,4.3rem);
+line-height:1.08;
+text-transform:uppercase;
+color:var(--ivory);
+max-width:900px;
+}
+
+.intro{
+margin-top:1.5rem;
+max-width:820px;
+border-left:2px solid var(--antique-gold);
+padding-left:1.2rem;
+color:var(--ivory-dim);
+}
+
+section{
+padding:4rem 0;
+border-bottom:1px solid var(--border-faint);
+}
+
+.section-title{
+font-family:'Playfair Display',serif;
+font-size:2rem;
+color:var(--ivory);
+margin-bottom:1rem;
+}
+
+.gold-rule{
+width:70px;
+height:2px;
+background:var(--antique-gold);
+margin:1rem 0 2rem;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:1px;
+background:var(--charcoal-border);
+border:1px solid var(--charcoal-border);
+}
+
+.card{
+background:var(--charcoal-card);
+padding:1.7rem;
+}
+
+.code{
+font-family:'JetBrains Mono',monospace;
+font-size:.62rem;
+letter-spacing:.1em;
+color:var(--antique-gold);
+margin-bottom:.7rem;
+}
+
+.card h3{
+color:var(--ivory);
+font-size:1.05rem;
+margin-bottom:.7rem;
+}
+
+.card p{
+font-size:.84rem;
+color:#b5b3aa;
+}
+
+.notice{
+background:linear-gradient(145deg,#0A0A0C,#111113);
+border-left:3px solid var(--crimson);
+padding:2rem;
+margin-top:2rem;
+font-family:'JetBrains Mono',monospace;
+font-size:.78rem;
+color:var(--ivory-dim);
+}
+
+.footer{
+padding:2.5rem 0;
+background:var(--deep-charcoal);
+font-family:'JetBrains Mono',monospace;
+font-size:.68rem;
+color:var(--slate-meta);
+}
+
+@media(max-width:700px){
+.container{padding:0 22px;}
+.nav-links{gap:1rem;}
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+<div class="container">
+<div class="nav-wrapper">
+
+<div class="identity-mark">
+<h1>KELLY LEGACY ESTATES</h1>
+<p>OFFICE OF THE FIDUCIARY</p>
+</div>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="governance.html">Governance</a>
+<a href="fiduciary-doctrine.html">Fiduciary Doctrine</a>
+<a href="ai-governance.html">AI Governance</a>
+<a href="publications.html">Publications</a>
+<a href="https://www.skool.com/kelly-legacy-institute-9231/about" target="_blank">Institute</a>
+<a href="klat-access.html">KLAT Access</a>
+<a href="contact.html" class="access-cta">Contact</a>
+</div>
+
+</div>
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+<div class="container">
+
+<div class="label">
+FIDUCIARY DOCTRINE // ADMINISTRATIVE FRAMEWORK
+</div>
+
+<h2>
+Fiduciary duty exists to govern entrusted authority.
+</h2>
+
+<p class="intro">
+Fiduciary doctrine governs the obligations attached to entrusted power, delegated authority, record stewardship, and administrative responsibility. The fiduciary standard requires discipline, accountability, loyalty, prudence, disclosure, and continuity protection.
+</p>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="label">
+FOUNDATIONAL PRINCIPLES
+</div>
+
+<div class="section-title">
+Core Fiduciary Standards
+</div>
+
+<div class="gold-rule"></div>
+
+<div class="grid">
+
+<div class="card">
+<div class="code">FID-001</div>
+<h3>Duty of Loyalty</h3>
+<p>
+Entrusted authority must act in alignment with the obligations of the office or position, free from undisclosed conflicts and self-serving conduct.
+</p>
+</div>
+
+<div class="card">
+<div class="code">FID-002</div>
+<h3>Duty of Care</h3>
+<p>
+Fiduciaries must act with diligence, competence, review discipline, and procedural prudence when exercising authority.
+</p>
+</div>
+
+<div class="card">
+<div class="code">FID-003</div>
+<h3>Duty to Account</h3>
+<p>
+Actions affecting records, property, administration, or governance require traceable accounting and reviewable documentation.
+</p>
+</div>
+
+<div class="card">
+<div class="code">FID-004</div>
+<h3>Duty of Disclosure</h3>
+<p>
+Material information affecting governance decisions, administration, or obligations must be properly disclosed within procedural boundaries.
+</p>
+</div>
+
+<div class="card">
+<div class="code">FID-005</div>
+<h3>Duty of Impartiality</h3>
+<p>
+Where multiple interests exist, fiduciary administration requires balanced treatment according to governing standards and documented authority.
+</p>
+</div>
+
+<div class="card">
+<div class="code">FID-006</div>
+<h3>Duty of Preservation</h3>
+<p>
+The fiduciary role includes preservation of institutional continuity, records, systems, administrative integrity, and governance infrastructure.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="label">
+FIDUCIARY GOVERNANCE FRAMEWORK
+</div>
+
+<div class="section-title">
+Status • Standing • Capacity
+</div>
+
+<div class="gold-rule"></div>
+
+<p>
+The Kelly Legacy framework treats status, standing, and capacity as foundational governance concepts. Every action, communication, claim, duty, and administrative relationship depends upon properly identified capacity.
+</p>
+
+<div class="notice">
+PROCEDURAL RULE: Capacity determines consequence. Improperly defined capacity creates defective administration, confusion of roles, and breakdowns in accountability.
+</div>
+
+<div class="grid" style="margin-top:2rem;">
+
+<div class="card">
+<div class="code">SSC-001</div>
+<h3>Status</h3>
+<p>
+Status identifies the position, condition, or legal relationship through which authority or obligations are evaluated.
+</p>
+</div>
+
+<div class="card">
+<div class="code">SSC-002</div>
+<h3>Standing</h3>
+<p>
+Standing determines whether a party possesses the procedural relationship necessary to assert a claim, enforce a right, or participate in review.
+</p>
+</div>
+
+<div class="card">
+<div class="code">SSC-003</div>
+<h3>Capacity</h3>
+<p>
+Capacity defines the role through which an individual, office, fiduciary, trustee, or institution acts.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="label">
+CONTINUITY & RECORD DISCIPLINE
+</div>
+
+<div class="section-title">
+Record Precedes Recognition
+</div>
+
+<div class="gold-rule"></div>
+
+<p>
+Fiduciary systems depend upon disciplined records. Governance without records produces uncertainty. Continuity without documentation collapses into dependency on memory, assumption, or personality.
+</p>
+
+<div class="grid" style="margin-top:2rem;">
+
+<div class="card">
+<div class="code">REC-001</div>
+<h3>Institutional Memory</h3>
+<p>
+Records preserve continuity beyond individual participation and maintain administrative consistency.
+</p>
+</div>
+
+<div class="card">
+<div class="code">REC-002</div>
+<h3>Procedural Traceability</h3>
+<p>
+Every material governance action should remain reviewable, documentable, and procedurally attributable.
+</p>
+</div>
+
+<div class="card">
+<div class="code">REC-003</div>
+<h3>Continuity Engineering</h3>
+<p>
+Long-term governance systems require structured succession, administrative frameworks, and preservation protocols.
+</p>
+</div>
+
+</div>
+
+<div class="notice">
+This doctrine page is educational in nature and does not create attorney-client relationships, fiduciary engagements, investment recommendations, or legal representation.
+</div>
+
+</div>
+</section>
+
+</main>
+
+<footer class="footer">
+<div class="container">
+© Kelly Legacy Estates™ // Office of the Fiduciary // Institutional Doctrine Archive
+</div>
+</footer>
+
+<script>
+(function(){
+if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+window.chatbase=(...arguments)=>{
+if(!window.chatbase.q){window.chatbase.q=[]}
+window.chatbase.q.push(arguments)
+};
+window.chatbase=new Proxy(window.chatbase,{
+get(target,prop){
+if(prop==="q"){return target.q}
+return(...args)=>target(prop,...args)
+}
+})
+}
+const onLoad=function(){
+const script=document.createElement("script");
+script.src="https://www.chatbase.co/embed.min.js";
+script.id="JB7Ysn50O_DpC9tWnoxrh";
+script.domain="www.chatbase.co";
+document.body.appendChild(script)
+};
+if(document.readyState==="complete"){onLoad()}
+else{window.addEventListener("load",onLoad)}
+})();
+</script>
+
+</body>
+</html>
