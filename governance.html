@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Governance | Kelly Legacy Estates</title>
+  <meta name="description" content="Governance framework for Kelly Legacy Estates, Office of the Fiduciary, fiduciary literacy, continuity systems, and administrative doctrine.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --exec-black:#050505;
+      --deep-charcoal:#111113;
+      --charcoal-card:#16161A;
+      --charcoal-border:#23232A;
+      --crimson:#9E2A2A;
+      --antique-gold:#C8A24C;
+      --ivory:#F0EFEA;
+      --ivory-dim:#CBC9C1;
+      --slate-meta:#7A7A7A;
+      --border-faint:rgba(240,239,234,0.06);
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      background:var(--exec-black);
+      color:var(--ivory-dim);
+      font-family:'Inter',sans-serif;
+      line-height:1.65;
+    }
+
+    .container {
+      max-width:1180px;
+      margin:0 auto;
+      padding:0 32px;
+    }
+
+    .site-header {
+      border-bottom:1px solid var(--border-faint);
+      background:rgba(5,5,5,0.94);
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+
+    .nav-wrapper {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:1.2rem 0;
+      gap:1rem;
+      flex-wrap:wrap;
+    }
+
+    .identity-mark h1 {
+      font-family:'Playfair Display',serif;
+      font-size:1.15rem;
+      letter-spacing:.12em;
+      color:var(--ivory);
+    }
+
+    .identity-mark p {
+      font-family:'JetBrains Mono',monospace;
+      font-size:.65rem;
+      letter-spacing:.2em;
+      color:var(--crimson);
+      margin-top:4px;
+    }
+
+    .nav-links {
+      display:flex;
+      gap:1.5rem;
+      flex-wrap:wrap;
+    }
+
+    .nav-links a {
+      font-family:'JetBrains Mono',monospace;
+      font-size:.68rem;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      text-decoration:none;
+      color:var(--ivory-dim);
+    }
+
+    .nav-links a:hover { color:var(--antique-gold); }
+
+    .access-cta {
+      border:1px solid var(--crimson);
+      padding:7px 14px;
+      color:var(--crimson)!important;
+    }
+
+    .hero {
+      padding:5rem 0 3.5rem;
+      border-bottom:1px solid var(--border-faint);
+    }
+
+    .label {
+      font-family:'JetBrains Mono',monospace;
+      font-size:.65rem;
+      letter-spacing:.26em;
+      color:var(--crimson);
+      text-transform:uppercase;
+      margin-bottom:1rem;
+    }
+
+    h2 {
+      font-family:'Playfair Display',serif;
+      font-size:clamp(2.4rem,5vw,4rem);
+      line-height:1.1;
+      color:var(--ivory);
+      text-transform:uppercase;
+      max-width:900px;
+    }
+
+    .intro {
+      max-width:820px;
+      margin-top:1.5rem;
+      border-left:2px solid var(--antique-gold);
+      padding-left:1.2rem;
+      color:var(--ivory-dim);
+    }
+
+    section {
+      padding:4rem 0;
+      border-bottom:1px solid var(--border-faint);
+    }
+
+    .section-title {
+      font-family:'Playfair Display',serif;
+      font-size:2rem;
+      color:var(--ivory);
+      margin-bottom:1rem;
+    }
+
+    .gold-rule {
+      width:64px;
+      height:2px;
+      background:var(--antique-gold);
+      margin:1rem 0 2rem;
+    }
+
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:1px;
+      background:var(--charcoal-border);
+      border:1px solid var(--charcoal-border);
+    }
+
+    .card {
+      background:var(--charcoal-card);
+      padding:1.6rem;
+    }
+
+    .code {
+      font-family:'JetBrains Mono',monospace;
+      font-size:.62rem;
+      letter-spacing:.1em;
+      color:var(--antique-gold);
+      margin-bottom:.6rem;
+    }
+
+    .card h3 {
+      color:var(--ivory);
+      font-size:1.05rem;
+      margin-bottom:.7rem;
+    }
+
+    .card p {
+      font-size:.85rem;
+      color:#b5b3aa;
+    }
+
+    .notice {
+      background:linear-gradient(145deg,#0A0A0C,#111113);
+      border-left:3px solid var(--crimson);
+      padding:2rem;
+      margin-top:2rem;
+      font-family:'JetBrains Mono',monospace;
+      font-size:.78rem;
+      color:var(--ivory-dim);
+    }
+
+    .footer {
+      padding:2.5rem 0;
+      background:var(--deep-charcoal);
+      font-family:'JetBrains Mono',monospace;
+      font-size:.68rem;
+      color:var(--slate-meta);
+    }
+
+    @media(max-width:700px){
+      .container{padding:0 22px;}
+      .nav-links{gap:1rem;}
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="nav-wrapper">
+      <div class="identity-mark">
+        <h1>KELLY LEGACY ESTATES</h1>
+        <p>OFFICE OF THE FIDUCIARY</p>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="governance.html">Governance</a>
+        <a href="fiduciary-doctrine.html">Fiduciary Doctrine</a>
+        <a href="ai-governance.html">AI Governance</a>
+        <a href="publications.html">Publications</a>
+        <a href="https://www.skool.com/kelly-legacy-institute-9231/about" target="_blank" rel="noopener">Institute</a>
+        <a href="klat-access.html">KLAT Access</a>
+        <a href="contact.html" class="access-cta">Contact</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <div class="label">GOVERNANCE FRAMEWORK // OFFICE RECORD</div>
+      <h2>Governance is not personality. Governance is structure.</h2>
+      <p class="intro">
+        Kelly Legacy Estates defines governance as the ordered system through which authority, duty, record, review, and continuity are preserved. Governance exists to prevent confusion, preserve accountability, and ensure that institutional action remains traceable, reviewable, and procedurally controlled.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="label">CORE GOVERNANCE PRINCIPLE</div>
+      <div class="section-title">Structure Determines Outcome</div>
+      <div class="gold-rule"></div>
+      <p>
+        Every institution is governed either by structure or by disorder. Where roles are undefined, records are absent, and authority is undocumented, continuity fails. The Kelly Legacy governance framework centers structure before expansion, procedure before remedy, and record before recognition.
+      </p>
+
+      <div class="notice">
+        GOVERNANCE RULE: No structure, no reliable authority. No record, no institutional memory. No procedure, no durable remedy.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="label">GOVERNANCE PILLARS</div>
+      <div class="section-title">Institutional Control Points</div>
+      <div class="gold-rule"></div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="code">GOV-001</div>
+          <h3>Authority</h3>
+          <p>Authority must be identified, limited, and connected to a defined capacity. No person, office, agent, or system acts outside its assigned authority.</p>
+        </div>
+
+        <div class="card">
+          <div class="code">GOV-002</div>
+          <h3>Duty</h3>
+          <p>Duty creates accountability. Fiduciary governance requires loyalty, care, disclosure, accounting, prudence, and disciplined administration.</p>
+        </div>
+
+        <div class="card">
+          <div class="code">GOV-003</div>
+          <h3>Record</h3>
+          <p>The record preserves institutional memory. What is not recorded is vulnerable to dispute, loss, denial, or mischaracterization.</p>
+        </div>
+
+        <div class="card">
+          <div class="code">GOV-004</div>
+          <h3>Procedure</h3>
+          <p>Procedure converts intent into recognized action. Proper sequence protects decisions from confusion, challenge, and administrative collapse.</p>
+        </div>
+
+        <div class="card">
+          <div class="code">GOV-005</div>
+          <h3>Review</h3>
+          <p>Governance requires review before reliance. Human review remains final for institutional decisions, classifications, and formal determinations.</p>
+        </div>
+
+        <div class="card">
+          <div class="code">GOV-006</div>
+          <h3>Continuity</h3>
+          <p>Continuity is not presumed. It is engineered through documentation, succession planning, record systems, and disciplined governance procedures.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="label">OFFICE OF THE FIDUCIARY</div>
+      <div class="section-title">Administrative Governance Role</div>
+      <div class="gold-rule"></div>
+      <p>
+        The Office of the Fiduciary functions as the governance voice for institutional discipline, fiduciary literacy, procedural clarity, and continuity preservation within the Kelly Legacy framework. Its purpose is educational, administrative, and structural.
+      </p>
+
+      <div class="grid" style="margin-top:2rem;">
+        <div class="card">
+          <div class="code">OFFICE FUNCTION</div>
+          <h3>Standards</h3>
+          <p>Preserves the governing principles used to evaluate conduct, communication, intake, recordkeeping, and institutional participation.</p>
+        </div>
+
+        <div class="card">
+          <div class="code">OFFICE FUNCTION</div>
+          <h3>Record Discipline</h3>
+          <p>Requires written procedure, submission control, classification, and documented review before recognition.</p>
+        </div>
+
+        <div class="card">
+          <div class="code">OFFICE FUNCTION</div>
+          <h3>Continuity Protection</h3>
+          <p>Supports continuity through structured education, institutional documentation, and governance frameworks.</p>
+        </div>
+      </div>
+
+      <div class="notice">
+        This page is educational and institutional in nature. It does not provide legal advice, financial advice, tax advice, fiduciary decisions, or attorney-client services.
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    © Kelly Legacy Estates™ // Office of the Fiduciary. Educational governance materials only. All institutional marks and doctrine reserved.
+  </div>
+</footer>
+
+<script>
+(function(){
+if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+window.chatbase=(...arguments)=>{
+if(!window.chatbase.q){window.chatbase.q=[]}
+window.chatbase.q.push(arguments)
+};
+window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})
+}
+const onLoad=function(){
+const script=document.createElement("script");
+script.src="https://www.chatbase.co/embed.min.js";
+script.id="JB7Ysn50O_DpC9tWnoxrh";
+script.domain="www.chatbase.co";
+document.body.appendChild(script)
+};
+if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}
+})();
+</script>
+
+</body>
+</html>
