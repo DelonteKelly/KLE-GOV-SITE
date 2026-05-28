@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Governance | Kelly Legacy Estates</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--exec-black:#050505;
+--deep-charcoal:#111113;
+--charcoal-card:#16161A;
+--charcoal-border:#23232A;
+--crimson:#9E2A2A;
+--antique-gold:#C8A24C;
+--ivory:#F0EFEA;
+--ivory-dim:#CBC9C1;
+--slate-meta:#7A7A7A;
+--border-faint:rgba(240,239,234,0.06);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:var(--exec-black);
+color:var(--ivory-dim);
+font-family:'Inter',sans-serif;
+line-height:1.7;
+}
+
+.container{
+max-width:1200px;
+margin:0 auto;
+padding:0 32px;
+}
+
+.site-header{
+border-bottom:1px solid var(--border-faint);
+background:rgba(5,5,5,.94);
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.nav-wrapper{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:1.2rem 0;
+gap:1rem;
+flex-wrap:wrap;
+}
+
+.identity-mark h1{
+font-family:'Playfair Display',serif;
+font-size:1.15rem;
+letter-spacing:.12em;
+color:var(--ivory);
+}
+
+.identity-mark p{
+font-family:'JetBrains Mono',monospace;
+font-size:.65rem;
+letter-spacing:.2em;
+color:var(--crimson);
+margin-top:4px;
+}
+
+.nav-links{
+display:flex;
+gap:1.5rem;
+flex-wrap:wrap;
+}
+
+.nav-links a{
+font-family:'JetBrains Mono',monospace;
+font-size:.68rem;
+letter-spacing:.12em;
+text-transform:uppercase;
+text-decoration:none;
+color:var(--ivory-dim);
+}
+
+.nav-links a:hover{
+color:var(--antique-gold);
+}
+
+.access-cta{
+border:1px solid var(--crimson);
+padding:7px 14px;
+color:var(--crimson)!important;
+}
+
+.hero{
+padding:5rem 0 4rem;
+border-bottom:1px solid var(--border-faint);
+}
+
+.label{
+font-family:'JetBrains Mono',monospace;
+font-size:.65rem;
+letter-spacing:.24em;
+color:var(--crimson);
+text-transform:uppercase;
+margin-bottom:1rem;
+}
+
+.hero h2{
+font-family:'Playfair Display',serif;
+font-size:clamp(2.5rem,5vw,4.4rem);
+line-height:1.08;
+text-transform:uppercase;
+color:var(--ivory);
+max-width:980px;
+}
+
+.intro{
+margin-top:1.5rem;
+max-width:860px;
+border-left:2px solid var(--antique-gold);
+padding-left:1.2rem;
+color:var(--ivory-dim);
+}
+
+section{
+padding:4rem 0;
+border-bottom:1px solid var(--border-faint);
+}
+
+.section-title{
+font-family:'Playfair Display',serif;
+font-size:2rem;
+color:var(--ivory);
+margin-bottom:1rem;
+}
+
+.gold-rule{
+width:70px;
+height:2px;
+background:var(--antique-gold);
+margin:1rem 0 2rem;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:1px;
+background:var(--charcoal-border);
+border:1px solid var(--charcoal-border);
+}
+
+.card{
+background:var(--charcoal-card);
+padding:1.7rem;
+}
+
+.code{
+font-family:'JetBrains Mono',monospace;
+font-size:.62rem;
+letter-spacing:.1em;
+color:var(--antique-gold);
+margin-bottom:.7rem;
+}
+
+.card h3{
+color:var(--ivory);
+font-size:1.05rem;
+margin-bottom:.7rem;
+}
+
+.card p{
+font-size:.84rem;
+color:#b5b3aa;
+}
+
+.notice{
+background:linear-gradient(145deg,#0A0A0C,#111113);
+border-left:3px solid var(--crimson);
+padding:2rem;
+margin-top:2rem;
+font-family:'JetBrains Mono',monospace;
+font-size:.78rem;
+color:var(--ivory-dim);
+}
+
+.footer{
+padding:2.5rem 0;
+background:var(--deep-charcoal);
+font-family:'JetBrains Mono',monospace;
+font-size:.68rem;
+color:var(--slate-meta);
+}
+
+@media(max-width:700px){
+.container{padding:0 22px;}
+.nav-links{gap:1rem;}
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+<div class="container">
+<div class="nav-wrapper">
+
+<div class="identity-mark">
+<h1>KELLY LEGACY ESTATES</h1>
+<p>OFFICE OF THE FIDUCIARY</p>
+</div>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="governance.html">Governance</a>
+<a href="fiduciary-doctrine.html">Fiduciary Doctrine</a>
+<a href="ai-governance.html">AI Governance</a>
+<a href="publications.html">Publications</a>
+<a href="https://www.skool.com/kelly-legacy-institute-9231/about" target="_blank">Institute</a>
+<a href="klat-access.html">KLAT Access</a>
+<a href="contact.html" class="access-cta">Contact</a>
+</div>
+
+</div>
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+<div class="container">
+
+<div class="label">
+EXECUTIVE AI GOVERNANCE // HUMAN OVERSIGHT REQUIRED
+</div>
+
+<h2>
+Artificial intelligence without governance increases institutional risk.
+</h2>
+
+<p class="intro">
+Kelly Legacy Estates approaches AI as a governance matter rather than merely a technology matter. AI systems extend institutional capability, but unmanaged systems increase operational exposure, procedural instability, data risk, continuity failures, and accountability breakdowns.
+</p>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="label">
+AI GOVERNANCE PRINCIPLES
+</div>
+
+<div class="section-title">
+The Five Governance Requirements
+</div>
+
+<div class="gold-rule"></div>
+
+<div class="grid">
+
+<div class="card">
+<div class="code">AI-GOV-001</div>
+<h3>Human Review</h3>
+<p>
+No material institutional output should rely exclusively upon autonomous AI determination. Human review remains final.
+</p>
+</div>
+
+<div class="card">
+<div class="code">AI-GOV-002</div>
+<h3>Record Preservation</h3>
+<p>
+AI-assisted workflows must preserve traceability, documentation, review logs, and administrative continuity.
+</p>
+</div>
+
+<div class="card">
+<div class="code">AI-GOV-003</div>
+<h3>Authority Boundaries</h3>
+<p>
+AI systems must operate within defined authority scopes, operational permissions, and governance restrictions.
+</p>
+</div>
+
+<div class="card">
+<div class="code">AI-GOV-004</div>
+<h3>Data Segregation</h3>
+<p>
+Institutional records, operational data, and governance documentation require disciplined separation and access control.
+</p>
+</div>
+
+<div class="card">
+<div class="code">AI-GOV-005</div>
+<h3>Continuity Oversight</h3>
+<p>
+AI deployment must support continuity rather than dependency, preserving institutional resilience and governance stability.
+</p>
+</div>
+
+<div class="card">
+<div class="code">AI-GOV-006</div>
+<h3>Procedural Accountability</h3>
+<p>
+Every workflow requires identifiable review procedures, escalation paths, and administrative responsibility structures.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="label">
+FIDUCIARY AI STRUCTURE
+</div>
+
+<div class="section-title">
+AI Requires Governance Discipline
+</div>
+
+<div class="gold-rule"></div>
+
+<p>
+The Kelly Legacy framework treats AI systems as extensions of operational authority. Every AI deployment therefore requires procedural structure, review discipline, documentation controls, and governance boundaries.
+</p>
+
+<div class="notice">
+GOVERNANCE POSITION: AI does not eliminate fiduciary duty. AI increases the need for disciplined fiduciary oversight.
+</div>
+
+<div class="grid" style="margin-top:2rem;">
+
+<div class="card">
+<div class="code">AI-ROLE-001</div>
+<h3>Educational Assistance</h3>
+<p>
+AI may support education, organization, summarization, procedural drafting, and structured communication assistance.
+</p>
+</div>
+
+<div class="card">
+<div class="code">AI-ROLE-002</div>
+<h3>Administrative Support</h3>
+<p>
+AI systems may assist intake routing, governance classification support, workflow organization, and continuity documentation.
+</p>
+</div>
+
+<div class="card">
+<div class="code">AI-ROLE-003</div>
+<h3>Restricted Functions</h3>
+<p>
+AI systems do not independently provide legal representation, fiduciary determinations, financial advice, or dispositive institutional rulings.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="label">
+EXECUTIVE AI GOVERNANCE SYSTEMS
+</div>
+
+<div class="section-title">
+Institutional AI Oversight Categories
+</div>
+
+<div class="gold-rule"></div>
+
+<div class="grid">
+
+<div class="card">
+<div class="code">SYS-001</div>
+<h3>Workflow Governance</h3>
+<p>
+Structured oversight for AI-assisted operational procedures and governance routing.
+</p>
+</div>
+
+<div class="card">
+<div class="code">SYS-002</div>
+<h3>Documentation Control</h3>
+<p>
+Version management, administrative records, and procedural traceability standards.
+</p>
+</div>
+
+<div class="card">
+<div class="code">SYS-003</div>
+<h3>Human Escalation</h3>
+<p>
+Defined review pathways for institutional review, correction, and procedural oversight.
+</p>
+</div>
+
+<div class="card">
+<div class="code">SYS-004</div>
+<h3>Continuity Preservation</h3>
+<p>
+AI systems should strengthen continuity infrastructure rather than replace governance structure.
+</p>
+</div>
+
+<div class="card">
+<div class="code">SYS-005</div>
+<h3>Identity Verification</h3>
+<p>
+Structured access controls and governance classification protocols for institutional participation.
+</p>
+</div>
+
+<div class="card">
+<div class="code">SYS-006</div>
+<h3>Governance Intelligence</h3>
+<p>
+AI-assisted systems supporting governance literacy, fiduciary education, and continuity awareness.
+</p>
+</div>
+
+</div>
+
+<div class="notice">
+This page is educational in nature. Kelly Legacy Estates does not provide legal advice, securities offerings, fiduciary representation, financial advice, or automated institutional determinations through AI systems.
+</div>
+
+</div>
+</section>
+
+</main>
+
+<footer class="footer">
+<div class="container">
+© Kelly Legacy Estates™ // Executive AI Governance Framework // Office of the Fiduciary
+</div>
+</footer>
+
+<script>
+(function(){
+if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+window.chatbase=(...arguments)=>{
+if(!window.chatbase.q){window.chatbase.q=[]}
+window.chatbase.q.push(arguments)
+};
+window.chatbase=new Proxy(window.chatbase,{
+get(target,prop){
+if(prop==="q"){return target.q}
+return(...args)=>target(prop,...args)
+}
+})
+}
+const onLoad=function(){
+const script=document.createElement("script");
+script.src="https://www.chatbase.co/embed.min.js";
+script.id="JB7Ysn50O_DpC9tWnoxrh";
+script.domain="www.chatbase.co";
+document.body.appendChild(script)
+};
+if(document.readyState==="complete"){onLoad()}
+else{window.addEventListener("load",onLoad)}
+})();
+</script>
+
+</body>
+</html>
