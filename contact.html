@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Kelly Legacy Estates</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--exec-black:#050505;
+--deep-charcoal:#111113;
+--charcoal-card:#16161A;
+--charcoal-border:#23232A;
+--crimson:#9E2A2A;
+--antique-gold:#C8A24C;
+--ivory:#F0EFEA;
+--ivory-dim:#CBC9C1;
+--slate-meta:#7A7A7A;
+--border-faint:rgba(240,239,234,0.06);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:var(--exec-black);
+color:var(--ivory-dim);
+font-family:'Inter',sans-serif;
+line-height:1.7;
+}
+
+.container{
+max-width:1200px;
+margin:0 auto;
+padding:0 32px;
+}
+
+.site-header{
+border-bottom:1px solid var(--border-faint);
+background:rgba(5,5,5,.94);
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.nav-wrapper{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:1.2rem 0;
+gap:1rem;
+flex-wrap:wrap;
+}
+
+.identity-mark h1{
+font-family:'Playfair Display',serif;
+font-size:1.15rem;
+letter-spacing:.12em;
+color:var(--ivory);
+}
+
+.identity-mark p{
+font-family:'JetBrains Mono',monospace;
+font-size:.65rem;
+letter-spacing:.2em;
+color:var(--crimson);
+margin-top:4px;
+}
+
+.nav-links{
+display:flex;
+gap:1.5rem;
+flex-wrap:wrap;
+}
+
+.nav-links a{
+font-family:'JetBrains Mono',monospace;
+font-size:.68rem;
+letter-spacing:.12em;
+text-transform:uppercase;
+text-decoration:none;
+color:var(--ivory-dim);
+}
+
+.nav-links a:hover{
+color:var(--antique-gold);
+}
+
+.access-cta{
+border:1px solid var(--crimson);
+padding:7px 14px;
+color:var(--crimson)!important;
+}
+
+.hero{
+padding:5rem 0 4rem;
+border-bottom:1px solid var(--border-faint);
+}
+
+.label{
+font-family:'JetBrains Mono',monospace;
+font-size:.65rem;
+letter-spacing:.24em;
+color:var(--crimson);
+text-transform:uppercase;
+margin-bottom:1rem;
+}
+
+.hero h2{
+font-family:'Playfair Display',serif;
+font-size:clamp(2.5rem,5vw,4.3rem);
+line-height:1.08;
+text-transform:uppercase;
+color:var(--ivory);
+max-width:980px;
+}
+
+.intro{
+margin-top:1.5rem;
+max-width:860px;
+border-left:2px solid var(--antique-gold);
+padding-left:1.2rem;
+color:var(--ivory-dim);
+}
+
+section{
+padding:4rem 0;
+border-bottom:1px solid var(--border-faint);
+}
+
+.section-title{
+font-family:'Playfair Display',serif;
+font-size:2rem;
+color:var(--ivory);
+margin-bottom:1rem;
+}
+
+.gold-rule{
+width:70px;
+height:2px;
+background:var(--antique-gold);
+margin:1rem 0 2rem;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:1px;
+background:var(--charcoal-border);
+border:1px solid var(--charcoal-border);
+}
+
+.card{
+background:var(--charcoal-card);
+padding:1.7rem;
+}
+
+.code{
+font-family:'JetBrains Mono',monospace;
+font-size:.62rem;
+letter-spacing:.1em;
+color:var(--antique-gold);
+margin-bottom:.7rem;
+}
+
+.card h3{
+color:var(--ivory);
+font-size:1.05rem;
+margin-bottom:.7rem;
+}
+
+.card p{
+font-size:.84rem;
+color:#b5b3aa;
+}
+
+.btn{
+display:inline-block;
+margin-top:1.2rem;
+border:1px solid var(--antique-gold);
+padding:10px 18px;
+font-family:'JetBrains Mono',monospace;
+font-size:.65rem;
+letter-spacing:.12em;
+text-transform:uppercase;
+text-decoration:none;
+color:var(--antique-gold);
+}
+
+.btn:hover{
+background:var(--antique-gold);
+color:var(--exec-black);
+}
+
+.notice{
+background:linear-gradient(145deg,#0A0A0C,#111113);
+border-left:3px solid var(--crimson);
+padding:2rem;
+margin-top:2rem;
+font-family:'JetBrains Mono',monospace;
+font-size:.78rem;
+color:var(--ivory-dim);
+}
+
+.footer{
+padding:2.5rem 0;
+background:var(--deep-charcoal);
+font-family:'JetBrains Mono',monospace;
+font-size:.68rem;
+color:var(--slate-meta);
+}
+
+a{
+color:var(--antique-gold);
+text-decoration:none;
+}
+
+a:hover{
+opacity:.85;
+}
+
+@media(max-width:700px){
+.container{padding:0 22px;}
+.nav-links{gap:1rem;}
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+<div class="container">
+<div class="nav-wrapper">
+
+<div class="identity-mark">
+<h1>KELLY LEGACY ESTATES</h1>
+<p>OFFICE OF THE FIDUCIARY</p>
+</div>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="governance.html">Governance</a>
+<a href="fiduciary-doctrine.html">Fiduciary Doctrine</a>
+<a href="ai-governance.html">AI Governance</a>
+<a href="publications.html">Publications</a>
+<a href="institute.html">Institute</a>
+<a href="klat-access.html">KLAT Access</a>
+<a href="contact.html" class="access-cta">Contact</a>
+</div>
+
+</div>
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+
+<div class="container">
+
+<div class="label">
+ADMINISTRATIVE CORRESPONDENCE // OFFICE OF THE FIDUCIARY
+</div>
+
+<h2>
+Structured communication preserves administrative clarity.
+</h2>
+
+<p class="intro">
+Kelly Legacy Estates processes communications through structured written channels intended to preserve record integrity, procedural clarity, governance discipline, and continuity documentation.
+</p>
+
+</div>
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="label">
+CONTACT CHANNELS
+</div>
+
+<div class="section-title">
+Administrative Communication Categories
+</div>
+
+<div class="gold-rule"></div>
+
+<div class="grid">
+
+<div class="card">
+<div class="code">CONTACT-001</div>
+<h3>General Administrative Inquiry</h3>
+<p>
+Questions regarding governance education, publications, institutional structure, and general informational matters.
+</p>
+
+<a href="mailto:tamaquahnation@gmail.com?subject=General%20Administrative%20Inquiry" class="btn">
+Send Inquiry
+</a>
+
+</div>
+
+<div class="card">
+<div class="code">CONTACT-002</div>
+<h3>KLI Institute Access</h3>
+<p>
+Questions regarding educational participation, curriculum pathways, onboarding, and governance literacy access.
+</p>
+
+<a href="https://www.skool.com/kelly-legacy-institute-9231/about" target="_blank" class="btn">
+Enter Institute
+</a>
+
+</div>
+
+<div class="card">
+<div class="code">CONTACT-003</div>
+<h3>KLAT Infrastructure</h3>
+<p>
+Governance participation, contribution-recognition systems, access classifications, and continuity infrastructure.
+</p>
+
+<a href="https://guild.xyz/kli-access-infrastructuretm" target="_blank" class="btn">
+Open Infrastructure
+</a>
+
+</div>
+
+<div class="card">
+<div class="code">CONTACT-004</div>
+<h3>Institutional Review Request</h3>
+<p>
+Formal written requests regarding governance systems, educational frameworks, continuity structures, or administrative review matters.
+</p>
+
+<a href="mailto:tamaquahnation@gmail.com?subject=Institutional%20Review%20Request" class="btn">
+Submit Request
+</a>
+
+</div>
+
+</div>
+
+<div class="notice">
+Administrative correspondence is processed through structured written channels. Submission does not create attorney-client relationships, fiduciary representation, securities participation, or advisory engagement.
+</div>
+
+</div>
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="label">
+DIGITAL GOVERNANCE CHANNELS
+</div>
+
+<div class="section-title">
+Official Ecosystem Access Points
+</div>
+
+<div class="gold-rule"></div>
+
+<div class="grid">
+
+<div class="card">
+<div class="code">CHANNEL-001</div>
+<h3>Kelly Legacy Institute</h3>
+<p>
+Governance education and institutional curriculum access.
+</p>
+
+<a href="https://www.skool.com/kelly-legacy-institute-9231/about" target="_blank" class="btn">
+Open Institute
+</a>
+
+</div>
+
+<div class="card">
+<div class="code">CHANNEL-002</div>
+<h3>Governance Credentials</h3>
+<p>
+Institutional credential archive and verification infrastructure.
+</p>
+
+<a href="https://opensea.io/collection/kli-governance-credential-series" target="_blank" class="btn">
+View Credentials
+</a>
+
+</div>
+
+<div class="card">
+<div class="code">CHANNEL-003</div>
+<h3>KLI Access Infrastructure™</h3>
+<p>
+Contribution-recognition and governance participation infrastructure.
+</p>
+
+<a href="https://guild.xyz/kli-access-infrastructuretm" target="_blank" class="btn">
+Open Infrastructure
+</a>
+
+</div>
+
+<div class="card">
+<div class="code">CHANNEL-004</div>
+<h3>X / Public Communications</h3>
+<p>
+Public governance commentary, institutional notices, and continuity-focused educational updates.
+</p>
+
+<a href="https://x.com/ZamariSpeaks" target="_blank" class="btn">
+Open Profile
+</a>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+</main>
+
+<footer class="footer">
+<div class="container">
+© Kelly Legacy Estates™ // Office of the Fiduciary // Administrative Correspondence Environment
+</div>
+</footer>
+
+<script>
+(function(){
+if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+window.chatbase=(...arguments)=>{
+if(!window.chatbase.q){window.chatbase.q=[]}
+window.chatbase.q.push(arguments)
+};
+window.chatbase=new Proxy(window.chatbase,{
+get(target,prop){
+if(prop==="q"){return target.q}
+return(...args)=>target(prop,...args)
+}
+})
+}
+const onLoad=function(){
+const script=document.createElement("script");
+script.src="https://www.chatbase.co/embed.min.js";
+script.id="JB7Ysn50O_DpC9tWnoxrh";
+script.domain="www.chatbase.co";
+document.body.appendChild(script)
+};
+if(document.readyState==="complete"){onLoad()}
+else{window.addEventListener("load",onLoad)}
+})();
+</script>
+
+</body>
+</html>
