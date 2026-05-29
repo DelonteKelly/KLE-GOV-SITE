@@ -1,65 +1,186 @@
-# KLY-landing-
+KLE-GOV-SITE
 
-Kelly Legacy Estates public web infrastructure for the KLAT Access Node and Kelly Legacy Institute training system.
+Kelly Legacy Estates Public Governance Infrastructure
 
-## SYSTEM PURPOSE
+Office of the Fiduciary
+Kelly Legacy Estates Trust
+Kelly Legacy Institute
 
-This repository functions as the public-facing access layer for KLAT (Kelly Legacy Access Token) verification, institutional intake routing, and controlled training module access. This is not a standalone application. It is an interface layer connected to structured administrative systems.
 
-## CURRENT STRUCTURE
+SYSTEM OVERVIEW
 
-KLY-landing-
-├── assets/
-├── components/
-│   └── training/
-│       └── module-1/
-│           └── index.html
-├── CNAME
-├── README.md
-└── index.html
+KLE-GOV-SITE functions as the public institutional website and governance environment for Kelly Legacy Estates, Kelly Legacy Institute, Kelly Legacy Publications, and the KLAT Access Infrastructure.
 
-## ENTRY POINT
+The platform serves as the primary public-facing entry point into the Kelly Legacy ecosystem and provides access to governance education, fiduciary doctrine, institutional publications, AI governance resources, administrative intake systems, and controlled participation pathways.
 
-/index.html
 
-This file operates as the KLAT Institutional Access Node. It handles wallet connection on Polygon, token verification, access classification, and intake routing.
+CURRENT RELEASE
 
-## TRAINING SYSTEM
+KLE-GOV-SITE v1.0.0
+Production Deployment
 
-/components/training/module-1/index.html
+Status: ACTIVE
+Distribution: PUBLIC
+Classification: Institutional Infrastructure
 
-Module 1: Status, Standing, Capacity
 
-Controlled sequence includes:
-Lesson 1 — Status
-Lesson 2 — Standing
-Lesson 3 — Capacity
-Lesson 4 — Capacity Errors
-Lesson 5 — Procedural Order
-Lesson 6 — Completion Gate
+PRIMARY OBJECTIVES
 
-Progression is not UI-based. It is record-based.
+The platform exists to:
 
-## GOVERNANCE MODEL
+- provide fiduciary and governance education
+- distribute institutional publications
+- route users into structured learning pathways
+- facilitate administrative intake and review
+- provide access to KLAT infrastructure
+- maintain continuity across institutional systems
+- establish public governance positioning
 
-All activity within this system is governed by fiduciary duty standards, institutional record requirements, controlled intake procedures, and verified submission review. No access, certification, or recognition is granted without submission, review, and formal recording.
 
-## OPERATIONAL RULES
+SITE ARCHITECTURE
 
-Wallet verification does not equal institutional recognition. UI interaction does not equal completion. Downloading materials does not equal certification. Only recorded actions produce institutional outcome.
+Public Website
 
-## DATA & RECORD SYSTEM
+- index.html
+- governance.html
+- fiduciary-doctrine.html
+- ai-governance.html
+- publications.html
+- institute.html
+- klat-access.html
+- contact.html
 
-Primary system of record is the KLI Master Ledger (external). It tracks Participant ID, intake status, lesson completion, review status, and certification status. This repository does not store official records.
 
-## AUTHORITY
+INSTITUTIONAL DIVISIONS
 
-Issued under the Office of the Fiduciary, Kelly Legacy Estates Trust, and Kelly Legacy Institute.
+Kelly Legacy Institute (KLI)
 
-## NOTICE
+Educational division responsible for:
 
-This system is educational in nature, administratively structured, and governed by institutional rules. It does not constitute legal advice, financial advice, or investment solicitation.
+- fiduciary literacy
+- governance education
+- trust administration education
+- procedural doctrine
+- institutional training systems
 
-## COPYRIGHT
 
-© 2026 Kelly Legacy Estates Trust. All rights reserved.
+Kelly Legacy Publications (KLP)
+
+Publishing division responsible for:
+
+- doctrine publications
+- manuals
+- frameworks
+- executive briefings
+- governance reference materials
+
+---
+
+KLAT Access Infrastructure™
+
+Institutional access and classification environment providing:
+
+- contribution recognition
+- governance participation pathways
+- access classification
+- continuity-based participation infrastructure
+
+Access Infrastructure:
+
+https://kli-access.replit.app/
+
+---
+
+Executive AI Governance Systems™
+
+Institutional AI governance framework focused on:
+
+- oversight
+- human review
+- accountability
+- procedural control
+- record integrity
+- continuity preservation
+
+
+ROUTING DESTINATIONS
+
+Function| Destination
+Institutional Access| https://kli-access.replit.app/
+Access Verification| https://kli-access.replit.app/
+Publications Gateway| publications.html
+Governance Doctrine| fiduciary-doctrine.html
+Institute Portal| institute.html
+Administrative Intake| Google Forms Intake System
+
+
+ADMINISTRATIVE REVIEW SYSTEM
+
+Institutional review requests are processed through structured intake procedures.
+
+Review categories include:
+
+- governance assessments
+- fiduciary review
+- continuity planning
+- educational participation
+- institutional coordination
+
+Submission does not guarantee acceptance, recognition, certification, or institutional endorsement.
+
+
+GOVERNING PRINCIPLES
+
+The platform operates according to the following institutional principles:
+
+- Structure determines outcome
+- Procedure precedes remedy
+- Record precedes recognition
+- Capacity determines consequence
+- Fiduciary duty governs entrusted authority
+- Human review remains final
+
+---
+
+SYSTEM OF RECORD
+
+The website is not the official record repository.
+
+Official records, certifications, reviews, classifications, and governance determinations are maintained through designated institutional record systems and administrative procedures.
+
+
+NOTICE
+
+This platform provides educational materials, governance education, fiduciary literacy resources, institutional publications, and administrative intake systems.
+
+Nothing contained within this repository constitutes:
+
+- legal advice
+- financial advice
+- investment advice
+- securities offerings
+- attorney-client services
+- fiduciary representation
+
+Users remain responsible for obtaining appropriate professional guidance.
+
+
+AUTHORITY
+
+Issued by:
+
+Office of the Fiduciary
+Kelly Legacy Estates Trust
+Kelly Legacy Institute
+
+---
+
+COPYRIGHT
+
+© 2026 Kelly Legacy Estates Trust
+
+All rights reserved.
+
+
+Structure determines outcome.
+Continuity requires governance.
