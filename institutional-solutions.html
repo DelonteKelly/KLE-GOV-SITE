@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Institutional Solutions | Kelly Legacy Estates</title>
-  <meta name="description" content="Institutional governance education, verification, administrative record systems, continuity infrastructure, and organizational licensing through Kelly Legacy Estates and Kelly Legacy Institute." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Institutional Solutions | KLI-INT-001™ Review System | Kelly Legacy Estates</title>
+  <meta name="description" content="KLI-INT-001™ Institutional Review System for governance evaluation, fiduciary administration, recordkeeping, AI governance, and organizational readiness. Begin your institutional review with Kelly Legacy Estates." />
 
   <style>
     :root {
@@ -14,6 +14,7 @@
       --text: #e8e2d6;
       --muted: #9a9488;
       --gold: #c8a96b;
+      --gold-light: rgba(200,169,107,0.15);
       --red: #9f2f2f;
       --line: rgba(200,169,107,.28);
     }
@@ -26,9 +27,11 @@
       color: var(--text);
       font-family: Georgia, 'Times New Roman', serif;
       line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
 
-    a { color: inherit; text-decoration: none; }
+    a { color: inherit; text-decoration: none; transition: opacity 0.2s ease; }
+    a:hover { opacity: 0.85; }
 
     header {
       padding: 34px 7%;
@@ -61,7 +64,7 @@
       font-size: .78rem;
     }
 
-    nav a:hover { color: var(--gold); }
+    nav a:hover { color: var(--gold); opacity: 1; }
 
     .status {
       border-top: 1px solid rgba(255,255,255,.06);
@@ -133,11 +136,26 @@
       font-size: .75rem;
       color: var(--gold);
       background: rgba(200,169,107,.06);
+      cursor: pointer;
+      display: inline-block;
+      transition: all 0.25s ease;
+    }
+
+    .btn:hover {
+      background: rgba(200,169,107,.15);
+      border-color: var(--gold);
+      opacity: 1;
     }
 
     .btn.primary {
       background: var(--gold);
       color: #050505;
+      border-color: var(--gold);
+    }
+
+    .btn.primary:hover {
+      background: #dbbf7a;
+      transform: translateY(-1px);
     }
 
     section {
@@ -158,6 +176,12 @@
       border: 1px solid rgba(255,255,255,.08);
       padding: 30px;
       min-height: 220px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      border-color: var(--gold-light);
+      transform: translateY(-2px);
     }
 
     .card.gold {
@@ -181,6 +205,11 @@
       border: 1px solid rgba(255,255,255,.08);
       margin-bottom: 18px;
       background: var(--panel);
+      transition: background 0.2s;
+    }
+
+    .step:hover {
+      background: #12161f;
     }
 
     .step::before {
@@ -197,12 +226,64 @@
       padding: 26px 26px 26px 0;
     }
 
+    .step-content p {
+      font-size: 1rem;
+    }
+
     .notice {
       border-left: 3px solid var(--red);
       background: rgba(159,47,47,.08);
       padding: 28px;
       color: var(--muted);
       margin-top: 40px;
+    }
+
+    .highlight-card {
+      background: linear-gradient(135deg, rgba(200,169,107,0.08), rgba(0,0,0,0.3));
+      border: 1px solid var(--gold-light);
+      padding: 32px;
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    .review-categories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+      margin: 40px 0 20px;
+    }
+
+    .review-card {
+      background: var(--panel);
+      border: 1px solid rgba(255,255,255,.06);
+      padding: 26px;
+      transition: all 0.2s;
+    }
+
+    .review-card h4 {
+      color: var(--gold);
+      font-size: 1.1rem;
+      letter-spacing: 0.1em;
+      margin: 0 0 12px;
+      text-transform: uppercase;
+    }
+
+    .review-card p {
+      font-size: 0.95rem;
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .final-cta {
+      background: linear-gradient(135deg, var(--panel), #080b10);
+      border: 1px solid var(--gold-light);
+      padding: 56px 40px;
+      text-align: center;
+      margin: 60px 0 30px;
+    }
+
+    .final-cta h2 {
+      margin-bottom: 20px;
     }
 
     footer {
@@ -213,6 +294,25 @@
       font-size: .82rem;
       letter-spacing: .12em;
       text-transform: uppercase;
+    }
+
+    @media (max-width: 768px) {
+      main { padding: 50px 5%; }
+      header { padding: 24px 5%; }
+      .status { padding: 10px 5%; }
+      nav { gap: 16px; justify-content: center; }
+      .step { grid-template-columns: 60px 1fr; gap: 12px; }
+      .step::before { font-size: 1.4rem; }
+      .step-content { padding: 18px 18px 18px 0; }
+      .final-cta { padding: 36px 20px; }
+      .btn { padding: 12px 20px; font-size: 0.7rem; }
+    }
+
+    @media (max-width: 480px) {
+      .step-content h3 { font-size: 0.75rem; }
+      .step-content p { font-size: 0.85rem; }
+      .review-card { padding: 20px; }
+      .card { padding: 20px; }
     }
   </style>
 </head>
@@ -237,7 +337,7 @@
 </header>
 
 <div class="status">
-  Institutional Solutions // Governance Education // Verification // Continuity // Licensing Pathway
+  Institutional Solutions // KLI-INT-001™ Review System // Governance Education // Verification // Continuity
 </div>
 
 <main>
@@ -252,12 +352,120 @@
     that require structure, accountability, and operational discipline.
   </p>
 
-  <div class="buttons">
-    <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfGcypt7yVuIeSa2yz0lEI6t-mA2ZQn_HFk5nkDfVE7lbBwFA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Request Institutional Review™</a>
-    <a class="btn" href="institute.html">Explore the Institute</a>
-    <a class="btn" href="klat-access.html">View KLAT Access</a>
+  <!-- NEW HERO CTA SECTION -->
+  <div class="highlight-card">
+    <div class="eyebrow" style="margin-bottom: 12px;">KLI-INT-001™</div>
+    <h2 style="margin-bottom: 16px;">REQUEST AN INSTITUTIONAL REVIEW™</h2>
+    <p style="max-width: 800px; margin-left: auto; margin-right: auto; color: var(--text);">
+      Evaluate governance readiness, administrative systems, fiduciary controls, recordkeeping practices, continuity planning, and AI governance maturity.
+    </p>
+    <p style="font-size: 1rem; margin-top: 16px;">
+      The KLI Institutional Review System identifies procedural gaps, operational vulnerabilities, governance weaknesses, and opportunities for organizational improvement.
+    </p>
+    <div class="buttons" style="justify-content: center; margin-top: 28px;">
+      <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfGcypt7yVuIeSa2yz0lEI6t-mA2ZQn_HFk5nkDfVE7lbBwFA/viewform" target="_blank" rel="noopener noreferrer" style="font-weight: 500;">START REVIEW REQUEST</a>
+    </div>
   </div>
 
+  <!-- REVIEW CATEGORIES SECTION -->
+  <section>
+    <div class="eyebrow">KLI-INT-001™ Review Framework</div>
+    <h2>Comprehensive Institutional Evaluation</h2>
+    <p style="margin-bottom: 20px;">The Institutional Review System examines eight core domains to provide a complete organizational assessment.</p>
+    
+    <div class="review-categories-grid">
+      <div class="review-card">
+        <h4>Governance Review</h4>
+        <p>Evaluates governance structure, decision-making protocols, and administrative accountability frameworks.</p>
+      </div>
+      <div class="review-card">
+        <h4>Fiduciary Administration Review</h4>
+        <p>Assesses fiduciary controls, duty protocols, administrative standards, and financial stewardship practices.</p>
+      </div>
+      <div class="review-card">
+        <h4>Recordkeeping Review</h4>
+        <p>Examines documentation standards, retention policies, evidence systems, and administrative records integrity.</p>
+      </div>
+      <div class="review-card">
+        <h4>Administrative Systems Review</h4>
+        <p>Analyzes operational workflows, procedural consistency, and administrative infrastructure effectiveness.</p>
+      </div>
+      <div class="review-card">
+        <h4>AI Governance Review</h4>
+        <p>Reviews artificial intelligence governance maturity, oversight protocols, and ethical AI implementation.</p>
+      </div>
+      <div class="review-card">
+        <h4>Organizational Readiness Review</h4>
+        <p>Evaluates institutional capacity, operational preparedness, and structural alignment with governance standards.</p>
+      </div>
+      <div class="review-card">
+        <h4>Certification Readiness Review</h4>
+        <p>Determines eligibility for KLI certification pathways and licensing program requirements.</p>
+      </div>
+      <div class="review-card">
+        <h4>Pilot Program Evaluation</h4>
+        <p>Assesses organizational fit for structured pilot deployment and phased implementation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS PROCESS SECTION -->
+  <section>
+    <div class="eyebrow">Review Process</div>
+    <h2>How the Institutional Review Works</h2>
+    <div class="process">
+      <div class="step">
+        <div class="step-content">
+          <h3>Submit Review Request</h3>
+          <p>Complete the KLI-INT-001™ intake form to initiate the institutional review process.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-content">
+          <h3>Intake & Classification</h3>
+          <p>Review request is classified by organizational type, scope, and review objectives.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-content">
+          <h3>Preliminary Assessment</h3>
+          <p>Initial evaluation of governance structure and administrative documentation.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-content">
+          <h3>Governance Analysis</h3>
+          <p>In-depth review of systems, controls, gaps, risks, and procedural integrity.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-content">
+          <h3>Recommendations & Pathway</h3>
+          <p>Delivery of findings, improvement roadmap, and institutional guidance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTITUTIONAL NOTICE SECTION -->
+  <div class="highlight-card" style="background: rgba(200,169,107,0.03); border-left: 3px solid var(--gold); text-align: left;">
+    <p style="font-size: 1.1rem; margin: 0; color: var(--text); letter-spacing: 0.02em;">
+      KLI-INT-001™ serves as the official intake instrument for organizations seeking governance review, pilot participation, licensing evaluation, or administrative readiness assessment.
+    </p>
+  </div>
+
+  <!-- FINAL CONVERSION SECTION -->
+  <div class="final-cta">
+    <h2 style="margin-bottom: 16px;">Ready to Strengthen Your Organization?</h2>
+    <p style="max-width: 700px; margin-left: auto; margin-right: auto; color: var(--muted);">
+      Begin with a structured institutional review and receive guidance regarding governance, fiduciary administration, operational readiness, AI governance, continuity planning, and certification pathways.
+    </p>
+    <div class="buttons" style="justify-content: center; margin-top: 32px;">
+      <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfGcypt7yVuIeSa2yz0lEI6t-mA2ZQn_HFk5nkDfVE7lbBwFA/viewform" target="_blank" rel="noopener noreferrer">Request Institutional Review</a>
+    </div>
+  </div>
+
+  <!-- EXISTING SECTIONS (PRESERVED) -->
   <section>
     <div class="eyebrow">The Problem</div>
     <h2>Most organizations do not fail from lack of effort. They fail from lack of structure.</h2>
@@ -428,31 +636,6 @@
         <h3>Enterprise License</h3>
         <p>Institutional deployment, staff training, continuity architecture, and governance support.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- KLI-INT-001™ Institutional Review System™ Section -->
-  <section>
-    <div class="eyebrow">KLI-INT-001™</div>
-    <h2>Institutional Review System™</h2>
-
-    <p class="lead">Begin with an institutional review.</p>
-
-    <p>
-      The Institutional Review System™ evaluates governance structure, fiduciary administration, operational readiness, recordkeeping systems, continuity planning, training infrastructure, and AI governance preparedness.
-    </p>
-
-    <p>
-      Reviews are designed to identify strengths, procedural gaps, operational risks, and opportunities for organizational improvement.
-    </p>
-
-    <div class="buttons">
-      <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfGcypt7yVuIeSa2yz0lEI6t-mA2ZQn_HFk5nkDfVE7lbBwFA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Submit Review Request →</a>
-      <a class="btn" href="institute.html">Explore KLI Programs</a>
-    </div>
-
-    <div class="notice">
-      Educational and informational use only. Institutional reviews are advisory in nature and do not constitute legal, financial, tax, accounting, or professional advice. Human review remains final.
     </div>
   </section>
 
