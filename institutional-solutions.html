@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Institutional Solutions | Kelly Legacy Estates</title>
+  <meta name="description" content="Institutional governance education, verification, administrative record systems, continuity infrastructure, and organizational licensing through Kelly Legacy Estates and Kelly Legacy Institute." />
+
+  <style>
+    :root {
+      --bg: #050505;
+      --panel: #0b0f14;
+      --panel2: #101319;
+      --text: #e8e2d6;
+      --muted: #9a9488;
+      --gold: #c8a96b;
+      --red: #9f2f2f;
+      --line: rgba(200,169,107,.28);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, 'Times New Roman', serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    header {
+      padding: 34px 7%;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      background: #070707;
+    }
+
+    .brand {
+      letter-spacing: .22em;
+      font-size: 1.45rem;
+      text-transform: uppercase;
+    }
+
+    .subbrand {
+      color: var(--red);
+      letter-spacing: .35em;
+      text-transform: uppercase;
+      font-size: .78rem;
+      margin-top: 6px;
+    }
+
+    nav {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: .78rem;
+    }
+
+    nav a:hover { color: var(--gold); }
+
+    .status {
+      border-top: 1px solid rgba(255,255,255,.06);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      padding: 12px 7%;
+      color: var(--muted);
+      font-size: .78rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      background: #0a0a0a;
+    }
+
+    main { padding: 80px 7%; }
+
+    .eyebrow {
+      color: var(--gold);
+      letter-spacing: .26em;
+      text-transform: uppercase;
+      font-size: .75rem;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 7vw, 6.5rem);
+      line-height: .95;
+      margin: 0 0 28px;
+      max-width: 1000px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.8rem);
+      line-height: 1.05;
+      margin: 0 0 24px;
+    }
+
+    h3 {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: .82rem;
+      margin: 0 0 14px;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 900px;
+    }
+
+    .lead {
+      border-left: 2px solid var(--gold);
+      padding-left: 28px;
+      font-size: 1.25rem;
+      color: var(--text);
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 36px;
+    }
+
+    .btn {
+      border: 1px solid var(--line);
+      padding: 16px 28px;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: .75rem;
+      color: var(--gold);
+      background: rgba(200,169,107,.06);
+    }
+
+    .btn.primary {
+      background: var(--gold);
+      color: #050505;
+    }
+
+    section {
+      margin-top: 90px;
+      padding-top: 70px;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+      margin-top: 34px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, var(--panel2), var(--panel));
+      border: 1px solid rgba(255,255,255,.08);
+      padding: 30px;
+      min-height: 220px;
+    }
+
+    .card.gold {
+      border-left: 3px solid var(--gold);
+    }
+
+    .card p {
+      font-size: .98rem;
+      margin-bottom: 0;
+    }
+
+    .process {
+      counter-reset: step;
+    }
+
+    .step {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 24px;
+      border: 1px solid rgba(255,255,255,.08);
+      margin-bottom: 18px;
+      background: var(--panel);
+    }
+
+    .step::before {
+      content: counter(step, decimal-leading-zero);
+      color: var(--gold);
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid rgba(255,255,255,.08);
+    }
+
+    .step-content {
+      padding: 26px 26px 26px 0;
+    }
+
+    .notice {
+      border-left: 3px solid var(--red);
+      background: rgba(159,47,47,.08);
+      padding: 28px;
+      color: var(--muted);
+      margin-top: 40px;
+    }
+
+    footer {
+      padding: 50px 7%;
+      border-top: 1px solid rgba(255,255,255,.08);
+      color: var(--muted);
+      text-align: center;
+      font-size: .82rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">Kelly Legacy Estates</div>
+  <div class="subbrand">Office of the Fiduciary</div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="governance.html">Governance</a>
+    <a href="fiduciary-doctrine.html">Fiduciary Doctrine</a>
+    <a href="ai-governance.html">AI Governance</a>
+    <a href="publications.html">Publications</a>
+    <a href="institute.html">Institute</a>
+    <a href="institutional-solutions.html">Institutional</a>
+    <a href="klat-access.html">KLAT Access</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="status">
+  Institutional Solutions // Governance Education // Verification // Continuity // Licensing Pathway
+</div>
+
+<main>
+
+  <div class="eyebrow">KLI Institutional Solutions</div>
+
+  <h1>Governance Infrastructure for Organizations.</h1>
+
+  <p class="lead">
+    Kelly Legacy Estates provides institutional governance education, fiduciary literacy,
+    verification systems, administrative records, and continuity infrastructure for organizations
+    that require structure, accountability, and operational discipline.
+  </p>
+
+  <div class="buttons">
+    <a class="btn primary" href="contact.html">Request Institutional Review</a>
+    <a class="btn" href="institute.html">Explore the Institute</a>
+    <a class="btn" href="klat-access.html">View KLAT Access</a>
+  </div>
+
+  <section>
+    <div class="eyebrow">The Problem</div>
+    <h2>Most organizations do not fail from lack of effort. They fail from lack of structure.</h2>
+
+    <div class="grid">
+      <div class="card gold">
+        <h3>Unclear Procedure</h3>
+        <p>Processes exist informally, but are not sequenced, documented, or repeatable.</p>
+      </div>
+
+      <div class="card gold">
+        <h3>Weak Records</h3>
+        <p>Activity occurs without a durable institutional record, making review and accountability difficult.</p>
+      </div>
+
+      <div class="card gold">
+        <h3>Role Confusion</h3>
+        <p>Individuals act without clear capacity, authority, responsibility, or administrative boundaries.</p>
+      </div>
+
+      <div class="card gold">
+        <h3>Continuity Risk</h3>
+        <p>Knowledge is dependent on people instead of preserved through systems, records, and governance infrastructure.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Platform Capabilities</div>
+    <h2>One framework. Multiple institutional functions.</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Governance Education</h3>
+        <p>Structured learning pathways for administrative doctrine, fiduciary duty, records, evidence, remedies, and institutional governance.</p>
+      </div>
+
+      <div class="card">
+        <h3>Verification Framework</h3>
+        <p>Participant verification, access classification, onboarding review, and documented recognition systems.</p>
+      </div>
+
+      <div class="card">
+        <h3>Administrative Records</h3>
+        <p>Institutional recordkeeping standards supporting activity logs, training completion, participation history, and review.</p>
+      </div>
+
+      <div class="card">
+        <h3>Legacy AI™</h3>
+        <p>Institutional intelligence support for curriculum navigation, resource discovery, pathway guidance, and governance education.</p>
+      </div>
+
+      <div class="card">
+        <h3>Certification Pathway</h3>
+        <p>Progressive learning and recognition structure designed to support future credentials, practitioner pathways, and licensing models.</p>
+      </div>
+
+      <div class="card">
+        <h3>Continuity Systems</h3>
+        <p>Frameworks for preserving institutional memory, documentation, succession readiness, and operational accountability.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Who This Serves</div>
+    <h2>Designed for organizations that need disciplined governance education.</h2>
+
+    <div class="grid">
+      <div class="card"><h3>Workforce Programs</h3><p>Administrative literacy, record discipline, and structured participant development.</p></div>
+      <div class="card"><h3>Nonprofit Organizations</h3><p>Governance training, procedural clarity, and continuity infrastructure.</p></div>
+      <div class="card"><h3>Educational Institutions</h3><p>Curriculum pathways, certification development, and institutional learning systems.</p></div>
+      <div class="card"><h3>Faith-Based Initiatives</h3><p>Stewardship education, fiduciary principles, and governance record discipline.</p></div>
+      <div class="card"><h3>Leadership Academies</h3><p>Structured development in responsibility, capacity, procedure, and accountability.</p></div>
+      <div class="card"><h3>Private Governance Environments</h3><p>Continuity planning, fiduciary literacy, administrative structure, and records.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Implementation Model</div>
+    <h2>From assessment to institutional deployment.</h2>
+
+    <div class="process">
+      <div class="step">
+        <div class="step-content">
+          <h3>Assessment</h3>
+          <p>Review organizational objectives, participant needs, governance gaps, and desired outcomes.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-content">
+          <h3>Configuration</h3>
+          <p>Establish onboarding workflows, access classifications, curriculum pathways, and record standards.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-content">
+          <h3>Training</h3>
+          <p>Deploy structured learning across governance, fiduciary literacy, evidence, procedure, and administration.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-content">
+          <h3>Verification</h3>
+          <p>Create reviewable participant records, verification logs, access classification records, and progress tracking.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-content">
+          <h3>Continuity</h3>
+          <p>Preserve institutional memory through documented procedures, governance records, and review standards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Pilot Program</div>
+    <h2>Start with a controlled institutional pilot.</h2>
+
+    <p>
+      The pilot program provides a structured entry point for organizations seeking to test the KLI framework before broader deployment.
+    </p>
+
+    <div class="grid">
+      <div class="card gold">
+        <h3>30-Day Pilot</h3>
+        <p>Orientation, foundational doctrine, verification framework, participant records, and pilot assessment.</p>
+      </div>
+
+      <div class="card gold">
+        <h3>60-Day Pilot</h3>
+        <p>Expanded training, administrative records, evidence standards, progress tracking, and leadership review.</p>
+      </div>
+
+      <div class="card gold">
+        <h3>90-Day Pilot</h3>
+        <p>Full institutional readiness review, certification pathway mapping, governance reporting, and licensing assessment.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Licensing Pathway</div>
+    <h2>Education becomes infrastructure when it can be deployed, verified, and governed.</h2>
+
+    <p>
+      KLI institutional licensing is designed for organizations that want to implement structured governance education,
+      participant verification, certification pathways, and administrative continuity systems within their own environment.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Starter License</h3>
+        <p>Core curriculum access, orientation materials, and participant guidance.</p>
+      </div>
+
+      <div class="card">
+        <h3>Professional License</h3>
+        <p>Expanded curriculum, verification support, reporting, and administrative templates.</p>
+      </div>
+
+      <div class="card">
+        <h3>Enterprise License</h3>
+        <p>Institutional deployment, staff training, continuity architecture, and governance support.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Request Review</div>
+    <h2>Begin with an institutional review.</h2>
+
+    <p>
+      The review determines whether the KLI Access Infrastructure, Legacy AI™, governance education,
+      verification framework, or certification pathway is appropriate for your organization.
+    </p>
+
+    <div class="buttons">
+      <a class="btn primary" href="contact.html">Request Institutional Review</a>
+      <a class="btn" href="institute.html">Explore KLI Programs</a>
+    </div>
+
+    <div class="notice">
+      Educational and informational use only. Kelly Legacy Estates, Kelly Legacy Institute, and Legacy AI™ do not provide legal, financial, tax, investment, accounting, or professional advice. Human review remains final.
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Kelly Legacy Estates™ • Office of the Fiduciary<br />
+  Governance • Education • Verification • Continuity
+</footer>
+
+</body>
+</html>
