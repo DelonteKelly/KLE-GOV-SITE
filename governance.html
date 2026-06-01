@@ -3,203 +3,333 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Governance | Kelly Legacy Estates</title>
-  <meta name="description" content="Governance framework for Kelly Legacy Estates, Office of the Fiduciary, fiduciary literacy, continuity systems, and administrative doctrine.">
+  <title>Governance | Kelly Legacy Estates • Office of the Fiduciary</title>
+  <meta name="description" content="Governance framework for Kelly Legacy Estates, Office of the Fiduciary, fiduciary literacy, continuity systems, and administrative doctrine. Structure determines outcome.">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://kellylegacyestates.com/governance.html">
+  
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Governance | Kelly Legacy Estates • Private Governance Infrastructure">
+  <meta property="og:description" content="Governance framework for Kelly Legacy Estates, Office of the Fiduciary, fiduciary literacy, continuity systems, and administrative doctrine.">
+  <meta property="og:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
+  <meta property="og:url" content="https://kellylegacyestates.com/governance.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kelly Legacy Estates">
+  
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Governance | Kelly Legacy Estates • Private Governance Infrastructure">
+  <meta name="twitter:description" content="Governance framework for Kelly Legacy Estates, Office of the Fiduciary, fiduciary literacy, continuity systems, and administrative doctrine.">
+  <meta name="twitter:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
   <style>
-    :root {
-      --exec-black:#050505;
-      --deep-charcoal:#111113;
-      --charcoal-card:#16161A;
-      --charcoal-border:#23232A;
-      --crimson:#9E2A2A;
-      --antique-gold:#C8A24C;
-      --ivory:#F0EFEA;
-      --ivory-dim:#CBC9C1;
-      --slate-meta:#7A7A7A;
-      --border-faint:rgba(240,239,234,0.06);
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    * { margin:0; padding:0; box-sizing:border-box; }
+    :root {
+      --exec-black: #050505;
+      --deep-charcoal: #111113;
+      --charcoal-card: #16161A;
+      --charcoal-border: #23232A;
+      --crimson: #9E2A2A;
+      --crimson-dim: #6E1E1E;
+      --antique-gold: #C8A24C;
+      --antique-gold-muted: #9A7A3A;
+      --ivory: #F0EFEA;
+      --ivory-dim: #CBC9C1;
+      --slate-meta: #7A7A7A;
+      --border-faint: rgba(240, 239, 234, 0.06);
+    }
 
     body {
-      background:var(--exec-black);
-      color:var(--ivory-dim);
-      font-family:'Inter',sans-serif;
-      line-height:1.65;
+      background: var(--exec-black);
+      color: var(--ivory-dim);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
+    /* noise & scanline from homepage */
+    .noise-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 999;
+      opacity: 0.35;
+    }
+
+    .scanline {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(0deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 3px, rgba(0,0,0,0.05) 3px, rgba(0,0,0,0.05) 6px);
+      pointer-events: none;
+      z-index: 998;
     }
 
     .container {
-      max-width:1180px;
-      margin:0 auto;
-      padding:0 32px;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 48px;
+      position: relative;
+      z-index: 10;
     }
 
+    /* header */
     .site-header {
-      border-bottom:1px solid var(--border-faint);
-      background:rgba(5,5,5,0.94);
-      position:sticky;
-      top:0;
-      z-index:100;
+      border-bottom: 1px solid var(--border-faint);
+      background: rgba(5,5,5,0.92);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .nav-wrapper {
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:1.2rem 0;
-      gap:1rem;
-      flex-wrap:wrap;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 0;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
 
     .identity-mark h1 {
-      font-family:'Playfair Display',serif;
-      font-size:1.15rem;
-      letter-spacing:.12em;
-      color:var(--ivory);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ivory);
     }
 
     .identity-mark p {
-      font-family:'JetBrains Mono',monospace;
-      font-size:.65rem;
-      letter-spacing:.2em;
-      color:var(--crimson);
-      margin-top:4px;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--crimson);
+      margin-top: 4px;
     }
 
     .nav-links {
-      display:flex;
-      gap:1.5rem;
-      flex-wrap:wrap;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
     .nav-links a {
-      font-family:'JetBrains Mono',monospace;
-      font-size:.68rem;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-      text-decoration:none;
-      color:var(--ivory-dim);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      color: var(--ivory-dim);
+      transition: color 0.2s;
+      text-transform: uppercase;
     }
 
-    .nav-links a:hover { color:var(--antique-gold); }
+    .nav-links a:hover { color: var(--antique-gold); }
+    .nav-links .active { color: var(--antique-gold); border-bottom: 1px solid var(--antique-gold); }
+    .nav-links .access-cta {
+      border: 1px solid var(--crimson);
+      padding: 8px 18px;
+      color: var(--crimson);
+      font-weight: 500;
+    }
+    .nav-links .access-cta:hover { background: rgba(158,42,42,0.08); color: var(--antique-gold); border-color: var(--antique-gold); }
 
-    .access-cta {
-      border:1px solid var(--crimson);
-      padding:7px 14px;
-      color:var(--crimson)!important;
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--crimson);
+      color: var(--ivory);
+      padding: 8px 16px;
+      font-family: 'JetBrains Mono', monospace;
+      cursor: pointer;
     }
 
+    /* meta-band */
+    .meta-band {
+      background: var(--deep-charcoal);
+      border-bottom: 1px solid var(--border-faint);
+      padding: 0.5rem 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--slate-meta);
+    }
+    .meta-inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .meta-inner span i { margin-right: 6px; color: var(--antique-gold-muted); font-size: 0.7rem; }
+
+    /* hero */
     .hero {
-      padding:5rem 0 3.5rem;
-      border-bottom:1px solid var(--border-faint);
+      padding: 5rem 0 4rem;
+      border-bottom: 1px solid var(--border-faint);
     }
-
     .label {
-      font-family:'JetBrains Mono',monospace;
-      font-size:.65rem;
-      letter-spacing:.26em;
-      color:var(--crimson);
-      text-transform:uppercase;
-      margin-bottom:1rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      color: var(--crimson);
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 1.5rem;
     }
-
     h2 {
-      font-family:'Playfair Display',serif;
-      font-size:clamp(2.4rem,5vw,4rem);
-      line-height:1.1;
-      color:var(--ivory);
-      text-transform:uppercase;
-      max-width:900px;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 600;
+      line-height: 1.1;
+      color: var(--ivory);
+      text-transform: uppercase;
     }
-
     .intro {
-      max-width:820px;
-      margin-top:1.5rem;
-      border-left:2px solid var(--antique-gold);
-      padding-left:1.2rem;
-      color:var(--ivory-dim);
+      max-width: 820px;
+      margin-top: 1.5rem;
+      border-left: 2px solid var(--antique-gold);
+      padding-left: 1.2rem;
+      color: var(--ivory-dim);
+      font-size: 1rem;
     }
 
+    /* sections */
     section {
-      padding:4rem 0;
-      border-bottom:1px solid var(--border-faint);
+      padding: 4rem 0;
+      border-bottom: 1px solid var(--border-faint);
     }
-
     .section-title {
-      font-family:'Playfair Display',serif;
-      font-size:2rem;
-      color:var(--ivory);
-      margin-bottom:1rem;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.3rem);
+      font-weight: 500;
+      color: var(--ivory);
     }
-
     .gold-rule {
-      width:64px;
-      height:2px;
-      background:var(--antique-gold);
-      margin:1rem 0 2rem;
+      width: 64px;
+      height: 2px;
+      background: var(--antique-gold);
+      margin: 1rem 0 2rem;
     }
-
     .grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:1px;
-      background:var(--charcoal-border);
-      border:1px solid var(--charcoal-border);
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 1px;
+      background: var(--charcoal-border);
+      border: 1px solid var(--charcoal-border);
     }
-
     .card {
-      background:var(--charcoal-card);
-      padding:1.6rem;
+      background: var(--charcoal-card);
+      padding: 1.6rem;
+      transition: all 0.2s;
     }
-
+    .card:hover { background: #1C1C22; }
     .code {
-      font-family:'JetBrains Mono',monospace;
-      font-size:.62rem;
-      letter-spacing:.1em;
-      color:var(--antique-gold);
-      margin-bottom:.6rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      color: var(--antique-gold-muted);
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
     }
-
     .card h3 {
-      color:var(--ivory);
-      font-size:1.05rem;
-      margin-bottom:.7rem;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--ivory);
+      margin-bottom: 0.6rem;
     }
-
     .card p {
-      font-size:.85rem;
-      color:#b5b3aa;
+      font-size: 0.8rem;
+      color: #afafa8;
+      line-height: 1.55;
     }
-
     .notice {
-      background:linear-gradient(145deg,#0A0A0C,#111113);
-      border-left:3px solid var(--crimson);
-      padding:2rem;
-      margin-top:2rem;
-      font-family:'JetBrains Mono',monospace;
-      font-size:.78rem;
-      color:var(--ivory-dim);
+      background: linear-gradient(145deg, #0A0A0C 0%, #111113 100%);
+      border-left: 3px solid var(--crimson);
+      padding: 2rem;
+      margin-top: 2rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--ivory-dim);
     }
 
+    /* footer */
     .footer {
-      padding:2.5rem 0;
-      background:var(--deep-charcoal);
-      font-family:'JetBrains Mono',monospace;
-      font-size:.68rem;
-      color:var(--slate-meta);
+      background: var(--deep-charcoal);
+      border-top: 1px solid var(--border-faint);
+      padding: 3rem 0 2rem;
+      font-size: 0.7rem;
+    }
+    .footer-disclaimer {
+      max-width: 900px;
+      color: var(--slate-meta);
+      line-height: 1.6;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .footer-links {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+    }
+    .footer-links a {
+      color: var(--ivory-dim);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      transition: color 0.2s ease;
+    }
+    .footer-links a:hover {
+      color: var(--antique-gold);
     }
 
-    @media(max-width:700px){
-      .container{padding:0 22px;}
-      .nav-links{gap:1rem;}
+    /* mobile */
+    @media (max-width: 860px) {
+      .container { padding: 0 24px; }
+      .nav-links {
+        gap: 1rem;
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links.active { display: flex; }
+      .mobile-menu-toggle { display: block; }
+      section { padding: 2.5rem 0; }
+      .hero { padding: 3rem 0 2.5rem; }
+    }
+    @media (max-width: 640px) {
+      .nav-wrapper { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
-
 <body>
+<div class="noise-overlay"></div>
+<div class="scanline"></div>
 
 <header class="site-header">
   <div class="container">
@@ -208,22 +338,33 @@
         <h1>KELLY LEGACY ESTATES</h1>
         <p>OFFICE OF THE FIDUCIARY</p>
       </div>
-      <div class="nav-links">
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">MENU</button>
+      <nav class="nav-links" id="mainNav" aria-label="Primary navigation">
         <a href="index.html">Home</a>
-        <a href="governance.html">Governance</a>
+        <a href="governance.html" class="active">Governance</a>
         <a href="fiduciary-doctrine.html">Fiduciary Doctrine</a>
         <a href="ai-governance.html">AI Governance</a>
         <a href="publications.html">Publications</a>
-        <a href="https://www.skool.com/kelly-legacy-institute-9231/about" target="_blank" rel="noopener">Institute</a>
-        <a href="klat-access.html">KLAT Access</a>
+        <a href="institute.html">Institute</a>
+        <a href="institutional-solutions.html">Institutional Solutions</a>
+        <a href="https://kli-access.replit.app/" target="_blank" rel="noopener noreferrer">KLAT Access</a>
         <a href="contact.html" class="access-cta">Contact</a>
-      </div>
+      </nav>
     </div>
   </div>
 </header>
 
-<main>
+<div class="meta-band">
+  <div class="container">
+    <div class="meta-inner">
+      <span><i class="fas fa-shield-alt"></i> INSTITUTIONAL RECORD // KLI-GOV-ENV-001</span>
+      <span><i class="fas fa-lock"></i> PRIVATE GOVERNANCE ENVIRONMENT // CONTROLLED DISTRIBUTION</span>
+      <span><i class="fas fa-hourglass-half"></i> CONTINUITY ACTIVE</span>
+    </div>
+  </div>
+</div>
 
+<main>
   <section class="hero">
     <div class="container">
       <div class="label">GOVERNANCE FRAMEWORK // OFFICE RECORD</div>
@@ -329,34 +470,68 @@
       </div>
     </div>
   </section>
-
 </main>
 
 <footer class="footer">
   <div class="container">
-    © Kelly Legacy Estates™ // Office of the Fiduciary. Educational governance materials only. All institutional marks and doctrine reserved.
+    <div class="footer-disclaimer">
+      <i class="fas fa-scale-balanced"></i> This website provides educational governance materials only. It does not provide legal advice, financial advice, fiduciary decisions, securities offerings, investment recommendations, or attorney-client services. KLAT access verification, where applicable, is used only for institutional access classification and governance participation recognition. Users remain responsible for independent professional review.<br><br>
+      © Kelly Legacy Institute // Kelly Legacy Estates Living Trust // Office of the Fiduciary. All institutional marks and doctrine reserved. Private Governance Infrastructure.
+    </div>
+    <div class="footer-links">
+      <a href="ip-policy.html">IP Policy</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="record-policy.html">Record Policy</a>
+      <a href="terms.html">Terms</a>
+      <a href="transparency.html">Transparency</a>
+      <a href="execution-framework.html">Execution Framework</a>
+      <a href="curriculum-portal.html">Curriculum Portal</a>
+    </div>
   </div>
 </footer>
 
 <script>
-(function(){
-if(!window.chatbase||window.chatbase("getState")!=="initialized"){
-window.chatbase=(...arguments)=>{
-if(!window.chatbase.q){window.chatbase.q=[]}
-window.chatbase.q.push(arguments)
-};
-window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})
-}
-const onLoad=function(){
-const script=document.createElement("script");
-script.src="https://www.chatbase.co/embed.min.js";
-script.id="JB7Ysn50O_DpC9tWnoxrh";
-script.domain="www.chatbase.co";
-document.body.appendChild(script)
-};
-if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}
-})();
-</script>
+  // Mobile menu toggle
+  const toggleBtn = document.getElementById('mobileMenuToggle');
+  const mainNav = document.getElementById('mainNav');
+  if (toggleBtn && mainNav) {
+    toggleBtn.addEventListener('click', () => {
+      mainNav.classList.toggle('active');
+    });
+  }
 
+  // Chatbase embed (Legacy AI)
+  (function(){
+    // Actual Legacy AI branding must be configured inside Chatbase dashboard.
+    if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+      window.chatbase=(...arguments)=>{
+        if(!window.chatbase.q){
+          window.chatbase.q=[]
+        }
+        window.chatbase.q.push(arguments)
+      };
+      window.chatbase=new Proxy(window.chatbase,{
+        get(target,prop){
+          if(prop==="q"){
+            return target.q
+          }
+          return(...args)=>target(prop,...args)
+        }
+      })
+    }
+    const onLoad=function(){
+      const script=document.createElement("script");
+      script.src="https://www.chatbase.co/embed.min.js";
+      script.id="JB7Ysn50O_DpC9tWnoxrh";
+      script.domain="www.chatbase.co";
+      document.body.appendChild(script)
+    };
+    if(document.readyState==="complete"){
+      onLoad()
+    }else{
+      window.addEventListener("load",onLoad)
+    }
+  })();
+</script>
 </body>
 </html>
