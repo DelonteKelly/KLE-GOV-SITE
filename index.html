@@ -64,6 +64,10 @@
       overflow: hidden;
     }
 
+    section {
+      padding: 4rem 0;
+    }
+
     .noise-overlay {
       position: fixed;
       top: 0;
@@ -400,7 +404,6 @@
       padding: 2rem;
     }
 
-    /* KLAT Access Production Styles */
     .treasury-display {
       background: rgba(0,0,0,0.4);
       padding: 1rem;
@@ -434,13 +437,6 @@
     }
     
     .copy-btn:hover { color: var(--antique-gold); }
-    
-    .wallet-status {
-      margin-top: 1rem;
-      padding: 1rem;
-      background: rgba(158,42,42,0.1);
-      border-left: 2px solid var(--crimson);
-    }
 
     .footer {
       background: var(--deep-charcoal);
@@ -583,6 +579,7 @@
       .review-modal-content { width: 95%; max-height: 90vh; }
       .review-modal iframe { min-height: 400px; }
       .review-modal-header h2 { font-size: 1.2rem; }
+      section { padding: 2.5rem 0; }
     }
     
     @media (max-width: 640px) {
@@ -637,9 +634,15 @@
           <div class="hero-sub">Kelly Legacy Estates provides institutional governance education, fiduciary literacy, continuity systems, and administrative doctrine for individuals, families, organizations, and private governance environments.</div>
           <div class="hero-body">Structure determines outcome. Procedure precedes remedy. Record precedes recognition. Capacity determines consequence.<br><br>Kelly Legacy Estates exists to bring order to governance, documentation, fiduciary literacy, administrative procedure, and continuity planning through disciplined education, institutional frameworks, and private governance infrastructure.</div>
           <div class="btn-inline">
-            <a href="klat-access.html" class="btn-primary">Enter KLI Institutional Access Infrastructure™</a>
+            <!-- ✅ Enter KLI routes to Replit app -->
+            <a href="https://kli-access.replit.app/"
+               class="btn-primary"
+               target="_blank"
+               rel="noopener noreferrer">
+               Enter KLI Institutional Access Infrastructure™
+            </a>
             <a href="fiduciary-doctrine.html" class="btn-primary btn-secondary">Explore Governance Doctrine</a>
-            <a href="#" id="requestInstitutionalReviewBtn" class="btn-primary">Request Institutional Review</a>
+            <a href="contact.html" id="requestInstitutionalReviewBtn" class="btn-primary">Request Institutional Review</a>
           </div>
         </div>
         <div class="office-card">
@@ -660,7 +663,7 @@
     </div>
   </section>
 
-  <section style="padding: 2rem 0; border-bottom: 1px solid var(--border-faint);">
+  <section>
     <div class="container">
       <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; font-family: 'JetBrains Mono', monospace;">
         <span style="color: var(--antique-gold); font-size: 0.7rem;">◼ STATUS, STANDING & CAPACITY</span>
@@ -717,8 +720,8 @@
     </div>
   </section>
 
-  <!-- KLAT Access Infrastructure Preview - Production Configuration -->
-  <section style="background: radial-gradient(circle at 0% 30%, rgba(158,42,42,0.02) 0%, transparent 70%);">
+  <!-- KLAT Access Infrastructure Preview - PRODUCTION POLYGON CONFIGURATION -->
+  <section>
     <div class="container">
       <div class="access-preview">
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 2rem;">
@@ -727,15 +730,16 @@
             <h3 style="font-family:'Playfair Display',serif; font-size: 1.8rem; color: var(--ivory);">Governance Access Credential</h3>
             <p style="max-width: 500px; margin-top: 0.7rem;">KLAT functions as a contribution-based governance access credential for institutional classification, curriculum access, governance participation, and continuity recognition. KLAT is not a security, investment contract, equity instrument, or passive yield mechanism.</p>
             
-            <!-- Production Treasury Display -->
+            <!-- ✅ Treasury address corrected, Safe routes to Polygon Safe -->
             <div class="treasury-display">
               <div class="treasury-label">Kelly Legacy Estates Treasury</div>
               <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 8px;">
                 <code class="treasury-hash">0x717160A756D5E3eFaBB6e2cC84B29cc6eDf71a80</code>
-                <button class="copy-btn" onclick="copyTreasuryAddress()" aria-label="Copy treasury address">
+                <button class="copy-btn" onclick="copyTreasuryAddress(event)" aria-label="Copy treasury address">
                   <i class="fas fa-copy"></i>
                 </button>
-                <a href="https://app.safe.global/eth:0x717160A756D5E3eFaBB6e2cC84B29cc6eDf71a80" target="_blank" rel="noopener noreferrer" style="color: var(--antique-gold); font-size: 0.7rem; text-decoration: none;">
+                <!-- ✅ Safe routes to Polygon Safe -->
+                <a href="https://app.safe.global/matic:0x717160A756D5E3eFaBB6e2cC84B29cc6eDf71a80" target="_blank" rel="noopener noreferrer" style="color: var(--antique-gold); font-size: 0.7rem; text-decoration: none;">
                   <i class="fas fa-external-link-alt"></i> View on Safe
                 </a>
               </div>
@@ -748,13 +752,20 @@
             </div>
           </div>
           <div>
-            <a href="klat-access.html" class="btn-primary" style="display: inline-block;">Verify Institutional Access →</a>
+            <!-- ✅ Enter KLI routes to Replit app -->
+            <a href="https://kli-access.replit.app/"
+               class="btn-primary"
+               target="_blank"
+               rel="noopener noreferrer"
+               style="display: inline-block;">
+               Verify Institutional Access →
+            </a>
           </div>
         </div>
         
-        <!-- Production Network Verification -->
+        <!-- ✅ Network shows Polygon, no testnet references visible -->
         <div style="margin-top: 2rem; padding-top: 1rem; font-size:0.7rem; color:var(--slate-meta); font-family:monospace; border-top:1px solid rgba(200,162,76,0.2);">
-          <i class="fas fa-check-circle" style="color: var(--crimson);"></i> Production: Ethereum Mainnet | Contract: Verified | Treasury: Safe Multisig
+          <i class="fas fa-check-circle" style="color: var(--crimson);"></i> Production: Polygon | Contract: Verified | Treasury: Safe Multisig
         </div>
       </div>
     </div>
@@ -791,7 +802,7 @@
         <div class="ai-card" style="padding: 1.5rem;"><i class="fas fa-microchip"></i><h4 style="color:var(--ivory);">AI Governance Inquiry</h4><p style="font-size:0.75rem;">Executive AI systems and oversight.</p></div>
       </div>
       <div class="access-preview" style="background: none; border: 1px solid var(--charcoal-border); text-align: center; padding: 1.5rem;">
-        <p style="font-family: monospace; font-size:0.75rem;">All correspondence is processed through the Office of the Fiduciary. Formal written requests only. <a href="#" id="submitInstitutionalReviewInline" style="color: var(--crimson); text-decoration: none;">Submit institutional review →</a></p>
+        <p style="font-family: monospace; font-size:0.75rem;">All correspondence is processed through the Office of the Fiduciary. Formal written requests only. <a href="contact.html" id="submitInstitutionalReviewInline" style="color: var(--crimson); text-decoration: none;">Submit institutional review →</a></p>
       </div>
     </div>
   </section>
@@ -839,12 +850,18 @@
     });
   }
 
-  // Modal functionality
+  // Modal functionality - FIXED: contact.html fallback preserved, modal only opens if element exists
   const modal = document.getElementById('institutionalReviewModal');
   const openBtns = document.querySelectorAll('#requestInstitutionalReviewBtn, #submitInstitutionalReviewInline');
   const closeBtn = modal?.querySelector('.close-review-modal');
 
-  function openModal() {
+  // Fixed: openModal handles missing event gracefully, only prevents default if modal exists
+  function openModal(e) {
+    // Only prevent default if we're actually opening the modal
+    if (e && modal) {
+      e.preventDefault();
+    }
+    
     if (modal) {
       modal.classList.add('active');
       document.body.classList.add('modal-open');
@@ -858,12 +875,11 @@
     }
   }
 
+  // Fixed: Only attach modal behavior if modal element exists
+  // This preserves contact.html fallback routing when modal is not present
   openBtns.forEach(btn => {
-    if (btn) {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        openModal();
-      });
+    if (btn && modal) {
+      btn.addEventListener('click', openModal);
     }
   });
 
@@ -881,11 +897,11 @@
     if (e.key === 'Escape' && modal?.classList.contains('active')) closeModal();
   });
 
-  // Copy treasury address function
-  window.copyTreasuryAddress = function() {
+  // Copy treasury address function - production only, no mock data
+  window.copyTreasuryAddress = function(event) {
     const treasuryAddr = '0x717160A756D5E3eFaBB6e2cC84B29cc6eDf71a80';
     navigator.clipboard.writeText(treasuryAddr).then(() => {
-      const btn = event.target.closest('.copy-btn');
+      const btn = event?.target?.closest('.copy-btn');
       if (btn) {
         const originalHtml = btn.innerHTML;
         btn.innerHTML = '<i class="fas fa-check"></i>';
@@ -895,19 +911,11 @@
   };
 </script>
 
-<!-- Legacy AI - Institutional Chat Configuration (No third-party branding override) -->
+<!-- Legacy AI - Institutional Chat Configuration -->
 <script>
 (function(){
-  // Institutional configuration for chat assistant
-  window.chatbaseConfig = {
-    branding: {
-      name: "Legacy AI",
-      primaryColor: "#9E2A2A",
-      accentColor: "#C8A24C",
-      fontFamily: "'Inter', 'JetBrains Mono', monospace"
-    }
-  };
-  
+  // Note: Chatbase branding configuration - actual branding must be set in Chatbase dashboard
+  // This provides initialization parameters but does not override embedded branding
   if(!window.chatbase||window.chatbase("getState")!=="initialized"){
     window.chatbase=(...arguments)=>{
       if(!window.chatbase.q){
