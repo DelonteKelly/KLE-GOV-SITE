@@ -1,1 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Trust Administration | KLI Knowledge Library</title>
+<meta name="description" content="Trust administration knowledge library covering trustee authority, fiduciary duties, trust property, accounting, distributions, beneficiary rights, breach, remedies, and institutional governance.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kellylegacyestates.com/library/trust-administration/">
 
+<!-- Open Graph -->
+<meta property="og:title" content="Trust Administration | KLI Knowledge Library">
+<meta property="og:description" content="Trust administration knowledge library covering trustee authority, fiduciary duties, trust property, accounting, distributions, beneficiary rights, breach, remedies, and institutional governance.">
+<meta property="og:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
+<meta property="og:url" content="https://kellylegacyestates.com/library/trust-administration/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kelly Legacy Estates">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Trust Administration | KLI Knowledge Library">
+<meta name="twitter:description" content="Trust administration knowledge library covering trustee authority, fiduciary duties, trust property, accounting, distributions, beneficiary rights, breach, remedies, and institutional governance.">
+<meta name="twitter:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
+
+<!-- Schema: CollectionPage + Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Trust Administration",
+  "description": "Trust administration knowledge library covering trustee authority, fiduciary duties, trust property, accounting, distributions, beneficiary rights, breach, remedies, and institutional governance.",
+  "url": "https://kellylegacyestates.com/library/trust-administration/",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Kelly Legacy Estates",
+    "url": "https://kellylegacyestates.com"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "KLI Knowledge Library",
+      "item": "https://kellylegacyestates.com/knowledge-library.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Trust Administration",
+      "item": "https://kellylegacyestates.com/library/trust-administration/"
+    }
+  ]
+}
+</script>
+
+<!-- Styles -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root {
+  --exec-black: #050505;
+  --deep-charcoal: #111113;
+  --charcoal-card: #16161A;
+  --charcoal-border: #23232A;
+  --crimson: #9E2A2A;
+  --crimson-dim: #6E1E1E;
+  --antique-gold: #C8A24C;
+  --antique-gold-muted: #9A7A3A;
+  --ivory: #F0EFEA;
+  --ivory-dim: #CBC9C1;
+  --slate-meta: #7A7A7A;
+  --border-faint: rgba(240,239,234,0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--exec-black);
+  color: var(--ivory-dim);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.35;
+}
+
+.scanline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(0deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 3px, rgba(0,0,0,0.05) 3px, rgba(0,0,0,0.05) 6px);
+  pointer-events: none;
+  z-index: 998;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+  position: relative;
+  z-index: 10;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border-faint);
+  background: rgba(5,5,5,0.92);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.identity-mark h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ivory);
+}
+
+.identity-mark p {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--crimson);
+  margin-top: 4px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  color: var(--ivory-dim);
+  transition: color 0.2s;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover { color: var(--antique-gold); }
+.nav-links a.active {
+  color: var(--antique-gold);
+  border-bottom: 1px solid var(--antique-gold);
+}
+.nav-links .access-cta {
+  border: 1px solid var(--crimson);
+  padding: 8px 18px;
+  color: var(--crimson);
+  font-weight: 500;
+}
+.nav-links .access-cta:hover { background: rgba(158,42,42,0.08); color: var(--antique-gold); border-color: var(--antique-gold); }
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--crimson);
+  color: var(--ivory);
+  padding: 8px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  cursor: pointer;
+}
+
+.meta-band {
+  background: var(--deep-charcoal);
+  border-bottom: 1px solid var(--border-faint);
+  padding: 0.5rem 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--slate-meta);
+}
+
+.meta-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.meta-inner span i { margin-right: 6px; color: var(--antique-gold-muted); font-size: 0.7rem; }
+
+.collection-header {
+  padding: 4rem 0 2rem;
+  border-bottom: 1px solid var(--border-faint);
+}
+
+.collection-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--crimson);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: var(--ivory);
+  margin-bottom: 1rem;
+}
+
+.collection-subtitle {
+  font-size: 1.2rem;
+  color: var(--ivory-dim);
+  max-width: 800px;
+  margin-bottom: 1.5rem;
+}
+
+.intro-panel {
+  background: var(--charcoal-card);
+  border: 1px solid var(--charcoal-border);
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 2px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--ivory);
+  margin: 3rem 0 1.5rem;
+  border-left: 3px solid var(--antique-gold);
+  padding-left: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1px;
+  background: var(--charcoal-border);
+  border: 1px solid var(--charcoal-border);
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: var(--charcoal-card);
+  padding: 1.8rem;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover { background: #1C1C22; }
+
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--ivory);
+  margin-bottom: 0.75rem;
+}
+
+.card-description {
+  font-size: 0.85rem;
+  color: #b5b3aa;
+  line-height: 1.55;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  color: var(--antique-gold-muted);
+  background: rgba(0,0,0,0.4);
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+
+.card-link {
+  display: inline-block;
+  border: 1px solid var(--antique-gold);
+  padding: 8px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--antique-gold);
+  transition: 0.2s;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.card-link:hover {
+  background: var(--antique-gold);
+  color: var(--exec-black);
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1px;
+  background: var(--charcoal-border);
+  margin: 1.5rem 0 2rem;
+}
+
+.related-card {
+  background: var(--charcoal-card);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.related-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--ivory);
+  margin-bottom: 0.5rem;
+}
+
+.related-link {
+  color: var(--antique-gold);
+  text-decoration: none;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+}
+
+.related-link:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid var(--antique-gold);
+  padding: 10px 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--antique-gold);
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: var(--antique-gold);
+  color: var(--exec-black);
+}
+
+.notice {
+  background: rgba(158,42,42,0.08);
+  border-left: 3px solid var(--crimson);
+  padding: 1.2rem;
+  font-size: 0.85rem;
+  margin: 2rem 0;
+}
+
+.footer {
+  background: var(--deep-charcoal);
+  border-top: 1px solid var(--border-faint);
+  padding: 3rem 0 2rem;
+  font-size: 0.7rem;
+}
+
+.footer-disclaimer {
+  max-width: 900px;
+  color: var(--slate-meta);
+  line-height: 1.6;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.footer-links {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+}
+
+.footer-links a {
+  color: var(--ivory-dim);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--antique-gold);
+}
+
+@media (max-width: 860px) {
+  .container { padding: 0 24px; }
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .nav-links.active { display: flex; }
+  .mobile-menu-toggle { display: block; }
+  h1 { font-size: 2.5rem; }
+  .section-title { font-size: 1.5rem; }
+}
+
+@media (max-width: 640px) {
+  .nav-wrapper { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<div class="noise-overlay"></div>
+<div class="scanline"></div>
+<header class="site-header">
+  <div class="container">
+    <div class="nav-wrapper">
+      <div class="identity-mark"><h1>KELLY LEGACY ESTATES</h1><p>OFFICE OF THE FIDUCIARY</p></div>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">MENU</button>
+      <nav class="nav-links" id="mainNav" aria-label="Primary navigation">
+        <a href="../../index.html">Home</a>
+        <a href="../../pages/governance.html">Governance</a>
+        <a href="../../pages/fiduciary-doctrine.html">Fiduciary Doctrine</a>
+        <a href="../../pages/ai-governance.html">AI Governance</a>
+        <a href="../../knowledge-library.html" class="active">Knowledge Library</a>
+        <a href="../../pages/publications.html">Publications</a>
+        <a href="../../pages/institute.html">Institute</a>
+        <a href="../../pages/institutional-solutions.html">Institutional Solutions</a>
+        <a href="../../pages/klat-access.html">KLAT Access</a>
+        <a href="../../pages/contact.html" class="access-cta">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<div class="meta-band"><div class="container"><div class="meta-inner"><span><i class="fas fa-shield-alt"></i> KLI KNOWLEDGE LIBRARY // TRUST ADMINISTRATION</span><span><i class="fas fa-hourglass-half"></i> CONTINUITY ACTIVE</span></div></div></div>
+
+<main>
+<div class="container">
+  <div class="collection-header">
+    <div class="collection-label">KLI KNOWLEDGE LIBRARY™ // COLLECTION</div>
+    <h1>Trust Administration</h1>
+    <div class="collection-subtitle">
+      A structured knowledge collection covering fiduciary authority, trustee responsibilities, trust property management, beneficiary protection, and equitable enforcement.
+    </div>
+  </div>
+
+  <div class="intro-panel">
+    <p>Trust administration is the disciplined management of entrusted property according to fiduciary obligations, governing instruments, beneficiary interests, and recognized principles of equity.</p>
+    <p style="margin-top: 1rem;">Effective administration requires:</p>
+    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+      <li>clear authority</li>
+      <li>proper capacity</li>
+      <li>accurate records</li>
+      <li>preservation of property</li>
+      <li>beneficiary accountability</li>
+      <li>fiduciary compliance</li>
+    </ul>
+    <p style="margin-top: 1rem;"><strong>Trust governance operates through structure, not assumption.</strong></p>
+  </div>
+
+  <!-- SECTION I — FOUNDATIONS -->
+  <div class="section-title">I. Foundations</div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-title">Legal Title vs Equitable Title</div>
+      <div class="card-description">Understand the separation between trustee authority and beneficiary interests.</div>
+      <div class="card-tags"><span class="tag">Title</span><span class="tag">Capacity</span><span class="tag">Equity</span></div>
+      <a href="legal-title-vs-equitable-title.html" class="card-link">Read Article →</a>
+    </div>
+    <div class="card">
+      <div class="card-title">Trustee Authority</div>
+      <div class="card-description">Understand the source, scope, and limitations of trustee power.</div>
+      <div class="card-tags"><span class="tag">Authority</span><span class="tag">Office</span><span class="tag">Governance</span></div>
+      <a href="trustee-authority.html" class="card-link">Read Article →</a>
+    </div>
+    <div class="card">
+      <div class="card-title">Trustee Duties</div>
+      <div class="card-description">Learn the fiduciary obligations governing trustee administration.</div>
+      <div class="card-tags"><span class="tag">Duty</span><span class="tag">Loyalty</span><span class="tag">Care</span></div>
+      <a href="trustee-duties.html" class="card-link">Read Article →</a>
+    </div>
+  </div>
+
+  <!-- SECTION II — ADMINISTRATION SYSTEMS -->
+  <div class="section-title">II. Administration Systems</div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-title">Trust Administration Process</div>
+      <div class="card-description">Review the procedural framework for operating and maintaining a trust.</div>
+      <div class="card-tags"><span class="tag">Procedure</span><span class="tag">Records</span><span class="tag">Continuity</span></div>
+      <a href="trust-administration-process.html" class="card-link">Read Article →</a>
+    </div>
+    <div class="card">
+      <div class="card-title">Trust Property & Asset Management</div>
+      <div class="card-description">Learn custody, preservation, asset control, and prudent management standards.</div>
+      <div class="card-tags"><span class="tag">Assets</span><span class="tag">Custody</span><span class="tag">Preservation</span></div>
+      <a href="trust-property-asset-management.html" class="card-link">Read Article →</a>
+    </div>
+    <div class="card">
+      <div class="card-title">Trust Accounting</div>
+      <div class="card-description">Understand fiduciary accounting, reporting, and record requirements.</div>
+      <div class="card-tags"><span class="tag">Accounting</span><span class="tag">Reports</span><span class="tag">Review</span></div>
+      <a href="trust-accounting.html" class="card-link">Read Article →</a>
+    </div>
+  </div>
+
+  <!-- SECTION III — BENEFICIARY ADMINISTRATION -->
+  <div class="section-title">III. Beneficiary Administration</div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-title">Trust Distributions</div>
+      <div class="card-description">Understand distribution authority, discretion, and beneficiary payments.</div>
+      <div class="card-tags"><span class="tag">Distributions</span><span class="tag">Beneficiaries</span><span class="tag">Records</span></div>
+      <a href="trust-distributions.html" class="card-link">Read Article →</a>
+    </div>
+    <div class="card">
+      <div class="card-title">Trustee Liability & Breach</div>
+      <div class="card-description">Analyze fiduciary breach, liability standards, and accountability.</div>
+      <div class="card-tags"><span class="tag">Breach</span><span class="tag">Liability</span><span class="tag">Review</span></div>
+      <a href="trustee-liability-breach.html" class="card-link">Read Article →</a>
+    </div>
+    <div class="card">
+      <div class="card-title">Beneficiary Rights</div>
+      <div class="card-description">Understand beneficiary information rights, enforcement, and equitable protection.</div>
+      <div class="card-tags"><span class="tag">Rights</span><span class="tag">Enforcement</span><span class="tag">Equity</span></div>
+      <a href="beneficiary-rights.html" class="card-link">Read Article →</a>
+    </div>
+  </div>
+
+  <!-- SECTION IV — CONTINUITY & REMEDIES -->
+  <div class="section-title">IV. Continuity & Remedies</div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-title">Trust Modification & Termination</div>
+      <div class="card-description">Review lawful adaptation, modification, termination, and final administration.</div>
+      <div class="card-tags"><span class="tag">Modification</span><span class="tag">Termination</span><span class="tag">Procedure</span></div>
+      <a href="trust-modification-termination.html" class="card-link">Read Article →</a>
+    </div>
+    <div class="card">
+      <div class="card-title">Successor Trustee Administration</div>
+      <div class="card-description">Understand trustee transition, succession, and continuity planning.</div>
+      <div class="card-tags"><span class="tag">Succession</span><span class="tag">Continuity</span><span class="tag">Office</span></div>
+      <a href="successor-trustee-administration.html" class="card-link">Read Article →</a>
+    </div>
+    <div class="card">
+      <div class="card-title">Fiduciary Remedies in Trusts</div>
+      <div class="card-description">Study equitable remedies enforcing fiduciary accountability.</div>
+      <div class="card-tags"><span class="tag">Remedies</span><span class="tag">Equity</span><span class="tag">Enforcement</span></div>
+      <a href="fiduciary-remedies-trusts.html" class="card-link">Read Article →</a>
+    </div>
+  </div>
+
+  <!-- RELATED COLLECTIONS -->
+  <div class="section-title">Related Collections</div>
+  <div class="related-grid">
+    <div class="related-card">
+      <h4>Fiduciary Foundations</h4>
+      <a href="../fiduciary/" class="related-link">Explore Collection →</a>
+    </div>
+    <div class="related-card">
+      <h4>Equity & Remedies</h4>
+      <a href="../equity/" class="related-link">Explore Collection →</a>
+    </div>
+    <div class="related-card">
+      <h4>Status, Standing & Capacity</h4>
+      <a href="../status-standing-capacity/" class="related-link">Explore Collection →</a>
+    </div>
+  </div>
+
+  <!-- NAVIGATION CTAs -->
+  <div style="margin: 2rem 0; text-align: center;">
+    <a href="../../knowledge-library.html" class="btn">Return to Knowledge Library</a>
+    <a href="../../pages/institute.html" class="btn">Continue Through Kelly Legacy Institute</a>
+  </div>
+
+  <!-- EDUCATIONAL DISCLAIMER -->
+  <div class="notice">
+    This collection is published by Kelly Legacy Institute for educational governance literacy only. It does not provide legal advice, financial advice, fiduciary decisions, securities guidance, tax advice, or attorney-client services. Application of legal or equitable principles depends on jurisdiction, facts, governing instruments, and competent professional review.
+  </div>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-disclaimer">
+      <i class="fas fa-scale-balanced"></i> Educational governance materials only. © Kelly Legacy Institute // Kelly Legacy Estates Living Trust // Office of the Fiduciary.
+    </div>
+    <div class="footer-links">
+      <a href="../../legal/ip-policy.html">IP Policy</a>
+      <a href="../../legal/privacy.html">Privacy</a>
+      <a href="../../legal/record-policy.html">Record Policy</a>
+      <a href="../../legal/terms.html">Terms</a>
+      <a href="../../legal/transparency.html">Transparency</a>
+      <a href="../../pages/execution-framework.html">Execution Framework</a>
+      <a href="../../pages/curriculum-portal.html">Curriculum Portal</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const toggleBtn = document.getElementById('mobileMenuToggle');
+  const mainNav = document.getElementById('mainNav');
+  if (toggleBtn && mainNav) {
+    toggleBtn.addEventListener('click', () => {
+      mainNav.classList.toggle('active');
+    });
+  }
+
+  (function(){
+    if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+      window.chatbase=(...arguments)=>{
+        if(!window.chatbase.q){window.chatbase.q=[]}
+        window.chatbase.q.push(arguments)
+      };
+      window.chatbase=new Proxy(window.chatbase,{
+        get(target,prop){
+          if(prop==="q"){return target.q}
+          return(...args)=>target(prop,...args)
+        }
+      })
+    }
+    const onLoad=function(){
+      const script=document.createElement("script");
+      script.src="https://www.chatbase.co/embed.min.js";
+      script.id="JB7Ysn50O_DpC9tWnoxrh";
+      script.domain="www.chatbase.co";
+      document.body.appendChild(script)
+    };
+    if(document.readyState==="complete"){onLoad()}
+    else{window.addEventListener("load",onLoad)}
+  })();
+</script>
+</body>
+</html>
