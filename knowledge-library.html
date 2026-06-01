@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>KLI Knowledge Library | Kelly Legacy Institute</title>
+<meta name="description" content="The KLI Knowledge Library is the public educational archive of Kelly Legacy Institute, covering fiduciary literacy, trust administration, equity doctrine, governance systems, AI governance, administrative process, and continuity education.">
+<meta name="robots" content="index, follow">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://kellylegacyestates.com/knowledge-library.html">
+
+<!-- Open Graph / Social -->
+<meta property="og:title" content="KLI Knowledge Library | Kelly Legacy Institute">
+<meta property="og:description" content="Public educational archive for fiduciary literacy, trust administration, equity doctrine, governance systems, AI governance, and continuity education.">
+<meta property="og:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
+<meta property="og:url" content="https://kellylegacyestates.com/knowledge-library.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kelly Legacy Estates">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="KLI Knowledge Library | Kelly Legacy Institute">
+<meta name="twitter:description" content="Institutional doctrine archive for fiduciary literacy, governance education, trust administration, equity, and AI governance.">
+<meta name="twitter:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root {
+  --exec-black: #050505;
+  --deep-charcoal: #111113;
+  --charcoal-card: #16161A;
+  --charcoal-border: #23232A;
+  --crimson: #9E2A2A;
+  --crimson-dim: #6E1E1E;
+  --antique-gold: #C8A24C;
+  --antique-gold-muted: #9A7A3A;
+  --ivory: #F0EFEA;
+  --ivory-dim: #CBC9C1;
+  --slate-meta: #7A7A7A;
+  --border-faint: rgba(240,239,234,0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--exec-black);
+  color: var(--ivory-dim);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* noise overlay */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.35;
+}
+
+.scanline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(0deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 3px, rgba(0,0,0,0.05) 3px, rgba(0,0,0,0.05) 6px);
+  pointer-events: none;
+  z-index: 998;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+  position: relative;
+  z-index: 10;
+}
+
+/* header */
+.site-header {
+  border-bottom: 1px solid var(--border-faint);
+  background: rgba(5,5,5,0.92);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.identity-mark h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ivory);
+}
+
+.identity-mark p {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--crimson);
+  margin-top: 4px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  color: var(--ivory-dim);
+  transition: color 0.2s;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover { color: var(--antique-gold); }
+.nav-links a.active { color: var(--antique-gold); border-bottom: 1px solid var(--antique-gold); }
+.nav-links .access-cta {
+  border: 1px solid var(--crimson);
+  padding: 8px 18px;
+  color: var(--crimson);
+  font-weight: 500;
+}
+.nav-links .access-cta:hover { background: rgba(158,42,42,0.08); color: var(--antique-gold); border-color: var(--antique-gold); }
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--crimson);
+  color: var(--ivory);
+  padding: 8px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  cursor: pointer;
+}
+
+/* meta-band */
+.meta-band {
+  background: var(--deep-charcoal);
+  border-bottom: 1px solid var(--border-faint);
+  padding: 0.5rem 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--slate-meta);
+}
+
+.meta-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.meta-inner span i { margin-right: 6px; color: var(--antique-gold-muted); font-size: 0.7rem; }
+
+/* hero */
+.hero {
+  padding: 5rem 0 4rem;
+  border-bottom: 1px solid var(--border-faint);
+}
+
+.label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: var(--crimson);
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.hero h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--ivory);
+  text-transform: uppercase;
+}
+
+.intro {
+  max-width: 860px;
+  margin-top: 1.5rem;
+  border-left: 2px solid var(--antique-gold);
+  padding-left: 1.2rem;
+  color: var(--ivory-dim);
+  font-size: 1rem;
+}
+
+/* sections */
+section {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--border-faint);
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  font-weight: 500;
+  color: var(--ivory);
+}
+
+.gold-rule {
+  width: 70px;
+  height: 2px;
+  background: var(--antique-gold);
+  margin: 1rem 0 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 1px;
+  background: var(--charcoal-border);
+  border: 1px solid var(--charcoal-border);
+}
+
+.card {
+  background: var(--charcoal-card);
+  padding: 1.7rem;
+  transition: all 0.2s;
+}
+
+.card:hover { background: #1C1C22; }
+.code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  color: var(--antique-gold);
+  margin-bottom: 0.7rem;
+}
+
+.card h3 {
+  color: var(--ivory);
+  font-size: 1.05rem;
+  margin-bottom: 0.7rem;
+}
+
+.card p {
+  font-size: 0.84rem;
+  color: #b5b3aa;
+  line-height: 1.55;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1.2rem;
+  border: 1px solid var(--antique-gold);
+  padding: 10px 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--antique-gold);
+  transition: all 0.2s;
+  cursor: pointer;
+  background: transparent;
+}
+
+.btn:hover {
+  background: var(--antique-gold);
+  color: var(--exec-black);
+  border-color: var(--antique-gold);
+}
+
+.btn-secondary {
+  border-color: var(--crimson);
+  color: var(--crimson);
+}
+.btn-secondary:hover {
+  background: var(--crimson);
+  color: var(--ivory);
+}
+
+/* button coming-soon (no anchor styling) */
+button.btn {
+  width: auto;
+  text-align: center;
+}
+
+.notice {
+  background: linear-gradient(145deg, #0A0A0C 0%, #111113 100%);
+  border-left: 3px solid var(--crimson);
+  padding: 2rem;
+  margin-top: 2rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--ivory-dim);
+}
+
+/* footer */
+.footer {
+  background: var(--deep-charcoal);
+  border-top: 1px solid var(--border-faint);
+  padding: 3rem 0 2rem;
+  font-size: 0.7rem;
+}
+
+.footer-disclaimer {
+  max-width: 900px;
+  color: var(--slate-meta);
+  line-height: 1.6;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.footer-links {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+}
+
+.footer-links a {
+  color: var(--ivory-dim);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--antique-gold);
+}
+
+/* responsive */
+@media (max-width: 860px) {
+  .container { padding: 0 24px; }
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .nav-links.active { display: flex; }
+  .mobile-menu-toggle { display: block; }
+  section { padding: 2.5rem 0; }
+  .hero { padding: 3rem 0 2.5rem; }
+}
+
+@media (max-width: 640px) {
+  .nav-wrapper { flex-direction: column; align-items: flex-start; }
+  .btn-secondary {
+    margin-left: 0 !important;
+  }
+  .btn, button.btn {
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
+  }
+  .btn + .btn, button.btn + button.btn {
+    margin-top: 1rem;
+  }
+}
+</style>
+
+<!-- JSON-LD: EducationalOrganization schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Kelly Legacy Institute",
+  "alternateName": "KLI",
+  "url": "https://kellylegacyestates.com/knowledge-library.html",
+  "logo": "https://kellylegacyestates.com/assets/images/kli-og-cover.png",
+  "description": "Public educational archive for fiduciary literacy, trust administration, equity doctrine, governance systems, AI governance, and continuity education.",
+  "department": {
+    "@type": "Organization",
+    "name": "KLI Knowledge Library"
+  }
+}
+</script>
+
+<!-- WebPage schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "KLI Knowledge Library",
+  "url": "https://kellylegacyestates.com/knowledge-library.html",
+  "description": "The KLI Knowledge Library is the public educational archive of Kelly Legacy Institute, covering fiduciary literacy, trust administration, equity doctrine, governance systems, AI governance, administrative process, and continuity education.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Kelly Legacy Estates",
+    "url": "https://kellylegacyestates.com"
+  },
+  "publisher": {
+    "@type": "EducationalOrganization",
+    "name": "Kelly Legacy Institute",
+    "url": "https://kellylegacyestates.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="noise-overlay"></div>
+<div class="scanline"></div>
+
+<header class="site-header">
+  <div class="container">
+    <div class="nav-wrapper">
+      <div class="identity-mark">
+        <h1>KELLY LEGACY ESTATES</h1>
+        <p>OFFICE OF THE FIDUCIARY</p>
+      </div>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">MENU</button>
+      <nav class="nav-links" id="mainNav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="governance.html">Governance</a>
+        <a href="fiduciary-doctrine.html">Fiduciary Doctrine</a>
+        <a href="ai-governance.html">AI Governance</a>
+        <a href="knowledge-library.html" class="active">Knowledge Library</a>
+        <a href="publications.html">Publications</a>
+        <a href="https://www.skool.com/kelly-legacy-institute-9231/about" target="_blank" rel="noopener noreferrer">Institute</a>
+        <a href="https://kli-access.replit.app/" target="_blank" rel="noopener noreferrer">Institutional Access</a>
+        <a href="contact.html" class="access-cta">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div class="meta-band">
+  <div class="container">
+    <div class="meta-inner">
+      <span><i class="fas fa-shield-alt"></i> INSTITUTIONAL RECORD // KLI-KL-2025</span>
+      <span><i class="fas fa-database"></i> PUBLIC DOCTRINE ARCHIVE // CONTROLLED EDUCATIONAL ACCESS</span>
+      <span><i class="fas fa-hourglass-half"></i> CONTINUITY ACTIVE</span>
+    </div>
+  </div>
+</div>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <div class="label">KLI KNOWLEDGE LIBRARY™ // INSTITUTIONAL DOCTRINE ARCHIVE</div>
+    <h2>Knowledge preserves governance.</h2>
+    <p class="intro">
+      The KLI Knowledge Library™ is the public educational archive of Kelly Legacy Institute, organized to support fiduciary literacy, trust administration, equity doctrine, governance systems, executive AI oversight, and continuity education.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="label">LIBRARY PURPOSE</div>
+    <div class="section-title">Structured Doctrine Access</div>
+    <div class="gold-rule"></div>
+    <p>
+      The Knowledge Library exists to provide disciplined access to institutional doctrine, governance education, fiduciary frameworks, and administrative principles. Materials are organized by subject matter for systematic learning, reference, and continuity development.
+    </p>
+  </div>
+</section>
+
+<!-- Core Library Collections (buttons instead of href="#") -->
+<section>
+  <div class="container">
+    <div class="label">COLLECTIONS</div>
+    <div class="section-title">Core Doctrine Categories</div>
+    <div class="gold-rule"></div>
+    <div class="grid">
+      <div class="card">
+        <div class="code">KLI-CORE-01</div>
+        <h3>Fiduciary Foundations</h3>
+        <p>Core fiduciary duties, entrusted authority, loyalty, care, impartiality, accounting, and fiduciary capacity.</p>
+        <button type="button" class="btn coming-soon">Explore Collection</button>
+      </div>
+      <div class="card">
+        <div class="code">KLI-CORE-02</div>
+        <h3>Trust Administration</h3>
+        <p>Trustee roles, beneficiary rights, legal title, equitable title, trust accounting, trust records, and continuity planning.</p>
+        <button type="button" class="btn coming-soon">Explore Collection</button>
+      </div>
+      <div class="card">
+        <div class="code">KLI-CORE-03</div>
+        <h3>Equity & Remedies</h3>
+        <p>Equity jurisprudence, clean hands, unjust enrichment, constructive trust, equitable lien, rescission, reformation, injunctions, and specific performance.</p>
+        <button type="button" class="btn coming-soon">Explore Collection</button>
+      </div>
+      <div class="card">
+        <div class="code">KLI-CORE-04</div>
+        <h3>Status, Standing & Capacity™</h3>
+        <p>Status, standing, representative capacity, attribution, delegated authority, and capacity‑based consequence.</p>
+        <button type="button" class="btn coming-soon">Explore Collection</button>
+      </div>
+      <div class="card">
+        <div class="code">KLI-CORE-05</div>
+        <h3>Governance Systems</h3>
+        <p>Institutional structure, decision frameworks, accountability systems, administrative records, succession planning, and continuity systems.</p>
+        <button type="button" class="btn coming-soon">Explore Collection</button>
+      </div>
+      <div class="card">
+        <div class="code">KLI-CORE-06</div>
+        <h3>Executive AI Governance</h3>
+        <p>Human review, AI oversight, data boundaries, workflow governance, recordkeeping, authority limits, and AI accountability.</p>
+        <button type="button" class="btn coming-soon">Explore Collection</button>
+      </div>
+      <div class="card">
+        <div class="code">KLI-CORE-07</div>
+        <h3>Administrative Process</h3>
+        <p>Notice, documentation, review, evidence standards, burden concepts, record authentication, and procedural sequence.</p>
+        <button type="button" class="btn coming-soon">Explore Collection</button>
+      </div>
+      <div class="card">
+        <div class="code">KLI-CORE-08</div>
+        <h3>Publications Companion Library</h3>
+        <p>Reading guides, doctrine glossaries, publication companions, and KLI curriculum support materials.</p>
+        <button type="button" class="btn coming-soon">Explore Collection</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Starting Points (buttons instead of href="#") -->
+<section>
+  <div class="container">
+    <div class="label">START HERE</div>
+    <div class="section-title">Featured Doctrine Introductions</div>
+    <div class="gold-rule"></div>
+    <div class="grid">
+      <div class="card">
+        <div class="code">KLI-START-01</div>
+        <h3>What Is a Fiduciary?</h3>
+        <p>Introduction to fiduciary relationships, duties, and the role of entrusted authority.</p>
+        <button type="button" class="btn coming-soon">Read</button>
+      </div>
+      <div class="card">
+        <div class="code">KLI-START-02</div>
+        <h3>Fiduciary Duty Explained</h3>
+        <p>Overview of loyalty, care, impartiality, accounting, and disclosure.</p>
+        <button type="button" class="btn coming-soon">Read</button>
+      </div>
+      <div class="card">
+        <div class="code">KLI-START-03</div>
+        <h3>What Is AI Governance?</h3>
+        <p>Understanding AI oversight, human review, and institutional risk.</p>
+        <button type="button" class="btn coming-soon">Read</button>
+      </div>
+      <div class="card">
+        <div class="code">KLI-START-04</div>
+        <h3>Legal Title vs Equitable Title</h3>
+        <p>Distinction between legal ownership and beneficial interest in trust administration.</p>
+        <button type="button" class="btn coming-soon">Read</button>
+      </div>
+      <div class="card">
+        <div class="code">KLI-START-05</div>
+        <h3>Status, Standing, and Capacity</h3>
+        <p>Foundational concepts for governance participation and procedural consequence.</p>
+        <button type="button" class="btn coming-soon">Read</button>
+      </div>
+      <div class="card">
+        <div class="code">KLI-START-06</div>
+        <h3>Equitable Remedies Explained</h3>
+        <p>Overview of constructive trust, equitable lien, rescission, and specific performance.</p>
+        <button type="button" class="btn coming-soon">Read</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Knowledge Library Governance Notice -->
+<section>
+  <div class="container">
+    <div class="notice">
+      The KLI Knowledge Library is educational in nature. It does not provide legal advice, fiduciary decisions, financial advice, securities offerings, or attorney-client services. Materials are provided for governance literacy, fiduciary education, administrative understanding, and institutional continuity development.
+    </div>
+  </div>
+</section>
+
+<!-- Calls to Action -->
+<section>
+  <div class="container">
+    <div class="label">CONTINUE YOUR LEARNING</div>
+    <div class="section-title">Further Educational Access</div>
+    <div class="gold-rule"></div>
+    <div style="margin: 1.5rem 0;">
+      <a href="https://www.skool.com/kelly-legacy-institute-9231/about" target="_blank" rel="noopener noreferrer" class="btn">Enter Kelly Legacy Institute</a>
+      <a href="https://kli-access.replit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="margin-left: 1rem;">Enter Institutional Access</a>
+      <a href="publications.html" class="btn btn-secondary" style="margin-left: 1rem;">View Publications</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-disclaimer">
+      <i class="fas fa-scale-balanced"></i> This website provides educational governance materials only. It does not provide legal advice, financial advice, fiduciary decisions, securities offerings, investment recommendations, or attorney-client services. KLAT access verification, where applicable, is used only for institutional access classification and governance participation recognition. Users remain responsible for independent professional review.<br><br>
+      © Kelly Legacy Institute // Kelly Legacy Estates Living Trust // Office of the Fiduciary. All institutional marks and doctrine reserved. Private Governance Infrastructure.
+    </div>
+    <div class="footer-links">
+      <a href="ip-policy.html">IP Policy</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="record-policy.html">Record Policy</a>
+      <a href="terms.html">Terms</a>
+      <a href="transparency.html">Transparency</a>
+      <a href="execution-framework.html">Execution Framework</a>
+      <a href="curriculum-portal.html">Curriculum Portal</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  const toggleBtn = document.getElementById('mobileMenuToggle');
+  const mainNav = document.getElementById('mainNav');
+  if (toggleBtn && mainNav) {
+    toggleBtn.addEventListener('click', () => {
+      mainNav.classList.toggle('active');
+    });
+  }
+
+  // "Coming Soon" modal for buttons (no href="#")
+  const comingSoonButtons = document.querySelectorAll('.btn.coming-soon');
+  if (comingSoonButtons.length) {
+    let modal = document.getElementById('comingSoonModal');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.id = 'comingSoonModal';
+      modal.style.display = 'none';
+      modal.style.position = 'fixed';
+      modal.style.top = '0';
+      modal.style.left = '0';
+      modal.style.width = '100%';
+      modal.style.height = '100%';
+      modal.style.backgroundColor = 'rgba(0,0,0,0.85)';
+      modal.style.backdropFilter = 'blur(8px)';
+      modal.style.zIndex = '10001';
+      modal.style.alignItems = 'center';
+      modal.style.justifyContent = 'center';
+      modal.innerHTML = `
+        <div style="background: var(--deep-charcoal); border: 1px solid var(--crimson); max-width: 400px; padding: 2rem; border-radius: 4px; text-align: center;">
+          <i class="fas fa-hourglass-half" style="font-size: 2rem; color: var(--antique-gold); margin-bottom: 1rem; display: block;"></i>
+          <h3 style="font-family: 'Playfair Display', serif; color: var(--ivory); margin-bottom: 0.5rem;">Resource Coming Soon</h3>
+          <p style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--ivory-dim);">This doctrine collection is under active development. Please check back later.</p>
+          <button id="closeComingSoonBtn" style="margin-top: 1.5rem; background: var(--crimson); border: none; padding: 8px 20px; color: var(--ivory); font-family: 'JetBrains Mono', monospace; cursor: pointer;">Close</button>
+        </div>
+      `;
+      document.body.appendChild(modal);
+    }
+
+    function showModal() {
+      if (modal) {
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    function hideModal() {
+      if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+    }
+    const closeBtn = document.getElementById('closeComingSoonBtn');
+    if (closeBtn) closeBtn.addEventListener('click', hideModal);
+    modal.addEventListener('click', (e) => { if (e.target === modal) hideModal(); });
+
+    comingSoonButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        showModal();
+      });
+    });
+  }
+
+  // Chatbase embed - Legacy AI
+  // Actual Legacy AI branding must be configured inside Chatbase dashboard.
+  (function(){
+    if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+      window.chatbase=(...arguments)=>{
+        if(!window.chatbase.q){window.chatbase.q=[]}
+        window.chatbase.q.push(arguments)
+      };
+      window.chatbase=new Proxy(window.chatbase,{
+        get(target,prop){
+          if(prop==="q"){return target.q}
+          return(...args)=>target(prop,...args)
+        }
+      })
+    }
+    const onLoad=function(){
+      const script=document.createElement("script");
+      script.src="https://www.chatbase.co/embed.min.js";
+      script.id="JB7Ysn50O_DpC9tWnoxrh";
+      script.domain="www.chatbase.co";
+      document.body.appendChild(script)
+    };
+    if(document.readyState==="complete"){onLoad()}
+    else{window.addEventListener("load",onLoad)}
+  })();
+</script>
+</body>
+</html>
