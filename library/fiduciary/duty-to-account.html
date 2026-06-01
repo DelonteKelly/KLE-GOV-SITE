@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Duty to Account | KLI Knowledge Library</title>
+<meta name="description" content="Duty to account explained for fiduciaries, trustees, agents, and institutional officers, including records, reports, accountings, transparency, beneficiary information rights, and fiduciary review.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kellylegacyestates.com/library/fiduciary/duty-to-account.html">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Duty to Account | KLI Knowledge Library">
+<meta property="og:description" content="Duty to account explained for fiduciaries, trustees, agents, and institutional officers, including records, reports, accountings, transparency, beneficiary information rights, and fiduciary review.">
+<meta property="og:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
+<meta property="og:url" content="https://kellylegacyestates.com/library/fiduciary/duty-to-account.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kelly Legacy Estates">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Duty to Account | KLI Knowledge Library">
+<meta name="twitter:description" content="Educational doctrine on fiduciary duty to account, including records, reports, transparency, and beneficiary information rights.">
+<meta name="twitter:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
+
+<!-- Schema: Article + Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Duty to Account",
+  "description": "Duty to account explained for fiduciaries, trustees, agents, and institutional officers, including records, reports, accountings, transparency, beneficiary information rights, and fiduciary review.",
+  "author": {
+    "@type": "Organization",
+    "name": "Kelly Legacy Institute"
+  },
+  "publisher": {
+    "@type": "EducationalOrganization",
+    "name": "Kelly Legacy Institute",
+    "url": "https://kellylegacyestates.com"
+  },
+  "datePublished": "2025-01-20",
+  "dateModified": "2026-06-01",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://kellylegacyestates.com/library/fiduciary/duty-to-account.html"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "KLI Knowledge Library",
+      "item": "https://kellylegacyestates.com/knowledge-library.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Fiduciary Foundations",
+      "item": "https://kellylegacyestates.com/library/fiduciary/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Duty to Account"
+    }
+  ]
+}
+</script>
+
+<!-- Styles -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root {
+  --exec-black: #050505;
+  --deep-charcoal: #111113;
+  --charcoal-card: #16161A;
+  --charcoal-border: #23232A;
+  --crimson: #9E2A2A;
+  --crimson-dim: #6E1E1E;
+  --antique-gold: #C8A24C;
+  --antique-gold-muted: #9A7A3A;
+  --ivory: #F0EFEA;
+  --ivory-dim: #CBC9C1;
+  --slate-meta: #7A7A7A;
+  --border-faint: rgba(240,239,234,0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--exec-black);
+  color: var(--ivory-dim);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* noise overlay and scanline */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.35;
+}
+
+.scanline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(0deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 3px, rgba(0,0,0,0.05) 3px, rgba(0,0,0,0.05) 6px);
+  pointer-events: none;
+  z-index: 998;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+  position: relative;
+  z-index: 10;
+}
+
+/* header */
+.site-header {
+  border-bottom: 1px solid var(--border-faint);
+  background: rgba(5,5,5,0.92);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.identity-mark h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ivory);
+}
+
+.identity-mark p {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--crimson);
+  margin-top: 4px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+  .nav-links a.active {
+  color: var(--antique-gold);
+  border-bottom: 1px solid var(--antique-gold);
+  }
+
+.nav-links a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  color: var(--ivory-dim);
+  transition: color 0.2s;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover { color: var(--antique-gold); }
+.nav-links .access-cta {
+  border: 1px solid var(--crimson);
+  padding: 8px 18px;
+  color: var(--crimson);
+  font-weight: 500;
+}
+.nav-links .access-cta:hover { background: rgba(158,42,42,0.08); color: var(--antique-gold); border-color: var(--antique-gold); }
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--crimson);
+  color: var(--ivory);
+  padding: 8px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  cursor: pointer;
+}
+
+/* meta-band */
+.meta-band {
+  background: var(--deep-charcoal);
+  border-bottom: 1px solid var(--border-faint);
+  padding: 0.5rem 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--slate-meta);
+}
+
+.meta-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.meta-inner span i { margin-right: 6px; color: var(--antique-gold-muted); font-size: 0.7rem; }
+
+.article-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.article-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-faint);
+  padding-bottom: 1.5rem;
+}
+
+.article-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--crimson);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.article-id {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--antique-gold-muted);
+  margin: 0.5rem 0;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: var(--ivory);
+  margin: 1rem 0 0.5rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--ivory);
+  margin: 2rem 0 1rem;
+  border-left: 3px solid var(--antique-gold);
+  padding-left: 1rem;
+}
+
+.content-panel {
+  background: var(--charcoal-card);
+  border: 1px solid var(--charcoal-border);
+  padding: 1.8rem;
+  margin: 1.5rem 0;
+  border-radius: 2px;
+}
+
+.notice {
+  background: rgba(158,42,42,0.08);
+  border-left: 3px solid var(--crimson);
+  padding: 1.2rem;
+  font-size: 0.85rem;
+  margin: 1.5rem 0;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid var(--antique-gold);
+  padding: 10px 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--antique-gold);
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: var(--antique-gold);
+  color: var(--exec-black);
+}
+
+/* footer */
+.footer {
+  background: var(--deep-charcoal);
+  border-top: 1px solid var(--border-faint);
+  padding: 3rem 0 2rem;
+  font-size: 0.7rem;
+}
+
+.footer-disclaimer {
+  max-width: 900px;
+  color: var(--slate-meta);
+  line-height: 1.6;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.footer-links {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+}
+
+.footer-links a {
+  color: var(--ivory-dim);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--antique-gold);
+}
+
+/* responsive */
+@media (max-width: 860px) {
+  .container { padding: 0 24px; }
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .nav-links.active { display: flex; }
+  .mobile-menu-toggle { display: block; }
+  h1 { font-size: 2rem; }
+}
+
+@media (max-width: 640px) {
+  .nav-wrapper { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<div class="noise-overlay"></div>
+<div class="scanline"></div>
+<header class="site-header">
+  <div class="container">
+    <div class="nav-wrapper">
+      <div class="identity-mark"><h1>KELLY LEGACY ESTATES</h1><p>OFFICE OF THE FIDUCIARY</p></div>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">MENU</button>
+      <nav class="nav-links" id="mainNav" aria-label="Primary navigation">
+        <a href="../../index.html">Home</a>
+        <a href="../../pages/governance.html">Governance</a>
+        <a href="../../pages/fiduciary-doctrine.html">Fiduciary Doctrine</a>
+        <a href="../../pages/ai-governance.html">AI Governance</a>
+        <a href="../../knowledge-library.html" class="active">Knowledge Library</a>
+        <a href="../../pages/publications.html">Publications</a>
+        <a href="../../pages/institute.html">Institute</a>
+        <a href="../../pages/institutional-solutions.html">Institutional Solutions</a>
+        <a href="../../pages/klat-access.html">KLAT Access</a>
+        <a href="../../pages/contact.html" class="access-cta">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<div class="meta-band"><div class="container"><div class="meta-inner"><span><i class="fas fa-shield-alt"></i> KLI KNOWLEDGE LIBRARY // FIDUCIARY FOUNDATIONS</span><span><i class="fas fa-hourglass-half"></i> CONTINUITY ACTIVE</span></div></div></div>
+
+<main>
+<div class="article-container">
+  <div class="article-header">
+    <div class="article-label">KELLY LEGACY INSTITUTE™ // KLI KNOWLEDGE LIBRARY™</div>
+    <div class="article-id">Article ID: KLI-KL-FID-004 | Public Educational Doctrine | Status: Published</div>
+    <h1>Duty to Account</h1>
+    <div class="meta-inner" style="margin-top:1rem;"><span>Primary Collection: Fiduciary Foundations</span><span>Related: Trust Administration, Governance Systems, Administrative Process</span></div>
+  </div>
+
+  <!-- I. EXECUTIVE SUMMARY -->
+  <div class="section-title">I. Executive Summary</div>
+  <p>The duty to account is the fiduciary obligation to maintain accurate records, preserve receipts and disbursements, disclose material information concerning administration, and provide a reviewable account of entrusted authority, property, and interests. This duty transforms fiduciary action from unverifiable conduct into documented, transparent, and reviewable administration.</p>
+  <p>Fiduciary accountability cannot exist without records. A fiduciary who fails to account deprives beneficiaries of the ability to verify proper administration, identify errors or breaches, and exercise their rights to information and review. Equity treats absence of records as presumptive evidence against the fiduciary, shifting the burden of proof to justify transactions that cannot be documented.</p>
+  <div class="content-panel"><strong>Why It Matters:</strong> Without accounting, beneficiaries cannot know whether fiduciaries have acted loyally, prudently, or within authority. The duty to account is the mechanism that makes fiduciary accountability operational rather than theoretical.</div>
+
+  <!-- II. CORE PRINCIPLE -->
+  <div class="section-title">II. Core Principle</div>
+  <p><strong>A fiduciary who receives, controls, manages, or administers entrusted property, records, authority, or interests must maintain accurate records and provide a clear accounting sufficient for review.</strong></p>
+
+  <!-- III. GOVERNANCE RULE -->
+  <div class="section-title">III. Governance Rule</div>
+  <p>No fiduciary action involving entrusted property, funds, records, authority, or institutional interest may remain undocumented. Every material action must be traceable through an authority reference, transaction record, accounting entry, communication record, and review trail. Where records are absent, the fiduciary bears the burden of proving proper administration.</p>
+
+  <!-- IV. DOCTRINAL EXPLANATION -->
+  <div class="section-title">IV. Doctrinal Explanation</div>
+  <p>The duty to account encompasses several distinct obligations:</p>
+  <ul style="margin-left:1.5rem; margin-top:0.5rem;">
+    <li><strong>Accounting as Fiduciary Transparency:</strong> A fiduciary must render a clear, accurate, and complete account of all receipts, disbursements, distributions, and transactions affecting entrusted property or interests.</li>
+    <li><strong>Records as Proof of Administration:</strong> Documentation serves as the evidentiary foundation for fiduciary conduct. Without records, proper administration cannot be verified.</li>
+    <li><strong>Receipts and Disbursements:</strong> Every inflow and outflow of property, funds, or value must be recorded, categorized, and supported by source documents.</li>
+    <li><strong>Inventory of Property:</strong> A fiduciary must prepare and maintain an inventory of all property subject to the fiduciary relationship, including assets, liabilities, and claims.</li>
+    <li><strong>Separation of Fiduciary and Personal Records:</strong> Entrusted property and records must be kept separate from personal assets and documentation to avoid confusion and improper benefit.</li>
+    <li><strong>Beneficiary Right to Information:</strong> Beneficiaries have a right to request and receive information concerning the administration of the fiduciary relationship, including accountings and supporting documents.</li>
+    <li><strong>Duty to Report:</strong> A fiduciary must provide regular reports, annual accountings, and final accountings upon termination of the fiduciary relationship.</li>
+    <li><strong>Duty to Preserve Records:</strong> Records must be retained for the period required by applicable law, governing instrument, institutional policy, or professional standard.</li>
+    <li><strong>Burden Created by Missing Records:</strong> Courts and reviewing authorities may presume against the fiduciary when records are incomplete or missing, shifting the burden of proof to the fiduciary to establish proper administration.</li>
+    <li><strong>Relationship to Equitable Remedies:</strong> Accounting failures support remedies including surcharge, removal, denial of compensation, and constructive trust.</li>
+  </ul>
+
+  <!-- V. RECOGNIZED AUTHORITIES -->
+  <div class="section-title">V. Recognized Authorities</div>
+  <ul style="margin-left:1.5rem; line-height:1.6;">
+    <li><strong>Uniform Trust Code § 813</strong> – A trustee shall keep the qualified beneficiaries of the trust reasonably informed about the administration of the trust and shall provide accountings, notices, and reports as specified.</li>
+    <li><strong>Uniform Trust Code § 810</strong> – Requires recordkeeping and identification of trust property, including a duty to keep trust property separate from the trustee's personal property.</li>
+    <li><strong>Uniform Trust Code § 801</strong> – Establishes the duty to administer the trust in good faith, which includes transparency and accurate accounting.</li>
+    <li><strong>Uniform Trust Code § 804</strong> – The duty of prudent administration includes maintaining appropriate records and documentation.</li>
+    <li><strong>Restatement (Third) of Trusts § 83</strong> – A trustee has a duty to furnish information to beneficiaries concerning the administration of the trust, including accountings and material facts.</li>
+    <li><strong>Restatement (Third) of Trusts § 76</strong> – The duty to administer the trust includes maintaining records and providing accountings.</li>
+    <li><strong>Bogert, The Law of Trusts and Trustees § 543</strong> – Trustees must maintain accurate accounts, preserve supporting documentation, and produce accountings for beneficiary inspection.</li>
+    <li><strong>Scott and Ascher on Trusts § 17.2</strong> – The fiduciary must keep clear records and render accounts; the burden of proof may shift to the fiduciary where records are deficient.</li>
+    <li><strong>Pomeroy, Equity Jurisprudence § 397</strong> – Equity requires fiduciaries to account for their administration as a condition of exercising entrusted authority.</li>
+  </ul>
+  <p>These authorities reflect broadly recognized fiduciary principles. Specific application depends on jurisdiction, governing instruments, facts, and competent professional review.</p>
+
+  <!-- VI. OPERATIONAL APPLICATION -->
+  <div class="section-title">VI. Operational Application</div>
+  <p>The duty to account applies across all fiduciary relationships and institutional contexts:</p>
+  <ul style="margin-left:1.5rem;">
+    <li><strong>Trust Administration:</strong> Trustees must maintain trust ledgers, bank account records, investment records, tax returns, distribution records, and beneficiary communications. Annual accountings must be provided to qualified beneficiaries.</li>
+    <li><strong>Trustee Accounting:</strong> Accountings should include beginning inventory, receipts (income and principal), disbursements (expenses and distributions), gains and losses, and ending inventory, with supporting documentation available for review.</li>
+    <li><strong>Institutional Ledger Systems:</strong> Organizations must maintain accounting systems that segregate entrusted funds, track authority approvals, and preserve audit trails for all financial and administrative actions.</li>
+    <li><strong>Beneficiary Communications:</strong> Accountings, notices, and reports must be provided in writing, preserved as records, and made available for beneficiary inspection upon reasonable request.</li>
+    <li><strong>Intake Records:</strong> Initial inventories and acceptance documentation establish the baseline for future accounting.</li>
+    <li><strong>Document Custody:</strong> Original governing instruments, appointment documents, and material correspondence must be preserved in secure, accessible locations.</li>
+    <li><strong>Record Audits:</strong> Regular internal or independent reviews verify accounting accuracy and compliance with fiduciary standards.</li>
+    <li><strong>Final Accounting:</strong> Upon termination of the fiduciary relationship, a complete accounting must be provided, approved, and preserved as a permanent record.</li>
+  </ul>
+
+  <!-- VII. CAPACITY DISTINCTION -->
+  <div class="section-title">VII. Capacity Distinction</div>
+  <div class="content-panel">
+    <p><strong>Private Individual Capacity:</strong> An individual acting for personal benefit has no duty to account to others, though records may be maintained for personal reference.</p>
+    <p><strong>Representative / Fiduciary Capacity:</strong> Once fiduciary capacity attaches, the duty to account applies. The fiduciary must maintain separate records and provide accountings to beneficiaries, principals, or reviewing authorities.</p>
+    <p><strong>Institutional / Office Capacity:</strong> Officers, directors, and institutional fiduciaries must maintain organizational accounting systems that preserve transparency, support review, and document all material actions.</p>
+    <p>Accounting obligations attach only when entrusted capacity exists. The same person owes no duty when acting privately but owes strict accounting duties when acting as fiduciary.</p>
+  </div>
+
+  <!-- VIII. RECORDKEEPING REQUIREMENTS -->
+  <div class="section-title">VIII. Recordkeeping Requirements</div>
+  <ul style="margin-left:1.5rem;">
+    <li>Asset inventory (initial and updated).</li>
+    <li>Receipts for all property or funds received.</li>
+    <li>Disbursement ledger with payee, amount, date, purpose, and authority reference.</li>
+    <li>Bank statements and financial account records for all fiduciary accounts.</li>
+    <li>Trust or institutional account records showing separate custody of entrusted property.</li>
+    <li>Transaction memoranda for all material decisions affecting property or interests.</li>
+    <li>Authority references linking each action to governing instrument or statute.</li>
+    <li>Beneficiary notices, reports, and accountings provided.</li>
+    <li>Annual reports summarizing administration for the period.</li>
+    <li>Final accounting upon termination, approved by beneficiaries or court.</li>
+    <li>Document custody log tracking location and access to records.</li>
+    <li>Version history for any amended or corrected records.</li>
+    <li>Signature capacity identified for each document.</li>
+    <li>Backup location and preservation protocol.</li>
+  </ul>
+  <p>Core rule: <strong>Record precedes recognition.</strong> Without a record, fiduciary action is vulnerable to challenge, and the burden of proof shifts to the fiduciary.</p>
+
+  <!-- IX. COMMON ERRORS -->
+  <div class="section-title">IX. Common Errors</div>
+  <ul style="margin-left:1.5rem;">
+    <li><strong>Treating informal records as sufficient.</strong> Fiduciary accounting requires organized, verifiable records, not informal notes or memory.</li>
+    <li><strong>Mixing personal and fiduciary accounts.</strong> Commingling creates confusion, risks improper benefit, and violates segregation requirements.</li>
+    <li><strong>Failing to identify trust property.</strong> Assets must be clearly identified as subject to the fiduciary relationship; ambiguous ownership invites challenge.</li>
+    <li><strong>Failing to retain receipts.</strong> Without source documents, disbursements cannot be verified, and the fiduciary may be personally surcharged.</li>
+    <li><strong>Failing to provide beneficiary information.</strong> Withholding accountings violates the duty to inform and may constitute concealment.</li>
+    <li><strong>Ignoring requests for reports.</strong> Beneficiaries have a right to information; unreasonable delay or refusal supports removal and remedies.</li>
+    <li><strong>Relying on memory instead of records.</strong> Memory is not accounting; records must be contemporaneous and verifiable.</li>
+    <li><strong>Late reconstruction of records.</strong> Post-hoc reconstruction is less credible and may not satisfy the duty to account.</li>
+    <li><strong>Unsigned accountings.</strong> Accountings must be authenticated by the fiduciary's signature and capacity identification.</li>
+    <li><strong>Unclear capacity on financial documents.</strong> All transactions should clearly indicate whether they are in fiduciary or personal capacity.</li>
+  </ul>
+
+  <!-- X. INSTITUTIONAL RATIONALE -->
+  <div class="section-title">X. Institutional Rationale</div>
+  <p>KLI treats the duty to account as the backbone of fiduciary accountability, institutional memory, equitable review, and continuity. Accounting transforms good intentions into verifiable conduct. Without accounting, governance becomes dependent on trust alone, which is insufficient for institutional reliability. The Institute preserves accounting doctrine to ensure that all entrusted authority remains documented, transparent, and reviewable across time and personnel changes.</p>
+
+  <!-- XI. RELATED KLI DOCTRINE -->
+  <div class="section-title">XI. Related KLI Doctrine</div>
+  <ul style="margin-left:1.5rem;">
+    <li><a href="../fiduciary/what-is-a-fiduciary.html" style="color:var(--antique-gold);">What Is a Fiduciary?</a> (KLI-KL-FID-001)</li>
+    <li><a href="../fiduciary/fiduciary-duty-explained.html" style="color:var(--antique-gold);">Fiduciary Duty Explained</a> (KLI-KL-FID-002)</li>
+    <li><a href="../fiduciary/duty-of-loyalty.html" style="color:var(--antique-gold);">Duty of Loyalty</a> (KLI-KL-FID-003)</li>
+    <li><a href="../trust-administration/legal-title-vs-equitable-title.html" style="color:var(--antique-gold);">Legal Title vs Equitable Title</a> (KLI-KL-TRUST-001)</li>
+    <li><a href="../status-standing-capacity/status-standing-capacity.html" style="color:var(--antique-gold);">Status, Standing, and Capacity</a> (KLI-KL-SSC-001)</li>
+    <li><a href="../equity/equity-follows-the-law.html" style="color:var(--antique-gold);">Equity Follows the Law</a> (KLI-KL-EQ-001)</li>
+  </ul>
+
+  <!-- XII. EDUCATIONAL DISCLAIMER -->
+  <div class="notice">
+    This article is published by Kelly Legacy Institute for educational governance literacy only. It does not provide legal advice, financial advice, fiduciary decisions, securities guidance, tax advice, or attorney-client services. Application of legal or equitable principles depends on jurisdiction, facts, governing instruments, and competent professional review.
+  </div>
+
+  <!-- CTAs -->
+  <div style="margin-top: 2rem; text-align: center;">
+    <a href="../../pages/institute.html" class="btn">Continue Through Kelly Legacy Institute</a>
+    <a href="../../pages/publications.html" class="btn">View Publications</a>
+    <a href="../../knowledge-library.html" class="btn">Return to Knowledge Library</a>
+  </div>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-disclaimer">
+      <i class="fas fa-scale-balanced"></i> Educational governance materials only. © Kelly Legacy Institute // Kelly Legacy Estates Living Trust // Office of the Fiduciary.
+    </div>
+    <div class="footer-links">
+      <a href="../../legal/ip-policy.html">IP Policy</a>
+      <a href="../../legal/privacy.html">Privacy</a>
+      <a href="../../legal/record-policy.html">Record Policy</a>
+      <a href="../../legal/terms.html">Terms</a>
+      <a href="../../legal/transparency.html">Transparency</a>
+      <a href="../../pages/execution-framework.html">Execution Framework</a>
+      <a href="../../pages/curriculum-portal.html">Curriculum Portal</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  const toggleBtn = document.getElementById('mobileMenuToggle');
+  const mainNav = document.getElementById('mainNav');
+  if (toggleBtn && mainNav) {
+    toggleBtn.addEventListener('click', () => {
+      mainNav.classList.toggle('active');
+    });
+  }
+
+  // Chatbase embed - Legacy AI
+  // Actual Legacy AI branding must be configured inside Chatbase dashboard.
+  (function(){
+    if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+      window.chatbase=(...arguments)=>{
+        if(!window.chatbase.q){window.chatbase.q=[]}
+        window.chatbase.q.push(arguments)
+      };
+      window.chatbase=new Proxy(window.chatbase,{
+        get(target,prop){
+          if(prop==="q"){return target.q}
+          return(...args)=>target(prop,...args)
+        }
+      })
+    }
+    const onLoad=function(){
+      const script=document.createElement("script");
+      script.src="https://www.chatbase.co/embed.min.js";
+      script.id="JB7Ysn50O_DpC9tWnoxrh";
+      script.domain="www.chatbase.co";
+      document.body.appendChild(script)
+    };
+    if(document.readyState==="complete"){onLoad()}
+    else{window.addEventListener("load",onLoad)}
+  })();
+</script>
+</body>
+</html>
