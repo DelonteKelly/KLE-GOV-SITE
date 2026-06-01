@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Trust Accounting | KLI Knowledge Library</title>
+<meta name="description" content="Trust accounting explained through fiduciary records, receipts, disbursements, distributions, asset schedules, trustee reporting, beneficiary review, and duty to account.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kellylegacyestates.com/library/trust-administration/trust-accounting.html">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Trust Accounting | KLI Knowledge Library">
+<meta property="og:description" content="Trust accounting explained through fiduciary records, receipts, disbursements, distributions, asset schedules, trustee reporting, beneficiary review, and duty to account.">
+<meta property="og:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
+<meta property="og:url" content="https://kellylegacyestates.com/library/trust-administration/trust-accounting.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kelly Legacy Estates">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Trust Accounting | KLI Knowledge Library">
+<meta name="twitter:description" content="Educational doctrine on trust accounting, fiduciary records, receipts, disbursements, distributions, asset schedules, trustee reporting, beneficiary review, and duty to account.">
+<meta name="twitter:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
+
+<!-- Schema: Article + Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Trust Accounting",
+  "description": "Trust accounting explained through fiduciary records, receipts, disbursements, distributions, asset schedules, trustee reporting, beneficiary review, and duty to account.",
+  "author": {
+    "@type": "Organization",
+    "name": "Kelly Legacy Institute"
+  },
+  "publisher": {
+    "@type": "EducationalOrganization",
+    "name": "Kelly Legacy Institute",
+    "url": "https://kellylegacyestates.com"
+  },
+  "datePublished": "2025-03-10",
+  "dateModified": "2026-06-01",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://kellylegacyestates.com/library/trust-administration/trust-accounting.html"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "KLI Knowledge Library",
+      "item": "https://kellylegacyestates.com/knowledge-library.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Trust Administration",
+      "item": "https://kellylegacyestates.com/library/trust-administration/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Trust Accounting"
+    }
+  ]
+}
+</script>
+
+<!-- Styles -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root {
+  --exec-black: #050505;
+  --deep-charcoal: #111113;
+  --charcoal-card: #16161A;
+  --charcoal-border: #23232A;
+  --crimson: #9E2A2A;
+  --crimson-dim: #6E1E1E;
+  --antique-gold: #C8A24C;
+  --antique-gold-muted: #9A7A3A;
+  --ivory: #F0EFEA;
+  --ivory-dim: #CBC9C1;
+  --slate-meta: #7A7A7A;
+  --border-faint: rgba(240,239,234,0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--exec-black);
+  color: var(--ivory-dim);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.35;
+}
+
+.scanline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(0deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 3px, rgba(0,0,0,0.05) 3px, rgba(0,0,0,0.05) 6px);
+  pointer-events: none;
+  z-index: 998;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+  position: relative;
+  z-index: 10;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border-faint);
+  background: rgba(5,5,5,0.92);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.identity-mark h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ivory);
+}
+
+.identity-mark p {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--crimson);
+  margin-top: 4px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  color: var(--ivory-dim);
+  transition: color 0.2s;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover { color: var(--antique-gold); }
+.nav-links a.active {
+  color: var(--antique-gold);
+  border-bottom: 1px solid var(--antique-gold);
+}
+.nav-links .access-cta {
+  border: 1px solid var(--crimson);
+  padding: 8px 18px;
+  color: var(--crimson);
+  font-weight: 500;
+}
+.nav-links .access-cta:hover { background: rgba(158,42,42,0.08); color: var(--antique-gold); border-color: var(--antique-gold); }
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--crimson);
+  color: var(--ivory);
+  padding: 8px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  cursor: pointer;
+}
+
+.meta-band {
+  background: var(--deep-charcoal);
+  border-bottom: 1px solid var(--border-faint);
+  padding: 0.5rem 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--slate-meta);
+}
+
+.meta-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.meta-inner span i { margin-right: 6px; color: var(--antique-gold-muted); font-size: 0.7rem; }
+
+.article-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.article-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-faint);
+  padding-bottom: 1.5rem;
+}
+
+.article-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--crimson);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.article-id {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--antique-gold-muted);
+  margin: 0.5rem 0;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: var(--ivory);
+  margin: 1rem 0 0.5rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--ivory);
+  margin: 2rem 0 1rem;
+  border-left: 3px solid var(--antique-gold);
+  padding-left: 1rem;
+}
+
+.content-panel {
+  background: var(--charcoal-card);
+  border: 1px solid var(--charcoal-border);
+  padding: 1.8rem;
+  margin: 1.5rem 0;
+  border-radius: 2px;
+}
+
+.notice {
+  background: rgba(158,42,42,0.08);
+  border-left: 3px solid var(--crimson);
+  padding: 1.2rem;
+  font-size: 0.85rem;
+  margin: 1.5rem 0;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid var(--antique-gold);
+  padding: 10px 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--antique-gold);
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: var(--antique-gold);
+  color: var(--exec-black);
+}
+
+.footer {
+  background: var(--deep-charcoal);
+  border-top: 1px solid var(--border-faint);
+  padding: 3rem 0 2rem;
+  font-size: 0.7rem;
+}
+
+.footer-disclaimer {
+  max-width: 900px;
+  color: var(--slate-meta);
+  line-height: 1.6;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.footer-links {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+}
+
+.footer-links a {
+  color: var(--ivory-dim);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--antique-gold);
+}
+
+@media (max-width: 860px) {
+  .container { padding: 0 24px; }
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .nav-links.active { display: flex; }
+  .mobile-menu-toggle { display: block; }
+  h1 { font-size: 2rem; }
+}
+
+@media (max-width: 640px) {
+  .nav-wrapper { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<div class="noise-overlay"></div>
+<div class="scanline"></div>
+<header class="site-header">
+  <div class="container">
+    <div class="nav-wrapper">
+      <div class="identity-mark"><h1>KELLY LEGACY ESTATES</h1><p>OFFICE OF THE FIDUCIARY</p></div>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">MENU</button>
+      <nav class="nav-links" id="mainNav" aria-label="Primary navigation">
+        <a href="../../index.html">Home</a>
+        <a href="../../pages/governance.html">Governance</a>
+        <a href="../../pages/fiduciary-doctrine.html">Fiduciary Doctrine</a>
+        <a href="../../pages/ai-governance.html">AI Governance</a>
+        <a href="../../knowledge-library.html">Knowledge Library</a>
+        <a href="../../pages/publications.html">Publications</a>
+        <a href="../../pages/institute.html">Institute</a>
+        <a href="../../pages/institutional-solutions.html">Institutional Solutions</a>
+        <a href="../../pages/klat-access.html">KLAT Access</a>
+        <a href="../../pages/contact.html" class="access-cta">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<div class="meta-band"><div class="container"><div class="meta-inner"><span><i class="fas fa-shield-alt"></i> KLI KNOWLEDGE LIBRARY // TRUST ADMINISTRATION</span><span><i class="fas fa-hourglass-half"></i> CONTINUITY ACTIVE</span></div></div></div>
+
+<main>
+<div class="article-container">
+  <div class="article-header">
+    <div class="article-label">KELLY LEGACY INSTITUTE™ // KLI KNOWLEDGE LIBRARY™</div>
+    <div class="article-id">Article ID: KLI-KL-TRUST-006 | Public Educational Doctrine | Status: Published</div>
+    <h1>Trust Accounting</h1>
+    <div class="meta-inner" style="margin-top:1rem;"><span>Primary Collection: Trust Administration</span><span>Related: Fiduciary Foundations, Governance Systems, Equity & Remedies</span></div>
+  </div>
+
+  <!-- I. EXECUTIVE SUMMARY -->
+  <div class="section-title">I. Executive Summary</div>
+  <p>Trust accounting is not ordinary bookkeeping. It is fiduciary evidence. It proves what property entered the trust, what was received, what was spent, what was distributed, what remains, and whether the trustee acted within fiduciary duty. Trust accounting is the record system that transforms trustee actions from unverifiable conduct into reviewable administration.</p>
+  <p>No accounting, no reliable administration. No records, no review. No review, no accountability. The duty to account is a core fiduciary obligation, and accounting records are the primary evidence of faithful administration. A trustee who fails to account cannot prove proper administration and may be surcharged, removed, or held personally liable for undocumented transactions.</p>
+  <div class="content-panel"><strong>Why It Matters:</strong> Trust accounting protects both the beneficiary and the trustee. Beneficiaries rely on accounting to verify proper administration. Trustees rely on accounting records to prove their faithful performance and defeat unfounded claims.</div>
+
+  <!-- II. CORE PRINCIPLE -->
+  <div class="section-title">II. Core Principle</div>
+  <p><strong>Trust accounting is the fiduciary record system that documents trust property, receipts, disbursements, distributions, expenses, asset changes, and trustee administration for beneficiary review.</strong></p>
+
+  <!-- III. GOVERNANCE RULE -->
+  <div class="section-title">III. Governance Rule</div>
+  <p>Every trust transaction must be recorded with: (1) date, (2) amount or asset description, (3) source, (4) purpose, (5) authority reference, (6) capacity, (7) supporting document, and (8) effect on trust property.</p>
+
+  <!-- IV. DOCTRINAL EXPLANATION -->
+  <div class="section-title">IV. Doctrinal Explanation</div>
+  <ul style="margin-left:1.5rem; margin-top:0.5rem;">
+    <li><strong>Accounting as Fiduciary Accountability:</strong> The duty to account is the mechanism that makes fiduciary accountability operational. Without accounting, beneficiaries cannot verify proper administration.</li>
+    <li><strong>Inventory Accounting:</strong> A complete inventory of trust assets establishes the baseline for all subsequent accounting. The inventory must identify each asset, its value, and its title status.</li>
+    <li><strong>Receipts:</strong> All property received into the trust must be recorded, including date, source, description, and value. Receipts establish what came into the trustee's control.</li>
+    <li><strong>Disbursements:</strong> All payments from trust assets must be recorded, including payee, amount, date, purpose, and authority reference. Disbursements establish what left the trust and why.</li>
+    <li><strong>Distributions:</strong> Distributions to beneficiaries must be recorded with beneficiary identification, amount, date, authority, and receipt acknowledgment.</li>
+    <li><strong>Income and Principal Classifications:</strong> Trust accounting distinguishes between income (earnings from trust assets) and principal (the original corpus). Classification matters for distribution rights.</li>
+    <li><strong>Trustee Fees:</strong> Trustee compensation must be disclosed, authorized, and recorded. Secret compensation breaches the duty of loyalty.</li>
+    <li><strong>Expenses:</strong> Administrative expenses must be reasonable, necessary, properly authorized, and documented.</li>
+    <li><strong>Beneficiary Reporting:</strong> Qualified beneficiaries are entitled to receive accountings. The frequency and detail depend on trust terms and applicable law.</li>
+    <li><strong>Final Accounting:</strong> Upon termination, the trustee must provide a complete accounting from inception to closing, showing all transactions and the final distribution.</li>
+    <li><strong>Burden Created by Missing Records:</strong> When records are missing, the burden of proof may shift to the trustee to establish proper administration by other evidence. Missing records may result in surcharge for undocumented amounts.</li>
+  </ul>
+  <p><strong>Clarifications:</strong> Trust accounting protects both beneficiary and trustee. Beneficiaries rely on accounting to verify proper administration. Trustees rely on accounting records to prove faithful performance and defeat unfounded claims.</p>
+
+  <!-- V. RECOGNIZED AUTHORITIES -->
+  <div class="section-title">V. Recognized Authorities</div>
+  <ul style="margin-left:1.5rem; line-height:1.6;">
+    <li><strong>Uniform Trust Code § 810:</strong> A trustee shall keep trust property separate and identifiable from the trustee's personal property and maintain adequate records.</li>
+    <li><strong>Uniform Trust Code § 813:</strong> A trustee has a duty to inform and report, including providing accountings and responding to beneficiary requests.</li>
+    <li><strong>Uniform Trust Code § 801:</strong> A trustee shall administer the trust in good faith, in accordance with its terms and purposes, and in the interests of the beneficiaries—the duty to account is implicit in proper administration.</li>
+    <li><strong>Uniform Trust Code § 802:</strong> The duty of loyalty requires full disclosure of transactions, which includes accounting records.</li>
+    <li><strong>Uniform Trust Code § 804:</strong> Prudent administration includes maintaining accurate accounting records.</li>
+    <li><strong>Uniform Trust Code § 1001:</strong> A trustee who commits a breach of trust is liable for the greater of the amount required to restore the trust or the profit made by the trustee. Accounting records establish the measure of liability.</li>
+    <li><strong>Restatement (Third) of Trusts § 76:</strong> The duty to administer the trust includes the duty to maintain accounts and provide information.</li>
+    <li><strong>Restatement (Third) of Trusts § 83:</strong> A trustee has a duty to furnish information to beneficiaries concerning the administration of the trust, including accountings.</li>
+    <li><strong>Bogert, The Law of Trusts and Trustees § 543:</strong> The trustee's duty to account is fundamental; without accounting, the trustee cannot be held accountable.</li>
+    <li><strong>Scott and Ascher on Trusts § 17.2:</strong> A trustee must keep clear records and render accounts; the burden of proof may shift to the trustee where records are deficient.</li>
+  </ul>
+  <p>These authorities reflect broadly recognized trust accounting principles. Specific application depends on jurisdiction, trust terms, accounting period, asset type, facts, and competent professional review.</p>
+
+  <!-- VI. OPERATIONAL APPLICATION - ACCOUNTING WORKFLOW -->
+  <div class="section-title">VI. Operational Application</div>
+  <div class="content-panel">
+    <p><strong>PHASE 1 — OPENING INVENTORY</strong></p>
+    <ul style="margin-left:1rem;">
+      <li>List all trust assets with descriptions and estimated values</li>
+      <li>Confirm title is properly held in trustee capacity</li>
+      <li>Assign opening values (cost basis, fair market value at funding)</li>
+      <li>Classify property as income-producing or principal</li>
+    </ul>
+    <p style="margin-top:1rem;"><strong>PHASE 2 — TRANSACTION RECORDING</strong></p>
+    <ul style="margin-left:1rem;">
+      <li>Record all receipts: date, source, amount, classification (income/principal)</li>
+      <li>Record all disbursements: date, payee, amount, purpose, authority</li>
+      <li>Record all expenses: reasonable, necessary, documented</li>
+      <li>Record all income: interest, dividends, rents, royalties</li>
+      <li>Record principal changes: purchases, sales, distributions, asset value changes</li>
+    </ul>
+    <p style="margin-top:1rem;"><strong>PHASE 3 — REVIEW</strong></p>
+    <ul style="margin-left:1rem;">
+      <li>Reconcile accounts monthly or quarterly</li>
+      <li>Verify supporting documents for all transactions</li>
+      <li>Confirm capacity identification on all records</li>
+      <li>Review for completeness and accuracy</li>
+    </ul>
+    <p style="margin-top:1rem;"><strong>PHASE 4 — REPORTING</strong></p>
+    <ul style="margin-left:1rem;">
+      <li>Provide initial notice and inventory to qualified beneficiaries</li>
+      <li>Prepare annual accounting showing all receipts, disbursements, and balances</li>
+      <li>Provide interim accountings upon reasonable beneficiary request</li>
+      <li>Respond to beneficiary questions with supporting documentation</li>
+    </ul>
+    <p style="margin-top:1rem;"><strong>PHASE 5 — FINAL ACCOUNTING</strong></p>
+    <ul style="margin-left:1rem;">
+      <li>Prepare closing balance showing all assets remaining</li>
+      <li>Document all final distributions with receipts</li>
+      <li>Obtain beneficiary approval or court approval where required</li>
+      <li>Archive records according to retention requirements</li>
+    </ul>
+  </div>
+
+  <!-- VII. CAPACITY DISTINCTION -->
+  <div class="section-title">VII. Capacity Distinction</div>
+  <div class="content-panel">
+    <p><strong>Private Individual Capacity:</strong> Personal records are private unless otherwise required. No duty to account to others for personal property management.</p>
+    <p><strong>Trustee Capacity:</strong> Accounting duty attaches to trust property and beneficiary review. The trustee must maintain separate records and provide accountings to qualified beneficiaries.</p>
+    <p><strong>Beneficiary Capacity:</strong> Beneficiary may request information and review accountings, subject to law and trust terms. Has standing to challenge incomplete or inaccurate accountings.</p>
+    <p><strong>Institutional Capacity:</strong> Accounting becomes part of official governance record. Institutional trustees must maintain systematic accounting procedures subject to internal and external review.</p>
+    <p>Capacity determines the duty to account and the right to review. A person acting as trustee must account; the same person acting privately owes no accounting duty.</p>
+  </div>
+
+  <!-- VIII. RECORDKEEPING REQUIREMENTS -->
+  <div class="section-title">VIII. Recordkeeping Requirements</div>
+  <ul style="margin-left:1.5rem;">
+    <li>Asset inventory (initial and updated)</li>
+    <li>Opening balance statement</li>
+    <li>Trust account bank statements</li>
+    <li>Receipts ledger (chronological record of all trust receipts)</li>
+    <li>Disbursement ledger (chronological record of all trust payments)</li>
+    <li>Distribution ledger (beneficiary distributions with receipts)</li>
+    <li>Income records (interest, dividends, rents, royalties)</li>
+    <li>Principal records (corpus transactions)</li>
+    <li>Invoices for all expenses</li>
+    <li>Receipts for all payments</li>
+    <li>Trustee fee records (authorization, calculation, payment)</li>
+    <li>Tax records and filings</li>
+    <li>Beneficiary reports provided</li>
+    <li>Reconciliation documents (bank to ledger)</li>
+    <li>Annual accounting statements</li>
+    <li>Final accounting</li>
+    <li>Archive log (location and retention period)</li>
+  </ul>
+  <p>Core rule: <strong>No accounting, no reliable administration. No records, no review. No review, no accountability.</strong> Trust accounting is the evidentiary foundation of fiduciary administration.</p>
+
+  <!-- IX. COMMON ERRORS -->
+  <div class="section-title">IX. Common Errors</div>
+  <ul style="margin-left:1.5rem;">
+    <li><strong>Treating bank statements as full accounting.</strong> Bank statements show activity but not purpose, authority, or classification. Full accounting requires additional documentation.</li>
+    <li><strong>Missing receipts.</strong> Without receipts, disbursements cannot be verified, and the trustee may be surcharged for undocumented payments.</li>
+    <li><strong>Unclear expense purpose.</strong> Expenses without stated purpose cannot be reviewed for necessity and reasonableness.</li>
+    <li><strong>No authority reference.</strong> Transactions without authority references may appear unauthorized or self-dealing.</li>
+    <li><strong>Mixing personal and trust funds.</strong> Commingling makes accounting impossible because transactions cannot be attributed.</li>
+    <li><strong>Undocumented distributions.</strong> Distributions without receipts or beneficiary acknowledgments cannot be verified.</li>
+    <li><strong>Failure to classify income/principal.</strong> Misclassification affects beneficiary distribution rights and may breach duty of impartiality.</li>
+    <li><strong>No beneficiary reports.</strong> Failure to provide accountings violates the duty to inform and report, and may result in removal.</li>
+    <li><strong>Late reconstruction of records.</strong> Post-hoc reconstruction is less credible and may not satisfy the duty to account.</li>
+    <li><strong>Unsigned final accounting.</strong> Accountings must be authenticated by the trustee's signature and capacity identification.</li>
+  </ul>
+
+  <!-- X. INSTITUTIONAL RATIONALE -->
+  <div class="section-title">X. Institutional Rationale</div>
+  <p>KLI teaches trust accounting because fiduciary administration must be provable. Trust accounting preserves institutional memory, beneficiary confidence, and equitable review. Without accounting, trust administration is unverifiable, beneficiaries cannot protect their interests, and courts cannot enforce fiduciary obligations. Trust accounting is not optional administrative detail; it is the evidence of faithful administration and the primary protection against unfounded claims.</p>
+
+  <!-- XI. RELATED KLI DOCTRINE -->
+  <div class="section-title">XI. Related KLI Doctrine</div>
+  <ul style="margin-left:1.5rem;">
+    <li><a href="../fiduciary/duty-to-account.html" style="color:var(--antique-gold);">Duty to Account</a> (KLI-KL-FID-004)</li>
+    <li><a href="../fiduciary/fiduciary-duty-explained.html" style="color:var(--antique-gold);">Fiduciary Duty Explained</a> (KLI-KL-FID-002)</li>
+    <li><a href="../trust-administration/legal-title-vs-equitable-title.html" style="color:var(--antique-gold);">Legal Title vs Equitable Title</a> (KLI-KL-TRUST-001)</li>
+    <li><a href="../trust-administration/trustee-authority.html" style="color:var(--antique-gold);">Trustee Authority</a> (KLI-KL-TRUST-002)</li>
+    <li><a href="../trust-administration/trustee-duties.html" style="color:var(--antique-gold);">Trustee Duties</a> (KLI-KL-TRUST-003)</li>
+    <li><a href="../trust-administration/trust-administration-process.html" style="color:var(--antique-gold);">Trust Administration Process</a> (KLI-KL-TRUST-004)</li>
+    <li><a href="../trust-administration/trust-property-asset-management.html" style="color:var(--antique-gold);">Trust Property & Asset Management</a> (KLI-KL-TRUST-005)</li>
+    <li><a href="../equity/equity-follows-the-law.html" style="color:var(--antique-gold);">Equity Follows the Law</a> (KLI-KL-EQ-001)</li>
+    <li><a href="../status-standing-capacity/status-standing-capacity.html" style="color:var(--antique-gold);">Status, Standing, and Capacity</a> (KLI-KL-SSC-001)</li>
+  </ul>
+
+  <!-- XII. EDUCATIONAL DISCLAIMER -->
+  <div class="notice">
+    This article is published by Kelly Legacy Institute for educational governance literacy only. It does not provide legal advice, financial advice, fiduciary decisions, securities guidance, tax advice, or attorney-client services. Application of legal or equitable principles depends on jurisdiction, facts, governing instruments, and competent professional review.
+  </div>
+
+  <!-- CTAs -->
+  <div style="margin-top: 2rem; text-align: center;">
+    <a href="../../pages/institute.html" class="btn">Continue Through Kelly Legacy Institute</a>
+    <a href="../../pages/publications.html" class="btn">View Publications</a>
+    <a href="../../knowledge-library.html" class="btn">Return to Knowledge Library</a>
+  </div>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-disclaimer">
+      <i class="fas fa-scale-balanced"></i> Educational governance materials only. © Kelly Legacy Institute // Kelly Legacy Estates Living Trust // Office of the Fiduciary.
+    </div>
+    <div class="footer-links">
+      <a href="../../legal/ip-policy.html">IP Policy</a>
+      <a href="../../legal/privacy.html">Privacy</a>
+      <a href="../../legal/record-policy.html">Record Policy</a>
+      <a href="../../legal/terms.html">Terms</a>
+      <a href="../../legal/transparency.html">Transparency</a>
+      <a href="../../pages/execution-framework.html">Execution Framework</a>
+      <a href="../../pages/curriculum-portal.html">Curriculum Portal</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const toggleBtn = document.getElementById('mobileMenuToggle');
+  const mainNav = document.getElementById('mainNav');
+  if (toggleBtn && mainNav) {
+    toggleBtn.addEventListener('click', () => {
+      mainNav.classList.toggle('active');
+    });
+  }
+
+  (function(){
+    if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+      window.chatbase=(...arguments)=>{
+        if(!window.chatbase.q){window.chatbase.q=[]}
+        window.chatbase.q.push(arguments)
+      };
+      window.chatbase=new Proxy(window.chatbase,{
+        get(target,prop){
+          if(prop==="q"){return target.q}
+          return(...args)=>target(prop,...args)
+        }
+      })
+    }
+    const onLoad=function(){
+      const script=document.createElement("script");
+      script.src="https://www.chatbase.co/embed.min.js";
+      script.id="JB7Ysn50O_DpC9tWnoxrh";
+      script.domain="www.chatbase.co";
+      document.body.appendChild(script)
+    };
+    if(document.readyState==="complete"){onLoad()}
+    else{window.addEventListener("load",onLoad)}
+  })();
+</script>
+</body>
+</html>
