@@ -3,47 +3,75 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>What Is a Fiduciary? | KLI Knowledge Library</title>
-<meta name="description" content="Definition and explanation of a fiduciary relationship: one person entrusted with authority to act for another's benefit, requiring loyalty, care, and accountability.">
+<title>KLI Knowledge Library | Kelly Legacy Estates</title>
+<meta name="description" content="Central archive for Kelly Legacy Institute Knowledge Library collections covering governance systems, fiduciary foundations, trust administration, equity and remedies, status and capacity, AI governance, and administrative process.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://kellylegacyestates.com/library/fiduciary/what-is-a-fiduciary.html">
+<link rel="canonical" href="https://kellylegacyestates.com/knowledge-library.html">
 
 <!-- Open Graph -->
-<meta property="og:title" content="What Is a Fiduciary? | KLI Knowledge Library">
-<meta property="og:description" content="Defines fiduciary relationship, duties of loyalty and care, capacity distinctions, and institutional governance applications.">
+<meta property="og:title" content="KLI Knowledge Library | Kelly Legacy Estates">
+<meta property="og:description" content="Central archive for Kelly Legacy Institute Knowledge Library collections covering governance, fiduciary duty, trust administration, equity, capacity, AI governance, and administrative process.">
 <meta property="og:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
-<meta property="og:url" content="https://kellylegacyestates.com/library/fiduciary/what-is-a-fiduciary.html">
-<meta property="og:type" content="article">
+<meta property="og:url" content="https://kellylegacyestates.com/knowledge-library.html">
+<meta property="og:type" content="website">
 <meta property="og:site_name" content="Kelly Legacy Estates">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="What Is a Fiduciary? | KLI Knowledge Library">
-<meta name="twitter:description" content="Educational doctrine defining fiduciary relationships, duties, and institutional governance consequences.">
+<meta name="twitter:title" content="KLI Knowledge Library | Kelly Legacy Estates">
+<meta name="twitter:description" content="Central archive for Kelly Legacy Institute Knowledge Library collections.">
 <meta name="twitter:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
 
-<!-- Schema: Article + Breadcrumb -->
+<!-- Schema: CollectionPage + BreadcrumbList -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "What Is a Fiduciary?",
-  "description": "Definition and explanation of a fiduciary relationship: one person entrusted with authority to act for another's benefit, requiring loyalty, care, and accountability.",
-  "author": {
-    "@type": "Organization",
-    "name": "Kelly Legacy Institute"
-  },
-  "publisher": {
-    "@type": "EducationalOrganization",
-    "name": "Kelly Legacy Institute",
+  "@type": "CollectionPage",
+  "name": "KLI Knowledge Library",
+  "description": "Central archive for Kelly Legacy Institute Knowledge Library collections covering governance systems, fiduciary foundations, trust administration, equity and remedies, status and capacity, AI governance, and administrative process.",
+  "url": "https://kellylegacyestates.com/knowledge-library.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Kelly Legacy Estates",
     "url": "https://kellylegacyestates.com"
   },
-  "datePublished": "2025-01-01",
-  "dateModified": "2026-06-01",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://kellylegacyestates.com/library/fiduciary/what-is-a-fiduciary.html"
-  }
+  "hasPart": [
+    {
+      "@type": "CollectionPage",
+      "name": "Governance Systems",
+      "url": "https://kellylegacyestates.com/library/governance/"
+    },
+    {
+      "@type": "CollectionPage",
+      "name": "Fiduciary Foundations",
+      "url": "https://kellylegacyestates.com/library/fiduciary/"
+    },
+    {
+      "@type": "CollectionPage",
+      "name": "Trust Administration",
+      "url": "https://kellylegacyestates.com/library/trust-administration/"
+    },
+    {
+      "@type": "CollectionPage",
+      "name": "Equity & Remedies",
+      "url": "https://kellylegacyestates.com/library/equity/"
+    },
+    {
+      "@type": "CollectionPage",
+      "name": "Status, Standing & Capacity",
+      "url": "https://kellylegacyestates.com/library/status-standing-capacity/"
+    },
+    {
+      "@type": "CollectionPage",
+      "name": "AI Governance",
+      "url": "https://kellylegacyestates.com/library/ai-governance/"
+    },
+    {
+      "@type": "CollectionPage",
+      "name": "Administrative Process",
+      "url": "https://kellylegacyestates.com/library/administration/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -54,19 +82,14 @@
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "KLI Knowledge Library",
-      "item": "https://kellylegacyestates.com/knowledge-library.html"
+      "name": "Home",
+      "item": "https://kellylegacyestates.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Fiduciary Foundations",
-      "item": "https://kellylegacyestates.com/library/fiduciary/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "What Is a Fiduciary?"
+      "name": "KLI Knowledge Library",
+      "item": "https://kellylegacyestates.com/knowledge-library.html"
     }
   ]
 }
@@ -109,7 +132,6 @@ body {
   overflow-x: hidden;
 }
 
-/* noise overlay and scanline */
 .noise-overlay {
   position: fixed;
   top: 0;
@@ -141,7 +163,6 @@ body {
   z-index: 10;
 }
 
-/* header */
 .site-header {
   border-bottom: 1px solid var(--border-faint);
   background: rgba(5,5,5,0.92);
@@ -184,6 +205,11 @@ body {
   flex-wrap: wrap;
 }
 
+.nav-links a.active {
+  color: var(--antique-gold);
+  border-bottom: 1px solid var(--antique-gold);
+}
+
 .nav-links a {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.7rem;
@@ -195,7 +221,6 @@ body {
 }
 
 .nav-links a:hover { color: var(--antique-gold); }
-.nav-links a.active { color: var(--antique-gold); border-bottom: 1px solid var(--antique-gold); }
 .nav-links .access-cta {
   border: 1px solid var(--crimson);
   padding: 8px 18px;
@@ -214,7 +239,6 @@ body {
   cursor: pointer;
 }
 
-/* meta-band */
 .meta-band {
   background: var(--deep-charcoal);
   border-bottom: 1px solid var(--border-faint);
@@ -233,57 +257,87 @@ body {
 
 .meta-inner span i { margin-right: 6px; color: var(--antique-gold-muted); font-size: 0.7rem; }
 
-.article-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 3rem 1rem;
+/* Collection specific */
+.library-header {
+  text-align: center;
+  margin: 3rem 0 2rem;
 }
 
-.article-header {
-  margin-bottom: 2.5rem;
-  border-bottom: 1px solid var(--border-faint);
-  padding-bottom: 1.5rem;
+.library-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: var(--ivory);
+  margin-bottom: 0.5rem;
 }
 
-.article-label {
+.library-subtitle {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.7rem;
-  color: var(--crimson);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-.article-id {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: var(--antique-gold-muted);
-  margin: 0.5rem 0;
+  letter-spacing: 0.1em;
 }
 
-h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
-  font-weight: 500;
-  color: var(--ivory);
-  margin: 1rem 0 0.5rem;
+.intro-panel {
+  background: var(--charcoal-card);
+  border-left: 4px solid var(--antique-gold);
+  padding: 2rem;
+  margin: 2rem 0 3rem;
+  border-radius: 2px;
 }
 
-.section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: var(--ivory);
-  margin: 2rem 0 1rem;
-  border-left: 3px solid var(--antique-gold);
-  padding-left: 1rem;
+.intro-panel p {
+  max-width: 800px;
+  margin-bottom: 1rem;
 }
 
-.content-panel {
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.8rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.collection-card {
   background: var(--charcoal-card);
   border: 1px solid var(--charcoal-border);
   padding: 1.8rem;
-  margin: 1.5rem 0;
+  transition: all 0.2s ease;
   border-radius: 2px;
+}
+
+.collection-card:hover {
+  border-color: var(--antique-gold-muted);
+  transform: translateY(-3px);
+}
+
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--antique-gold);
+  margin-bottom: 0.75rem;
+}
+
+.card-description {
+  font-size: 0.9rem;
+  color: var(--ivory-dim);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.card-link {
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--antique-gold);
+  transition: color 0.2s;
+}
+
+.card-link:hover {
+  color: var(--ivory);
 }
 
 .notice {
@@ -291,7 +345,7 @@ h1 {
   border-left: 3px solid var(--crimson);
   padding: 1.2rem;
   font-size: 0.85rem;
-  margin: 1.5rem 0;
+  margin: 2rem 0;
 }
 
 .btn {
@@ -313,7 +367,6 @@ h1 {
   color: var(--exec-black);
 }
 
-/* footer */
 .footer {
   background: var(--deep-charcoal);
   border-top: 1px solid var(--border-faint);
@@ -349,7 +402,6 @@ h1 {
   color: var(--antique-gold);
 }
 
-/* responsive */
 @media (max-width: 860px) {
   .container { padding: 0 24px; }
   .nav-links {
@@ -361,7 +413,8 @@ h1 {
   }
   .nav-links.active { display: flex; }
   .mobile-menu-toggle { display: block; }
-  h1 { font-size: 2rem; }
+  .library-header h1 { font-size: 2.2rem; }
+  .card-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
@@ -372,135 +425,100 @@ h1 {
 <body>
 <div class="noise-overlay"></div>
 <div class="scanline"></div>
+
 <header class="site-header">
   <div class="container">
     <div class="nav-wrapper">
       <div class="identity-mark"><h1>KELLY LEGACY ESTATES</h1><p>OFFICE OF THE FIDUCIARY</p></div>
       <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">MENU</button>
       <nav class="nav-links" id="mainNav" aria-label="Primary navigation">
-        <a href="../../index.html">Home</a>
-        <a href="../../governance.html">Governance</a>
-        <a href="../../fiduciary-doctrine.html">Fiduciary Doctrine</a>
-        <a href="../../ai-governance.html">AI Governance</a>
-        <a href="../../knowledge-library.html">Knowledge Library</a>
-        <a href="../../publications.html">Publications</a>
-        <a href="../../institute.html">Institute</a>
-        <a href="../../institutional-solutions.html">Institutional Solutions</a>
-        <a href="../../klat-access.html">KLAT Access</a>
-        <a href="../../contact.html" class="access-cta">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="pages/governance.html">Governance</a>
+        <a href="pages/fiduciary-doctrine.html">Fiduciary Doctrine</a>
+        <a href="pages/ai-governance.html">AI Governance</a>
+        <a href="knowledge-library.html" class="active">Knowledge Library</a>
+        <a href="pages/publications.html">Publications</a>
+        <a href="pages/institute.html">Institute</a>
+        <a href="pages/institutional-solutions.html">Institutional Solutions</a>
+        <a href="pages/klat-access.html">KLAT Access</a>
+        <a href="pages/contact.html" class="access-cta">Contact</a>
       </nav>
     </div>
   </div>
 </header>
-<div class="meta-band"><div class="container"><div class="meta-inner"><span><i class="fas fa-shield-alt"></i> KLI KNOWLEDGE LIBRARY // FIDUCIARY FOUNDATIONS</span><span><i class="fas fa-hourglass-half"></i> CONTINUITY ACTIVE</span></div></div></div>
 
-<main>
-<div class="article-container">
-  <div class="article-header">
-    <div class="article-label">KELLY LEGACY INSTITUTE™ // KLI KNOWLEDGE LIBRARY™</div>
-    <div class="article-id">Article ID: KLI-KL-FID-001 | Public Educational Doctrine | Status: Published</div>
-    <h1>What Is a Fiduciary?</h1>
-    <div class="meta-inner" style="margin-top:1rem;"><span>Primary Collection: Fiduciary Foundations</span><span>Related: Trust Administration, Equity & Remedies, Governance Systems</span></div>
-  </div>
-
-  <!-- I. EXECUTIVE SUMMARY -->
-  <div class="section-title">I. Executive Summary</div>
-  <p>A fiduciary is a person or entity who holds a position of trust, confidence, or authority with respect to another, and who is therefore bound by duties of loyalty, good faith, care, and accountability. The fiduciary relationship arises whenever one party places legitimate reliance on another's expertise, control, or discretion, and the other accepts that trust. In legal and governance contexts, fiduciaries include trustees, executors, guardians, agents, corporate directors, attorneys, and any individual acting in a representative capacity.</p>
-  <p>The fiduciary concept is essential to governance because it imposes enforceable obligations that protect the beneficiary's interests. Without fiduciary duty, entrusted authority could be exercised arbitrarily, secretly, or self-servingly. Fiduciary law supplies a remedy when that duty is breached. For Kelly Legacy Institute, understanding fiduciary relationships is foundational to fiduciary literacy, trust administration, and institutional continuity.</p>
-  <div class="content-panel"><strong>Why It Matters:</strong> Every person exercising authority over another's rights, property, or welfare must know whether they act as a fiduciary. Mischaracterizing capacity leads to unenforceable decisions, defective records, and personal liability. Governance depends on clear identification of fiduciary roles.</div>
-
-  <!-- II. CORE PRINCIPLE -->
-  <div class="section-title">II. Core Principle</div>
-  <p><strong>A fiduciary duty exists wherever one person is entrusted with authority to act for the benefit of another under circumstances requiring loyalty, care, accountability, and good faith.</strong></p>
-
-  <!-- III. GOVERNANCE RULE -->
-  <div class="section-title">III. Governance Rule</div>
-  <p>No person or office exercising entrusted authority may act without identifying the duty owed, the capacity in which the act is performed, the authority supporting the act, and the record preserving the act. Before any discretionary action, a fiduciary must determine: (1) to whom the duty is owed, (2) the scope of delegated authority, (3) the standard of conduct required, and (4) the recordkeeping obligation.</p>
-
-  <!-- IV. DOCTRINAL EXPLANATION -->
-  <div class="section-title">IV. Doctrinal Explanation</div>
-  <p>The term "fiduciary" derives from the Latin <em>fiducia</em>, meaning trust or confidence. In Anglo-American law, the fiduciary relationship is the highest standard of care known to equity. It is not a contract; it is a status-based obligation that can arise by formal appointment (e.g., trustee), by operation of law (e.g., partner to partnership), or by informal circumstances (e.g., advisor who assumes control).</p>
-  <p>A fiduciary must act solely in the interest of the beneficiary, not for the fiduciary's own advantage unless fully disclosed and consented to. The duty of loyalty prohibits conflicts of interest; the duty of care requires diligence and competence; the duty to account requires transparency and documentation; the duty of good faith forbids dishonest or abusive conduct.</p>
-  <p>Fiduciary obligations survive termination of the relationship until all entrusted property and information are returned. They cannot be waived entirely, though they may be modified by consent within limits set by law.</p>
-
-  <!-- V. RECOGNIZED AUTHORITIES -->
-  <div class="section-title">V. Recognized Authorities</div>
-  <ul style="margin-left:1.5rem; line-height:1.6;">
-    <li><strong>Restatement (Third) of Trusts § 78</strong> – Identifies the trustee's duty of loyalty and prohibits administration for the trustee's own benefit except as authorized.</li>
-    <li><strong>Restatement (Third) of Trusts § 77</strong> – Establishes the duty of prudence in trust administration.</li>
-    <li><strong>Restatement (Third) of Trusts § 79</strong> – Addresses the duty of impartiality among beneficiaries.</li>
-    <li><strong>Uniform Trust Code § 802</strong> – Provides that a trustee shall administer the trust solely in the interests of the beneficiaries.</li>
-    <li><strong>Uniform Trust Code § 813</strong> – Addresses the trustee's duty to inform and report to beneficiaries.</li>
-    <li><strong>Bogert, The Law of Trusts and Trustees § 543</strong> – Describes the fiduciary relationship as one in which a party is under a duty to act for another's benefit within the scope of the relation.</li>
-    <li><strong>Scott and Ascher on Trusts § 17.2</strong> – Explains the trustee's fiduciary obligation not to use the position for personal advantage without appropriate authorization or informed consent.</li>
-    <li><strong>Pomeroy, Equity Jurisprudence § 397</strong> – Discusses equity's treatment of relationships involving confidence, influence, and fiduciary obligation.</li>
-  </ul>
-  <p>These authorities reflect broadly recognized fiduciary principles. Specific application depends on jurisdiction, governing instruments, facts, and competent professional review.</p>
-
-  <!-- VI. OPERATIONAL APPLICATION -->
-  <div class="section-title">VI. Operational Application</div>
-  <p>In institutional governance, every person delegated authority must be designated as acting in a fiduciary capacity. Intake forms, appointment letters, and governance records must identify: the fiduciary's name, the office or role, the principal or beneficiary, the scope of authority, the governing instrument, and the recordkeeping protocols.</p>
-  <p>When a fiduciary makes a decision, they must document: the issue, the alternatives considered, the reasons for the choice, any conflicts, and how the decision serves the beneficiary's interest. All material communications must be retained. Regular accountings must be rendered.</p>
-
-  <!-- VII. CAPACITY DISTINCTION -->
-  <div class="section-title">VII. Capacity Distinction</div>
-  <div class="content-panel">
-    <p><strong>Private Individual Capacity</strong> – Acting for one's own benefit, with no duty to another. No fiduciary obligation.</p>
-    <p><strong>Representative / Fiduciary Capacity</strong> – Acting for the benefit of another, with imposed duties of loyalty, care, and account. Authority is derived from the office or instrument.</p>
-    <p><strong>Institutional / Office Capacity</strong> – Acting as part of an organization's governance structure, where duties run to the institution and its members or beneficiaries.</p>
-    <p>Capacity determines attribution, personal liability, and the standard of review. A fiduciary who acts outside capacity may be personally liable for losses caused.</p>
-  </div>
-
-  <!-- VIII. RECORDKEEPING REQUIREMENTS -->
-  <div class="section-title">VIII. Recordkeeping Requirements</div>
-  <ul style="margin-left:1.5rem;">
-    <li>Governing instrument or appointment document (trust, will, corporate resolution, agency agreement).</li>
-    <li>Acceptance of fiduciary role in writing.</li>
-    <li>Written policies defining scope of authority.</li>
-    <li>Minutes or memoranda of all significant decisions.</li>
-    <li>Regular accountings (financial and transactional).</li>
-    <li>Disclosure of conflicts and consents.</li>
-    <li>Records of communications with beneficiaries.</li>
-    <li>Retention for the period required by applicable law, governing instrument, institutional policy, or professional standard.</li>
-  </ul>
-  <p>Core rule: <strong>Record precedes recognition.</strong> Without a record, fiduciary action is vulnerable to challenge.</p>
-
-  <!-- IX. COMMON ERRORS -->
-  <div class="section-title">IX. Common Errors</div>
-  <ul style="margin-left:1.5rem;">
-    <li><strong>Confusing personal capacity with fiduciary capacity</strong> – leads to unauthorized acts and personal liability.</li>
-    <li><strong>Assuming a fiduciary relationship does not require documentation</strong> – oral appointments are enforceable but difficult to prove; written records are essential.</li>
-    <li><strong>Acting without a clear scope of authority</strong> – resulting in ultra vires acts that bind the fiduciary personally.</li>
-    <li><strong>Withholding information from beneficiaries</strong> – violates duty to account and may be concealment or fraud.</li>
-    <li><strong>Using fiduciary position for personal advantage</strong> – a strict violation of the duty of loyalty, even if no loss occurs.</li>
-  </ul>
-
-  <!-- X. INSTITUTIONAL RATIONALE -->
-  <div class="section-title">X. Institutional Rationale</div>
-  <p>KLI preserves and teaches fiduciary doctrine because governance without fiduciary accountability is unreliable. The Institute exists to educate individuals, families, and organizations on how to establish, document, and review fiduciary relationships. Understanding the definition of a fiduciary is the first step toward structured governance, continuity, and remedy.</p>
-
-  <!-- XI. RELATED KLI DOCTRINE -->
-  <div class="section-title">XI. Related KLI Doctrine</div>
-  <ul style="margin-left:1.5rem;">
-    <li><a href="../fiduciary/fiduciary-duty-explained.html" style="color:var(--antique-gold);">Fiduciary Duty Explained</a> (KLI-KL-FID-002)</li>
-    <li><a href="../fiduciary/duty-of-loyalty.html" style="color:var(--antique-gold);">Duty of Loyalty</a> (KLI-KL-FID-003)</li>
-    <li><a href="../fiduciary/duty-to-account.html" style="color:var(--antique-gold);">Duty to Account</a> (KLI-KL-FID-004)</li>
-    <li><a href="../status-standing-capacity/status-standing-capacity.html" style="color:var(--antique-gold);">Status, Standing, and Capacity</a> (KLI-KL-SSC-001)</li>
-    <li><a href="../trust-administration/legal-title-vs-equitable-title.html" style="color:var(--antique-gold);">Legal Title vs Equitable Title</a> (KLI-KL-TRUST-001)</li>
-  </ul>
-
-  <!-- XII. EDUCATIONAL DISCLAIMER -->
-  <div class="notice">
-    This article is published by Kelly Legacy Institute for educational governance literacy only. It does not provide legal advice, financial advice, fiduciary decisions, securities guidance, tax advice, or attorney-client services. Application of legal or equitable principles depends on jurisdiction, facts, governing instruments, and competent professional review.
-  </div>
-
-  <!-- CTAs -->
-  <div style="margin-top: 2rem; text-align: center;">
-    <a href="../../institute.html" class="btn">Continue Through Kelly Legacy Institute</a>
-    <a href="../../publications.html" class="btn">View Publications</a>
-    <a href="../../knowledge-library.html" class="btn">Return to Knowledge Library</a>
+<div class="meta-band">
+  <div class="container">
+    <div class="meta-inner">
+      <span><i class="fas fa-shield-alt"></i> KLI KNOWLEDGE LIBRARY // INSTITUTIONAL DOCTRINE ARCHIVE</span>
+      <span><i class="fas fa-hourglass-half"></i> CONTINUITY ACTIVE</span>
+    </div>
   </div>
 </div>
+
+<main>
+  <div class="container">
+    <div class="library-header">
+      <h1>KLI Knowledge Library</h1>
+      <div class="library-subtitle">INSTITUTIONAL DOCTRINE ARCHIVE</div>
+    </div>
+
+    <div class="intro-panel">
+      <p><strong>The Knowledge Library is the central archive for Kelly Legacy Institute educational doctrine.</strong></p>
+      <p>Structured collections covering governance systems, fiduciary foundations, trust administration, equity and remedies, status and capacity, AI governance, and administrative process. All materials are published for educational governance literacy.</p>
+    </div>
+
+    <!-- COLLECTION GRID -->
+    <div class="card-grid">
+      <div class="collection-card">
+        <div class="card-title">Governance Systems</div>
+        <div class="card-description">Authority, accountability, records, delegation, controls, and continuity.</div>
+        <a href="library/governance/" class="card-link">Access Collection →</a>
+      </div>
+      <div class="collection-card">
+        <div class="card-title">Fiduciary Foundations</div>
+        <div class="card-description">Fiduciary duty, loyalty, care, impartiality, accounting, breach, remedies, and capacity.</div>
+        <a href="library/fiduciary/" class="card-link">Access Collection →</a>
+      </div>
+      <div class="collection-card">
+        <div class="card-title">Trust Administration</div>
+        <div class="card-description">Trustee authority, trust property, accounting, distributions, beneficiary rights, breach, and trust remedies.</div>
+        <a href="library/trust-administration/" class="card-link">Access Collection →</a>
+      </div>
+      <div class="collection-card">
+        <div class="card-title">Equity & Remedies</div>
+        <div class="card-description">Equity follows the law, constructive trust, equitable lien, unjust enrichment, injunction, specific performance, rescission, reformation, subrogation, and accounting.</div>
+        <a href="library/equity/" class="card-link">Access Collection →</a>
+      </div>
+      <div class="collection-card">
+        <div class="card-title">Status, Standing & Capacity</div>
+        <div class="card-description">Individual capacity, representative capacity, authority, record attribution, standing, and capacity errors.</div>
+        <a href="library/status-standing-capacity/" class="card-link">Access Collection →</a>
+      </div>
+      <div class="collection-card">
+        <div class="card-title">AI Governance</div>
+        <div class="card-description">AI governance principles, risk management, recordkeeping, human oversight, data governance, and acceptable use.</div>
+        <a href="library/ai-governance/" class="card-link">Access Collection →</a>
+      </div>
+      <div class="collection-card">
+        <div class="card-title">Administrative Process</div>
+        <div class="card-description">Notice, records, evidence, burden of proof, authentication, procedural sequence, and administrative review.</div>
+        <a href="library/administration/" class="card-link">Access Collection →</a>
+      </div>
+    </div>
+
+    <!-- EDUCATIONAL DISCLAIMER -->
+    <div class="notice">
+      This Knowledge Library is published by Kelly Legacy Institute for educational governance literacy only. It does not provide legal advice, financial advice, fiduciary decisions, securities guidance, tax advice, compliance certification, or attorney-client services. Application depends on jurisdiction, facts, governing instruments, and competent professional review.
+    </div>
+
+    <!-- CTAs -->
+    <div style="margin-top: 2rem; text-align: center; margin-bottom: 3rem;">
+      <a href="pages/institute.html" class="btn">Continue Through Kelly Legacy Institute</a>
+      <a href="pages/publications.html" class="btn">View Publications</a>
+      <a href="index.html" class="btn">Return to Home</a>
+    </div>
+  </div>
 </main>
 
 <footer class="footer">
@@ -509,7 +527,13 @@ h1 {
       <i class="fas fa-scale-balanced"></i> Educational governance materials only. © Kelly Legacy Institute // Kelly Legacy Estates Living Trust // Office of the Fiduciary.
     </div>
     <div class="footer-links">
-      <a href="../../ip-policy.html">IP Policy</a> <a href="../../privacy.html">Privacy</a> <a href="../../record-policy.html">Record Policy</a> <a href="../../terms.html">Terms</a> <a href="../../transparency.html">Transparency</a> <a href="../../execution-framework.html">Execution Framework</a> <a href="../../curriculum-portal.html">Curriculum Portal</a>
+      <a href="legal/ip-policy.html">IP Policy</a>
+      <a href="legal/privacy.html">Privacy</a>
+      <a href="legal/record-policy.html">Record Policy</a>
+      <a href="legal/terms.html">Terms</a>
+      <a href="legal/transparency.html">Transparency</a>
+      <a href="pages/execution-framework.html">Execution Framework</a>
+      <a href="pages/curriculum-portal.html">Curriculum Portal</a>
     </div>
   </div>
 </footer>
@@ -525,7 +549,6 @@ h1 {
   }
 
   // Chatbase embed - Legacy AI
-  // Actual Legacy AI branding must be configured inside Chatbase dashboard.
   (function(){
     if(!window.chatbase||window.chatbase("getState")!=="initialized"){
       window.chatbase=(...arguments)=>{
