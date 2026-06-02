@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Unjust Enrichment | KLI Knowledge Library</title>
+<meta name="description" content="Unjust enrichment explained through restitution, equitable remedies, benefit retention, fiduciary breach, constructive trust, equitable lien, accounting, and governance accountability.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kellylegacyestates.com/library/equity/unjust-enrichment.html">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Unjust Enrichment | KLI Knowledge Library">
+<meta property="og:description" content="Unjust enrichment explained through restitution, equitable remedies, benefit retention, fiduciary breach, constructive trust, equitable lien, accounting, and governance accountability.">
+<meta property="og:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
+<meta property="og:url" content="https://kellylegacyestates.com/library/equity/unjust-enrichment.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kelly Legacy Estates">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Unjust Enrichment | KLI Knowledge Library">
+<meta name="twitter:description" content="Educational doctrine on unjust enrichment, including restitution, equitable remedies, fiduciary breach, and governance accountability.">
+<meta name="twitter:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
+
+<!-- Schema: Article + Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Unjust Enrichment",
+  "description": "Unjust enrichment explained through restitution, equitable remedies, benefit retention, fiduciary breach, constructive trust, equitable lien, accounting, and governance accountability.",
+  "author": {
+    "@type": "Organization",
+    "name": "Kelly Legacy Institute"
+  },
+  "publisher": {
+    "@type": "EducationalOrganization",
+    "name": "Kelly Legacy Institute",
+    "url": "https://kellylegacyestates.com"
+  },
+  "datePublished": "2025-01-20",
+  "dateModified": "2026-06-02",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://kellylegacyestates.com/library/equity/unjust-enrichment.html"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "KLI Knowledge Library",
+      "item": "https://kellylegacyestates.com/knowledge-library.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Equity & Remedies",
+      "item": "https://kellylegacyestates.com/library/equity/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Unjust Enrichment"
+    }
+  ]
+}
+</script>
+
+<!-- Styles -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root {
+  --exec-black: #050505;
+  --deep-charcoal: #111113;
+  --charcoal-card: #16161A;
+  --charcoal-border: #23232A;
+  --crimson: #9E2A2A;
+  --crimson-dim: #6E1E1E;
+  --antique-gold: #C8A24C;
+  --antique-gold-muted: #9A7A3A;
+  --ivory: #F0EFEA;
+  --ivory-dim: #CBC9C1;
+  --slate-meta: #7A7A7A;
+  --border-faint: rgba(240,239,234,0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--exec-black);
+  color: var(--ivory-dim);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* noise overlay and scanline */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.35;
+}
+
+.scanline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(0deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 3px, rgba(0,0,0,0.05) 3px, rgba(0,0,0,0.05) 6px);
+  pointer-events: none;
+  z-index: 998;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+  position: relative;
+  z-index: 10;
+}
+
+/* header */
+.site-header {
+  border-bottom: 1px solid var(--border-faint);
+  background: rgba(5,5,5,0.92);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.identity-mark h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ivory);
+}
+
+.identity-mark p {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--crimson);
+  margin-top: 4px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+  .nav-links a.active {
+  color: var(--antique-gold);
+  border-bottom: 1px solid var(--antique-gold);
+  }
+
+.nav-links a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  color: var(--ivory-dim);
+  transition: color 0.2s;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover { color: var(--antique-gold); }
+.nav-links .access-cta {
+  border: 1px solid var(--crimson);
+  padding: 8px 18px;
+  color: var(--crimson);
+  font-weight: 500;
+}
+.nav-links .access-cta:hover { background: rgba(158,42,42,0.08); color: var(--antique-gold); border-color: var(--antique-gold); }
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--crimson);
+  color: var(--ivory);
+  padding: 8px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  cursor: pointer;
+}
+
+/* meta-band */
+.meta-band {
+  background: var(--deep-charcoal);
+  border-bottom: 1px solid var(--border-faint);
+  padding: 0.5rem 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--slate-meta);
+}
+
+.meta-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.meta-inner span i { margin-right: 6px; color: var(--antique-gold-muted); font-size: 0.7rem; }
+
+.article-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.article-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-faint);
+  padding-bottom: 1.5rem;
+}
+
+.article-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--crimson);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.article-id {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--antique-gold-muted);
+  margin: 0.5rem 0;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: var(--ivory);
+  margin: 1rem 0 0.5rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--ivory);
+  margin: 2rem 0 1rem;
+  border-left: 3px solid var(--antique-gold);
+  padding-left: 1rem;
+}
+
+.content-panel {
+  background: var(--charcoal-card);
+  border: 1px solid var(--charcoal-border);
+  padding: 1.8rem;
+  margin: 1.5rem 0;
+  border-radius: 2px;
+}
+
+.notice {
+  background: rgba(158,42,42,0.08);
+  border-left: 3px solid var(--crimson);
+  padding: 1.2rem;
+  font-size: 0.85rem;
+  margin: 1.5rem 0;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid var(--antique-gold);
+  padding: 10px 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--antique-gold);
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: var(--antique-gold);
+  color: var(--exec-black);
+}
+
+/* footer */
+.footer {
+  background: var(--deep-charcoal);
+  border-top: 1px solid var(--border-faint);
+  padding: 3rem 0 2rem;
+  font-size: 0.7rem;
+}
+
+.footer-disclaimer {
+  max-width: 900px;
+  color: var(--slate-meta);
+  line-height: 1.6;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.footer-links {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+}
+
+.footer-links a {
+  color: var(--ivory-dim);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--antique-gold);
+}
+
+/* responsive */
+@media (max-width: 860px) {
+  .container { padding: 0 24px; }
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .nav-links.active { display: flex; }
+  .mobile-menu-toggle { display: block; }
+  h1 { font-size: 2rem; }
+}
+
+@media (max-width: 640px) {
+  .nav-wrapper { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<div class="noise-overlay"></div>
+<div class="scanline"></div>
+<header class="site-header">
+  <div class="container">
+    <div class="nav-wrapper">
+      <div class="identity-mark"><h1>KELLY LEGACY ESTATES</h1><p>OFFICE OF THE FIDUCIARY</p></div>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">MENU</button>
+      <nav class="nav-links" id="mainNav" aria-label="Primary navigation">
+        <a href="../../index.html">Home</a>
+        <a href="../../pages/governance.html">Governance</a>
+        <a href="../../pages/fiduciary-doctrine.html">Fiduciary Doctrine</a>
+        <a href="../../pages/ai-governance.html">AI Governance</a>
+        <a href="../../knowledge-library.html">Knowledge Library</a>
+        <a href="../../pages/publications.html">Publications</a>
+        <a href="../../pages/institute.html">Institute</a>
+        <a href="../../pages/institutional-solutions.html">Institutional Solutions</a>
+        <a href="../../pages/klat-access.html">KLAT Access</a>
+        <a href="../../pages/contact.html" class="access-cta">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<div class="meta-band"><div class="container"><div class="meta-inner"><span><i class="fas fa-shield-alt"></i> KLI KNOWLEDGE LIBRARY // EQUITY & REMEDIES</span><span><i class="fas fa-hourglass-half"></i> CONTINUITY ACTIVE</span></div></div></div>
+
+<main>
+<div class="article-container">
+  <div class="article-header">
+    <div class="article-label">KELLY LEGACY INSTITUTE™ // KLI KNOWLEDGE LIBRARY™</div>
+    <div class="article-id">Article ID: KLI-KL-EQ-004 | Public Educational Doctrine | Status: Published</div>
+    <h1>Unjust Enrichment</h1>
+    <div class="meta-inner" style="margin-top:1rem;"><span>Primary Collection: Equity & Remedies</span><span>Related: Restitution, Constructive Trust, Equitable Lien, Disgorgement</span></div>
+  </div>
+
+  <!-- I. EXECUTIVE SUMMARY -->
+  <div class="section-title">I. Executive Summary</div>
+  <p>Unjust enrichment is a restitutionary principle. It applies when a person or entity has received or retained a benefit that equity does not allow them to keep. The focus is not punishment. The focus is restoration, disgorgement, or prevention of improper benefit. Unjust enrichment may arise from mistake, fraud, breach of fiduciary duty, improper transfer, wrongful retention, failure of basis, misuse of entrusted property, or benefits conferred without proper justification.</p>
+  <p>Unjust enrichment is distinct from tort or contract. It does not require a wrongful act in the sense of intentional wrongdoing; it requires that retention of the benefit would be unjust under recognized legal or equitable principles. The remedy is restitution: the return of the benefit or its value to the rightful claimant.</p>
+  <div class="content-panel"><strong>Why It Matters:</strong> Unjust enrichment prevents a fiduciary or other party from retaining a benefit obtained through breach of duty, mistake, or inequitable circumstances. It is a primary tool for restoring misappropriated assets, recovering unauthorized profits, and enforcing fiduciary accountability.</div>
+
+  <!-- II. CORE PRINCIPLE -->
+  <div class="section-title">II. Core Principle</div>
+  <p><strong>Unjust enrichment occurs when one party receives or retains a benefit at another's expense under circumstances where equity and good conscience require restitution.</strong></p>
+
+  <!-- III. GOVERNANCE RULE -->
+  <div class="section-title">III. Governance Rule</div>
+  <p>No unjust enrichment analysis should proceed without identifying:</p>
+  <ol style="margin-left:1.5rem; margin-top:0.5rem;">
+    <li>benefit received or retained (specific property, funds, or value);</li>
+    <li>party enriched (who holds the benefit);</li>
+    <li>party at whose expense enrichment occurred (the claimant);</li>
+    <li>reason enrichment is unjust (fraud, breach of duty, mistake, etc.);</li>
+    <li>relationship between enrichment and claimant (tracing or causation);</li>
+    <li>available remedy (restitution, constructive trust, equitable lien, accounting); and</li>
+    <li>supporting evidence and record (documents, accounting, tracing).</li>
+  </ol>
+  <p>If any of these elements is missing, an unjust enrichment claim is unlikely to succeed.</p>
+
+  <!-- IV. DOCTRINAL EXPLANATION -->
+  <div class="section-title">IV. Doctrinal Explanation</div>
+  <p>Unjust enrichment doctrine provides a restitutionary remedy independent of contract or tort. Key elements include:</p>
+  <ul style="margin-left:1.5rem;">
+    <li><strong>Restitutionary Function:</strong> Unjust enrichment is a restitution claim, meaning the remedy is restoration of the benefit, not compensation for harm. The measure is the gain to the enriched party, not the loss to the claimant.</li>
+    <li><strong>Enrichment:</strong> The enriched party must have received a benefit: money, property, services, or any measurable value. The benefit may be direct or indirect.</li>
+    <li><strong>Expense of Another:</strong> The benefit must have been conferred at the claimant's expense. Tracing is often required to connect the claimant's value to the enrichment.</li>
+    <li><strong>Unjust Circumstances:</strong> Retention of the benefit must be unjust under recognized grounds: fraud, duress, undue influence, mistake, breach of fiduciary duty, failure of consideration, or wrongful retention.</li>
+    <li><strong>Absence or Failure of Legal Justification:</strong> Unjust enrichment is not proven merely by showing a loss; there must be no legal justification for the enrichment. A contract, gift, or lawful transaction may provide justification.</li>
+    <li><strong>Fiduciary Breach:</strong> A fiduciary who profits from a breach of duty (self-dealing, conflict of interest, misappropriation) is unjustly enriched and must disgorge the profit, even if the beneficiary suffered no loss.</li>
+    <li><strong>Mistake and Fraud:</strong> Payments made under mistake of fact or induced by fraud are recoverable on unjust enrichment grounds.</li>
+    <li><strong>Disgorgement:</strong> In fiduciary contexts, the remedy is often disgorgement of all profits obtained through the breach, regardless of whether the beneficiary would have made the profit.</li>
+    <li><strong>Relationship to Constructive Trust:</strong> A constructive trust is a remedy for unjust enrichment when specific property can be traced. It gives the claimant an ownership interest in the property.</li>
+    <li><strong>Relationship to Equitable Lien:</strong> An equitable lien is an alternative remedy that secures restitution from specific property without transferring ownership.</li>
+    <li><strong>Relationship to Accounting:</strong> An accounting in equity may be necessary to trace benefits, calculate unjust enrichment, and determine the appropriate remedy.</li>
+    <li><strong>Limits of Unjust Enrichment:</strong> Unjust enrichment is not a catch-all fairness claim. It requires a specific unjust factor, identifiable benefit, and connection to the claimant. Courts will not impose restitution where the enrichment is not unjust.</li>
+  </ul>
+  <div class="content-panel"><strong>Clarification:</strong> Unjust enrichment is not a general fairness claim. It requires a recognized basis for restitution. Not every financial disparity or unfavorable outcome constitutes unjust enrichment.</div>
+
+  <!-- V. RECOGNIZED AUTHORITIES -->
+  <div class="section-title">V. Recognized Authorities</div>
+  <ul style="margin-left:1.5rem; line-height:1.6;">
+    <li><strong>Restatement (Third) of Restitution and Unjust Enrichment § 1</strong> – A person who is unjustly enriched at the expense of another is liable in restitution. This is the foundational principle.</li>
+    <li><strong>Restatement (Third) of Restitution and Unjust Enrichment § 3</strong> – Liability for wrongful gain includes any benefit obtained through breach of duty, misappropriation, or other wrongful conduct.</li>
+    <li><strong>Restatement (Third) of Restitution and Unjust Enrichment § 55</strong> – A constructive trust is a remedy to prevent unjust enrichment, imposing an equitable duty to transfer property to the claimant.</li>
+    <li><strong>Restatement (Third) of Restitution and Unjust Enrichment § 56</strong> – An equitable lien is a remedy that charges specific property with an obligation to restore an unjustly enriched benefit.</li>
+    <li><strong>Uniform Trust Code § 1001</strong> – A trustee is liable for breach of trust, and remedies include restitution and disgorgement of profits.</li>
+    <li><strong>Uniform Trust Code § 1002</strong> – A trustee who commits a breach is liable for restoration of trust property and any profit made through the breach.</li>
+    <li><strong>Pomeroy, Equity Jurisprudence</strong> – Unjust enrichment is a primary ground for equitable intervention; equity will compel restitution of benefits obtained through fraud, mistake, or breach of confidence.</li>
+    <li><strong>Scott and Ascher on Trusts</strong> – A trustee who profits from a breach of duty is liable to disgorge the profit, even if the trust suffered no loss.</li>
+    <li><strong>Bogert, The Law of Trusts and Trustees</strong> – Unjust enrichment is the basis for surcharge, constructive trust, and equitable lien remedies against a breaching fiduciary.</li>
+  </ul>
+  <p>These authorities reflect broadly recognized restitutionary, equitable, and fiduciary principles. Specific application depends on jurisdiction, facts, property involved, claims, defenses, and competent professional review.</p>
+
+  <!-- VI. OPERATIONAL APPLICATION -->
+  <div class="section-title">VI. Operational Application</div>
+  <p>Unjust enrichment applies across all fiduciary and institutional contexts:</p>
+  <ul style="margin-left:1.5rem;">
+    <li><strong>Trust Administration:</strong> A trustee retains unauthorized benefit (e.g., excessive fees, secret commissions). The beneficiary may seek restitution through disgorgement, constructive trust, or equitable lien. Trust property used for personal advantage (e.g., using trust funds to purchase a personal residence) gives rise to an unjust enrichment claim traceable to the purchased asset.</li>
+    <li><strong>Governance:</strong> An officer receives improper advantage (undisclosed compensation, self-dealing). The institution may recover the benefit. Institutional funds confer unauthorized benefit on a third party; restitution may be available.</li>
+    <li><strong>Administrative Records:</strong> Accounting records, transaction records, benefit analysis, and tracing records are essential to proving unjust enrichment.</li>
+    <li><strong>Equitable Review:</strong> Identify the specific benefit, identify the unjust basis (breach of duty, mistake, fraud), determine the restitutionary remedy (return of property, disgorgement, constructive trust, equitable lien).</li>
+  </ul>
+
+  <!-- VII. CAPACITY DISTINCTION -->
+  <div class="section-title">VII. Capacity Distinction</div>
+  <div class="content-panel">
+    <p><strong>Private Individual Capacity:</strong> A private dispute may require proof that retention of benefit is unjust under recognized grounds (fraud, mistake, duress), not merely unfavorable or unfair.</p>
+    <p><strong>Representative / Fiduciary Capacity:</strong> Fiduciaries are subject to stricter restitution because they may not profit from entrusted authority without authorization. Even good-faith fiduciaries may be required to disgorge unauthorized profits.</p>
+    <p><strong>Trustee Capacity:</strong> Unauthorized gain from trust property may require disgorgement, accounting, constructive trust, or equitable lien. The trustee's intent is not dispositive.</p>
+    <p><strong>Institutional / Office Capacity:</strong> Benefits obtained through office authority must be reviewed for institutional ownership, authorization, and proper purpose. The institution may recover benefits obtained by officeholders without authority.</p>
+    <p>Capacity determines consequence. The same individual may be subject to unjust enrichment claims in fiduciary capacity but not in personal capacity.</p>
+  </div>
+
+  <!-- VIII. RECORDKEEPING REQUIREMENTS -->
+  <div class="section-title">VIII. Recordkeeping Requirements</div>
+  <ul style="margin-left:1.5rem;">
+    <li>Benefit identification record (specific asset, funds, or value received).</li>
+    <li>Transaction history (invoices, receipts, canceled checks, wire transfers).</li>
+    <li>Accounting records (ledgers, financial statements, allocation records).</li>
+    <li>Payment records (who paid what to whom, when, and why).</li>
+    <li>Transfer records (documentation of asset movement).</li>
+    <li>Fiduciary authority records (appointment, trust instrument, agency agreement).</li>
+    <li>Correspondence (emails, letters, notices regarding the benefit).</li>
+    <li>Notices to interested parties (beneficiaries, co-fiduciaries).</li>
+    <li>Tracing documents (showing flow of value from claimant to enriched party).</li>
+    <li>Unjust enrichment memorandum (legal basis for restitution).</li>
+    <li>Remedy analysis (constructive trust, equitable lien, disgorgement).</li>
+    <li>Evidence index (list of all documents submitted).</li>
+    <li>Final determination or order where applicable (judgment imposing restitution).</li>
+    <li>Signature capacity records (who signed transaction documents, who asserted claim).</li>
+  </ul>
+  <p>Core rule: <strong>Unjust enrichment requires traceable benefit and a record of unjust circumstances.</strong> Without documented evidence, restitution cannot be proven.</p>
+
+  <!-- IX. COMMON ERRORS -->
+  <div class="section-title">IX. Common Errors</div>
+  <ul style="margin-left:1.5rem;">
+    <li>Treating every unfair outcome as unjust enrichment – requires specific unjust factor, not mere dissatisfaction.</li>
+    <li>Failing to identify a specific benefit – general allegations of unfairness are insufficient.</li>
+    <li>Failing to show enrichment occurred at another's expense – the claimant must trace value to the enriched party.</li>
+    <li>Ignoring legal justification – a valid contract or gift may defeat an unjust enrichment claim.</li>
+    <li>Lacking accounting records – without financial documentation, benefit and tracing cannot be proven.</li>
+    <li>Confusing damages with restitution – damages compensate loss; restitution restores gain.</li>
+    <li>Failing to trace property or value – constructive trust and equitable lien require tracing.</li>
+    <li>Ignoring clean hands – a claimant with unclean hands may be denied restitution.</li>
+    <li>Seeking remedy without evidence – unsubstantiated claims cannot support unjust enrichment.</li>
+    <li>Confusing personal capacity with fiduciary capacity – the standard for unjust enrichment is stricter for fiduciaries.</li>
+  </ul>
+
+  <!-- X. INSTITUTIONAL RATIONALE -->
+  <div class="section-title">X. Institutional Rationale</div>
+  <p>KLI teaches unjust enrichment because fiduciary governance requires a system for identifying improper benefits, correcting retention of value, and restoring accountability where entrusted authority or institutional property has been misused. Equity prevents gain from becoming protected merely because legal title or possession exists. Unjust enrichment is not a vague fairness doctrine; it is a disciplined restitutionary principle requiring a specific benefit, an unjust factor, and a connection to the claimant. Understanding unjust enrichment enables fiduciaries and institutions to prevent improper retention, recover misappropriated assets, and enforce accountability.</p>
+
+  <!-- XI. RELATED KLI DOCTRINE -->
+  <div class="section-title">XI. Related KLI Doctrine</div>
+  <ul style="margin-left:1.5rem;">
+    <li><a href="../equity/equity-follows-the-law.html" style="color:var(--antique-gold);">Equity Follows the Law</a> (KLI-KL-EQ-001)</li>
+    <li><a href="../equity/constructive-trust.html" style="color:var(--antique-gold);">Constructive Trust</a> (KLI-KL-EQ-002)</li>
+    <li><a href="../equity/equitable-lien.html" style="color:var(--antique-gold);">Equitable Lien</a> (KLI-KL-EQ-003)</li>
+    <li><a href="../equity/accounting-equity.html" style="color:var(--antique-gold);">Accounting in Equity</a> (KLI-KL-EQ-005)</li>
+    <li><a href="../fiduciary/fiduciary-remedies.html" style="color:var(--antique-gold);">Fiduciary Remedies</a> (KLI-KL-FID-009)</li>
+    <li><a href="../fiduciary/fiduciary-breach.html" style="color:var(--antique-gold);">Fiduciary Breach</a> (KLI-KL-FID-008)</li>
+    <li><a href="../fiduciary/duty-of-loyalty.html" style="color:var(--antique-gold);">Duty of Loyalty</a> (KLI-KL-FID-003)</li>
+    <li><a href="../trust-administration/fiduciary-remedies-trusts.html" style="color:var(--antique-gold);">Fiduciary Remedies in Trusts</a> (KLI-KL-TRUST-007)</li>
+    <li><a href="../administration/evidence-standards.html" style="color:var(--antique-gold);">Evidence Standards</a> (KLI-KL-ADMIN-003)</li>
+  </ul>
+
+  <!-- XII. EDUCATIONAL DISCLAIMER -->
+  <div class="notice">
+    This article is published by Kelly Legacy Institute for educational governance literacy only. It does not provide legal advice, financial advice, fiduciary decisions, securities guidance, tax advice, or attorney-client services. Application of legal or equitable principles depends on jurisdiction, facts, governing instruments, and competent professional review.
+  </div>
+
+  <!-- CTAs -->
+  <div style="margin-top: 2rem; text-align: center;">
+    <a href="../../pages/institute.html" class="btn">Continue Through Kelly Legacy Institute</a>
+    <a href="../../pages/publications.html" class="btn">View Publications</a>
+    <a href="../../knowledge-library.html" class="btn">Return to Knowledge Library</a>
+  </div>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-disclaimer">
+      <i class="fas fa-scale-balanced"></i> Educational governance materials only. © Kelly Legacy Institute // Kelly Legacy Estates Living Trust // Office of the Fiduciary.
+    </div>
+    <div class="footer-links">
+      <a href="../../legal/ip-policy.html">IP Policy</a>
+      <a href="../../legal/privacy.html">Privacy</a>
+      <a href="../../legal/record-policy.html">Record Policy</a>
+      <a href="../../legal/terms.html">Terms</a>
+      <a href="../../legal/transparency.html">Transparency</a>
+      <a href="../../pages/execution-framework.html">Execution Framework</a>
+      <a href="../../pages/curriculum-portal.html">Curriculum Portal</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  const toggleBtn = document.getElementById('mobileMenuToggle');
+  const mainNav = document.getElementById('mainNav');
+  if (toggleBtn && mainNav) {
+    toggleBtn.addEventListener('click', () => {
+      mainNav.classList.toggle('active');
+    });
+  }
+
+  // Chatbase embed - Legacy AI
+  // Actual Legacy AI branding must be configured inside Chatbase dashboard.
+  (function(){
+    if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+      window.chatbase=(...arguments)=>{
+        if(!window.chatbase.q){window.chatbase.q=[]}
+        window.chatbase.q.push(arguments)
+      };
+      window.chatbase=new Proxy(window.chatbase,{
+        get(target,prop){
+          if(prop==="q"){return target.q}
+          return(...args)=>target(prop,...args)
+        }
+      })
+    }
+    const onLoad=function(){
+      const script=document.createElement("script");
+      script.src="https://www.chatbase.co/embed.min.js";
+      script.id="JB7Ysn50O_DpC9tWnoxrh";
+      script.domain="www.chatbase.co";
+      document.body.appendChild(script)
+    };
+    if(document.readyState==="complete"){onLoad()}
+    else{window.addEventListener("load",onLoad)}
+  })();
+</script>
+</body>
+</html>
