@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Injunction | KLI Knowledge Library</title>
+<meta name="description" content="Injunction explained through equitable relief, irreparable harm, inadequacy of legal remedies, fiduciary breach, trust administration, governance protection, and procedural standards.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kellylegacyestates.com/library/equity/injunction.html">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Injunction | KLI Knowledge Library">
+<meta property="og:description" content="Injunction explained through equitable relief, irreparable harm, inadequacy of legal remedies, fiduciary breach, trust administration, governance protection, and procedural standards.">
+<meta property="og:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
+<meta property="og:url" content="https://kellylegacyestates.com/library/equity/injunction.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kelly Legacy Estates">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Injunction | KLI Knowledge Library">
+<meta name="twitter:description" content="Educational doctrine on injunction, including equitable relief, irreparable harm, inadequacy of legal remedies, and fiduciary breach.">
+<meta name="twitter:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
+
+<!-- Schema: Article + Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Injunction",
+  "description": "Injunction explained through equitable relief, irreparable harm, inadequacy of legal remedies, fiduciary breach, trust administration, governance protection, and procedural standards.",
+  "author": {
+    "@type": "Organization",
+    "name": "Kelly Legacy Institute"
+  },
+  "publisher": {
+    "@type": "EducationalOrganization",
+    "name": "Kelly Legacy Institute",
+    "url": "https://kellylegacyestates.com"
+  },
+  "datePublished": "2025-01-20",
+  "dateModified": "2026-06-02",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://kellylegacyestates.com/library/equity/injunction.html"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "KLI Knowledge Library",
+      "item": "https://kellylegacyestates.com/knowledge-library.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Equity & Remedies",
+      "item": "https://kellylegacyestates.com/library/equity/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Injunction"
+    }
+  ]
+}
+</script>
+
+<!-- Styles -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root {
+  --exec-black: #050505;
+  --deep-charcoal: #111113;
+  --charcoal-card: #16161A;
+  --charcoal-border: #23232A;
+  --crimson: #9E2A2A;
+  --crimson-dim: #6E1E1E;
+  --antique-gold: #C8A24C;
+  --antique-gold-muted: #9A7A3A;
+  --ivory: #F0EFEA;
+  --ivory-dim: #CBC9C1;
+  --slate-meta: #7A7A7A;
+  --border-faint: rgba(240,239,234,0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--exec-black);
+  color: var(--ivory-dim);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* noise overlay and scanline */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.35;
+}
+
+.scanline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(0deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 3px, rgba(0,0,0,0.05) 3px, rgba(0,0,0,0.05) 6px);
+  pointer-events: none;
+  z-index: 998;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+  position: relative;
+  z-index: 10;
+}
+
+/* header */
+.site-header {
+  border-bottom: 1px solid var(--border-faint);
+  background: rgba(5,5,5,0.92);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.identity-mark h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ivory);
+}
+
+.identity-mark p {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--crimson);
+  margin-top: 4px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+  .nav-links a.active {
+  color: var(--antique-gold);
+  border-bottom: 1px solid var(--antique-gold);
+  }
+
+.nav-links a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  color: var(--ivory-dim);
+  transition: color 0.2s;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover { color: var(--antique-gold); }
+.nav-links .access-cta {
+  border: 1px solid var(--crimson);
+  padding: 8px 18px;
+  color: var(--crimson);
+  font-weight: 500;
+}
+.nav-links .access-cta:hover { background: rgba(158,42,42,0.08); color: var(--antique-gold); border-color: var(--antique-gold); }
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--crimson);
+  color: var(--ivory);
+  padding: 8px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  cursor: pointer;
+}
+
+/* meta-band */
+.meta-band {
+  background: var(--deep-charcoal);
+  border-bottom: 1px solid var(--border-faint);
+  padding: 0.5rem 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--slate-meta);
+}
+
+.meta-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.meta-inner span i { margin-right: 6px; color: var(--antique-gold-muted); font-size: 0.7rem; }
+
+.article-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.article-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-faint);
+  padding-bottom: 1.5rem;
+}
+
+.article-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--crimson);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.article-id {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--antique-gold-muted);
+  margin: 0.5rem 0;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: var(--ivory);
+  margin: 1rem 0 0.5rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--ivory);
+  margin: 2rem 0 1rem;
+  border-left: 3px solid var(--antique-gold);
+  padding-left: 1rem;
+}
+
+.content-panel {
+  background: var(--charcoal-card);
+  border: 1px solid var(--charcoal-border);
+  padding: 1.8rem;
+  margin: 1.5rem 0;
+  border-radius: 2px;
+}
+
+.notice {
+  background: rgba(158,42,42,0.08);
+  border-left: 3px solid var(--crimson);
+  padding: 1.2rem;
+  font-size: 0.85rem;
+  margin: 1.5rem 0;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid var(--antique-gold);
+  padding: 10px 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--antique-gold);
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: var(--antique-gold);
+  color: var(--exec-black);
+}
+
+/* footer */
+.footer {
+  background: var(--deep-charcoal);
+  border-top: 1px solid var(--border-faint);
+  padding: 3rem 0 2rem;
+  font-size: 0.7rem;
+}
+
+.footer-disclaimer {
+  max-width: 900px;
+  color: var(--slate-meta);
+  line-height: 1.6;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.footer-links {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+}
+
+.footer-links a {
+  color: var(--ivory-dim);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--antique-gold);
+}
+
+/* responsive */
+@media (max-width: 860px) {
+  .container { padding: 0 24px; }
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .nav-links.active { display: flex; }
+  .mobile-menu-toggle { display: block; }
+  h1 { font-size: 2rem; }
+}
+
+@media (max-width: 640px) {
+  .nav-wrapper { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<div class="noise-overlay"></div>
+<div class="scanline"></div>
+<header class="site-header">
+  <div class="container">
+    <div class="nav-wrapper">
+      <div class="identity-mark"><h1>KELLY LEGACY ESTATES</h1><p>OFFICE OF THE FIDUCIARY</p></div>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">MENU</button>
+      <nav class="nav-links" id="mainNav" aria-label="Primary navigation">
+        <a href="../../index.html">Home</a>
+        <a href="../../pages/governance.html">Governance</a>
+        <a href="../../pages/fiduciary-doctrine.html">Fiduciary Doctrine</a>
+        <a href="../../pages/ai-governance.html">AI Governance</a>
+        <a href="../../knowledge-library.html">Knowledge Library</a>
+        <a href="../../pages/publications.html">Publications</a>
+        <a href="../../pages/institute.html">Institute</a>
+        <a href="../../pages/institutional-solutions.html">Institutional Solutions</a>
+        <a href="../../pages/klat-access.html">KLAT Access</a>
+        <a href="../../pages/contact.html" class="access-cta">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<div class="meta-band"><div class="container"><div class="meta-inner"><span><i class="fas fa-shield-alt"></i> KLI KNOWLEDGE LIBRARY // EQUITY & REMEDIES</span><span><i class="fas fa-hourglass-half"></i> CONTINUITY ACTIVE</span></div></div></div>
+
+<main>
+<div class="article-container">
+  <div class="article-header">
+    <div class="article-label">KELLY LEGACY INSTITUTE™ // KLI KNOWLEDGE LIBRARY™</div>
+    <div class="article-id">Article ID: KLI-KL-EQ-005 | Public Educational Doctrine | Status: Published</div>
+    <h1>Injunction</h1>
+    <div class="meta-inner" style="margin-top:1rem;"><span>Primary Collection: Equity & Remedies</span><span>Related: Equitable Orders, Irreparable Harm, Preliminary Relief, Governance Protection</span></div>
+  </div>
+
+  <!-- I. EXECUTIVE SUMMARY -->
+  <div class="section-title">I. Executive Summary</div>
+  <p>An injunction is a court order directing a party to act, stop acting, or preserve the status quo. Injunctions may be used to prevent continuing harm, protect trust property, stop fiduciary misconduct, preserve records, prevent disclosure of protected information, or maintain stability while a dispute is reviewed. Common forms include temporary restraining order, preliminary injunction, permanent injunction, prohibitory injunction (ordering a party to refrain from an act), and mandatory injunction (ordering a party to perform an act). An injunction is not automatic. It requires evidence, proper procedure, equitable basis, and a showing that ordinary legal remedies are inadequate.</p>
+  <p>Injunctive relief is a powerful equitable tool, but it is granted sparingly and only when the moving party meets rigorous standards.</p>
+  <div class="content-panel"><strong>Why It Matters:</strong> Injunctions provide urgent protection when money damages cannot remedy a threatened harm. In fiduciary contexts, an injunction can prevent dissipation of trust assets, stop unauthorized transfers, or compel preservation of records critical to accountability.</div>
+
+  <!-- II. CORE PRINCIPLE -->
+  <div class="section-title">II. Core Principle</div>
+  <p><strong>An injunction is an equitable remedy that orders a party to do, stop doing, or refrain from doing a specific act where legal remedies are inadequate and equitable standards justify court intervention.</strong></p>
+
+  <!-- III. GOVERNANCE RULE -->
+  <div class="section-title">III. Governance Rule</div>
+  <p>No injunction analysis should proceed without identifying:</p>
+  <ol style="margin-left:1.5rem; margin-top:0.5rem;">
+    <li>specific conduct to be restrained or required (the act or omission);</li>
+    <li>harm threatened or occurring (irreparable injury);</li>
+    <li>inadequacy of ordinary legal remedy (why money damages are insufficient);</li>
+    <li>likelihood or basis of entitlement (probability of success on the merits or established right);</li>
+    <li>balance of equities (whether hardship to the moving party outweighs hardship to the restrained party);</li>
+    <li>public or institutional interest where applicable; and</li>
+    <li>supporting evidence and record (affidavits, documents, threatened harm).</li>
+  </ol>
+  <p>If any of these elements is missing, injunctive relief is unlikely to be granted.</p>
+
+  <!-- IV. DOCTRINAL EXPLANATION -->
+  <div class="section-title">IV. Doctrinal Explanation</div>
+  <p>Injunction doctrine balances the need for urgent relief against the risk of granting extraordinary remedies. Key elements include:</p>
+  <ul style="margin-left:1.5rem;">
+    <li><strong>Injunction as Equitable Order:</strong> An injunction is a judicial command, not a damages award. Violation may result in contempt sanctions.</li>
+    <li><strong>Prohibitory Injunction:</strong> Orders a party to refrain from doing a specific act (e.g., stop transferring trust assets, cease self-dealing).</li>
+    <li><strong>Mandatory Injunction:</strong> Orders a party to perform an affirmative act (e.g., preserve records, return property, take corrective action).</li>
+    <li><strong>Temporary Restraining Order (TRO):</strong> Emergency relief granted without full hearing, lasting typically 14 days or less. Requires immediate and irreparable harm.</li>
+    <li><strong>Preliminary Injunction:</strong> Preserves the status quo pending final resolution of a dispute. Requires likelihood of success on the merits, irreparable harm, balance of equities favoring relief, and public interest.</li>
+    <li><strong>Permanent Injunction:</strong> Final relief granted after a decision on the merits. Requires actual success on the merits, irreparable harm, inadequacy of legal remedies, and balance of equities.</li>
+    <li><strong>Irreparable Harm:</strong> Injury that cannot be adequately compensated by money damages or measured with certainty. Examples: destruction of unique property, dissipation of trust assets, loss of governance records, breach of confidentiality.</li>
+    <li><strong>Inadequacy of Legal Remedy:</strong> Courts will not grant an injunction if money damages would make the moving party whole. The moving party must show that damages are insufficient.</li>
+    <li><strong>Balance of Equities:</strong> Courts weigh the hardship to the moving party if the injunction is denied against the hardship to the restrained party if the injunction is granted. If the balance tips against relief, injunction may be denied.</li>
+    <li><strong>Clean Hands:</strong> A party seeking an injunction must have acted equitably in the matter. Unclean hands bars injunctive relief.</li>
+    <li><strong>Specificity Requirement:</strong> An injunction must describe the specific conduct to be restrained or required in reasonable detail. Vague or ambiguous orders are not enforceable.</li>
+    <li><strong>Limits of Injunctive Relief:</strong> Courts will not issue injunctions that are impossible to obey, that require continuous supervision, or that are broader than necessary to protect the moving party's rights.</li>
+  </ul>
+  <div class="content-panel"><strong>Clarification:</strong> An injunction must be specific enough to be obeyed and enforced. Equity does not issue vague commands. The moving party bears the burden of proving each required element.</div>
+
+  <!-- V. RECOGNIZED AUTHORITIES -->
+  <div class="section-title">V. Recognized Authorities</div>
+  <ul style="margin-left:1.5rem; line-height:1.6;">
+    <li><strong>Hecht Co. v. Bowles, 321 U.S. 321 (1944)</strong> – Equitable discretion must be exercised, not mechanically applied. Courts consider the equities of each case before granting injunctive relief.</li>
+    <li><strong>Weinberger v. Romero-Barcelo, 456 U.S. 305 (1982)</strong> – An injunction is an equitable remedy that requires balancing of the equities and consideration of the public interest. It is not automatic even when a statutory violation is shown.</li>
+    <li><strong>eBay Inc. v. MercExchange, 547 U.S. 388 (2006)</strong> – A plaintiff seeking a permanent injunction must demonstrate: (1) irreparable injury; (2) inadequacy of legal remedies; (3) balance of hardships favors relief; and (4) public interest would not be disserved.</li>
+    <li><strong>Winter v. Natural Resources Defense Council, 555 U.S. 7 (2008)</strong> – A preliminary injunction requires a likelihood of irreparable harm, not merely a possibility. The moving party must make a clear showing.</li>
+    <li><strong>Uniform Trust Code § 1001</strong> – A court may issue an injunction as a remedy for breach of trust, including restraining the trustee from committing further breaches.</li>
+    <li><strong>Restatement (Third) of Trusts</strong> – Courts may enforce trust duties through equitable remedies, including injunction, to prevent harm to beneficiaries.</li>
+    <li><strong>Pomeroy, Equity Jurisprudence</strong> – The injunction is a primary equitable remedy to prevent wrongs that cannot be adequately redressed at law. It is preventive, not remedial.</li>
+    <li><strong>Story, Commentaries on Equity Jurisprudence</strong> – Equity may restrain acts that violate trust obligations, infringe rights, or cause irreparable injury where legal remedies are inadequate.</li>
+  </ul>
+  <p>These authorities reflect broadly recognized equitable principles governing injunctive relief. Specific application depends on jurisdiction, procedural rules, facts, remedy requested, and competent professional review.</p>
+
+  <!-- VI. OPERATIONAL APPLICATION -->
+  <div class="section-title">VI. Operational Application</div>
+  <p>Injunction applies across all fiduciary and institutional contexts:</p>
+  <ul style="margin-left:1.5rem;">
+    <li><strong>Trust Administration:</strong> Restrain misuse of trust property (e.g., prevent a trustee from selling trust assets without authority). Prevent unauthorized transfer (freeze assets pending review). Compel preservation of records (require the trustee to maintain and not destroy trust documents). Stop fiduciary self-dealing (enjoin conflicted transactions).</li>
+    <li><strong>Governance:</strong> Prevent unauthorized institutional action (e.g., stop a board from acting beyond its authority). Preserve corporate or trust records (enjoin destruction of records relevant to pending dispute). Stop misuse of confidential materials (enjoin disclosure of trade secrets or privileged information).</li>
+    <li><strong>Administrative Records:</strong> Evidence of threatened harm (affidavits, declarations), notices to opposing parties, governing instruments establishing rights, decision records documenting the underlying dispute.</li>
+    <li><strong>Equitable Review:</strong> Identify the specific conduct to be restrained or required, identify the threatened harm (irreparable injury), determine the appropriate form of relief (TRO, preliminary, permanent), preserve a complete record of the injunction proceeding.</li>
+  </ul>
+
+  <!-- VII. CAPACITY DISTINCTION -->
+  <div class="section-title">VII. Capacity Distinction</div>
+  <div class="content-panel">
+    <p><strong>Private Individual Capacity:</strong> A private party must show personal right, threatened harm, and inadequacy of legal remedy. The standard for injunctive relief is rigorous.</p>
+    <p><strong>Representative / Fiduciary Capacity:</strong> A fiduciary may seek or face injunction where entrusted authority is being misused or property requires preservation. Beneficiaries may seek to enjoin a fiduciary's improper conduct.</p>
+    <p><strong>Trustee Capacity:</strong> Trustees may be restrained from unauthorized acts or compelled to preserve trust property and records. A court may enjoin a trustee from making improper distributions or selling trust assets without authority.</p>
+    <p><strong>Institutional / Office Capacity:</strong> Institutional actors may be restrained from actions outside authority or contrary to governing documents. Officers may be enjoined from exceeding delegated authority.</p>
+    <p>Capacity determines consequence. The same individual may seek an injunction in personal capacity but may be subject to injunction in fiduciary capacity.</p>
+  </div>
+
+  <!-- VIII. RECORDKEEPING REQUIREMENTS -->
+  <div class="section-title">VIII. Recordkeeping Requirements</div>
+  <ul style="margin-left:1.5rem;">
+    <li>Governing instrument (trust, contract, bylaws, articles).</li>
+    <li>Authority record (appointment, resolution, delegation).</li>
+    <li>Conduct record (documentation of the act or omission giving rise to the request).</li>
+    <li>Harm memorandum (explanation of threatened irreparable injury).</li>
+    <li>Notice records (proof of notice to the opposing party).</li>
+    <li>Correspondence (demand letters, communications regarding the conduct).</li>
+    <li>Evidence index (list of all documents submitted).</li>
+    <li>Affidavits or declarations where applicable (sworn statements supporting the request).</li>
+    <li>Property records (title, location, value, endangered status).</li>
+    <li>Accounting records (if financial harm is threatened).</li>
+    <li>Remedy request memorandum (legal basis for injunction).</li>
+    <li>Court order or determination where applicable (TRO, preliminary injunction, permanent injunction).</li>
+    <li>Compliance records (proof of compliance or non-compliance with the order).</li>
+    <li>Signature capacity records (who signed documents, who requested relief).</li>
+  </ul>
+  <p>Core rule: <strong>Injunction requires a record of irreparable harm and inadequate legal remedy.</strong> Without documented evidence, equitable relief will not be granted.</p>
+
+  <!-- IX. COMMON ERRORS -->
+  <div class="section-title">IX. Common Errors</div>
+  <ul style="margin-left:1.5rem;">
+    <li>Requesting injunction without specific conduct – vague or overbroad requests will be denied.</li>
+    <li>Failing to prove irreparable harm – showing economic loss alone is often insufficient.</li>
+    <li>Relying only on money damages – if money damages would suffice, an injunction is not available.</li>
+    <li>Ignoring clean hands – the moving party must have acted equitably.</li>
+    <li>Failing to preserve evidence – incomplete records undermine the request.</li>
+    <li>Seeking vague commands – an injunction must be specific enough to be obeyed.</li>
+    <li>Confusing temporary relief with final relief – TRO and preliminary injunction are interim, not final.</li>
+    <li>Ignoring procedural requirements – failure to give notice or post bond may defeat relief.</li>
+    <li>Failing to show authority or standing – the moving party must have a legal right to enforce.</li>
+    <li>Using injunction language without equitable basis – not every dispute justifies equitable intervention.</li>
+  </ul>
+
+  <!-- X. INSTITUTIONAL RATIONALE -->
+  <div class="section-title">X. Institutional Rationale</div>
+  <p>KLI teaches injunction because governance sometimes requires preservation before final remedy. In fiduciary administration, records, assets, authority, and beneficiary interests may need protection before loss becomes irreversible. An injunction can stop a trustee from dissipating trust assets, prevent destruction of critical records, or halt unauthorized self-dealing while a court reviews the merits. Understanding injunctive relief enables fiduciaries and institutions to seek urgent protection when needed and to respond appropriately when faced with an injunction request.</p>
+
+  <!-- XI. RELATED KLI DOCTRINE -->
+  <div class="section-title">XI. Related KLI Doctrine</div>
+  <ul style="margin-left:1.5rem;">
+    <li><a href="../equity/equity-follows-the-law.html" style="color:var(--antique-gold);">Equity Follows the Law</a> (KLI-KL-EQ-001)</li>
+    <li><a href="../equity/constructive-trust.html" style="color:var(--antique-gold);">Constructive Trust</a> (KLI-KL-EQ-002)</li>
+    <li><a href="../equity/equitable-lien.html" style="color:var(--antique-gold);">Equitable Lien</a> (KLI-KL-EQ-003)</li>
+    <li><a href="../equity/unjust-enrichment.html" style="color:var(--antique-gold);">Unjust Enrichment</a> (KLI-KL-EQ-004)</li>
+    <li><a href="../equity/specific-performance.html" style="color:var(--antique-gold);">Specific Performance</a> (KLI-KL-EQ-006)</li>
+    <li><a href="../fiduciary/fiduciary-remedies.html" style="color:var(--antique-gold);">Fiduciary Remedies</a> (KLI-KL-FID-009)</li>
+    <li><a href="../fiduciary/fiduciary-breach.html" style="color:var(--antique-gold);">Fiduciary Breach</a> (KLI-KL-FID-008)</li>
+    <li><a href="../trust-administration/fiduciary-remedies-trusts.html" style="color:var(--antique-gold);">Fiduciary Remedies in Trusts</a> (KLI-KL-TRUST-007)</li>
+    <li><a href="../administration/evidence-standards.html" style="color:var(--antique-gold);">Evidence Standards</a> (KLI-KL-ADMIN-003)</li>
+  </ul>
+
+  <!-- XII. EDUCATIONAL DISCLAIMER -->
+  <div class="notice">
+    This article is published by Kelly Legacy Institute for educational governance literacy only. It does not provide legal advice, financial advice, fiduciary decisions, securities guidance, tax advice, or attorney-client services. Application of legal or equitable principles depends on jurisdiction, facts, governing instruments, and competent professional review.
+  </div>
+
+  <!-- CTAs -->
+  <div style="margin-top: 2rem; text-align: center;">
+    <a href="../../pages/institute.html" class="btn">Continue Through Kelly Legacy Institute</a>
+    <a href="../../pages/publications.html" class="btn">View Publications</a>
+    <a href="../../knowledge-library.html" class="btn">Return to Knowledge Library</a>
+  </div>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-disclaimer">
+      <i class="fas fa-scale-balanced"></i> Educational governance materials only. © Kelly Legacy Institute // Kelly Legacy Estates Living Trust // Office of the Fiduciary.
+    </div>
+    <div class="footer-links">
+      <a href="../../legal/ip-policy.html">IP Policy</a>
+      <a href="../../legal/privacy.html">Privacy</a>
+      <a href="../../legal/record-policy.html">Record Policy</a>
+      <a href="../../legal/terms.html">Terms</a>
+      <a href="../../legal/transparency.html">Transparency</a>
+      <a href="../../pages/execution-framework.html">Execution Framework</a>
+      <a href="../../pages/curriculum-portal.html">Curriculum Portal</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  const toggleBtn = document.getElementById('mobileMenuToggle');
+  const mainNav = document.getElementById('mainNav');
+  if (toggleBtn && mainNav) {
+    toggleBtn.addEventListener('click', () => {
+      mainNav.classList.toggle('active');
+    });
+  }
+
+  // Chatbase embed - Legacy AI
+  // Actual Legacy AI branding must be configured inside Chatbase dashboard.
+  (function(){
+    if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+      window.chatbase=(...arguments)=>{
+        if(!window.chatbase.q){window.chatbase.q=[]}
+        window.chatbase.q.push(arguments)
+      };
+      window.chatbase=new Proxy(window.chatbase,{
+        get(target,prop){
+          if(prop==="q"){return target.q}
+          return(...args)=>target(prop,...args)
+        }
+      })
+    }
+    const onLoad=function(){
+      const script=document.createElement("script");
+      script.src="https://www.chatbase.co/embed.min.js";
+      script.id="JB7Ysn50O_DpC9tWnoxrh";
+      script.domain="www.chatbase.co";
+      document.body.appendChild(script)
+    };
+    if(document.readyState==="complete"){onLoad()}
+    else{window.addEventListener("load",onLoad)}
+  })();
+</script>
+</body>
+</html>
