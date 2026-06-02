@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Internal Controls | KLI Knowledge Library</title>
+<meta name="description" content="Internal controls explained through approvals, segregation of duties, records, fiduciary oversight, risk management, review procedures, audit trails, and governance accountability.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kellylegacyestates.com/library/governance/internal-controls.html">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Internal Controls | KLI Knowledge Library">
+<meta property="og:description" content="Internal controls explained through approvals, segregation of duties, records, fiduciary oversight, risk management, review procedures, audit trails, and governance accountability.">
+<meta property="og:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
+<meta property="og:url" content="https://kellylegacyestates.com/library/governance/internal-controls.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kelly Legacy Estates">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Internal Controls | KLI Knowledge Library">
+<meta name="twitter:description" content="Educational doctrine on internal controls, including approvals, segregation of duties, records, fiduciary oversight, risk management, and audit trails.">
+<meta name="twitter:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
+
+<!-- Schema: Article + Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Internal Controls",
+  "description": "Internal controls explained through approvals, segregation of duties, records, fiduciary oversight, risk management, review procedures, audit trails, and governance accountability.",
+  "author": {
+    "@type": "Organization",
+    "name": "Kelly Legacy Institute"
+  },
+  "publisher": {
+    "@type": "EducationalOrganization",
+    "name": "Kelly Legacy Institute",
+    "url": "https://kellylegacyestates.com"
+  },
+  "datePublished": "2025-01-20",
+  "dateModified": "2026-06-02",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://kellylegacyestates.com/library/governance/internal-controls.html"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "KLI Knowledge Library",
+      "item": "https://kellylegacyestates.com/knowledge-library.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Governance Systems",
+      "item": "https://kellylegacyestates.com/library/governance/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Internal Controls",
+      "item": "https://kellylegacyestates.com/library/governance/internal-controls.html"
+    }
+  ]
+}
+</script>
+
+<!-- Styles -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root {
+  --exec-black: #050505;
+  --deep-charcoal: #111113;
+  --charcoal-card: #16161A;
+  --charcoal-border: #23232A;
+  --crimson: #9E2A2A;
+  --crimson-dim: #6E1E1E;
+  --antique-gold: #C8A24C;
+  --antique-gold-muted: #9A7A3A;
+  --ivory: #F0EFEA;
+  --ivory-dim: #CBC9C1;
+  --slate-meta: #7A7A7A;
+  --border-faint: rgba(240,239,234,0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--exec-black);
+  color: var(--ivory-dim);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* noise overlay and scanline */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.35;
+}
+
+.scanline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(0deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 3px, rgba(0,0,0,0.05) 3px, rgba(0,0,0,0.05) 6px);
+  pointer-events: none;
+  z-index: 998;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+  position: relative;
+  z-index: 10;
+}
+
+/* header */
+.site-header {
+  border-bottom: 1px solid var(--border-faint);
+  background: rgba(5,5,5,0.92);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.identity-mark h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ivory);
+}
+
+.identity-mark p {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--crimson);
+  margin-top: 4px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+  .nav-links a.active {
+  color: var(--antique-gold);
+  border-bottom: 1px solid var(--antique-gold);
+  }
+
+.nav-links a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  color: var(--ivory-dim);
+  transition: color 0.2s;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover { color: var(--antique-gold); }
+.nav-links .access-cta {
+  border: 1px solid var(--crimson);
+  padding: 8px 18px;
+  color: var(--crimson);
+  font-weight: 500;
+}
+.nav-links .access-cta:hover { background: rgba(158,42,42,0.08); color: var(--antique-gold); border-color: var(--antique-gold); }
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--crimson);
+  color: var(--ivory);
+  padding: 8px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  cursor: pointer;
+}
+
+/* meta-band */
+.meta-band {
+  background: var(--deep-charcoal);
+  border-bottom: 1px solid var(--border-faint);
+  padding: 0.5rem 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--slate-meta);
+}
+
+.meta-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.meta-inner span i { margin-right: 6px; color: var(--antique-gold-muted); font-size: 0.7rem; }
+
+.article-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.article-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-faint);
+  padding-bottom: 1.5rem;
+}
+
+.article-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--crimson);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.article-id {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--antique-gold-muted);
+  margin: 0.5rem 0;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: var(--ivory);
+  margin: 1rem 0 0.5rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--ivory);
+  margin: 2rem 0 1rem;
+  border-left: 3px solid var(--antique-gold);
+  padding-left: 1rem;
+}
+
+.content-panel {
+  background: var(--charcoal-card);
+  border: 1px solid var(--charcoal-border);
+  padding: 1.8rem;
+  margin: 1.5rem 0;
+  border-radius: 2px;
+}
+
+.notice {
+  background: rgba(158,42,42,0.08);
+  border-left: 3px solid var(--crimson);
+  padding: 1.2rem;
+  font-size: 0.85rem;
+  margin: 1.5rem 0;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid var(--antique-gold);
+  padding: 10px 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--antique-gold);
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: var(--antique-gold);
+  color: var(--exec-black);
+}
+
+/* footer */
+.footer {
+  background: var(--deep-charcoal);
+  border-top: 1px solid var(--border-faint);
+  padding: 3rem 0 2rem;
+  font-size: 0.7rem;
+}
+
+.footer-disclaimer {
+  max-width: 900px;
+  color: var(--slate-meta);
+  line-height: 1.6;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.footer-links {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+}
+
+.footer-links a {
+  color: var(--ivory-dim);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--antique-gold);
+}
+
+/* responsive */
+@media (max-width: 860px) {
+  .container { padding: 0 24px; }
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .nav-links.active { display: flex; }
+  .mobile-menu-toggle { display: block; }
+  h1 { font-size: 2rem; }
+}
+
+@media (max-width: 640px) {
+  .nav-wrapper { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<div class="noise-overlay"></div>
+<div class="scanline"></div>
+<header class="site-header">
+  <div class="container">
+    <div class="nav-wrapper">
+      <div class="identity-mark"><h1>KELLY LEGACY ESTATES</h1><p>OFFICE OF THE FIDUCIARY</p></div>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">MENU</button>
+      <nav class="nav-links" id="mainNav" aria-label="Primary navigation">
+        <a href="../../index.html">Home</a>
+        <a href="../../pages/governance.html">Governance</a>
+        <a href="../../pages/fiduciary-doctrine.html">Fiduciary Doctrine</a>
+        <a href="../../pages/ai-governance.html">AI Governance</a>
+        <a href="../../knowledge-library.html">Knowledge Library</a>
+        <a href="../../pages/publications.html">Publications</a>
+        <a href="../../pages/institute.html">Institute</a>
+        <a href="../../pages/institutional-solutions.html">Institutional Solutions</a>
+        <a href="../../pages/klat-access.html">KLAT Access</a>
+        <a href="../../pages/contact.html" class="access-cta">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<div class="meta-band"><div class="container"><div class="meta-inner"><span><i class="fas fa-shield-alt"></i> KLI KNOWLEDGE LIBRARY // GOVERNANCE SYSTEMS</span><span><i class="fas fa-hourglass-half"></i> CONTINUITY ACTIVE</span></div></div></div>
+
+<main>
+<div class="article-container">
+  <div class="article-header">
+    <div class="article-label">KELLY LEGACY INSTITUTE™ // KLI KNOWLEDGE LIBRARY™</div>
+    <div class="article-id">Article ID: KLI-KL-GOV-005 | Public Educational Doctrine | Status: Published</div>
+    <h1>Internal Controls</h1>
+    <div class="meta-inner" style="margin-top:1rem;"><span>Primary Collection: Governance Systems</span><span>Related: Approvals, Segregation of Duties, Records, Audit Trails, Oversight</span></div>
+  </div>
+
+  <!-- I. EXECUTIVE SUMMARY -->
+  <div class="section-title">I. Executive Summary</div>
+  <p>Internal controls are governance mechanisms that protect institutional integrity. They help ensure that actions are authorized, records are accurate, assets are protected, duties are separated, conflicts are disclosed, decisions are reviewed, errors are corrected, and misconduct is deterred. Internal controls are not bureaucracy. They are the operating safeguards that preserve fiduciary accountability and institutional continuity. Without internal controls, institutions rely on trust alone — a condition that cannot sustain accountability.</p>
+  <div class="content-panel"><strong>Why It Matters:</strong> Controls convert duty into procedure, procedure into records, and records into accountability. Internal controls protect against error, fraud, and misuse. They are essential for fiduciary administration and institutional governance.</div>
+
+  <!-- II. CORE PRINCIPLE -->
+  <div class="section-title">II. Core Principle</div>
+  <p><strong>Internal controls are the policies, procedures, approvals, records, reviews, and safeguards used to ensure institutional actions are authorized, accurate, compliant, accountable, and protected from misuse.</strong></p>
+
+  <!-- III. GOVERNANCE RULE -->
+  <div class="section-title">III. Governance Rule</div>
+  <p>No institutional control system should operate without identifying:</p>
+  <ol style="margin-left:1.5rem; margin-top:0.5rem;">
+    <li>control objective (what risk or risk is being addressed);</li>
+    <li>responsible party (who is accountable for the control);</li>
+    <li>approval requirement (what approvals are required);</li>
+    <li>record requirement (what documentation must be maintained);</li>
+    <li>review standard (how the control is monitored);</li>
+    <li>escalation process (how control failures are reported); and</li>
+    <li>correction procedure (how deficiencies are remediated).</li>
+  </ol>
+  <p>If any of these elements is missing, the control is incomplete and may be ineffective.</p>
+
+  <!-- IV. DOCTRINAL EXPLANATION -->
+  <div class="section-title">IV. Doctrinal Explanation</div>
+  <p>Internal controls doctrine provides the framework for institutional safeguards. Key elements include:</p>
+  <ul style="margin-left:1.5rem;">
+    <li><strong>Control Environment:</strong> The organizational culture, policies, and oversight that set the tone for internal control. The control environment influences whether controls are taken seriously.</li>
+    <li><strong>Risk Assessment:</strong> Identifying risks that could prevent the institution from achieving its objectives. Controls are designed to mitigate identified risks.</li>
+    <li><strong>Control Activities:</strong> Specific actions that implement controls: approvals, authorizations, verifications, reconciliations, and physical or digital safeguards.</li>
+    <li><strong>Segregation of Duties:</strong> No single person should have control over all aspects of a transaction (authorization, custody, recordkeeping, review). Segregation prevents and detects errors or fraud.</li>
+    <li><strong>Authorization Limits:</strong> Defined spending, approval, and decision limits by role. Transactions exceeding limits require higher-level approval.</li>
+    <li><strong>Approval Workflows:</strong> Documented sequences of review and approval for material actions. Workflows ensure that multiple eyes review significant decisions.</li>
+    <li><strong>Record Controls:</strong> Policies for creating, authenticating, retaining, and disposing of records. Record controls protect data integrity and availability.</li>
+    <li><strong>Access Controls:</strong> Restrictions on who can access systems, records, assets, and sensitive information. Access controls prevent unauthorized use.</li>
+    <li><strong>Monitoring:</strong> Ongoing review of control effectiveness through oversight, audits, exception reports, and management review.</li>
+    <li><strong>Corrective Action:</strong> When controls fail or deficiencies are identified, corrective action must be taken, documented, and reviewed.</li>
+    <li><strong>Audit Trail:</strong> A chronological record of transactions, approvals, access, and changes. Audit trails enable reconstruction of events and detection of irregularities.</li>
+    <li><strong>Fiduciary Oversight:</strong> Fiduciaries must ensure that internal controls are adequate to protect entrusted property and fulfill fiduciary duties.</li>
+  </ul>
+  <div class="content-panel"><strong>Clarification:</strong> Controls must be documented, followed, reviewed, and corrected when defective. Internal controls are not optional; they are a governance requirement for accountable institutions.</div>
+
+  <!-- V. RECOGNIZED AUTHORITIES -->
+  <div class="section-title">V. Recognized Authorities</div>
+  <ul style="margin-left:1.5rem; line-height:1.6;">
+    <li><strong>COSO Internal Control — Integrated Framework</strong> – The leading framework for designing, implementing, and evaluating internal controls, organized around five components: control environment, risk assessment, control activities, information and communication, and monitoring.</li>
+    <li><strong>Generally accepted governance, risk, and compliance principles</strong> – Internal controls are foundational to GRC; without controls, governance is unenforceable.</li>
+    <li><strong>Generally accepted internal audit and control principles</strong> – Auditing standards require evaluation of internal controls as part of audit procedures.</li>
+    <li><strong>Uniform Trust Code § 801</strong> – A trustee shall administer the trust in good faith, which requires adequate internal controls over trust administration.</li>
+    <li><strong>Uniform Trust Code § 802</strong> – The duty of loyalty requires controls that detect and prevent self-dealing.</li>
+    <li><strong>Uniform Trust Code § 810</strong> – A trustee has a duty to keep trust property separate and maintain clear records — a core internal control.</li>
+    <li><strong>Uniform Trust Code § 813</strong> – A trustee has a duty to inform and report, which relies on internal controls over information.</li>
+    <li><strong>Restatement (Third) of Trusts § 77</strong> – The duty of prudence requires trustees to implement appropriate controls over trust administration.</li>
+    <li><strong>Restatement (Third) of Trusts § 83</strong> – A trustee has a duty to furnish information, which requires controls over information accuracy.</li>
+  </ul>
+  <p>These authorities reflect broadly recognized internal control, fiduciary, governance, and recordkeeping principles. Specific application depends on entity type, governing instruments, operational risk, jurisdiction, and competent professional review.</p>
+
+  <!-- VI. OPERATIONAL APPLICATION -->
+  <div class="section-title">VI. Operational Application</div>
+  <p>Internal controls apply across all organizational contexts:</p>
+  <ul style="margin-left:1.5rem;">
+    <li><strong>Trust Administration:</strong> Separate trust property from personal assets (segregation of assets). Implement account controls (dual approval for large transactions). Establish distribution approvals (defined limits and review). Conduct accounting review (periodic reconciliation).</li>
+    <li><strong>Institutional Governance:</strong> Define approval workflows (who can approve what). Require conflict disclosures with documented review. Implement access permissions (role-based access to systems and records). Monitor policy compliance through periodic review.</li>
+    <li><strong>Administrative Process:</strong> Notice controls ensure that notices are properly issued and delivery is documented. Evidence handling requires chain-of-custody controls. Review logs document who reviewed what and when. Corrective action records demonstrate remediation.</li>
+    <li><strong>AI Governance:</strong> Access controls restrict who can use AI tools. Human review controls ensure outputs are verified. Audit logs preserve records of AI use. Incident reporting captures AI failures or misuse.</li>
+  </ul>
+
+  <!-- VII. CAPACITY DISTINCTION -->
+  <div class="section-title">VII. Capacity Distinction</div>
+  <div class="content-panel">
+    <p><strong>Private Individual Capacity:</strong> A private person may choose personal controls, but institutional accountability is not automatically created. Personal controls are voluntary.</p>
+    <p><strong>Representative / Fiduciary Capacity:</strong> A fiduciary must use controls sufficient to protect entrusted property and fulfill duties. Failure to implement adequate controls may constitute a breach of the duty of care.</p>
+    <p><strong>Institutional / Office Capacity:</strong> An officeholder must follow controls established by governing instruments, policies, and oversight standards. Controls are mandatory, not optional.</p>
+    <p>Capacity determines consequence. The same person may operate without formal controls in personal capacity but must follow strict controls in fiduciary or institutional capacity.</p>
+  </div>
+
+  <!-- VIII. RECORDKEEPING REQUIREMENTS -->
+  <div class="section-title">VIII. Recordkeeping Requirements</div>
+  <ul style="margin-left:1.5rem;">
+    <li>Internal control policy (written control framework).</li>
+    <li>Risk assessment (documented risk identification).</li>
+    <li>Approval matrix (who can approve what).</li>
+    <li>Segregation of duties chart (assigned responsibilities).</li>
+    <li>Access control records (who has access to what).</li>
+    <li>Authorization records (approvals granted).</li>
+    <li>Accounting controls (ledgers, reconciliations, separation of duties).</li>
+    <li>Conflict disclosure records (documented disclosures and review).</li>
+    <li>Review logs (records of oversight and monitoring).</li>
+    <li>Audit trail (chronological record of transactions and approvals).</li>
+    <li>Incident reports (control failures or breaches).</li>
+    <li>Corrective action records (documented remediation).</li>
+    <li>Policy exception records (authorized deviations).</li>
+    <li>Signature capacity records (who approved, who acted).</li>
+  </ul>
+  <p>Core rule: <strong>If it is not controlled, it is not governed.</strong> Internal controls must be documented and enforced.</p>
+
+  <!-- IX. COMMON ERRORS -->
+  <div class="section-title">IX. Common Errors</div>
+  <ul style="margin-left:1.5rem;">
+    <li>No written controls – relying on unwritten practices that cannot be enforced or reviewed.</li>
+    <li>Informal approvals – verbal approvals without documentation.</li>
+    <li>One person controls everything without review – no segregation of duties, creating fraud risk.</li>
+    <li>No segregation of duties – the same person authorizes, processes, and reviews transactions.</li>
+    <li>No access controls – anyone can access systems, records, or assets.</li>
+    <li>No audit trail – no record of who did what, when, or why.</li>
+    <li>No conflict procedure – failing to require or review conflict disclosures.</li>
+    <li>No correction process – control failures identified but not remediated.</li>
+    <li>Outdated policies – controls not updated to reflect current operations or risks.</li>
+    <li>Treating controls as optional – assuming controls can be bypassed without consequence.</li>
+  </ul>
+
+  <!-- X. INSTITUTIONAL RATIONALE -->
+  <div class="section-title">X. Institutional Rationale</div>
+  <p>KLI teaches internal controls because institutional integrity depends on more than intention. Controls convert duty into procedure, procedure into records, and records into accountability. Structure determines outcome. Organizations that implement internal controls reduce risk of error, fraud, misuse, and non-compliance. Controls are not bureaucracy; they are the operational safeguards that transform governance from aspiration into enforceable discipline.</p>
+
+  <!-- XI. RELATED KLI DOCTRINE -->
+  <div class="section-title">XI. Related KLI Doctrine</div>
+  <ul style="margin-left:1.5rem;">
+    <li><a href="institutional-governance.html" style="color:var(--antique-gold);">Institutional Governance</a> (KLI-KL-GOV-001)</li>
+    <li><a href="institutional-accountability.html" style="color:var(--antique-gold);">Institutional Accountability</a> (KLI-KL-GOV-002)</li>
+    <li><a href="governance-records.html" style="color:var(--antique-gold);">Governance Records</a> (KLI-KL-GOV-003)</li>
+    <li><a href="authority-delegation.html" style="color:var(--antique-gold);">Authority Delegation</a> (KLI-KL-GOV-004)</li>
+    <li><a href="../fiduciary/duty-of-care.html" style="color:var(--antique-gold);">Duty of Care</a> (KLI-KL-FID-005)</li>
+    <li><a href="../fiduciary/duty-to-account.html" style="color:var(--antique-gold);">Duty to Account</a> (KLI-KL-FID-004)</li>
+    <li><a href="../trust-administration/trust-accounting.html" style="color:var(--antique-gold);">Trust Accounting</a> (KLI-KL-TRUST-009)</li>
+    <li><a href="../ai-governance/ai-risk-management.html" style="color:var(--antique-gold);">AI Risk Management</a> (KLI-KL-AI-002)</li>
+  </ul>
+
+  <!-- XII. EDUCATIONAL DISCLAIMER -->
+  <div class="notice">
+    This article is published by Kelly Legacy Institute for educational governance literacy only. It does not provide legal advice, financial advice, fiduciary decisions, securities guidance, tax advice, or attorney-client services. Application of legal or equitable principles depends on jurisdiction, facts, governing instruments, and competent professional review.
+  </div>
+
+  <!-- CTAs -->
+  <div style="margin-top: 2rem; text-align: center;">
+    <a href="../../pages/institute.html" class="btn">Continue Through Kelly Legacy Institute</a>
+    <a href="../../pages/publications.html" class="btn">View Publications</a>
+    <a href="../../knowledge-library.html" class="btn">Return to Knowledge Library</a>
+  </div>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-disclaimer">
+      <i class="fas fa-scale-balanced"></i> Educational governance materials only. © Kelly Legacy Institute // Kelly Legacy Estates Living Trust // Office of the Fiduciary.
+    </div>
+    <div class="footer-links">
+      <a href="../../legal/ip-policy.html">IP Policy</a>
+      <a href="../../legal/privacy.html">Privacy</a>
+      <a href="../../legal/record-policy.html">Record Policy</a>
+      <a href="../../legal/terms.html">Terms</a>
+      <a href="../../legal/transparency.html">Transparency</a>
+      <a href="../../pages/execution-framework.html">Execution Framework</a>
+      <a href="../../pages/curriculum-portal.html">Curriculum Portal</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  const toggleBtn = document.getElementById('mobileMenuToggle');
+  const mainNav = document.getElementById('mainNav');
+  if (toggleBtn && mainNav) {
+    toggleBtn.addEventListener('click', () => {
+      mainNav.classList.toggle('active');
+    });
+  }
+
+  // Chatbase embed - Legacy AI
+  (function(){
+    if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+      window.chatbase=(...arguments)=>{
+        if(!window.chatbase.q){window.chatbase.q=[]}
+        window.chatbase.q.push(arguments)
+      };
+      window.chatbase=new Proxy(window.chatbase,{
+        get(target,prop){
+          if(prop==="q"){return target.q}
+          return(...args)=>target(prop,...args)
+        }
+      })
+    }
+    const onLoad=function(){
+      const script=document.createElement("script");
+      script.src="https://www.chatbase.co/embed.min.js";
+      script.id="JB7Ysn50O_DpC9tWnoxrh";
+      script.domain="www.chatbase.co";
+      document.body.appendChild(script)
+    };
+    if(document.readyState==="complete"){onLoad()}
+    else{window.addEventListener("load",onLoad)}
+  })();
+</script>
+</body>
+</html>
