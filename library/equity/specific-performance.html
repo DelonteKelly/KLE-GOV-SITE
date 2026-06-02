@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Specific Performance | KLI Knowledge Library</title>
+<meta name="description" content="Specific performance explained through equitable enforcement, inadequate legal remedies, contracts, fiduciary obligations, trust administration, property rights, and governance accountability.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kellylegacyestates.com/library/equity/specific-performance.html">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Specific Performance | KLI Knowledge Library">
+<meta property="og:description" content="Specific performance explained through equitable enforcement, inadequate legal remedies, contracts, fiduciary obligations, trust administration, property rights, and governance accountability.">
+<meta property="og:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
+<meta property="og:url" content="https://kellylegacyestates.com/library/equity/specific-performance.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kelly Legacy Estates">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Specific Performance | KLI Knowledge Library">
+<meta name="twitter:description" content="Educational doctrine on specific performance, including equitable enforcement, inadequate legal remedies, fiduciary obligations, and trust administration.">
+<meta name="twitter:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
+
+<!-- Schema: Article + Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Specific Performance",
+  "description": "Specific performance explained through equitable enforcement, inadequate legal remedies, contracts, fiduciary obligations, trust administration, property rights, and governance accountability.",
+  "author": {
+    "@type": "Organization",
+    "name": "Kelly Legacy Institute"
+  },
+  "publisher": {
+    "@type": "EducationalOrganization",
+    "name": "Kelly Legacy Institute",
+    "url": "https://kellylegacyestates.com"
+  },
+  "datePublished": "2025-01-20",
+  "dateModified": "2026-06-02",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://kellylegacyestates.com/library/equity/specific-performance.html"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "KLI Knowledge Library",
+      "item": "https://kellylegacyestates.com/knowledge-library.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Equity & Remedies",
+      "item": "https://kellylegacyestates.com/library/equity/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Specific Performance",
+      "item": "https://kellylegacyestates.com/library/equity/specific-performance.html"
+    }
+  ]
+}
+</script>
+
+<!-- Styles -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root {
+  --exec-black: #050505;
+  --deep-charcoal: #111113;
+  --charcoal-card: #16161A;
+  --charcoal-border: #23232A;
+  --crimson: #9E2A2A;
+  --crimson-dim: #6E1E1E;
+  --antique-gold: #C8A24C;
+  --antique-gold-muted: #9A7A3A;
+  --ivory: #F0EFEA;
+  --ivory-dim: #CBC9C1;
+  --slate-meta: #7A7A7A;
+  --border-faint: rgba(240,239,234,0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--exec-black);
+  color: var(--ivory-dim);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* noise overlay and scanline */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.35;
+}
+
+.scanline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(0deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 3px, rgba(0,0,0,0.05) 3px, rgba(0,0,0,0.05) 6px);
+  pointer-events: none;
+  z-index: 998;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+  position: relative;
+  z-index: 10;
+}
+
+/* header */
+.site-header {
+  border-bottom: 1px solid var(--border-faint);
+  background: rgba(5,5,5,0.92);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.identity-mark h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ivory);
+}
+
+.identity-mark p {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--crimson);
+  margin-top: 4px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+  .nav-links a.active {
+  color: var(--antique-gold);
+  border-bottom: 1px solid var(--antique-gold);
+  }
+
+.nav-links a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  color: var(--ivory-dim);
+  transition: color 0.2s;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover { color: var(--antique-gold); }
+.nav-links .access-cta {
+  border: 1px solid var(--crimson);
+  padding: 8px 18px;
+  color: var(--crimson);
+  font-weight: 500;
+}
+.nav-links .access-cta:hover { background: rgba(158,42,42,0.08); color: var(--antique-gold); border-color: var(--antique-gold); }
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--crimson);
+  color: var(--ivory);
+  padding: 8px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  cursor: pointer;
+}
+
+/* meta-band */
+.meta-band {
+  background: var(--deep-charcoal);
+  border-bottom: 1px solid var(--border-faint);
+  padding: 0.5rem 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--slate-meta);
+}
+
+.meta-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.meta-inner span i { margin-right: 6px; color: var(--antique-gold-muted); font-size: 0.7rem; }
+
+.article-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.article-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-faint);
+  padding-bottom: 1.5rem;
+}
+
+.article-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--crimson);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.article-id {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--antique-gold-muted);
+  margin: 0.5rem 0;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: var(--ivory);
+  margin: 1rem 0 0.5rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--ivory);
+  margin: 2rem 0 1rem;
+  border-left: 3px solid var(--antique-gold);
+  padding-left: 1rem;
+}
+
+.content-panel {
+  background: var(--charcoal-card);
+  border: 1px solid var(--charcoal-border);
+  padding: 1.8rem;
+  margin: 1.5rem 0;
+  border-radius: 2px;
+}
+
+.notice {
+  background: rgba(158,42,42,0.08);
+  border-left: 3px solid var(--crimson);
+  padding: 1.2rem;
+  font-size: 0.85rem;
+  margin: 1.5rem 0;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid var(--antique-gold);
+  padding: 10px 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--antique-gold);
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: var(--antique-gold);
+  color: var(--exec-black);
+}
+
+/* footer */
+.footer {
+  background: var(--deep-charcoal);
+  border-top: 1px solid var(--border-faint);
+  padding: 3rem 0 2rem;
+  font-size: 0.7rem;
+}
+
+.footer-disclaimer {
+  max-width: 900px;
+  color: var(--slate-meta);
+  line-height: 1.6;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.footer-links {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+}
+
+.footer-links a {
+  color: var(--ivory-dim);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--antique-gold);
+}
+
+/* responsive */
+@media (max-width: 860px) {
+  .container { padding: 0 24px; }
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .nav-links.active { display: flex; }
+  .mobile-menu-toggle { display: block; }
+  h1 { font-size: 2rem; }
+}
+
+@media (max-width: 640px) {
+  .nav-wrapper { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<div class="noise-overlay"></div>
+<div class="scanline"></div>
+<header class="site-header">
+  <div class="container">
+    <div class="nav-wrapper">
+      <div class="identity-mark"><h1>KELLY LEGACY ESTATES</h1><p>OFFICE OF THE FIDUCIARY</p></div>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">MENU</button>
+      <nav class="nav-links" id="mainNav" aria-label="Primary navigation">
+        <a href="../../index.html">Home</a>
+        <a href="../../pages/governance.html">Governance</a>
+        <a href="../../pages/fiduciary-doctrine.html">Fiduciary Doctrine</a>
+        <a href="../../pages/ai-governance.html">AI Governance</a>
+        <a href="../../knowledge-library.html">Knowledge Library</a>
+        <a href="../../pages/publications.html">Publications</a>
+        <a href="../../pages/institute.html">Institute</a>
+        <a href="../../pages/institutional-solutions.html">Institutional Solutions</a>
+        <a href="../../pages/klat-access.html">KLAT Access</a>
+        <a href="../../pages/contact.html" class="access-cta">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<div class="meta-band"><div class="container"><div class="meta-inner"><span><i class="fas fa-shield-alt"></i> KLI KNOWLEDGE LIBRARY // EQUITY & REMEDIES</span><span><i class="fas fa-hourglass-half"></i> CONTINUITY ACTIVE</span></div></div></div>
+
+<main>
+<div class="article-container">
+  <div class="article-header">
+    <div class="article-label">KELLY LEGACY INSTITUTE™ // KLI KNOWLEDGE LIBRARY™</div>
+    <div class="article-id">Article ID: KLI-KL-EQ-006 | Public Educational Doctrine | Status: Published</div>
+    <h1>Specific Performance</h1>
+    <div class="meta-inner" style="margin-top:1rem;"><span>Primary Collection: Equity & Remedies</span><span>Related: Equitable Enforcement, Unique Property, Trust Obligations, Governance Instruments</span></div>
+  </div>
+
+  <!-- I. EXECUTIVE SUMMARY -->
+  <div class="section-title">I. Executive Summary</div>
+  <p>Specific performance is an equitable remedy compelling performance of a specific duty or obligation. It is commonly associated with contracts involving unique property, trust obligations, settlement terms, governance instruments, or duties that cannot be adequately remedied by money damages. Specific performance may apply where property is unique, damages are inadequate, the obligation is definite, the party seeking relief has performed or is ready to perform, enforcement would be equitable, and no adequate legal remedy exists. Specific performance is not automatic. It requires a clear obligation, adequate proof, clean hands, feasibility of enforcement, and equitable justification.</p>
+  <p>In fiduciary contexts, specific performance may compel a trustee or fiduciary to perform a clear duty required by the trust instrument or governing law, such as delivering property, rendering an accounting, or transferring assets.</p>
+  <div class="content-panel"><strong>Why It Matters:</strong> Specific performance provides a remedy when money damages cannot substitute for the actual performance owed. In governance and fiduciary administration, certain obligations — such as delivery of unique property or compliance with clear trust terms — cannot be adequately remedied by monetary compensation.</div>
+
+  <!-- II. CORE PRINCIPLE -->
+  <div class="section-title">II. Core Principle</div>
+  <p><strong>Specific performance is an equitable remedy requiring a party to perform a specific obligation where money damages are inadequate and enforcement is consistent with equity, good faith, and procedural fairness.</strong></p>
+
+  <!-- III. GOVERNANCE RULE -->
+  <div class="section-title">III. Governance Rule</div>
+  <p>No specific performance analysis should proceed without identifying:</p>
+  <ol style="margin-left:1.5rem; margin-top:0.5rem;">
+    <li>specific obligation to be performed (the exact act or duty);</li>
+    <li>source of obligation (contract, trust, statute, or governing instrument);</li>
+    <li>party obligated to perform (the promisor, trustee, or fiduciary);</li>
+    <li>party seeking enforcement (the promisee, beneficiary, or claimant);</li>
+    <li>inadequacy of money damages (why legal remedy is insufficient);</li>
+    <li>fairness of enforcement (no unconscionability, clean hands, reasonable terms); and</li>
+    <li>supporting evidence and record (agreement, trust instrument, performance history).</li>
+  </ol>
+  <p>If any of these elements is missing, specific performance is unlikely to be granted.</p>
+
+  <!-- IV. DOCTRINAL EXPLANATION -->
+  <div class="section-title">IV. Doctrinal Explanation</div>
+  <p>Specific performance doctrine ensures that when legal remedies are inadequate, equity may compel the exact performance promised. Key elements include:</p>
+  <ul style="margin-left:1.5rem;">
+    <li><strong>Specific Performance as Equitable Enforcement:</strong> Unlike damages, which compensate after breach, specific performance orders the breaching party to do what was promised. It is a remedy, not a cause of action.</li>
+    <li><strong>Requirement of Definite Obligation:</strong> The court must be able to state with precision what the party is required to do. Vague or indefinite obligations cannot be specifically enforced.</li>
+    <li><strong>Inadequacy of Legal Remedy:</strong> Equity only intervenes when money damages are insufficient. Common examples: land (unique), chattels with special value, or obligations where performance is the essence of the bargain.</li>
+    <li><strong>Uniqueness of Property or Obligation:</strong> Real property is traditionally considered unique. Other property (art, collectibles, closely held shares) may also be unique. Contract terms that are not substitutable may support specific performance.</li>
+    <li><strong>Mutuality and Readiness to Perform:</strong> The party seeking specific performance must have performed or be ready, willing, and able to perform their own obligations under the agreement.</li>
+    <li><strong>Clean Hands:</strong> A party seeking specific performance must have acted equitably. Fraud, misrepresentation, or bad faith bars relief.</li>
+    <li><strong>Impossibility or Impracticability Limits:</strong> If performance has become impossible or impracticable after contract formation, specific performance will not be ordered.</li>
+    <li><strong>Supervision Concerns:</strong> Courts are reluctant to order specific performance if doing so would require ongoing, burdensome supervision. However, modern courts are more willing to supervise where practical.</li>
+    <li><strong>Relationship to Injunction:</strong> Specific performance orders affirmative conduct (do something), whereas a prohibitory injunction orders restraint (stop doing something). A mandatory injunction is similar to specific performance.</li>
+    <li><strong>Relationship to Trust Enforcement:</strong> Beneficiaries may seek specific performance to compel a trustee to perform a clear duty: deliver trust property, render an accounting, or make a distribution required by the trust terms.</li>
+  </ul>
+  <div class="content-panel"><strong>Clarification:</strong> Equity will not compel vague, impossible, unlawful, or unfair performance. The obligation must be definite, enforceable, and consistent with equitable principles.</div>
+
+  <!-- V. RECOGNIZED AUTHORITIES -->
+  <div class="section-title">V. Recognized Authorities</div>
+  <ul style="margin-left:1.5rem; line-height:1.6;">
+    <li><strong>Restatement (Second) of Contracts § 357</strong> – Specific performance is available to enforce a contract duty if legal remedy is inadequate and the terms are sufficiently definite.</li>
+    <li><strong>Restatement (Second) of Contracts § 359</strong> – Specific performance will not be ordered if damages would be adequate to protect the expectation interest.</li>
+    <li><strong>Restatement (Second) of Contracts § 364</strong> – Specific performance may be denied if the contract is unfair, was induced by misrepresentation, or enforcement would cause disproportionate hardship.</li>
+    <li><strong>Uniform Trust Code § 1001</strong> – A court may enforce trust duties through equitable remedies, including specific performance of trustee obligations.</li>
+    <li><strong>Pomeroy, Equity Jurisprudence</strong> – Specific performance is a primary equitable remedy, available where the legal remedy is inadequate and the contract is fair, definite, and mutually enforceable.</li>
+    <li><strong>Story, Commentaries on Equity Jurisprudence</strong> – Equity will compel specific performance of contracts where damages are inadequate, particularly for unique property or where performance is the substance of the agreement.</li>
+    <li><strong>Weinberger v. Romero-Barcelo, 456 U.S. 305 (1982)</strong> – Equitable remedies, including specific performance, are discretionary and require balancing of the equities.</li>
+    <li><strong>Hecht Co. v. Bowles, 321 U.S. 321 (1944)</strong> – Equitable relief is not automatic; courts exercise discretion based on equitable standards, not rigid rules.</li>
+  </ul>
+  <p>These authorities reflect broadly recognized equitable and contractual principles. Specific application depends on jurisdiction, facts, contract terms, trust terms, procedural posture, remedy requested, and competent professional review.</p>
+
+  <!-- VI. OPERATIONAL APPLICATION -->
+  <div class="section-title">VI. Operational Application</div>
+  <p>Specific performance applies across all fiduciary and institutional contexts:</p>
+  <ul style="margin-left:1.5rem;">
+    <li><strong>Trust Administration:</strong> Compel a trustee to perform a required trust duty (e.g., make a distribution mandated by the trust terms). Enforce delivery of records or accountings where the trust instrument requires reporting. Require transfer of trust property where the duty to transfer is clear and money damages are inadequate.</li>
+    <li><strong>Governance:</strong> Enforce an institutional agreement or resolution (e.g., compel a party to complete a transaction required by board resolution). Compel compliance with governing documents (bylaws, articles, or shareholder agreements). Require completion of a documented obligation (settlement agreement, contract).</li>
+    <li><strong>Administrative Records:</strong> Contract or governing instrument, performance history, notices and demands, correspondence, evidence of readiness to perform, accounting records, property records.</li>
+    <li><strong>Equitable Review:</strong> Identify the specific obligation, confirm enforceability, determine whether damages are adequate, assess equitable factors (clean hands, fairness, mutuality).</li>
+  </ul>
+
+  <!-- VII. CAPACITY DISTINCTION -->
+  <div class="section-title">VII. Capacity Distinction</div>
+  <div class="content-panel">
+    <p><strong>Private Individual Capacity:</strong> A private party may seek enforcement of a definite obligation where damages are inadequate (e.g., specific performance of a real estate contract). The standard is rigorous but well-established.</p>
+    <p><strong>Representative / Fiduciary Capacity:</strong> A fiduciary may be compelled to perform duties required by the governing instrument or equity. A beneficiary may seek specific performance against a trustee who fails to perform a clear duty.</p>
+    <p><strong>Trustee Capacity:</strong> A trustee may be required to account, transfer, preserve, or administer property according to trust terms. Specific performance may compel delivery of trust assets to beneficiaries or transfer to a successor trustee.</p>
+    <p><strong>Institutional / Office Capacity:</strong> An institutional officer may be required to comply with official governance instruments within the scope of authority. Specific performance may enforce settlement agreements or governance resolutions.</p>
+    <p>Capacity determines consequence. The same individual may seek specific performance in personal capacity but may be subject to specific performance in fiduciary capacity.</p>
+  </div>
+
+  <!-- VIII. RECORDKEEPING REQUIREMENTS -->
+  <div class="section-title">VIII. Recordkeeping Requirements</div>
+  <ul style="margin-left:1.5rem;">
+    <li>Contract or governing instrument (trust, agreement, resolution, settlement).</li>
+    <li>Obligation identification record (specific act or duty to be performed).</li>
+    <li>Performance history (what has been performed and what remains outstanding).</li>
+    <li>Notices and demands (documentation of requests for performance).</li>
+    <li>Correspondence (emails, letters regarding the obligation).</li>
+    <li>Authority records (proof of capacity and authority to enforce).</li>
+    <li>Readiness-to-perform documentation (evidence that the moving party can and will perform).</li>
+    <li>Accounting records where applicable (financial obligations, trust accounts).</li>
+    <li>Property records where applicable (uniqueness, location, value).</li>
+    <li>Breach memorandum (explaining how the obligation was violated).</li>
+    <li>Remedy memorandum (legal basis for specific performance).</li>
+    <li>Evidence index (list of all documents submitted).</li>
+    <li>Final order or determination where applicable (court order compelling performance).</li>
+    <li>Signature capacity records (who signed agreements, who enforces).</li>
+  </ul>
+  <p>Core rule: <strong>Specific performance requires a clear, documented obligation and evidence that damages are inadequate.</strong> Without a definite agreement and proof of unavailability of legal remedy, specific performance will be denied.</p>
+
+  <!-- IX. COMMON ERRORS -->
+  <div class="section-title">IX. Common Errors</div>
+  <ul style="margin-left:1.5rem;">
+    <li>Seeking specific performance without a definite obligation – vague promises are not enforceable.</li>
+    <li>Failing to show damages are inadequate – if money damages can make the claimant whole, specific performance will not be ordered.</li>
+    <li>Ignoring clean hands – the moving party must have acted equitably throughout the transaction.</li>
+    <li>Requesting impossible performance – if the obligation cannot be performed, specific performance will not be ordered.</li>
+    <li>Failing to prove readiness to perform – the moving party must show ability and willingness to perform their own obligations.</li>
+    <li>Relying on vague promises – the obligation must be specific enough for a court to enforce.</li>
+    <li>Confusing specific performance with damages – specific performance compels action; damages compensate for loss.</li>
+    <li>Ignoring contractual defenses (fraud, mistake, unconscionability) – these defenses bar specific performance.</li>
+    <li>Failing to identify capacity – the moving party must have standing and authority to enforce.</li>
+    <li>Seeking relief without governing record – without a written agreement or trust instrument, specific performance is unlikely.</li>
+  </ul>
+
+  <!-- X. INSTITUTIONAL RATIONALE -->
+  <div class="section-title">X. Institutional Rationale</div>
+  <p>KLI teaches specific performance because governance depends on enforceable duties, not vague expectations. Where legal damages cannot protect trust property, institutional obligations, or fiduciary duties, equity may compel performance when the record supports relief. In trust administration, specific performance can enforce clear trustee duties, compel delivery of assets, or require compliance with trust terms. Understanding specific performance enables fiduciaries and beneficiaries to seek appropriate relief when money damages would be inadequate and to respond properly when faced with a specific performance claim.</p>
+
+  <!-- XI. RELATED KLI DOCTRINE -->
+  <div class="section-title">XI. Related KLI Doctrine</div>
+  <ul style="margin-left:1.5rem;">
+    <li><a href="../equity/equity-follows-the-law.html" style="color:var(--antique-gold);">Equity Follows the Law</a> (KLI-KL-EQ-001)</li>
+    <li><a href="../equity/injunction.html" style="color:var(--antique-gold);">Injunction</a> (KLI-KL-EQ-005)</li>
+    <li><a href="../equity/rescission.html" style="color:var(--antique-gold);">Rescission</a> (KLI-KL-EQ-007)</li>
+    <li><a href="../equity/reformation.html" style="color:var(--antique-gold);">Reformation</a> (KLI-KL-EQ-008)</li>
+    <li><a href="../equity/constructive-trust.html" style="color:var(--antique-gold);">Constructive Trust</a> (KLI-KL-EQ-002)</li>
+    <li><a href="../fiduciary/fiduciary-remedies.html" style="color:var(--antique-gold);">Fiduciary Remedies</a> (KLI-KL-FID-009)</li>
+    <li><a href="../fiduciary/fiduciary-breach.html" style="color:var(--antique-gold);">Fiduciary Breach</a> (KLI-KL-FID-008)</li>
+    <li><a href="../trust-administration/fiduciary-remedies-trusts.html" style="color:var(--antique-gold);">Fiduciary Remedies in Trusts</a> (KLI-KL-TRUST-007)</li>
+    <li><a href="../administration/evidence-standards.html" style="color:var(--antique-gold);">Evidence Standards</a> (KLI-KL-ADMIN-003)</li>
+  </ul>
+
+  <!-- XII. EDUCATIONAL DISCLAIMER -->
+  <div class="notice">
+    This article is published by Kelly Legacy Institute for educational governance literacy only. It does not provide legal advice, financial advice, fiduciary decisions, securities guidance, tax advice, or attorney-client services. Application of legal or equitable principles depends on jurisdiction, facts, governing instruments, and competent professional review.
+  </div>
+
+  <!-- CTAs -->
+  <div style="margin-top: 2rem; text-align: center;">
+    <a href="../../pages/institute.html" class="btn">Continue Through Kelly Legacy Institute</a>
+    <a href="../../pages/publications.html" class="btn">View Publications</a>
+    <a href="../../knowledge-library.html" class="btn">Return to Knowledge Library</a>
+  </div>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-disclaimer">
+      <i class="fas fa-scale-balanced"></i> Educational governance materials only. © Kelly Legacy Institute // Kelly Legacy Estates Living Trust // Office of the Fiduciary.
+    </div>
+    <div class="footer-links">
+      <a href="../../legal/ip-policy.html">IP Policy</a>
+      <a href="../../legal/privacy.html">Privacy</a>
+      <a href="../../legal/record-policy.html">Record Policy</a>
+      <a href="../../legal/terms.html">Terms</a>
+      <a href="../../legal/transparency.html">Transparency</a>
+      <a href="../../pages/execution-framework.html">Execution Framework</a>
+      <a href="../../pages/curriculum-portal.html">Curriculum Portal</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  const toggleBtn = document.getElementById('mobileMenuToggle');
+  const mainNav = document.getElementById('mainNav');
+  if (toggleBtn && mainNav) {
+    toggleBtn.addEventListener('click', () => {
+      mainNav.classList.toggle('active');
+    });
+  }
+
+  // Chatbase embed - Legacy AI
+  // Actual Legacy AI branding must be configured inside Chatbase dashboard.
+  (function(){
+    if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+      window.chatbase=(...arguments)=>{
+        if(!window.chatbase.q){window.chatbase.q=[]}
+        window.chatbase.q.push(arguments)
+      };
+      window.chatbase=new Proxy(window.chatbase,{
+        get(target,prop){
+          if(prop==="q"){return target.q}
+          return(...args)=>target(prop,...args)
+        }
+      })
+    }
+    const onLoad=function(){
+      const script=document.createElement("script");
+      script.src="https://www.chatbase.co/embed.min.js";
+      script.id="JB7Ysn50O_DpC9tWnoxrh";
+      script.domain="www.chatbase.co";
+      document.body.appendChild(script)
+    };
+    if(document.readyState==="complete"){onLoad()}
+    else{window.addEventListener("load",onLoad)}
+  })();
+</script>
+</body>
+</html>
