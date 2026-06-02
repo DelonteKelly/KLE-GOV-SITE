@@ -1,21 +1,30 @@
 {
   "name": "Kelly Legacy Estates",
-  "short_name": "Kelly Legacy",
-  "description": "Private governance infrastructure and fiduciary administration.",
+  "short_name": "KLE",
+  "description": "Office of the Fiduciary • Private Governance Infrastructure",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#050505",
   "icons": [
     {
       "src": "/favicon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "/apple-touch-icon.png",
       "sizes": "180x180",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     }
-  ],
-  "theme_color": "#050A14",
-  "background_color": "#050505",
-  "display": "standalone"
+  ]
 }
