@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>AI Acceptable Use | KLI Knowledge Library</title>
+<meta name="description" content="AI acceptable use explained through permitted use, restricted use, prohibited conduct, human review, privacy, data protection, institutional policy, and governance accountability.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kellylegacyestates.com/library/ai-governance/ai-acceptable-use.html">
+
+<!-- Open Graph -->
+<meta property="og:title" content="AI Acceptable Use | KLI Knowledge Library">
+<meta property="og:description" content="AI acceptable use explained through permitted use, restricted use, prohibited conduct, human review, privacy, data protection, institutional policy, and governance accountability.">
+<meta property="og:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
+<meta property="og:url" content="https://kellylegacyestates.com/library/ai-governance/ai-acceptable-use.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kelly Legacy Estates">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Acceptable Use | KLI Knowledge Library">
+<meta name="twitter:description" content="Educational doctrine on AI acceptable use, including permitted use, restricted use, prohibited conduct, human review, privacy, and data protection.">
+<meta name="twitter:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
+
+<!-- Schema: Article + Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI Acceptable Use",
+  "description": "AI acceptable use explained through permitted use, restricted use, prohibited conduct, human review, privacy, data protection, institutional policy, and governance accountability.",
+  "author": {
+    "@type": "Organization",
+    "name": "Kelly Legacy Institute"
+  },
+  "publisher": {
+    "@type": "EducationalOrganization",
+    "name": "Kelly Legacy Institute",
+    "url": "https://kellylegacyestates.com"
+  },
+  "datePublished": "2025-01-20",
+  "dateModified": "2026-06-02",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://kellylegacyestates.com/library/ai-governance/ai-acceptable-use.html"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "KLI Knowledge Library",
+      "item": "https://kellylegacyestates.com/knowledge-library.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI Governance",
+      "item": "https://kellylegacyestates.com/library/ai-governance/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AI Acceptable Use",
+      "item": "https://kellylegacyestates.com/library/ai-governance/ai-acceptable-use.html"
+    }
+  ]
+}
+</script>
+
+<!-- Styles -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root {
+  --exec-black: #050505;
+  --deep-charcoal: #111113;
+  --charcoal-card: #16161A;
+  --charcoal-border: #23232A;
+  --crimson: #9E2A2A;
+  --crimson-dim: #6E1E1E;
+  --antique-gold: #C8A24C;
+  --antique-gold-muted: #9A7A3A;
+  --ivory: #F0EFEA;
+  --ivory-dim: #CBC9C1;
+  --slate-meta: #7A7A7A;
+  --border-faint: rgba(240,239,234,0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--exec-black);
+  color: var(--ivory-dim);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* noise overlay and scanline */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.35;
+}
+
+.scanline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(0deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 3px, rgba(0,0,0,0.05) 3px, rgba(0,0,0,0.05) 6px);
+  pointer-events: none;
+  z-index: 998;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+  position: relative;
+  z-index: 10;
+}
+
+/* header */
+.site-header {
+  border-bottom: 1px solid var(--border-faint);
+  background: rgba(5,5,5,0.92);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.identity-mark h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ivory);
+}
+
+.identity-mark p {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--crimson);
+  margin-top: 4px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+  .nav-links a.active {
+  color: var(--antique-gold);
+  border-bottom: 1px solid var(--antique-gold);
+  }
+
+.nav-links a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  color: var(--ivory-dim);
+  transition: color 0.2s;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover { color: var(--antique-gold); }
+.nav-links .access-cta {
+  border: 1px solid var(--crimson);
+  padding: 8px 18px;
+  color: var(--crimson);
+  font-weight: 500;
+}
+.nav-links .access-cta:hover { background: rgba(158,42,42,0.08); color: var(--antique-gold); border-color: var(--antique-gold); }
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--crimson);
+  color: var(--ivory);
+  padding: 8px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  cursor: pointer;
+}
+
+/* meta-band */
+.meta-band {
+  background: var(--deep-charcoal);
+  border-bottom: 1px solid var(--border-faint);
+  padding: 0.5rem 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--slate-meta);
+}
+
+.meta-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.meta-inner span i { margin-right: 6px; color: var(--antique-gold-muted); font-size: 0.7rem; }
+
+.article-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.article-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-faint);
+  padding-bottom: 1.5rem;
+}
+
+.article-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--crimson);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.article-id {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--antique-gold-muted);
+  margin: 0.5rem 0;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: var(--ivory);
+  margin: 1rem 0 0.5rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--ivory);
+  margin: 2rem 0 1rem;
+  border-left: 3px solid var(--antique-gold);
+  padding-left: 1rem;
+}
+
+.content-panel {
+  background: var(--charcoal-card);
+  border: 1px solid var(--charcoal-border);
+  padding: 1.8rem;
+  margin: 1.5rem 0;
+  border-radius: 2px;
+}
+
+.notice {
+  background: rgba(158,42,42,0.08);
+  border-left: 3px solid var(--crimson);
+  padding: 1.2rem;
+  font-size: 0.85rem;
+  margin: 1.5rem 0;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid var(--antique-gold);
+  padding: 10px 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--antique-gold);
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: var(--antique-gold);
+  color: var(--exec-black);
+}
+
+/* footer */
+.footer {
+  background: var(--deep-charcoal);
+  border-top: 1px solid var(--border-faint);
+  padding: 3rem 0 2rem;
+  font-size: 0.7rem;
+}
+
+.footer-disclaimer {
+  max-width: 900px;
+  color: var(--slate-meta);
+  line-height: 1.6;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.footer-links {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+}
+
+.footer-links a {
+  color: var(--ivory-dim);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--antique-gold);
+}
+
+/* responsive */
+@media (max-width: 860px) {
+  .container { padding: 0 24px; }
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .nav-links.active { display: flex; }
+  .mobile-menu-toggle { display: block; }
+  h1 { font-size: 2rem; }
+}
+
+@media (max-width: 640px) {
+  .nav-wrapper { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<div class="noise-overlay"></div>
+<div class="scanline"></div>
+<header class="site-header">
+  <div class="container">
+    <div class="nav-wrapper">
+      <div class="identity-mark"><h1>KELLY LEGACY ESTATES</h1><p>OFFICE OF THE FIDUCIARY</p></div>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">MENU</button>
+      <nav class="nav-links" id="mainNav" aria-label="Primary navigation">
+        <a href="../../index.html">Home</a>
+        <a href="../../pages/governance.html">Governance</a>
+        <a href="../../pages/fiduciary-doctrine.html">Fiduciary Doctrine</a>
+        <a href="../../pages/ai-governance.html">AI Governance</a>
+        <a href="../../knowledge-library.html">Knowledge Library</a>
+        <a href="../../pages/publications.html">Publications</a>
+        <a href="../../pages/institute.html">Institute</a>
+        <a href="../../pages/institutional-solutions.html">Institutional Solutions</a>
+        <a href="../../pages/klat-access.html">KLAT Access</a>
+        <a href="../../pages/contact.html" class="access-cta">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<div class="meta-band"><div class="container"><div class="meta-inner"><span><i class="fas fa-shield-alt"></i> KLI KNOWLEDGE LIBRARY // AI GOVERNANCE</span><span><i class="fas fa-hourglass-half"></i> CONTINUITY ACTIVE</span></div></div></div>
+
+<main>
+<div class="article-container">
+  <div class="article-header">
+    <div class="article-label">KELLY LEGACY INSTITUTE™ // KLI KNOWLEDGE LIBRARY™</div>
+    <div class="article-id">Article ID: KLI-KL-AI-006 | Public Educational Doctrine | Status: Published</div>
+    <h1>AI Acceptable Use</h1>
+    <div class="meta-inner" style="margin-top:1rem;"><span>Primary Collection: AI Governance</span><span>Related: Permitted Use, Restricted Use, Prohibited Conduct, Policy, Accountability</span></div>
+  </div>
+
+  <!-- I. EXECUTIVE SUMMARY -->
+  <div class="section-title">I. Executive Summary</div>
+  <p>AI acceptable use establishes clear boundaries for how AI tools may be used in institutional, educational, administrative, and operational contexts. It identifies permitted uses, restricted uses, prohibited uses, approval requirements, data restrictions, review obligations, user responsibilities, and escalation procedures. Acceptable use is not merely a technology rule. It is a governance control that protects records, people, systems, confidential information, and institutional integrity. Organizations without clear AI acceptable use policies expose themselves to operational confusion, data breaches, compliance violations, and accountability failures.</p>
+  <p>AI access is not unlimited authority. Authorized access does not excuse misuse.</p>
+  <div class="content-panel"><strong>Why It Matters:</strong> Institutions cannot govern systems they have not bounded. Clear use rules prevent operational confusion, unauthorized reliance, data exposure, and accountability failure. Procedure precedes remedy.</div>
+
+  <!-- II. CORE PRINCIPLE -->
+  <div class="section-title">II. Core Principle</div>
+  <p><strong>AI acceptable use defines the permitted, restricted, and prohibited ways artificial intelligence systems may be used within an institution so use remains lawful, ethical, secure, documented, and subject to human oversight.</strong></p>
+
+  <!-- III. GOVERNANCE RULE -->
+  <div class="section-title">III. Governance Rule</div>
+  <p>No user should use AI systems for institutional work without identifying:</p>
+  <ol style="margin-left:1.5rem; margin-top:0.5rem;">
+    <li>permitted purpose (is this use authorized by policy);</li>
+    <li>user capacity (does the user have authority to use AI for this purpose);</li>
+    <li>data sensitivity (what data will be submitted);</li>
+    <li>approved platform (is the AI system approved for this use);</li>
+    <li>required human review (what review is required before reliance);</li>
+    <li>documentation requirement (what must be recorded);</li>
+    <li>prohibited-use boundary (is this use restricted or prohibited); and</li>
+    <li>escalation procedure (what to do if uncertain or if output is problematic).</li>
+  </ol>
+  <p>If any of these elements is missing, the use is outside acceptable use parameters.</p>
+
+  <!-- IV. DOCTRINAL EXPLANATION -->
+  <div class="section-title">IV. Doctrinal Explanation</div>
+  <p>AI acceptable use doctrine establishes the boundaries for responsible AI deployment. Key elements include:</p>
+  <ul style="margin-left:1.5rem;">
+    <li><strong>Acceptable Use Policy:</strong> The institution must maintain a written AI acceptable use policy that is communicated to all users, acknowledged, and enforced.</li>
+    <li><strong>Permitted Use:</strong> Low‑risk, routine, non‑sensitive uses where AI assists but does not make final decisions. Examples: drafting assistance, summarization, brainstorming, research support.</li>
+    <li><strong>Restricted Use:</strong> Medium‑risk uses requiring additional approval, training, or controls. Examples: AI‑assisted decision support, customer communications, internal reporting.</li>
+    <li><strong>Prohibited Use:</strong> High‑risk uses that are never permitted without exception. Examples: final legal advice without human review, medical diagnosis, autonomous dispositive decisions, unauthorized use of sensitive data.</li>
+    <li><strong>User Accountability:</strong> Each user is accountable for their AI use, including verifying outputs, documenting use where required, and reporting misuse.</li>
+    <li><strong>Sensitive Data Limits:</strong> Users may not submit confidential, privileged, or personally identifiable information to AI systems unless explicitly authorized and protected.</li>
+    <li><strong>Output Verification:</strong> AI outputs must be verified before reliance. Unverified outputs are not acceptable for material decisions.</li>
+    <li><strong>Institutional Adoption:</strong> Final institutional decisions, records, or communications may include AI‑assisted content, but the adopting human retains responsibility.</li>
+    <li><strong>Misuse Prevention:</strong> Technical, administrative, and procedural controls prevent or detect misuse of AI systems. Examples: access controls, usage logging, data loss prevention.</li>
+    <li><strong>Escalation and Reporting:</strong> Users must report suspected misuse, policy violations, incidents, or problematic outputs through defined escalation procedures.</li>
+    <li><strong>Disciplinary or Access Consequences:</strong> Violations of acceptable use policy may result in loss of AI access, disciplinary action, or legal consequences.</li>
+    <li><strong>Policy Review Cycle:</strong> Acceptable use policy must be reviewed and updated regularly as AI capabilities and institutional needs evolve.</li>
+  </ul>
+  <div class="content-panel"><strong>Clarification:</strong> AI access is not unlimited authority. Authorized access does not excuse misuse. Policy sets the boundary; compliance is required.</div>
+
+  <!-- V. RECOGNIZED STANDARDS -->
+  <div class="section-title">V. Recognized Standards</div>
+  <ul style="margin-left:1.5rem; line-height:1.6;">
+    <li><strong>NIST Artificial Intelligence Risk Management Framework (AI RMF 1.0)</strong> – Emphasizes governance and accountability, including clear roles, responsibilities, and acceptable use boundaries.</li>
+    <li><strong>ISO/IEC 42001 Artificial Intelligence Management System Standard</strong> – Requires organizations to define acceptable use criteria for AI systems, including policies and procedures.</li>
+    <li><strong>OECD AI Principles</strong> – Emphasizes responsible stewardship, including transparency, accountability, and human oversight.</li>
+    <li><strong>NIST Cybersecurity Framework</strong> – Access control and acceptable use policies are core cybersecurity controls applicable to AI systems.</li>
+    <li><strong>NIST Privacy Framework</strong> – Privacy policies and acceptable use boundaries protect personal information in AI systems.</li>
+    <li><strong>Generally accepted governance, risk, compliance, cybersecurity, and institutional policy principles</strong> – Foundational principles applicable to AI acceptable use.</li>
+  </ul>
+  <p>These frameworks reflect recognized approaches to responsible AI use, privacy, cybersecurity, governance, and organizational control. Application depends on institutional purpose, data sensitivity, system design, user role, and professional implementation.</p>
+
+  <!-- VI. OPERATIONAL APPLICATION -->
+  <div class="section-title">VI. Operational Application</div>
+  <p>AI acceptable use applies across all institutional contexts:</p>
+  <ul style="margin-left:1.5rem;">
+    <li><strong>Institutional Governance:</strong> Maintain an acceptable use policy covering all AI systems. Define role‑based AI permissions (who can use what systems for what purposes). Maintain a prohibited‑use register (explicit list of prohibited activities). Establish an incident reporting system for policy violations or AI failures.</li>
+    <li><strong>Education:</strong> Require student AI disclosure rules (students must disclose AI use in assignments). Define instructor review requirements for AI‑assisted student work. Maintain assignment integrity standards for AI use. Provide responsible‑use training to students and staff.</li>
+    <li><strong>Business Operations:</strong> Drafting support (permitted for preliminary drafts, subject to review). Summarization (permitted with verification). Workflow organization (permitted for non‑material tasks). Quality review (required for all material AI outputs).</li>
+    <li><strong>Record Administration:</strong> Maintain AI use logs (who used what, when, for what purpose). Preserve approval records for permitted uses. Document correction records where AI output was modified. Report misuse through incident reports.</li>
+  </ul>
+
+  <!-- VII. CAPACITY DISTINCTION -->
+  <div class="section-title">VII. Capacity Distinction</div>
+  <div class="content-panel">
+    <p><strong>Individual Capacity:</strong> A person using AI privately remains responsible for lawful use, verification, and protection of third‑party information. Personal acceptable use is the user's own responsibility.</p>
+    <p><strong>Representative / Organizational Capacity:</strong> A person using AI for an organization must act within authorized role, policy limits, and documentation standards. The organization is responsible for establishing and enforcing acceptable use policy.</p>
+    <p><strong>Administrative Capacity:</strong> AI acceptable use must align with institutional purpose, data boundaries, and final human responsibility. Administrative AI use is subject to policy and review.</p>
+    <p>Capacity determines consequence. The same AI tool may be acceptable for personal use but prohibited for organizational use without proper policy and controls.</p>
+  </div>
+
+  <!-- VIII. RECORDKEEPING REQUIREMENTS -->
+  <div class="section-title">VIII. Recordkeeping Requirements</div>
+  <ul style="margin-left:1.5rem;">
+    <li>Acceptable use policy (current version, effective date).</li>
+    <li>User acknowledgment records (signed or logged acknowledgment of policy).</li>
+    <li>AI platform approval record (list of approved platforms and permitted uses).</li>
+    <li>Role‑based access records (who has access to which AI systems).</li>
+    <li>Permitted‑use list (explicit list of acceptable uses).</li>
+    <li>Prohibited‑use list (explicit list of prohibited activities).</li>
+    <li>Training records (AI acceptable use training completion).</li>
+    <li>AI use logs (record of who used what system, when, for what purpose).</li>
+    <li>Output review records (documentation that outputs were reviewed).</li>
+    <li>Incident reports (policy violations, misuse, problematic outputs).</li>
+    <li>Escalation records (notices to management, oversight bodies).</li>
+    <li>Policy exception records (authorized deviations from policy).</li>
+    <li>Disciplinary or access restriction records where applicable.</li>
+    <li>Review cycle history (dates and findings of policy reviews).</li>
+  </ul>
+  <p>Core rule: <strong>If it is not permitted by policy, it is prohibited.</strong> Acceptable use requires clear, documented boundaries.</p>
+
+  <!-- IX. COMMON ERRORS -->
+  <div class="section-title">IX. Common Errors</div>
+  <ul style="margin-left:1.5rem;">
+    <li>Allowing AI use without policy – no rules governing acceptable use, risk, or oversight.</li>
+    <li>No user acknowledgment – users unaware of or not bound by policy.</li>
+    <li>No prohibited‑use list – unclear what uses are forbidden.</li>
+    <li>Using unapproved AI tools – users select systems without review or approval.</li>
+    <li>Submitting confidential data without authority – exposing sensitive information to unapproved platforms.</li>
+    <li>Treating AI output as verified – relying on AI outputs without human review.</li>
+    <li>No human review requirement – material decisions made without oversight.</li>
+    <li>No incident process – no procedure for reporting policy violations or AI failures.</li>
+    <li>Unclear role permissions – users uncertain whether they have authority to use AI for specific purposes.</li>
+    <li>Failing to document misuse – no record of policy violations or corrective actions.</li>
+  </ul>
+
+  <!-- X. INSTITUTIONAL RATIONALE -->
+  <div class="section-title">X. Institutional Rationale</div>
+  <p>KLI teaches AI acceptable use because institutions cannot govern systems they have not bounded. Clear use rules prevent operational confusion, unauthorized reliance, data exposure, and accountability failure. Procedure precedes remedy. Organizations that implement AI acceptable use policies reduce risk, ensure compliance, protect confidential information, and maintain stakeholder trust. Acceptable use is not a restriction; it is the governance control that makes AI safe to use.</p>
+
+  <!-- XI. RELATED KLI DOCTRINE -->
+  <div class="section-title">XI. Related KLI Doctrine</div>
+  <ul style="margin-left:1.5rem;">
+    <li><a href="ai-governance-principles.html" style="color:var(--antique-gold);">AI Governance Principles</a> (KLI-KL-AI-001)</li>
+    <li><a href="ai-risk-management.html" style="color:var(--antique-gold);">AI Risk Management</a> (KLI-KL-AI-002)</li>
+    <li><a href="ai-recordkeeping.html" style="color:var(--antique-gold);">AI Recordkeeping</a> (KLI-KL-AI-003)</li>
+    <li><a href="human-oversight.html" style="color:var(--antique-gold);">Human Oversight of AI</a> (KLI-KL-AI-004)</li>
+    <li><a href="ai-data-governance.html" style="color:var(--antique-gold);">AI Data Governance</a> (KLI-KL-AI-005)</li>
+    <li><a href="../administration/procedural-sequence.html" style="color:var(--antique-gold);">Procedural Sequence</a> (KLI-KL-ADMIN-006)</li>
+    <li><a href="../fiduciary/duty-of-care.html" style="color:var(--antique-gold);">Duty of Care</a> (KLI-KL-FID-005)</li>
+  </ul>
+
+  <!-- XII. EDUCATIONAL DISCLAIMER -->
+  <div class="notice">
+    This article is published by Kelly Legacy Institute for educational governance literacy only. It does not provide legal advice, financial advice, fiduciary decisions, securities guidance, tax advice, or attorney-client services. Application of legal or equitable principles depends on jurisdiction, facts, governing instruments, and competent professional review. AI acceptable use policies should be implemented with qualified professional guidance tailored to specific organizational contexts.
+  </div>
+
+  <!-- CTAs -->
+  <div style="margin-top: 2rem; text-align: center;">
+    <a href="../../pages/institute.html" class="btn">Continue Through Kelly Legacy Institute</a>
+    <a href="../../pages/publications.html" class="btn">View Publications</a>
+    <a href="../../knowledge-library.html" class="btn">Return to Knowledge Library</a>
+  </div>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-disclaimer">
+      <i class="fas fa-scale-balanced"></i> Educational governance materials only. © Kelly Legacy Institute // Kelly Legacy Estates Living Trust // Office of the Fiduciary.
+    </div>
+    <div class="footer-links">
+      <a href="../../legal/ip-policy.html">IP Policy</a>
+      <a href="../../legal/privacy.html">Privacy</a>
+      <a href="../../legal/record-policy.html">Record Policy</a>
+      <a href="../../legal/terms.html">Terms</a>
+      <a href="../../legal/transparency.html">Transparency</a>
+      <a href="../../pages/execution-framework.html">Execution Framework</a>
+      <a href="../../pages/curriculum-portal.html">Curriculum Portal</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  const toggleBtn = document.getElementById('mobileMenuToggle');
+  const mainNav = document.getElementById('mainNav');
+  if (toggleBtn && mainNav) {
+    toggleBtn.addEventListener('click', () => {
+      mainNav.classList.toggle('active');
+    });
+  }
+
+  // Chatbase embed - Legacy AI
+  (function(){
+    if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+      window.chatbase=(...arguments)=>{
+        if(!window.chatbase.q){window.chatbase.q=[]}
+        window.chatbase.q.push(arguments)
+      };
+      window.chatbase=new Proxy(window.chatbase,{
+        get(target,prop){
+          if(prop==="q"){return target.q}
+          return(...args)=>target(prop,...args)
+        }
+      })
+    }
+    const onLoad=function(){
+      const script=document.createElement("script");
+      script.src="https://www.chatbase.co/embed.min.js";
+      script.id="JB7Ysn50O_DpC9tWnoxrh";
+      script.domain="www.chatbase.co";
+      document.body.appendChild(script)
+    };
+    if(document.readyState==="complete"){onLoad()}
+    else{window.addEventListener("load",onLoad)}
+  })();
+</script>
+</body>
+</html>
