@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>AI Data Governance | KLI Knowledge Library</title>
+<meta name="description" content="AI data governance explained through data classification, permissions, privacy, security, retention, training data, output records, confidentiality, and institutional accountability.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kellylegacyestates.com/library/ai-governance/ai-data-governance.html">
+
+<!-- Open Graph -->
+<meta property="og:title" content="AI Data Governance | KLI Knowledge Library">
+<meta property="og:description" content="AI data governance explained through data classification, permissions, privacy, security, retention, training data, output records, confidentiality, and institutional accountability.">
+<meta property="og:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
+<meta property="og:url" content="https://kellylegacyestates.com/library/ai-governance/ai-data-governance.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kelly Legacy Estates">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Data Governance | KLI Knowledge Library">
+<meta name="twitter:description" content="Educational doctrine on AI data governance, including data classification, permissions, privacy, security, retention, and training data restrictions.">
+<meta name="twitter:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
+
+<!-- Schema: Article + Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI Data Governance",
+  "description": "AI data governance explained through data classification, permissions, privacy, security, retention, training data, output records, confidentiality, and institutional accountability.",
+  "author": {
+    "@type": "Organization",
+    "name": "Kelly Legacy Institute"
+  },
+  "publisher": {
+    "@type": "EducationalOrganization",
+    "name": "Kelly Legacy Institute",
+    "url": "https://kellylegacyestates.com"
+  },
+  "datePublished": "2025-01-20",
+  "dateModified": "2026-06-02",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://kellylegacyestates.com/library/ai-governance/ai-data-governance.html"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "KLI Knowledge Library",
+      "item": "https://kellylegacyestates.com/knowledge-library.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI Governance",
+      "item": "https://kellylegacyestates.com/library/ai-governance/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AI Data Governance",
+      "item": "https://kellylegacyestates.com/library/ai-governance/ai-data-governance.html"
+    }
+  ]
+}
+</script>
+
+<!-- Styles -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root {
+  --exec-black: #050505;
+  --deep-charcoal: #111113;
+  --charcoal-card: #16161A;
+  --charcoal-border: #23232A;
+  --crimson: #9E2A2A;
+  --crimson-dim: #6E1E1E;
+  --antique-gold: #C8A24C;
+  --antique-gold-muted: #9A7A3A;
+  --ivory: #F0EFEA;
+  --ivory-dim: #CBC9C1;
+  --slate-meta: #7A7A7A;
+  --border-faint: rgba(240,239,234,0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--exec-black);
+  color: var(--ivory-dim);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* noise overlay and scanline */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.35;
+}
+
+.scanline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(0deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 3px, rgba(0,0,0,0.05) 3px, rgba(0,0,0,0.05) 6px);
+  pointer-events: none;
+  z-index: 998;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+  position: relative;
+  z-index: 10;
+}
+
+/* header */
+.site-header {
+  border-bottom: 1px solid var(--border-faint);
+  background: rgba(5,5,5,0.92);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.identity-mark h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ivory);
+}
+
+.identity-mark p {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--crimson);
+  margin-top: 4px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+  .nav-links a.active {
+  color: var(--antique-gold);
+  border-bottom: 1px solid var(--antique-gold);
+  }
+
+.nav-links a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  color: var(--ivory-dim);
+  transition: color 0.2s;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover { color: var(--antique-gold); }
+.nav-links .access-cta {
+  border: 1px solid var(--crimson);
+  padding: 8px 18px;
+  color: var(--crimson);
+  font-weight: 500;
+}
+.nav-links .access-cta:hover { background: rgba(158,42,42,0.08); color: var(--antique-gold); border-color: var(--antique-gold); }
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--crimson);
+  color: var(--ivory);
+  padding: 8px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  cursor: pointer;
+}
+
+/* meta-band */
+.meta-band {
+  background: var(--deep-charcoal);
+  border-bottom: 1px solid var(--border-faint);
+  padding: 0.5rem 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--slate-meta);
+}
+
+.meta-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.meta-inner span i { margin-right: 6px; color: var(--antique-gold-muted); font-size: 0.7rem; }
+
+.article-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.article-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-faint);
+  padding-bottom: 1.5rem;
+}
+
+.article-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--crimson);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.article-id {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--antique-gold-muted);
+  margin: 0.5rem 0;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: var(--ivory);
+  margin: 1rem 0 0.5rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--ivory);
+  margin: 2rem 0 1rem;
+  border-left: 3px solid var(--antique-gold);
+  padding-left: 1rem;
+}
+
+.content-panel {
+  background: var(--charcoal-card);
+  border: 1px solid var(--charcoal-border);
+  padding: 1.8rem;
+  margin: 1.5rem 0;
+  border-radius: 2px;
+}
+
+.notice {
+  background: rgba(158,42,42,0.08);
+  border-left: 3px solid var(--crimson);
+  padding: 1.2rem;
+  font-size: 0.85rem;
+  margin: 1.5rem 0;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid var(--antique-gold);
+  padding: 10px 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--antique-gold);
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: var(--antique-gold);
+  color: var(--exec-black);
+}
+
+/* footer */
+.footer {
+  background: var(--deep-charcoal);
+  border-top: 1px solid var(--border-faint);
+  padding: 3rem 0 2rem;
+  font-size: 0.7rem;
+}
+
+.footer-disclaimer {
+  max-width: 900px;
+  color: var(--slate-meta);
+  line-height: 1.6;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.footer-links {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+}
+
+.footer-links a {
+  color: var(--ivory-dim);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--antique-gold);
+}
+
+/* responsive */
+@media (max-width: 860px) {
+  .container { padding: 0 24px; }
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .nav-links.active { display: flex; }
+  .mobile-menu-toggle { display: block; }
+  h1 { font-size: 2rem; }
+}
+
+@media (max-width: 640px) {
+  .nav-wrapper { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<div class="noise-overlay"></div>
+<div class="scanline"></div>
+<header class="site-header">
+  <div class="container">
+    <div class="nav-wrapper">
+      <div class="identity-mark"><h1>KELLY LEGACY ESTATES</h1><p>OFFICE OF THE FIDUCIARY</p></div>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">MENU</button>
+      <nav class="nav-links" id="mainNav" aria-label="Primary navigation">
+        <a href="../../index.html">Home</a>
+        <a href="../../pages/governance.html">Governance</a>
+        <a href="../../pages/fiduciary-doctrine.html">Fiduciary Doctrine</a>
+        <a href="../../pages/ai-governance.html">AI Governance</a>
+        <a href="../../knowledge-library.html">Knowledge Library</a>
+        <a href="../../pages/publications.html">Publications</a>
+        <a href="../../pages/institute.html">Institute</a>
+        <a href="../../pages/institutional-solutions.html">Institutional Solutions</a>
+        <a href="../../pages/klat-access.html">KLAT Access</a>
+        <a href="../../pages/contact.html" class="access-cta">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<div class="meta-band"><div class="container"><div class="meta-inner"><span><i class="fas fa-shield-alt"></i> KLI KNOWLEDGE LIBRARY // AI GOVERNANCE</span><span><i class="fas fa-hourglass-half"></i> CONTINUITY ACTIVE</span></div></div></div>
+
+<main>
+<div class="article-container">
+  <div class="article-header">
+    <div class="article-label">KELLY LEGACY INSTITUTE™ // KLI KNOWLEDGE LIBRARY™</div>
+    <div class="article-id">Article ID: KLI-KL-AI-005 | Public Educational Doctrine | Status: Published</div>
+    <h1>AI Data Governance</h1>
+    <div class="meta-inner" style="margin-top:1rem;"><span>Primary Collection: AI Governance</span><span>Related: Data Classification, Privacy, Security, Retention, Confidentiality</span></div>
+  </div>
+
+  <!-- I. EXECUTIVE SUMMARY -->
+  <div class="section-title">I. Executive Summary</div>
+  <p>AI data governance controls the information used by, submitted into, generated by, stored through, or relied upon by artificial intelligence systems. It addresses data classification, permission to use data, sensitive information, confidentiality, privacy, cybersecurity, retention, training data restrictions, output storage, and third‑party platform risks. AI governance cannot exist without data governance because AI systems depend on information. Poor data controls create institutional risk. Not all data is appropriate for AI systems. Institutional data should not be submitted into AI tools without authority, purpose, and safeguards.</p>
+  <p>Data governance transforms AI from an uncontrolled data consumer into a governed information processor.</p>
+  <div class="content-panel"><strong>Why It Matters:</strong> When data is uncontrolled, AI becomes an institutional exposure point. Responsible governance requires that information be classified, protected, authorized, recorded, and reviewed. Data breaches, privacy violations, and regulatory non‑compliance often begin with uncontrolled data entering AI systems.</div>
+
+  <!-- II. CORE PRINCIPLE -->
+  <div class="section-title">II. Core Principle</div>
+  <p><strong>AI data governance establishes the rules, controls, classifications, permissions, retention standards, and accountability procedures governing data used in or produced by artificial intelligence systems.</strong></p>
+
+  <!-- III. GOVERNANCE RULE -->
+  <div class="section-title">III. Governance Rule</div>
+  <p>No AI system should receive, process, store, or generate institutional data without identifying:</p>
+  <ol style="margin-left:1.5rem; margin-top:0.5rem;">
+    <li>data category (what type of data – public, internal, confidential, restricted);</li>
+    <li>data owner or responsible authority (who has authority over the data);</li>
+    <li>permitted use (what purposes are authorized);</li>
+    <li>sensitivity level (risk classification of the data);</li>
+    <li>confidentiality requirements (privacy, legal, or contractual obligations);</li>
+    <li>retention rule (how long data and outputs must be kept);</li>
+    <li>platform or vendor involved (where the data is being processed); and</li>
+    <li>approval and review standard (who authorized use).</li>
+  </ol>
+  <p>If any of these elements is missing, the AI system is operating outside data governance controls.</p>
+
+  <!-- IV. DOCTRINAL EXPLANATION -->
+  <div class="section-title">IV. Doctrinal Explanation</div>
+  <p>AI data governance applies established data management principles to AI systems. Key elements include:</p>
+  <ul style="margin-left:1.5rem;">
+    <li><strong>Data Classification:</strong> Institutional data must be classified by sensitivity and risk: public (no restrictions), internal (institutional use only), confidential (restricted access, legal protections), restricted (high‑risk, limited distribution). AI system access must be aligned with classification.</li>
+    <li><strong>Data Minimization:</strong> Only data necessary for the AI system's purpose should be submitted. Avoid submitting excessive, irrelevant, or sensitive data that is not required.</li>
+    <li><strong>Permissioned Use:</strong> Data submitted to AI systems must have documented permission from the data owner or responsible authority. Personal data may require consent or legal basis.</li>
+    <li><strong>Sensitive Data Controls:</strong> Personally identifiable information (PII), protected health information (PHI), financial data, trade secrets, and attorney‑client privileged information require special controls. Many commercial AI systems should not receive such data without enterprise agreements.</li>
+    <li><strong>Confidentiality:</strong> Users must not submit confidential or privileged information into AI systems unless authorized and protected. AI outputs may be stored, reviewed, or used for training; confidentiality may not be preserved.</li>
+    <li><strong>Privacy Protection:</strong> AI use must comply with applicable privacy laws (GDPR, CCPA, etc.). Data subjects may have rights regarding automated decision‑making and data processing.</li>
+    <li><strong>Cybersecurity Boundaries:</strong> AI platforms are subject to cybersecurity risks, including data breaches, unauthorized access, and adversarial attacks. Data submitted to AI systems may be exposed.</li>
+    <li><strong>Vendor/Platform Risk:</strong> Third‑party AI platforms may have different security, privacy, and data handling standards than the institution. Vendor risk assessments are required before submitting sensitive data.</li>
+    <li><strong>Training Data Restrictions:</strong> Some AI systems use submitted data for model training. Institutions must understand whether submitted data will be used to train models and whether that is acceptable.</li>
+    <li><strong>Output Data Management:</strong> AI outputs may contain derivative sensitive information. Outputs must be classified and retained according to the same standards as input data.</li>
+    <li><strong>Retention and Deletion:</strong> Data submitted to AI systems and outputs generated must be retained according to institutional retention schedules. Deletion must be verifiable where required.</li>
+    <li><strong>Incident Response:</strong> Data incidents involving AI systems (breaches, unauthorized access, improper training use) must be documented and reported through institutional incident response procedures.</li>
+  </ul>
+  <div class="content-panel"><strong>Clarification:</strong> Not all data is appropriate for AI systems. Institutional data should not be submitted into AI tools without authority, purpose, and safeguards. The institution remains responsible for data regardless of where it is processed.</div>
+
+  <!-- V. RECOGNIZED STANDARDS -->
+  <div class="section-title">V. Recognized Standards</div>
+  <ul style="margin-left:1.5rem; line-height:1.6;">
+    <li><strong>NIST Artificial Intelligence Risk Management Framework (AI RMF 1.0)</strong> – Emphasizes data governance as a core function, including data quality, provenance, and management.</li>
+    <li><strong>ISO/IEC 42001 Artificial Intelligence Management System Standard</strong> – Requires organizations to manage data used in AI systems, including data sources, quality, and governance.</li>
+    <li><strong>ISO/IEC 23894 Artificial Intelligence Risk Management</strong> – Provides guidance on data‑related risks in AI systems, including bias, quality, and security.</li>
+    <li><strong>NIST Privacy Framework</strong> – Framework for managing privacy risk, applicable to AI systems that process personal information.</li>
+    <li><strong>NIST Cybersecurity Framework</strong> – Framework for managing cybersecurity risk, applicable to AI system data protection.</li>
+    <li><strong>OECD AI Principles</strong> – Requires responsible data governance as part of trustworthy AI, including data quality and privacy.</li>
+    <li><strong>Generally accepted data governance, privacy, cybersecurity, and GRC principles</strong> – Foundational principles applicable to AI data governance.</li>
+  </ul>
+  <p>These frameworks reflect recognized approaches to AI data governance, privacy, cybersecurity, and responsible system administration. Application depends on data sensitivity, platform architecture, organizational policy, jurisdiction, and professional implementation.</p>
+
+  <!-- VI. OPERATIONAL APPLICATION -->
+  <div class="section-title">VI. Operational Application</div>
+  <p>AI data governance applies across all institutional contexts:</p>
+  <ul style="margin-left:1.5rem;">
+    <li><strong>Institutional Governance:</strong> Establish data classification policy defining categories and permitted AI use. Create approval workflow for submitting sensitive data to AI systems. Conduct vendor review for AI platforms before deployment. Implement access controls restricting AI use by classification.</li>
+    <li><strong>Education:</strong> Protect student records from unauthorized AI processing. Control curriculum content submitted to AI systems. Establish AI assignment rules specifying what data students may submit. Provide privacy notices to students regarding AI use.</li>
+    <li><strong>Business Operations:</strong> Handle customer or participant data with documented consent and purpose limitation. Review confidential documents for AI suitability before submission. Manage internal knowledge bases with classification and access controls. Define output retention rules for AI‑generated content.</li>
+    <li><strong>Record Administration:</strong> Maintain data inventory of information used in AI systems. Preserve consent records where required. Log AI inputs where appropriate for audit. Follow retention schedules for AI inputs and outputs. Document incidents for investigation and remediation.</li>
+  </ul>
+
+  <!-- VII. CAPACITY DISTINCTION -->
+  <div class="section-title">VII. Capacity Distinction</div>
+  <div class="content-panel">
+    <p><strong>Individual Capacity:</strong> A person using AI privately must avoid submitting sensitive third‑party information without authority. Personal data protection remains the user's responsibility.</p>
+    <p><strong>Representative / Organizational Capacity:</strong> A person using AI for an organization must comply with data governance rules and cannot expose protected records without authorization. The organization is responsible for implementing data governance controls.</p>
+    <p><strong>Administrative Capacity:</strong> AI data handling must be tied to official purpose, authorized access, and institutional record controls. Administrative data used in AI remains subject to the same governance standards as other institutional data.</p>
+    <p>Capacity determines consequence. The same data may be acceptable for personal AI use but prohibited for organizational AI use without governance controls.</p>
+  </div>
+
+  <!-- VIII. RECORDKEEPING REQUIREMENTS -->
+  <div class="section-title">VIII. Recordkeeping Requirements</div>
+  <ul style="margin-left:1.5rem;">
+    <li>Data inventory (what data is used in AI systems).</li>
+    <li>Data classification record (sensitivity level of each dataset).</li>
+    <li>AI system inventory (what systems process what data).</li>
+    <li>Permitted‑use memorandum (documentation of authorized purposes).</li>
+    <li>Access control record (who can submit what data to AI).</li>
+    <li>Vendor/platform review (security and privacy assessment).</li>
+    <li>Privacy review (compliance with applicable privacy laws).</li>
+    <li>Security review (cybersecurity assessment of AI platform).</li>
+    <li>Consent or authorization record (where required).</li>
+    <li>Input log (record of data submitted, where material).</li>
+    <li>Output storage record (preservation of AI outputs).</li>
+    <li>Retention schedule (how long data and outputs are kept).</li>
+    <li>Deletion record (verifiable deletion where required).</li>
+    <li>Incident report (data breaches, unauthorized access).</li>
+    <li>Responsible‑party identification (who authorized data use).</li>
+  </ul>
+  <p>Core rule: <strong>If it is not classified and authorized, it is not governed.</strong> Data governance is the foundation of AI accountability.</p>
+
+  <!-- IX. COMMON ERRORS -->
+  <div class="section-title">IX. Common Errors</div>
+  <ul style="margin-left:1.5rem;">
+    <li>Submitting sensitive data into AI tools without authority – exposing confidential or protected information.</li>
+    <li>No data classification – treating all data as equally sensitive without assessment.</li>
+    <li>No retention rule – not knowing how long AI inputs or outputs must be kept.</li>
+    <li>Unclear ownership of AI outputs – not knowing who owns AI‑generated content.</li>
+    <li>Poor vendor review – assuming AI platforms have adequate security without assessment.</li>
+    <li>Storing unnecessary data – retaining data longer than needed, increasing risk.</li>
+    <li>Using confidential records for public AI tools – submitting trade secrets or privileged information to consumer‑grade AI.</li>
+    <li>Failing to document consent – using personal data without proper consent or legal basis.</li>
+    <li>Ignoring cybersecurity risks – not considering breach potential when selecting AI platforms.</li>
+    <li>Treating AI platforms as private by default – assuming that submitted data will not be used for training or reviewed by vendor personnel.</li>
+  </ul>
+
+  <!-- X. INSTITUTIONAL RATIONALE -->
+  <div class="section-title">X. Institutional Rationale</div>
+  <p>KLI teaches AI data governance because data is the substance AI systems operate upon. When data is uncontrolled, AI becomes an institutional exposure point. Responsible governance requires that information be classified, protected, authorized, recorded, and reviewed. Organizations that implement AI data governance reduce privacy and security risk, ensure regulatory compliance, protect confidential information, and maintain stakeholder trust. Data governance is not optional when using AI; it is the control that prevents data from becoming a liability.</p>
+
+  <!-- XI. RELATED KLI DOCTRINE -->
+  <div class="section-title">XI. Related KLI Doctrine</div>
+  <ul style="margin-left:1.5rem;">
+    <li><a href="ai-governance-principles.html" style="color:var(--antique-gold);">AI Governance Principles</a> (KLI-KL-AI-001)</li>
+    <li><a href="ai-risk-management.html" style="color:var(--antique-gold);">AI Risk Management</a> (KLI-KL-AI-002)</li>
+    <li><a href="ai-recordkeeping.html" style="color:var(--antique-gold);">AI Recordkeeping</a> (KLI-KL-AI-003)</li>
+    <li><a href="human-oversight.html" style="color:var(--antique-gold);">Human Oversight of AI</a> (KLI-KL-AI-004)</li>
+    <li><a href="../administration/record-authentication.html" style="color:var(--antique-gold);">Record Authentication</a> (KLI-KL-ADMIN-005)</li>
+    <li><a href="../administration/evidence-standards.html" style="color:var(--antique-gold);">Evidence Standards</a> (KLI-KL-ADMIN-003)</li>
+    <li><a href="../fiduciary/duty-to-account.html" style="color:var(--antique-gold);">Duty to Account</a> (KLI-KL-FID-004)</li>
+    <li><a href="../../legal/privacy.html" style="color:var(--antique-gold);">Privacy Policy</a></li>
+  </ul>
+
+  <!-- XII. EDUCATIONAL DISCLAIMER -->
+  <div class="notice">
+    This article is published by Kelly Legacy Institute for educational governance literacy only. It does not provide legal advice, financial advice, fiduciary decisions, securities guidance, tax advice, or attorney-client services. Application of legal or equitable principles depends on jurisdiction, facts, governing instruments, and competent professional review. AI data governance should be implemented with qualified professional guidance tailored to specific organizational contexts and legal requirements.
+  </div>
+
+  <!-- CTAs -->
+  <div style="margin-top: 2rem; text-align: center;">
+    <a href="../../pages/institute.html" class="btn">Continue Through Kelly Legacy Institute</a>
+    <a href="../../pages/publications.html" class="btn">View Publications</a>
+    <a href="../../knowledge-library.html" class="btn">Return to Knowledge Library</a>
+  </div>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-disclaimer">
+      <i class="fas fa-scale-balanced"></i> Educational governance materials only. © Kelly Legacy Institute // Kelly Legacy Estates Living Trust // Office of the Fiduciary.
+    </div>
+    <div class="footer-links">
+      <a href="../../legal/ip-policy.html">IP Policy</a>
+      <a href="../../legal/privacy.html">Privacy</a>
+      <a href="../../legal/record-policy.html">Record Policy</a>
+      <a href="../../legal/terms.html">Terms</a>
+      <a href="../../legal/transparency.html">Transparency</a>
+      <a href="../../pages/execution-framework.html">Execution Framework</a>
+      <a href="../../pages/curriculum-portal.html">Curriculum Portal</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  const toggleBtn = document.getElementById('mobileMenuToggle');
+  const mainNav = document.getElementById('mainNav');
+  if (toggleBtn && mainNav) {
+    toggleBtn.addEventListener('click', () => {
+      mainNav.classList.toggle('active');
+    });
+  }
+
+  // Chatbase embed - Legacy AI
+  (function(){
+    if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+      window.chatbase=(...arguments)=>{
+        if(!window.chatbase.q){window.chatbase.q=[]}
+        window.chatbase.q.push(arguments)
+      };
+      window.chatbase=new Proxy(window.chatbase,{
+        get(target,prop){
+          if(prop==="q"){return target.q}
+          return(...args)=>target(prop,...args)
+        }
+      })
+    }
+    const onLoad=function(){
+      const script=document.createElement("script");
+      script.src="https://www.chatbase.co/embed.min.js";
+      script.id="JB7Ysn50O_DpC9tWnoxrh";
+      script.domain="www.chatbase.co";
+      document.body.appendChild(script)
+    };
+    if(document.readyState==="complete"){onLoad()}
+    else{window.addEventListener("load",onLoad)}
+  })();
+</script>
+</body>
+</html>
