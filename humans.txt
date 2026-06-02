@@ -1,0 +1,46 @@
+/* TEAM */
+
+Organization:
+Kelly Legacy Estates
+
+Division:
+Office of the Fiduciary
+
+Education:
+Kelly Legacy Institute
+
+Publications:
+Kelly Legacy Publications
+
+Website:
+https://kellylegacyestates.com
+
+
+/* PURPOSE */
+
+Kelly Legacy Estates provides fiduciary literacy,
+governance education, institutional continuity systems,
+and administrative doctrine.
+
+Focus Areas:
+
+- Fiduciary Duty
+- Trust Administration Education
+- Governance Systems
+- Institutional Records
+- AI Governance
+
+
+/* SITE */
+
+Domain:
+kellylegacyestates.com
+
+Established:
+2025
+
+Standards:
+HTML5
+Structured Data
+Accessibility
+Responsive Design
