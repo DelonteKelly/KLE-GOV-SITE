@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Subrogation | KLI Knowledge Library</title>
+<meta name="description" content="Subrogation explained through equitable substitution, payment of another's obligation, unjust enrichment, fiduciary administration, reimbursement, liens, and governance accountability.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kellylegacyestates.com/library/equity/subrogation.html">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Subrogation | KLI Knowledge Library">
+<meta property="og:description" content="Subrogation explained through equitable substitution, payment of another's obligation, unjust enrichment, fiduciary administration, reimbursement, liens, and governance accountability.">
+<meta property="og:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
+<meta property="og:url" content="https://kellylegacyestates.com/library/equity/subrogation.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kelly Legacy Estates">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Subrogation | KLI Knowledge Library">
+<meta name="twitter:description" content="Educational doctrine on subrogation, including equitable substitution, payment of another's obligation, unjust enrichment, and fiduciary administration.">
+<meta name="twitter:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
+
+<!-- Schema: Article + Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Subrogation",
+  "description": "Subrogation explained through equitable substitution, payment of another's obligation, unjust enrichment, fiduciary administration, reimbursement, liens, and governance accountability.",
+  "author": {
+    "@type": "Organization",
+    "name": "Kelly Legacy Institute"
+  },
+  "publisher": {
+    "@type": "EducationalOrganization",
+    "name": "Kelly Legacy Institute",
+    "url": "https://kellylegacyestates.com"
+  },
+  "datePublished": "2025-01-20",
+  "dateModified": "2026-06-02",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://kellylegacyestates.com/library/equity/subrogation.html"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "KLI Knowledge Library",
+      "item": "https://kellylegacyestates.com/knowledge-library.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Equity & Remedies",
+      "item": "https://kellylegacyestates.com/library/equity/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Subrogation",
+      "item": "https://kellylegacyestates.com/library/equity/subrogation.html"
+    }
+  ]
+}
+</script>
+
+<!-- Styles -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root {
+  --exec-black: #050505;
+  --deep-charcoal: #111113;
+  --charcoal-card: #16161A;
+  --charcoal-border: #23232A;
+  --crimson: #9E2A2A;
+  --crimson-dim: #6E1E1E;
+  --antique-gold: #C8A24C;
+  --antique-gold-muted: #9A7A3A;
+  --ivory: #F0EFEA;
+  --ivory-dim: #CBC9C1;
+  --slate-meta: #7A7A7A;
+  --border-faint: rgba(240,239,234,0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--exec-black);
+  color: var(--ivory-dim);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* noise overlay and scanline */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.35;
+}
+
+.scanline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(0deg, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 3px, rgba(0,0,0,0.05) 3px, rgba(0,0,0,0.05) 6px);
+  pointer-events: none;
+  z-index: 998;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+  position: relative;
+  z-index: 10;
+}
+
+/* header */
+.site-header {
+  border-bottom: 1px solid var(--border-faint);
+  background: rgba(5,5,5,0.92);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.identity-mark h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ivory);
+}
+
+.identity-mark p {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--crimson);
+  margin-top: 4px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+  .nav-links a.active {
+  color: var(--antique-gold);
+  border-bottom: 1px solid var(--antique-gold);
+  }
+
+.nav-links a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  color: var(--ivory-dim);
+  transition: color 0.2s;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover { color: var(--antique-gold); }
+.nav-links .access-cta {
+  border: 1px solid var(--crimson);
+  padding: 8px 18px;
+  color: var(--crimson);
+  font-weight: 500;
+}
+.nav-links .access-cta:hover { background: rgba(158,42,42,0.08); color: var(--antique-gold); border-color: var(--antique-gold); }
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--crimson);
+  color: var(--ivory);
+  padding: 8px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  cursor: pointer;
+}
+
+/* meta-band */
+.meta-band {
+  background: var(--deep-charcoal);
+  border-bottom: 1px solid var(--border-faint);
+  padding: 0.5rem 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--slate-meta);
+}
+
+.meta-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.meta-inner span i { margin-right: 6px; color: var(--antique-gold-muted); font-size: 0.7rem; }
+
+.article-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.article-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-faint);
+  padding-bottom: 1.5rem;
+}
+
+.article-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--crimson);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.article-id {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--antique-gold-muted);
+  margin: 0.5rem 0;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: var(--ivory);
+  margin: 1rem 0 0.5rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--ivory);
+  margin: 2rem 0 1rem;
+  border-left: 3px solid var(--antique-gold);
+  padding-left: 1rem;
+}
+
+.content-panel {
+  background: var(--charcoal-card);
+  border: 1px solid var(--charcoal-border);
+  padding: 1.8rem;
+  margin: 1.5rem 0;
+  border-radius: 2px;
+}
+
+.notice {
+  background: rgba(158,42,42,0.08);
+  border-left: 3px solid var(--crimson);
+  padding: 1.2rem;
+  font-size: 0.85rem;
+  margin: 1.5rem 0;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid var(--antique-gold);
+  padding: 10px 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--antique-gold);
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: var(--antique-gold);
+  color: var(--exec-black);
+}
+
+/* footer */
+.footer {
+  background: var(--deep-charcoal);
+  border-top: 1px solid var(--border-faint);
+  padding: 3rem 0 2rem;
+  font-size: 0.7rem;
+}
+
+.footer-disclaimer {
+  max-width: 900px;
+  color: var(--slate-meta);
+  line-height: 1.6;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.footer-links {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+}
+
+.footer-links a {
+  color: var(--ivory-dim);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--antique-gold);
+}
+
+/* responsive */
+@media (max-width: 860px) {
+  .container { padding: 0 24px; }
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .nav-links.active { display: flex; }
+  .mobile-menu-toggle { display: block; }
+  h1 { font-size: 2rem; }
+}
+
+@media (max-width: 640px) {
+  .nav-wrapper { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<div class="noise-overlay"></div>
+<div class="scanline"></div>
+<header class="site-header">
+  <div class="container">
+    <div class="nav-wrapper">
+      <div class="identity-mark"><h1>KELLY LEGACY ESTATES</h1><p>OFFICE OF THE FIDUCIARY</p></div>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">MENU</button>
+      <nav class="nav-links" id="mainNav" aria-label="Primary navigation">
+        <a href="../../index.html">Home</a>
+        <a href="../../pages/governance.html">Governance</a>
+        <a href="../../pages/fiduciary-doctrine.html">Fiduciary Doctrine</a>
+        <a href="../../pages/ai-governance.html">AI Governance</a>
+        <a href="../../knowledge-library.html">Knowledge Library</a>
+        <a href="../../pages/publications.html">Publications</a>
+        <a href="../../pages/institute.html">Institute</a>
+        <a href="../../pages/institutional-solutions.html">Institutional Solutions</a>
+        <a href="../../pages/klat-access.html">KLAT Access</a>
+        <a href="../../pages/contact.html" class="access-cta">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<div class="meta-band"><div class="container"><div class="meta-inner"><span><i class="fas fa-shield-alt"></i> KLI KNOWLEDGE LIBRARY // EQUITY & REMEDIES</span><span><i class="fas fa-hourglass-half"></i> CONTINUITY ACTIVE</span></div></div></div>
+
+<main>
+<div class="article-container">
+  <div class="article-header">
+    <div class="article-label">KELLY LEGACY INSTITUTE™ // KLI KNOWLEDGE LIBRARY™</div>
+    <div class="article-id">Article ID: KLI-KL-EQ-009 | Public Educational Doctrine | Status: Published</div>
+    <h1>Subrogation</h1>
+    <div class="meta-inner" style="margin-top:1rem;"><span>Primary Collection: Equity & Remedies</span><span>Related: Equitable Substitution, Reimbursement, Unjust Enrichment, Suretyship</span></div>
+  </div>
+
+  <!-- I. EXECUTIVE SUMMARY -->
+  <div class="section-title">I. Executive Summary</div>
+  <p>Subrogation allows one party to step into the position of another after satisfying an obligation that should properly be borne by someone else. It may arise where a party pays a debt to protect an interest, a surety pays an obligation, trust or fiduciary property is used to satisfy another's obligation, one party prevents loss by paying another's duty, or equity requires reimbursement to prevent unjust enrichment. Subrogation is not a windfall. It is a substitution remedy designed to place responsibility where equity says it belongs.</p>
+  <p>In fiduciary contexts, subrogation may allow a trustee who pays a third-party claim to preserve trust property to step into the creditor's rights against the primary obligor.</p>
+  <div class="content-panel"><strong>Why It Matters:</strong> Subrogation prevents unjust enrichment by ensuring that the party who ultimately bears responsibility for an obligation cannot avoid liability because another paid. It preserves equitable balance and supports reimbursement in fiduciary and governance contexts.</div>
+
+  <!-- II. CORE PRINCIPLE -->
+  <div class="section-title">II. Core Principle</div>
+  <p><strong>Subrogation is an equitable remedy that allows a party who properly pays or satisfies another's obligation to step into the rights of the original claimant to prevent unjust enrichment and preserve equitable accountability.</strong></p>
+
+  <!-- III. GOVERNANCE RULE -->
+  <div class="section-title">III. Governance Rule</div>
+  <p>No subrogation analysis should proceed without identifying:</p>
+  <ol style="margin-left:1.5rem; margin-top:0.5rem;">
+    <li>obligation satisfied (debt, lien, claim, or duty);</li>
+    <li>party who paid or performed (subrogee);</li>
+    <li>party primarily responsible (debtor or primary obligor);</li>
+    <li>original creditor or claimant rights (what rights are being substituted);</li>
+    <li>reason payment was proper (interest to protect, duty to pay, prevention of loss);</li>
+    <li>unjust enrichment prevented (what would have been unjust if subrogation denied); and</li>
+    <li>supporting evidence and record (payment records, obligation documents, authority).</li>
+  </ol>
+  <p>If any of these elements is missing, subrogation is unlikely to be granted.</p>
+
+  <!-- IV. DOCTRINAL EXPLANATION -->
+  <div class="section-title">IV. Doctrinal Explanation</div>
+  <p>Subrogation doctrine allows equity to shift rights to prevent unjust enrichment. Key elements include:</p>
+  <ul style="margin-left:1.5rem;">
+    <li><strong>Subrogation as Equitable Substitution:</strong> The subrogee steps into the shoes of the original creditor, acquiring the same rights, remedies, and security interests that the original creditor possessed.</li>
+    <li><strong>Payment of Another's Obligation:</strong> The subrogee must have paid or satisfied an obligation that was primarily another's responsibility. The payment must be real and complete.</li>
+    <li><strong>Prevention of Unjust Enrichment:</strong> Subrogation is grounded in unjust enrichment: if the primary obligor is not required to reimburse the subrogee, the obligor would be unjustly enriched at the subrogee's expense.</li>
+    <li><strong>Surety and Guarantor Context:</strong> A surety who pays a guaranteed debt is subrogated to the creditor's rights against the principal debtor, including any security held by the creditor.</li>
+    <li><strong>Insurance and Reimbursement Context:</strong> An insurer who pays a loss covered by insurance may be subrogated to the insured's rights against the tortfeasor or wrongdoer.</li>
+    <li><strong>Trust and Fiduciary Context:</strong> A trustee who pays a debt to preserve trust property (e.g., paying a mortgage on trust real estate) may be subrogated to the lender's rights against the primary obligor.</li>
+    <li><strong>Relationship to Equitable Lien:</strong> Subrogation often results in an equitable lien on property that secured the original obligation, allowing the subrogee to enforce that lien.</li>
+    <li><strong>Relationship to Restitution:</strong> Subrogation is a restitutionary remedy: the subrogee is entitled to reimbursement for the amount paid, up to the value of the original obligation.</li>
+    <li><strong>Limits of Volunteer Payments:</strong> A mere volunteer (one who pays another's obligation without any interest to protect or duty to pay) is generally not entitled to subrogation.</li>
+    <li><strong>Clean Hands and Priority Issues:</strong> Subrogation is subject to clean hands and may be limited by intervening rights of third parties or priority rules (e.g., recording acts).</li>
+  </ul>
+  <div class="content-panel"><strong>Clarification:</strong> A mere volunteer generally does not receive subrogation. The payment must be made under recognized equitable circumstances: to protect an existing interest, to satisfy a legal duty, or to prevent loss.</div>
+
+  <!-- V. RECOGNIZED AUTHORITIES -->
+  <div class="section-title">V. Recognized Authorities</div>
+  <ul style="margin-left:1.5rem; line-height:1.6;">
+    <li><strong>Restatement (Third) of Restitution and Unjust Enrichment § 24</strong> – A person who satisfies another's obligation is subrogated to the rights of the original obligee if subrogation is necessary to prevent unjust enrichment.</li>
+    <li><strong>Restatement (Third) of Restitution and Unjust Enrichment § 1</strong> – A person unjustly enriched at another's expense is liable in restitution; subrogation is a mechanism for enforcing that liability.</li>
+    <li><strong>Restatement (Third) of Restitution and Unjust Enrichment § 56</strong> – Subrogation may be enforced through an equitable lien on property that secured the original obligation.</li>
+    <li><strong>Pearlman v. Reliance Insurance Co., 371 U.S. 132 (1962)</strong> – Equitable subrogation arises by operation of law to prevent unjust enrichment, regardless of express agreement.</li>
+    <li><strong>American Surety Co. v. Bethlehem National Bank, 314 U.S. 314 (1941)</strong> – A surety who pays a debt is entitled to subrogation to the creditor's rights, including any security held.</li>
+    <li><strong>Uniform Trust Code § 1001</strong> – A trustee may seek equitable remedies, including subrogation, as part of trust administration.</li>
+    <li><strong>Pomeroy, Equity Jurisprudence</strong> – Subrogation is a primary equitable remedy, arising from the prevention of unjust enrichment and the restoration of equitable balance.</li>
+    <li><strong>Story, Commentaries on Equity Jurisprudence</strong> – Equity substitutes the person who pays an obligation into the place of the original creditor, granting all rights to enforce the obligation.</li>
+  </ul>
+  <p>These authorities reflect broadly recognized equitable, restitutionary, and fiduciary principles. Specific application depends on jurisdiction, facts, payment circumstances, priority, governing instruments, and competent professional review.</p>
+
+  <!-- VI. OPERATIONAL APPLICATION -->
+  <div class="section-title">VI. Operational Application</div>
+  <p>Subrogation applies across all fiduciary and institutional contexts:</p>
+  <ul style="margin-left:1.5rem;">
+    <li><strong>Trust Administration:</strong> A trustee pays an obligation to preserve trust property (e.g., a mortgage on trust real estate). The trustee may be subrogated to the lender's rights against the primary obligor (e.g., a beneficiary who was personally responsible). Trust funds used to protect secured property (e.g., paying taxes on trust property) may support subrogation against the property owner. A beneficiary seeks reimbursement where the trust benefited from payment of another's obligation.</li>
+    <li><strong>Governance:</strong> Institutional funds satisfy an obligation owed by another responsible party (e.g., a subsidiary's debt paid by a parent corporation). Reimbursement and priority must be documented. The institution may be subrogated to the creditor's rights against the primary obligor.</li>
+    <li><strong>Administrative Records:</strong> Payment records (receipts, canceled checks, wire confirmations), obligation documents (notes, mortgages, contracts), creditor records, authority records (resolution, board approval), reimbursement analysis.</li>
+    <li><strong>Equitable Review:</strong> Identify the obligation satisfied, identify the payer (subrogee), identify the party primarily responsible, determine substitution rights (what rights were transferred), trace payment and documentation.</li>
+  </ul>
+
+  <!-- VII. CAPACITY DISTINCTION -->
+  <div class="section-title">VII. Capacity Distinction</div>
+  <div class="content-panel">
+    <p><strong>Private Individual Capacity:</strong> A person who voluntarily pays another's obligation may not be entitled to subrogation unless recognized equitable grounds exist (interest to protect, legal duty, or prevention of loss).</p>
+    <p><strong>Representative / Fiduciary Capacity:</strong> A fiduciary must document why payment was authorized and whether reimbursement or substitution rights belong to the protected interest. The fiduciary may be subrogated to the rights of the original creditor.</p>
+    <p><strong>Trustee Capacity:</strong> A trustee acting to preserve trust property may require subrogation analysis if trust assets satisfy another obligation. The trustee may be subrogated to the rights of the original creditor against the primary obligor.</p>
+    <p><strong>Institutional / Office Capacity:</strong> Institutional payment of another's obligation must be tied to authority, benefit, and reimbursement rights. The institution may be subrogated to the rights of the original creditor.</p>
+    <p>Capacity determines consequence. The same individual may be entitled to subrogation in fiduciary capacity but not in personal capacity.</p>
+  </div>
+
+  <!-- VIII. RECORDKEEPING REQUIREMENTS -->
+  <div class="section-title">VIII. Recordkeeping Requirements</div>
+  <ul style="margin-left:1.5rem;">
+    <li>Obligation record (debt, lien, contract, or claim).</li>
+    <li>Payment record (receipt, canceled check, wire confirmation, ledger entry).</li>
+    <li>Authority record (trust instrument, resolution, delegation, or court order).</li>
+    <li>Creditor documents (original note, mortgage, security agreement, judgment).</li>
+    <li>Proof of satisfaction (release, satisfaction of judgment, discharge).</li>
+    <li>Responsible-party identification (who was primarily obligated).</li>
+    <li>Reimbursement memorandum (analysis of why subrogation is equitable).</li>
+    <li>Priority analysis (intervening rights, recording acts, competing claims).</li>
+    <li>Accounting entries (payment recorded in trust or institutional ledgers).</li>
+    <li>Correspondence (notices to primary obligor, original creditor).</li>
+    <li>Notices to interested parties (beneficiaries, co-trustees).</li>
+    <li>Evidence index (list of all documents submitted).</li>
+    <li>Final determination or order where applicable (court order granting subrogation).</li>
+    <li>Signature capacity records (who authorized payment, who paid).</li>
+  </ul>
+  <p>Core rule: <strong>Subrogation requires a complete record of the obligation, payment, and equitable justification.</strong> Without documented proof, subrogation cannot be established.</p>
+
+  <!-- IX. COMMON ERRORS -->
+  <div class="section-title">IX. Common Errors</div>
+  <ul style="margin-left:1.5rem;">
+    <li>Assuming every payment creates subrogation – subrogation requires equitable justification, not merely payment.</li>
+    <li>Paying as a volunteer without authority – a volunteer generally is not entitled to subrogation.</li>
+    <li>Failing to identify original creditor rights – without knowing what rights are being substituted, subrogation is impossible.</li>
+    <li>Failing to prove obligation was satisfied – partial or incomplete payment may not support subrogation.</li>
+    <li>Ignoring priority rules – a subrogee takes subject to intervening rights; priority must be analyzed.</li>
+    <li>Lacking payment records – without proof of payment, subrogation fails.</li>
+    <li>Confusing reimbursement with ownership – subrogation gives rights to enforce the obligation, not ownership of the property.</li>
+    <li>Ignoring clean hands – the subrogee must have acted equitably.</li>
+    <li>Failing to identify capacity – the payer must have acted in a capacity that supports subrogation (not a mere volunteer).</li>
+    <li>Seeking substitution without equitable basis – subrogation requires that denial would result in unjust enrichment.</li>
+  </ul>
+
+  <!-- X. INSTITUTIONAL RATIONALE -->
+  <div class="section-title">X. Institutional Rationale</div>
+  <p>KLI teaches subrogation because governance requires accurate allocation of responsibility. Where one party satisfies an obligation to protect property, preserve value, or prevent loss, equity may shift rights to avoid unjust enrichment and preserve accountable administration. In trust administration, subrogation can prevent a trust or its beneficiaries from being unfairly burdened by obligations that should be borne by another. Understanding subrogation enables fiduciaries to document payments, preserve rights, and seek reimbursement where equity requires shifting responsibility back to the primary obligor.</p>
+
+  <!-- XI. RELATED KLI DOCTRINE -->
+  <div class="section-title">XI. Related KLI Doctrine</div>
+  <ul style="margin-left:1.5rem;">
+    <li><a href="../equity/equity-follows-the-law.html" style="color:var(--antique-gold);">Equity Follows the Law</a> (KLI-KL-EQ-001)</li>
+    <li><a href="../equity/equitable-lien.html" style="color:var(--antique-gold);">Equitable Lien</a> (KLI-KL-EQ-003)</li>
+    <li><a href="../equity/unjust-enrichment.html" style="color:var(--antique-gold);">Unjust Enrichment</a> (KLI-KL-EQ-004)</li>
+    <li><a href="../equity/accounting-equity.html" style="color:var(--antique-gold);">Accounting in Equity</a> (KLI-KL-EQ-005)</li>
+    <li><a href="../fiduciary/fiduciary-remedies.html" style="color:var(--antique-gold);">Fiduciary Remedies</a> (KLI-KL-FID-009)</li>
+    <li><a href="../fiduciary/fiduciary-breach.html" style="color:var(--antique-gold);">Fiduciary Breach</a> (KLI-KL-FID-008)</li>
+    <li><a href="../trust-administration/trust-accounting.html" style="color:var(--antique-gold);">Trust Accounting</a> (KLI-KL-TRUST-009)</li>
+    <li><a href="../administration/evidence-standards.html" style="color:var(--antique-gold);">Evidence Standards</a> (KLI-KL-ADMIN-003)</li>
+    <li><a href="../administration/record-authentication.html" style="color:var(--antique-gold);">Record Authentication</a> (KLI-KL-ADMIN-005)</li>
+  </ul>
+
+  <!-- XII. EDUCATIONAL DISCLAIMER -->
+  <div class="notice">
+    This article is published by Kelly Legacy Institute for educational governance literacy only. It does not provide legal advice, financial advice, fiduciary decisions, securities guidance, tax advice, or attorney-client services. Application of legal or equitable principles depends on jurisdiction, facts, governing instruments, and competent professional review.
+  </div>
+
+  <!-- CTAs -->
+  <div style="margin-top: 2rem; text-align: center;">
+    <a href="../../pages/institute.html" class="btn">Continue Through Kelly Legacy Institute</a>
+    <a href="../../pages/publications.html" class="btn">View Publications</a>
+    <a href="../../knowledge-library.html" class="btn">Return to Knowledge Library</a>
+  </div>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-disclaimer">
+      <i class="fas fa-scale-balanced"></i> Educational governance materials only. © Kelly Legacy Institute // Kelly Legacy Estates Living Trust // Office of the Fiduciary.
+    </div>
+    <div class="footer-links">
+      <a href="../../legal/ip-policy.html">IP Policy</a>
+      <a href="../../legal/privacy.html">Privacy</a>
+      <a href="../../legal/record-policy.html">Record Policy</a>
+      <a href="../../legal/terms.html">Terms</a>
+      <a href="../../legal/transparency.html">Transparency</a>
+      <a href="../../pages/execution-framework.html">Execution Framework</a>
+      <a href="../../pages/curriculum-portal.html">Curriculum Portal</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  const toggleBtn = document.getElementById('mobileMenuToggle');
+  const mainNav = document.getElementById('mainNav');
+  if (toggleBtn && mainNav) {
+    toggleBtn.addEventListener('click', () => {
+      mainNav.classList.toggle('active');
+    });
+  }
+
+  // Chatbase embed - Legacy AI
+  // Actual Legacy AI branding must be configured inside Chatbase dashboard.
+  (function(){
+    if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+      window.chatbase=(...arguments)=>{
+        if(!window.chatbase.q){window.chatbase.q=[]}
+        window.chatbase.q.push(arguments)
+      };
+      window.chatbase=new Proxy(window.chatbase,{
+        get(target,prop){
+          if(prop==="q"){return target.q}
+          return(...args)=>target(prop,...args)
+        }
+      })
+    }
+    const onLoad=function(){
+      const script=document.createElement("script");
+      script.src="https://www.chatbase.co/embed.min.js";
+      script.id="JB7Ysn50O_DpC9tWnoxrh";
+      script.domain="www.chatbase.co";
+      document.body.appendChild(script)
+    };
+    if(document.readyState==="complete"){onLoad()}
+    else{window.addEventListener("load",onLoad)}
+  })();
+</script>
+</body>
+</html>
