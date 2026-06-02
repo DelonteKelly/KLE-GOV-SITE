@@ -1,0 +1,6 @@
+Contact: mailto:kellylegacyestatesllc@gmail.com
+Preferred-Languages: en
+Canonical: https://kellylegacyestates.com/security.txt
+
+Policy:
+Security matters concerning this website may be reported through the listed contact channel.
