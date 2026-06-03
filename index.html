@@ -132,6 +132,7 @@
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "Institutional Inquiry",
+        "email": "office@kellylegacyestates.com",
         "url": "https://kellylegacyestates.com/pages/contact.html"
       }
     },
@@ -740,6 +741,32 @@
       display: inline-block;
     }
 
+    .contact-email-block {
+      background: var(--charcoal-card);
+      border: 1px solid var(--antique-gold);
+      padding: 1.2rem 1.8rem;
+      margin-top: 1rem;
+      text-align: center;
+    }
+    
+    .contact-email-block a {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.1rem;
+      color: var(--antique-gold);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+    }
+    
+    .contact-email-block a:hover {
+      text-decoration: underline;
+    }
+    
+    .contact-email-block p {
+      margin-top: 0.5rem;
+      font-size: 0.7rem;
+      color: var(--slate-meta);
+    }
+
     @media (max-width: 860px) {
       .container { padding: 0 24px; }
       .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -773,7 +800,6 @@
 <nav class="nav-links" id="mainNav" aria-label="Primary navigation">
   <a href="index.html">Home</a>
   <a href="legacy-ai.html">Legacy AI™</a>
-  <!-- Updated case study link -->
   <a href="google-cloud-governance-intelligence-case-study.html">
     Case Study
   </a>
@@ -988,7 +1014,14 @@
         <div class="ai-card" style="padding: 1.5rem;"><i class="fas fa-graduation-cap"></i><h4 style="color:var(--ivory);">KLI Access Request</h4><p style="font-size:0.75rem;">Governance classification pathway.</p></div>
         <div class="ai-card" style="padding: 1.5rem;"><i class="fas fa-microchip"></i><h4 style="color:var(--ivory);">AI Governance Inquiry</h4><p style="font-size:0.75rem;">Executive AI systems and oversight.</p></div>
       </div>
-      <div class="access-preview" style="background: none; border: 1px solid var(--charcoal-border); text-align: center; padding: 1.5rem;">
+      
+      <!-- Official Contact Email Display -->
+      <div class="contact-email-block">
+        <a href="mailto:office@kellylegacyestates.com">office@kellylegacyestates.com</a>
+        <p>Official administrative correspondence channel • Office of the Fiduciary</p>
+      </div>
+      
+      <div class="access-preview" style="background: none; border: 1px solid var(--charcoal-border); text-align: center; padding: 1.5rem; margin-top: 1rem;">
         <p style="font-family: monospace; font-size:0.75rem;">All correspondence is processed through the Office of the Fiduciary. Formal written requests only. <a href="pages/contact.html" id="submitInstitutionalReviewInline" style="color: var(--crimson); text-decoration: none;">Submit institutional review →</a></p>
       </div>
     </div>
