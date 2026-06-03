@@ -118,36 +118,89 @@
     "url": "https://kellylegacyestates.com/contact.html"
   }
 }
-</script>
-
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SiteNavigationElement",
-  "name": [
-    "Home",
-    "Governance",
-    "Fiduciary Doctrine",
-    "AI Governance",
-    "Knowledge Library",
-    "Publications",
-    "Institute",
-    "Institutional Solutions",
-    "KLAT Access",
-    "Contact"
-  ],
-  "url": [
-    "https://kellylegacyestates.com/",
-    "https://kellylegacyestates.com/governance.html",
-    "https://kellylegacyestates.com/fiduciary-doctrine.html",
-    "https://kellylegacyestates.com/ai-governance.html",
-    "https://kellylegacyestates.com/knowledge-library.html",
-    "https://kellylegacyestates.com/publications.html",
-    "https://kellylegacyestates.com/institute.html",
-    "https://kellylegacyestates.com/institutional-solutions.html",
-    "https://kellylegacyestates.com/klat-access.html",
-    "https://kellylegacyestates.com/contact.html"
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://kellylegacyestates.com/#organization",
+      "name": "Kelly Legacy Estates",
+      "url": "https://kellylegacyestates.com/",
+      "logo": "https://kellylegacyestates.com/assets/images/kli-og-cover.png",
+      "description": "Kelly Legacy Estates provides institutional governance education, fiduciary literacy, continuity systems, and administrative doctrine.",
+      "department": [
+        {
+          "@type": "EducationalOrganization",
+          "@id": "https://kellylegacyestates.com/pages/institute.html#kli",
+          "name": "Kelly Legacy Institute",
+          "url": "https://kellylegacyestates.com/pages/institute.html"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://kellylegacyestates.com/legacy-ai.html#legacy-ai",
+          "name": "Legacy AI™",
+          "url": "https://kellylegacyestates.com/legacy-ai.html",
+          "description": "Institutional intelligence interface supporting governance education, fiduciary literacy, curriculum navigation, and structured knowledge access."
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://kellylegacyestates.com/pages/publications.html#publications",
+          "name": "Kelly Legacy Publications",
+          "url": "https://kellylegacyestates.com/pages/publications.html"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://kellylegacyestates.com/#website",
+      "name": "Kelly Legacy Estates",
+      "url": "https://kellylegacyestates.com/",
+      "publisher": {
+        "@id": "https://kellylegacyestates.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://kellylegacyestates.com/#webpage",
+      "url": "https://kellylegacyestates.com/",
+      "name": "Kelly Legacy Estates | Office of the Fiduciary",
+      "isPartOf": {
+        "@id": "https://kellylegacyestates.com/#website"
+      },
+      "about": {
+        "@id": "https://kellylegacyestates.com/#organization"
+      }
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "name": [
+        "Home",
+        "Legacy AI™",
+        "Governance",
+        "Fiduciary Doctrine",
+        "AI Governance",
+        "Knowledge Library",
+        "Publications",
+        "Institute",
+        "Institutional Solutions",
+        "KLAT Access",
+        "Contact"
+      ],
+      "url": [
+        "https://kellylegacyestates.com/",
+        "https://kellylegacyestates.com/legacy-ai.html",
+        "https://kellylegacyestates.com/pages/governance.html",
+        "https://kellylegacyestates.com/pages/fiduciary-doctrine.html",
+        "https://kellylegacyestates.com/pages/ai-governance.html",
+        "https://kellylegacyestates.com/knowledge-library.html",
+        "https://kellylegacyestates.com/pages/publications.html",
+        "https://kellylegacyestates.com/pages/institute.html",
+        "https://kellylegacyestates.com/pages/institutional-solutions.html",
+        "https://kellylegacyestates.com/pages/klat-access.html",
+        "https://kellylegacyestates.com/pages/contact.html"
+      ]
+    }
   ]
 }
 </script>
