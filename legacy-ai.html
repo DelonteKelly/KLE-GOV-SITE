@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Legacy AI™ | Kelly Legacy Estates — Institutional Intelligence</title>
+<meta name="description" content="Legacy AI™ is the institutional intelligence interface of Kelly Legacy Estates, supporting governance education, fiduciary literacy, curriculum navigation, and structured knowledge access.">
+<meta name="theme-color" content="#050505">
+<style>
+
+  /* ---------- RESET & GLOBAL ---------- */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #050505;
+    color: #ececec;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+  }
+
+  /* subtle grain texture (optional depth) */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: radial-gradient(rgba(200, 164, 77, 0.02) 1px, transparent 1px);
+    background-size: 32px 32px;
+    z-index: 0;
+  }
+
+  /* main content above grain */
+  header, section, footer {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ---------- TYPOGRAPHY & GOLD ACCENTS ---------- */
+  .gold {
+    color: #c8a44d;
+    text-shadow: 0 0 1px rgba(200, 164, 77, 0.3);
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 8vw, 4.8rem);
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-bottom: 0.35em;
+    line-height: 1.2;
+  }
+
+  h2 {
+    color: #c8a44d;
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    margin-bottom: 1rem;
+    border-left: 3px solid #c8a44d;
+    padding-left: 1rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #dfc48c;
+    margin-bottom: 0.75rem;
+  }
+
+  /* ---------- LAYOUT & CONTAINERS ---------- */
+  header {
+    padding: 3rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(200, 164, 77, 0.25);
+    background: linear-gradient(to bottom, #0a0a0a, #050505);
+  }
+
+  .subhead {
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    color: #bcbcbc;
+    margin-top: 0.5rem;
+  }
+
+  .estate-line {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #a08854;
+    margin-top: 1rem;
+  }
+
+  section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+  }
+
+  .card {
+    background: rgba(17, 17, 17, 0.9);
+    backdrop-filter: blur(0px);
+    border: 1px solid #2a2a2a;
+    border-radius: 24px;
+    padding: 1.8rem;
+    transition: all 0.25s ease-in-out;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .card:hover {
+    border-color: #c8a44d40;
+    background: #121212;
+    transform: translateY(-3px);
+    box-shadow: 0 16px 28px -12px rgba(0, 0, 0, 0.6);
+  }
+
+  /* Governance intro paragraph */
+  .intro-text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    color: #dddddd;
+  }
+
+  .fiduciary-card {
+    background: linear-gradient(135deg, #111111 0%, #0c0c0c 100%);
+    border-left: 4px solid #c8a44d;
+    margin: 2rem 0;
+  }
+
+  /* Agent Grid */
+  .agent-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.8rem;
+    margin: 2rem 0 1rem;
+  }
+
+  .agent-card {
+    background: #0f0f0f;
+    border-radius: 20px;
+    padding: 1.5rem;
+    border: 1px solid #262626;
+    transition: all 0.2s;
+  }
+
+  .agent-card:hover {
+    border-color: #c8a44d;
+    background: #141414;
+  }
+
+  .agent-card h3 {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .agent-card h3::before {
+    content: "◆";
+    font-size: 1rem;
+    color: #c8a44d;
+    opacity: 0.8;
+  }
+
+  .pillar-quote {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #c8a44d;
+    margin: 1rem 0 0.5rem;
+  }
+
+  .pillar-sub {
+    text-align: center;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #6f6f6f;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2.5rem 2rem;
+    border-top: 1px solid #1e1e1e;
+    font-size: 0.8rem;
+    color: #9a9a9a;
+    background: #030303;
+  }
+
+  footer .copyright {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+  }
+
+  hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c8a44d30, #c8a44d80, #c8a44d30, transparent);
+    margin: 1.5rem 0;
+  }
+
+  /* responsive refinements */
+  @media (max-width: 680px) {
+    header {
+      padding: 2rem 1rem;
+    }
+    section {
+      padding: 2rem 1.2rem;
+    }
+    h2 {
+      font-size: 1.6rem;
+    }
+    .card {
+      padding: 1.4rem;
+    }
+    .pillar-quote {
+      font-size: 1.2rem;
+    }
+  }
+
+  /* subtle gold link for future */
+  a {
+    color: #c8a44d;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+  }
+
+  /* accessibility & selection */
+  ::selection {
+    background: #c8a44d40;
+    color: #f5e2b0;
+  }
+</style>
+</head>
+<body>
+  <nav style="padding:1rem 2rem; border-bottom:1px solid #1e1e1e; background:#030303; text-align:center; font-size:0.8rem; letter-spacing:1px;">
+  <a href="index.html">Home</a> ·
+  <a href="knowledge-library.html">Knowledge Library</a> ·
+  <a href="pages/ai-governance.html">AI Governance</a> ·
+  <a href="pages/institute.html">Institute</a> ·
+  <a href="pages/contact.html">Contact</a>
+  </nav>
+<header>
+  <h1>
+    Legacy <span class="gold">AI™</span>
+  </h1>
+  <div class="subhead">Institutional Intelligence Interface</div>
+  <div class="estate-line">Kelly Legacy Estates | Office of the Fiduciary</div>
+</header>
+
+<section>
+  <h2>Governance Before Automation</h2>
+  <p class="intro-text">
+    Legacy AI™ is an institutional intelligence system designed to organize knowledge, preserve record integrity, and support structured educational navigation.
+  </p>
+  <p>
+    The platform operates under a human-review governance model where artificial intelligence supports administration but does not replace fiduciary judgment.
+  </p>
+
+  <!-- Enhanced fiduciary card -->
+  <div class="card fiduciary-card">
+    <h2 style="border-left: none; padding-left: 0; margin-bottom: 0.5rem;">✧ Office of the Fiduciary Agent ✧</h2>
+    <p style="font-size: 1.05rem;">
+      Supports fiduciary education, governance frameworks, administrative concepts, record discipline, and institutional knowledge retrieval.
+    </p>
+    <hr>
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: space-between; font-size: 0.85rem; color: #c8a44dbb;">
+      <span>📜 Fiduciary literacy</span>
+      <span>⚖️ Governance architecture</span>
+      <span>📁 Record integrity</span>
+      <span>🧠 Knowledge continuity</span>
+    </div>
+  </div>
+
+  <h2>Agent Architecture</h2>
+  <div class="agent-grid">
+    <div class="agent-card">
+      <h3>KLI Curriculum Agent</h3>
+      <p>Course navigation, lessons, study support, and educational frameworks. Adaptive learning pathways with structured module access.</p>
+    </div>
+    <div class="agent-card">
+      <h3>Knowledge Library Agent</h3>
+      <p>Research repository for structured institutional references. Semantic indexing and controlled vocabulary for precision retrieval.</p>
+    </div>
+    <div class="agent-card">
+      <h3>Publication Agent</h3>
+      <p>Supports publications, articles, educational materials, and knowledge organization. Version-aware editorial assistant.</p>
+    </div>
+    <div class="agent-card">
+      <h3>AI Governance Agent</h3>
+      <p>Oversight framework supporting responsible AI operation and accountability. Audit trails, policy alignment, and human-in-the-loop protocols.</p>
+    </div>
+  </div>
+
+  <!-- Operational standard card upgraded -->
+  <div class="card" style="margin-top: 1.5rem; text-align: center;">
+    <div class="pillar-quote">⟡ Structure determines outcome ⟡</div>
+    <div class="pillar-sub">Procedure. Record. Accountability.</div>
+    <p style="margin-top: 1rem; font-size: 0.9rem; max-width: 500px; margin-left: auto; margin-right: auto; color: #b9b9b9;">
+      Every interaction within Legacy AI™ adheres to documented institutional standards, ensuring transparency and traceability across all knowledge systems.
+    </p>
+  </div>
+
+  <!-- subtle addition: guiding principle -->
+  <div style="margin-top: 2.5rem; padding: 0.5rem; border-radius: 2rem; text-align: center;">
+    <span style="background: #111; padding: 0.4rem 1.2rem; border-radius: 40px; font-size: 0.7rem; letter-spacing: 1.5px; color: #c8a44d; border: 0.5px solid #2c2c2c;">◈ HUMAN-REVIEW GOVERNANCE ◈</span>
+  </div>
+</section>
+
+<footer>
+  <div>© Kelly Legacy Estates</div>
+  <div style="margin-top: 0.4rem;">Legacy AI™ — Educational Information System</div>
+  <div class="copyright">Institutional Intelligence · Fiduciary Infrastructure</div>
+</footer>
+
+</body>
+</html>
