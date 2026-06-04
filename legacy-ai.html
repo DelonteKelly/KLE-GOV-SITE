@@ -243,6 +243,9 @@
     background: #c8a44d40;
     color: #f5e2b0;
   }
+
+  /* Font Awesome for Governance module */
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 </style>
 </head>
 <body>
@@ -318,6 +321,414 @@
   <div style="margin-top: 2.5rem; padding: 0.5rem; border-radius: 2rem; text-align: center;">
     <span style="background: #111; padding: 0.4rem 1.2rem; border-radius: 40px; font-size: 0.7rem; letter-spacing: 1.5px; color: #c8a44d; border: 0.5px solid #2c2c2c;">◈ HUMAN-REVIEW GOVERNANCE ◈</span>
   </div>
+</section>
+
+<!-- ========== LEGACY GOVERNANCE INTELLIGENCE™ EMBEDDED SECTION ========== -->
+<section style="max-width: 1400px; background: transparent; padding: 2rem 1rem;">
+  <style>
+    /* ========== GOVERNANCE INTELLIGENCE™ SCOPED STYLES ========== */
+    .gi-root {
+      --gi-black: #0B0D12;
+      --gi-charcoal: #1A1D26;
+      --gi-ivory: #F8F5EE;
+      --gi-antique-gold: #C9A96E;
+      --gi-deep-navy: #0F172A;
+      --gi-gold-glow: #D4AF37;
+      --gi-red-score: #C44536;
+      --gi-yellow-score: #E6B422;
+      --gi-green-score: #2D8C6A;
+      --gi-card-bg: rgba(26, 29, 38, 0.85);
+      --gi-border-subtle: #2A2F3F;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Georgia', serif;
+    }
+    .gi-root * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .gi-root {
+      background: linear-gradient(135deg, #0A0C12 0%, #11141C 100%);
+      border-radius: 32px;
+      margin: 1rem 0;
+      padding: 0;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,169,110,0.15);
+    }
+    .gi-app-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .gi-top-bar {
+      background: var(--gi-black);
+      border-bottom: 1px solid var(--gi-border-subtle);
+      padding: 0.9rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border-radius: 32px 32px 0 0;
+    }
+    .gi-logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .gi-logo-icon {
+      font-size: 1.6rem;
+      color: var(--gi-antique-gold);
+    }
+    .gi-logo-text {
+      font-weight: 600;
+      font-size: 1.3rem;
+      letter-spacing: -0.3px;
+      color: #EAEFF5;
+    }
+    .gi-logo-text span {
+      color: var(--gi-antique-gold);
+      font-weight: 700;
+    }
+    .gi-tagline {
+      font-size: 0.7rem;
+      color: #8E9AAE;
+      margin-left: 0.5rem;
+    }
+    .gi-nav-links {
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .gi-nav-links a {
+      color: #E2E8F0;
+      text-decoration: none;
+      font-size: 0.75rem;
+      font-weight: 500;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+    .gi-nav-links a:hover {
+      color: var(--gi-antique-gold);
+    }
+    .gi-demo-badge {
+      background: var(--gi-antique-gold);
+      color: var(--gi-black);
+      padding: 0.25rem 0.9rem;
+      border-radius: 24px;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+    .gi-main-content {
+      flex: 1;
+      padding: 2rem;
+    }
+    .gi-page-header {
+      margin-bottom: 1.8rem;
+      border-left: 4px solid var(--gi-antique-gold);
+      padding-left: 1rem;
+    }
+    .gi-page-header h2 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #EAEFF5;
+      border-left: none;
+      padding-left: 0;
+    }
+    .gi-page-header p {
+      color: #9CA3AF;
+      font-size: 0.85rem;
+      margin-top: 0.3rem;
+    }
+    .gi-card {
+      background: var(--gi-card-bg);
+      backdrop-filter: blur(4px);
+      border: 1px solid var(--gi-border-subtle);
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    .gi-card-gold-edge {
+      border-top: 2px solid var(--gi-antique-gold);
+    }
+    .gi-grid-2 {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+    }
+    .gi-score-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.2rem 0.8rem;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+    }
+    .gi-score-green { background: rgba(45, 140, 106, 0.2); color: var(--gi-green-score); border-left: 3px solid var(--gi-green-score); }
+    .gi-score-yellow { background: rgba(230, 180, 34, 0.2); color: var(--gi-yellow-score); border-left: 3px solid var(--gi-yellow-score); }
+    .gi-score-red { background: rgba(196, 69, 54, 0.2); color: var(--gi-red-score); border-left: 3px solid var(--gi-red-score); }
+    .gi-btn {
+      background: transparent;
+      border: 1px solid var(--gi-antique-gold);
+      color: var(--gi-antique-gold);
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.2s;
+      font-size: 0.8rem;
+    }
+    .gi-btn-primary {
+      background: var(--gi-antique-gold);
+      color: var(--gi-black);
+      border: none;
+    }
+    .gi-btn-primary:hover {
+      background: #B8914E;
+      transform: translateY(-1px);
+    }
+    input, select {
+      background: #11141E;
+      border: 1px solid #2A2F3F;
+      padding: 0.6rem 1rem;
+      border-radius: 12px;
+      color: white;
+      width: 100%;
+      font-family: inherit;
+      font-size: 0.85rem;
+    }
+    .gi-form-group {
+      margin-bottom: 1rem;
+    }
+    .gi-form-group label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #BDC4D4;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    .gi-notice {
+      background: rgba(196, 69, 54, 0.08);
+      border-left: 3px solid var(--gi-red-score);
+      padding: 0.8rem;
+      border-radius: 12px;
+      color: #BDC4D4;
+      font-size: 0.75rem;
+    }
+    .gi-section-intro {
+      text-align: center;
+      padding: 2rem 2rem 0.5rem;
+    }
+    .gi-section-intro h3 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #EAEFF5 0%, var(--gi-antique-gold) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 0.5rem;
+    }
+    .gi-cta {
+      text-align: center;
+      padding: 1.5rem 2rem 2rem;
+      border-top: 1px solid var(--gi-border-subtle);
+    }
+    @media (max-width: 700px) {
+      .gi-main-content { padding: 1rem; }
+      .gi-top-bar { flex-direction: column; gap: 0.8rem; }
+    }
+  </style>
+
+  <div class="gi-root">
+    <div class="gi-app-container">
+      <!-- product header -->
+      <div class="gi-top-bar">
+        <div class="gi-logo-area">
+          <i class="fas fa-landmark gi-logo-icon"></i>
+          <div class="gi-logo-text">LEGACY<span>Gov</span> Intelligence™</div>
+          <div class="gi-tagline">Governance Infrastructure for Businesses</div>
+        </div>
+        <div class="gi-nav-links" id="giNavLinks">
+          <a data-gi-page="dashboard">Dashboard</a>
+          <a data-gi-page="onboarding">Onboarding</a>
+          <a data-gi-page="entity">Entity Profile</a>
+          <a data-gi-page="vault">Record Vault</a>
+          <a data-gi-page="authority">Authority Matrix</a>
+          <a data-gi-page="riskscore">Risk Score</a>
+          <a data-gi-page="aiRegistry">AI Registry</a>
+          <a data-gi-page="continuity">Continuity</a>
+          <a data-gi-page="report">Review Report</a>
+          <span class="gi-demo-badge"><i class="fas fa-chart-line"></i> Governance Intelligence Demo</span>
+        </div>
+      </div>
+
+      <!-- section description -->
+      <div class="gi-section-intro">
+        <h3>GOVERNANCE INTELLIGENCE™</h3>
+        <p style="color: #B9C3D4; max-width: 700px; margin: 0.5rem auto 0;">Governance infrastructure for businesses that need records, authority, accountability, AI oversight, and continuity.</p>
+        <p style="font-size: 0.85rem; color: #9CA3AF; margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+          Governance Intelligence™ is a Legacy AI™ system designed to help businesses assess structure, document authority, classify institutional records, monitor AI usage, evaluate continuity risk, and generate governance review summaries.
+        </p>
+      </div>
+
+      <!-- dynamic demo renderer -->
+      <div class="gi-main-content" id="giMainContent">
+        <div id="giPageRenderer">Loading governance intelligence demo...</div>
+      </div>
+
+      <!-- CTA + disclaimer -->
+      <div class="gi-cta">
+        <a href="contact.html" class="gi-btn gi-btn-primary" style="display: inline-block; text-decoration: none;"><i class="fas fa-gavel"></i> Request Governance Intelligence Review</a>
+        <div class="gi-notice" style="margin-top: 1.5rem; text-align: left;">
+          Governance Intelligence™ provides governance-support, record organization, administrative review, AI oversight, and continuity assessment tools. It does not provide legal, tax, accounting, fiduciary, securities, or investment advice. Authority remains with properly designated human actors.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      // ========== GOVERNANCE INTELLIGENCE™ STATE (scoped) ==========
+      const giState = {
+        entity: { name: "", jurisdiction: "", industry: "", founded: "", legalStatus: "Active" },
+        records: [
+          { id: "R001", title: "Board Charter & Authority", classification: "Level 1 — Charter Document", location: "Governance Vault", authoritySigned: "Board", riskFlag: "GREEN" },
+          { id: "R002", title: "Delegation of Authority Policy", classification: "Level 2 — Governance Policy", location: "Policy Archive", authoritySigned: "CEO", riskFlag: "YELLOW" },
+          { id: "R003", title: "Shareholder Meeting Procedure", classification: "Level 3 — Operational Procedure", location: "Procedural Records", authoritySigned: "Secretary", riskFlag: "GREEN" },
+          { id: "R004", title: "Annual Transaction Ledger", classification: "Level 4 — Transaction Record", location: "Financial Vault", authoritySigned: "CFO", riskFlag: "RED" }
+        ],
+        authorityMatrix: [
+          { role: "CEO", capacity: "Full operational authority", limit: "$5M", compliance: "GREEN" },
+          { role: "CFO", capacity: "Financial & treasury", limit: "$2M", compliance: "YELLOW" },
+          { role: "Board Chair", capacity: "Strategic oversight", limit: "Unlimited with board", compliance: "GREEN" },
+          { role: "General Counsel", capacity: "Legal & regulatory", limit: "Advisory", compliance: "RED" }
+        ],
+        riskMetrics: { overallScore: "YELLOW", documentCompleteness: 78, authorityClarity: 62, recordRetention: 88, complianceGaps: 3, aiGovernanceScore: "YELLOW", continuityScore: "RED" },
+        framework: {
+          principles: [
+            { title: "Structure Determines Outcome", status: "YELLOW", note: "Structural review not completed." },
+            { title: "Authority Requires Documentation", status: "YELLOW", note: "Authority matrix requires supporting records." },
+            { title: "Records Preserve Accountability", status: "GREEN", note: "Record vault active." },
+            { title: "Procedure Precedes Remedy", status: "YELLOW", note: "Exception procedure not yet configured." },
+            { title: "Capacity Determines Responsibility", status: "YELLOW", note: "Capacity classifications incomplete." },
+            { title: "AI Requires Governance", status: "RED", note: "No AI registry active." },
+            { title: "Continuity Requires Systems", status: "RED", note: "No continuity plan recorded." }
+          ],
+          domains: [
+            { name: "Foundational Principles", score: "YELLOW" }, { name: "Organizational Structure", score: "YELLOW" }, { name: "Authority Mapping", score: "YELLOW" },
+            { name: "Institutional Record System", score: "GREEN" }, { name: "AI Governance", score: "RED" }, { name: "Continuity Risk", score: "RED" }
+          ]
+        },
+        aiRegistry: [
+          { system: "Governance Review Assistant", category: "Advisory", humanReviewer: "Executive Administrator", certificationStatus: "Pending Review", lastReview: "Not Reviewed", riskFlag: "YELLOW" },
+          { system: "Document Classification Agent", category: "Decision Support", humanReviewer: "Records Administrator", certificationStatus: "Uncertified", lastReview: "Not Reviewed", riskFlag: "RED" }
+        ],
+        continuity: { founderDependency: "YELLOW", leadershipTransition: "RED", knowledgePreservation: "YELLOW", successionReadiness: "RED", operationalResilience: "YELLOW" }
+      };
+
+      function recalcRiskScore() {
+        let redCount = giState.records.filter(r => r.riskFlag === "RED").length;
+        let yellowCount = giState.records.filter(r => r.riskFlag === "YELLOW").length;
+        let authRed = giState.authorityMatrix.filter(a => a.compliance === "RED").length;
+        let authYellow = giState.authorityMatrix.filter(a => a.compliance === "YELLOW").length;
+        let aiRed = giState.aiRegistry.filter(a => a.riskFlag === "RED").length;
+        let aiYellow = giState.aiRegistry.filter(a => a.riskFlag === "YELLOW").length;
+        let continuityVals = Object.values(giState.continuity);
+        let continuityRed = continuityVals.filter(v => v === "RED").length;
+        let continuityYellow = continuityVals.filter(v => v === "YELLOW").length;
+        let totalRed = redCount + authRed + aiRed + continuityRed;
+        let totalYellow = yellowCount + authYellow + aiYellow + continuityYellow;
+        let overall = "GREEN";
+        if (totalRed >= 2) overall = "RED";
+        else if (totalYellow >= 4) overall = "YELLOW";
+        else if (totalRed >= 1) overall = "YELLOW";
+        giState.riskMetrics.overallScore = overall;
+        giState.riskMetrics.complianceGaps = totalRed;
+        giState.riskMetrics.authorityClarity = Math.max(30, 100 - (authRed * 15) - (authYellow * 5));
+        giState.riskMetrics.documentCompleteness = Math.max(50, 100 - (redCount * 8));
+        giState.riskMetrics.aiGovernanceScore = aiRed >= 1 ? "RED" : aiYellow >= 1 ? "YELLOW" : "GREEN";
+        giState.riskMetrics.continuityScore = continuityRed >= 2 ? "RED" : continuityRed >= 1 ? "YELLOW" : "GREEN";
+        return overall;
+      }
+      function getEntityName() { return giState.entity.name?.trim() ? giState.entity.name : "Unconfigured Business Entity"; }
+      function updateRecordRisk(idx, flag) { if (giState.records[idx]) giState.records[idx].riskFlag = flag; recalcRiskScore(); renderGI(); }
+      function updateAuthority(idx, status) { if (giState.authorityMatrix[idx]) giState.authorityMatrix[idx].compliance = status; recalcRiskScore(); renderGI(); }
+      function addRecord(title) { giState.records.push({ id: "R"+Date.now(), title, classification: "Level 4 — Transaction Record", location: "Record Vault", authoritySigned: "Designated Officer", riskFlag: "GREEN" }); recalcRiskScore(); renderGI(); }
+
+      let currentPage = "dashboard";
+      function setPage(page) { currentPage = page; renderGI(); }
+
+      function renderGI() {
+        const container = document.getElementById("giPageRenderer");
+        if (!container) return;
+        recalcRiskScore();
+        let html = "";
+        if (currentPage === "dashboard") html = renderDashboard();
+        else if (currentPage === "onboarding") html = renderOnboarding();
+        else if (currentPage === "entity") html = renderEntity();
+        else if (currentPage === "vault") html = renderVault();
+        else if (currentPage === "authority") html = renderAuthority();
+        else if (currentPage === "riskscore") html = renderRiskScore();
+        else if (currentPage === "aiRegistry") html = renderAIRegistry();
+        else if (currentPage === "continuity") html = renderContinuity();
+        else if (currentPage === "report") html = renderReport();
+        else html = renderDashboard();
+        container.innerHTML = html;
+        attachEvents();
+      }
+
+      function renderDashboard() {
+        return `<div class="gi-page-header"><h2>Executive Governance Dashboard</h2><p>Framework compliance & risk intelligence</p></div>
+        <div class="gi-grid-2">
+          <div class="gi-card gi-card-gold-edge"><h3><i class="fas fa-balance-scale"></i> Overall Risk Score</h3><div class="gi-score-badge gi-score-${giState.riskMetrics.overallScore.toLowerCase()}">${giState.riskMetrics.overallScore}</div><p>Gaps: ${giState.riskMetrics.complianceGaps}</p></div>
+          <div class="gi-card"><h3>Framework Principles</h3>${giState.framework.principles.slice(0,3).map(p=>`<div><span class="gi-score-badge gi-score-${p.status.toLowerCase()}">${p.status}</span> ${p.title}</div>`).join('')}</div>
+        </div>
+        <div class="gi-card"><h3>Seven Principles Status</h3><div class="gi-grid-2">${giState.framework.principles.map(p=>`<div><strong>${p.title}</strong><br><span class="gi-score-badge gi-score-${p.status.toLowerCase()}">${p.status}</span><br><span style="font-size:0.7rem;">${p.note}</span></div>`).join('')}</div></div>
+        <div style="margin-top:1rem;"><button class="gi-btn gi-btn-primary" id="giGenReportBtn"><i class="fas fa-file-alt"></i> Generate Governance Review Report</button></div>`;
+      }
+      function renderOnboarding() {
+        return `<div class="gi-page-header"><h2>Business Onboarding</h2><p>Configure entity profile</p></div><div class="gi-card">
+          <div class="gi-form-group"><label>Legal Entity Name</label><input type="text" id="giEntityName" value="${giState.entity.name}"></div>
+          <div class="gi-grid-2"><div class="gi-form-group"><label>Jurisdiction</label><input id="giJurisdiction" value="${giState.entity.jurisdiction}"></div><div class="gi-form-group"><label>Industry</label><input id="giIndustry" value="${giState.entity.industry}"></div></div>
+          <button class="gi-btn gi-btn-primary" id="giSaveOnboarding">Save Entity</button>
+        </div>`;
+      }
+      function renderEntity() { return `<div class="gi-page-header"><h2>Entity Profile</h2></div><div class="gi-card"><p><strong>Name:</strong> ${getEntityName()}<br><strong>Jurisdiction:</strong> ${giState.entity.jurisdiction || "—"}<br><strong>Industry:</strong> ${giState.entity.industry || "—"}<br><strong>Legal Status:</strong> ${giState.entity.legalStatus}</p><button class="gi-btn" id="giEditEntityBtn">Edit</button></div>`; }
+      function renderVault() {
+        let rows = giState.records.map((r,idx)=>`<div style="border-bottom:1px solid #2A2F3F; padding:0.8rem 0; display:flex; justify-content:space-between;"><div><strong>${r.title}</strong><br><span style="font-size:0.7rem;">${r.classification}</span></div><select class="giRiskSelect" data-idx="${idx}"><option ${r.riskFlag==="GREEN"?"selected":""}>GREEN</option><option ${r.riskFlag==="YELLOW"?"selected":""}>YELLOW</option><option ${r.riskFlag==="RED"?"selected":""}>RED</option></select></div>`).join('');
+        return `<div class="gi-page-header"><h2>Institutional Record Vault</h2><p>Document control levels</p></div><div class="gi-card">${rows}<hr><div class="gi-form-group"><input id="giNewRecordTitle" placeholder="New record title"></div><button class="gi-btn gi-btn-primary" id="giAddRecordBtn">Add Level 4 Record</button></div>`;
+      }
+      function renderAuthority() {
+        let rows = giState.authorityMatrix.map((a,idx)=>`<div style="border-bottom:1px solid #2A2F3F; padding:0.8rem 0;"><div><strong>${a.role}</strong> — ${a.capacity}</div><select class="giAuthSelect" data-authidx="${idx}"><option ${a.compliance==="GREEN"?"selected":""}>GREEN</option><option ${a.compliance==="YELLOW"?"selected":""}>YELLOW</option><option ${a.compliance==="RED"?"selected":""}>RED</option></select><span class="gi-score-badge gi-score-${a.compliance.toLowerCase()}">${a.compliance}</span></div>`).join('');
+        return `<div class="gi-page-header"><h2>Authority & Capacity Matrix</h2></div><div class="gi-card">${rows}</div>`;
+      }
+      function renderRiskScore() {
+        return `<div class="gi-page-header"><h2>Governance Risk Score</h2></div><div class="gi-grid-2"><div class="gi-card"><h3>Overall: ${giState.riskMetrics.overallScore}</h3><div>🔴 Gaps: ${giState.riskMetrics.complianceGaps}</div></div><div class="gi-card"><h3>Domain Scores</h3>${giState.framework.domains.map(d=>`<div>${d.name}: <span class="gi-score-badge gi-score-${d.score.toLowerCase()}">${d.score}</span></div>`).join('')}</div></div>`;
+      }
+      function renderAIRegistry() {
+        let rows = giState.aiRegistry.map(ai => `<div style="border-bottom:1px solid #2A2F3F; padding:1rem 0;"><div style="display:flex; justify-content:space-between;"><strong>${ai.system}</strong><span class="gi-score-badge gi-score-${ai.riskFlag.toLowerCase()}">${ai.riskFlag}</span></div><div style="font-size:0.75rem;">Reviewer: ${ai.humanReviewer} | Certification: ${ai.certificationStatus}</div></div>`).join('');
+        return `<div class="gi-page-header"><h2>AI Governance Registry</h2><p>AI supports institutional intelligence.</p></div><div class="gi-card">${rows}<div class="gi-notice" style="margin-top:1rem;">Governance Intelligence™ agents may review, classify, summarize, score, and recommend. Authority remains with properly designated human actors.</div></div>`;
+      }
+      function renderContinuity() {
+        let items = [["Founder Dependency",giState.continuity.founderDependency],["Leadership Transition",giState.continuity.leadershipTransition],["Knowledge Preservation",giState.continuity.knowledgePreservation],["Succession Readiness",giState.continuity.successionReadiness],["Operational Resilience",giState.continuity.operationalResilience]];
+        return `<div class="gi-page-header"><h2>Continuity Risk Management</h2></div><div class="gi-card">${items.map(([label,score])=>`<div style="display:flex; justify-content:space-between; margin:0.5rem 0;"><strong>${label}</strong><span class="gi-score-badge gi-score-${score.toLowerCase()}">${score}</span></div>`).join('')}</div>`;
+      }
+      function renderReport() {
+        return `<div class="gi-page-header"><h2>Governance Review Report</h2></div><div class="gi-card"><p><strong>Organization:</strong> ${getEntityName()}<br><strong>Overall Risk:</strong> <span class="gi-score-badge gi-score-${giState.riskMetrics.overallScore.toLowerCase()}">${giState.riskMetrics.overallScore}</span></p><h4>Score by Domain</h4>${giState.framework.domains.map(d=>`<div>${d.name}: ${d.score}</div>`).join('')}<h4>AI Governance</h4><p>${giState.aiRegistry.map(a=>`${a.system} (${a.riskFlag})`).join(', ')}</p><h4>Continuity</h4><p>Leadership transition: ${giState.continuity.leadershipTransition}</p><div class="gi-notice">Authority remains with human actors. This is not legal advice.</div></div>`;
+      }
+
+      function attachEvents() {
+        document.querySelectorAll("[data-gi-page]").forEach(link => link.addEventListener("click", (e) => { e.preventDefault(); setPage(link.getAttribute("data-gi-page")); }));
+        document.getElementById("giSaveOnboarding")?.addEventListener("click", () => { giState.entity.name = document.getElementById("giEntityName")?.value || ""; giState.entity.jurisdiction = document.getElementById("giJurisdiction")?.value || ""; giState.entity.industry = document.getElementById("giIndustry")?.value || ""; setPage("dashboard"); });
+        document.getElementById("giEditEntityBtn")?.addEventListener("click", () => setPage("onboarding"));
+        document.getElementById("giAddRecordBtn")?.addEventListener("click", () => { let inp = document.getElementById("giNewRecordTitle"); if(inp?.value) addRecord(inp.value); inp.value = ""; });
+        document.querySelectorAll(".giRiskSelect").forEach(sel => sel.addEventListener("change", (e) => { let idx = parseInt(sel.dataset.idx); if(!isNaN(idx)) updateRecordRisk(idx, sel.value); }));
+        document.querySelectorAll(".giAuthSelect").forEach(sel => sel.addEventListener("change", (e) => { let idx = parseInt(sel.dataset.authidx); if(!isNaN(idx)) updateAuthority(idx, sel.value); }));
+        document.getElementById("giGenReportBtn")?.addEventListener("click", () => setPage("report"));
+      }
+      renderGI();
+    })();
+  </script>
 </section>
 
 <footer>
