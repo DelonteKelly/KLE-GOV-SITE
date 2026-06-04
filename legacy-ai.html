@@ -247,64 +247,6 @@
   /* Font Awesome for Governance module */
   @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
-  /* Modal Styles for Request Review */
-  .gi-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.85);
-    backdrop-filter: blur(8px);
-    z-index: 10000;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Georgia', serif;
-  }
-  .gi-modal-content {
-    background: #11141C;
-    border: 1px solid #C9A96E;
-    border-radius: 28px;
-    max-width: 500px;
-    width: 90%;
-    padding: 2rem;
-    box-shadow: 0 25px 40px rgba(0,0,0,0.5);
-    position: relative;
-  }
-  .gi-modal-content h3 {
-    color: #C9A96E;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-  }
-  .gi-modal-close {
-    position: absolute;
-    top: 1rem;
-    right: 1.2rem;
-    font-size: 1.8rem;
-    cursor: pointer;
-    color: #9CA3AF;
-  }
-  .gi-modal-close:hover { color: #C9A96E; }
-  .gi-modal input, .gi-modal textarea, .gi-modal select {
-    background: #0A0C12;
-    border: 1px solid #2A2F3F;
-    border-radius: 12px;
-    padding: 0.75rem;
-    width: 100%;
-    color: white;
-    margin-bottom: 1rem;
-  }
-  .gi-modal button {
-    background: #C9A96E;
-    border: none;
-    color: #0B0D12;
-    padding: 0.7rem 1.2rem;
-    border-radius: 40px;
-    font-weight: 600;
-    cursor: pointer;
-    width: 100%;
-  }
 </style>
 </head>
 <body>
@@ -313,7 +255,7 @@
   <a href="knowledge-library.html">Knowledge Library</a> ·
   <a href="pages/ai-governance.html">AI Governance</a> ·
   <a href="pages/institute.html">Institute</a> ·
-  <a href="#" id="contactNavLink">Contact</a>
+  <a href="mailto:office@kellylegacyestates.com">Contact</a>
   </nav>
 <header>
   <h1>
@@ -633,7 +575,7 @@
       </div>
 
       <div class="gi-cta">
-        <button class="gi-btn gi-btn-primary" id="openRequestModalBtn"><i class="fas fa-gavel"></i> Request Governance Intelligence Review</button>
+        <a href="mailto:office@kellylegacyestates.com?subject=Governance%20Intelligence%20Review%20Request&body=I%20would%20like%20to%20request%20a%20Governance%20Intelligence%20review%20for%20my%20business%20entity." class="gi-btn gi-btn-primary" style="display: inline-block; text-decoration: none;"><i class="fas fa-gavel"></i> Request Governance Intelligence Review</a>
         <div class="gi-notice" style="margin-top: 1.5rem; text-align: left;">
           Governance Intelligence™ provides governance-support, record organization, administrative review, AI oversight, and continuity assessment tools. It does not provide legal, tax, accounting, fiduciary, securities, or investment advice. Authority remains with properly designated human actors.
         </div>
@@ -641,58 +583,8 @@
     </div>
   </div>
 
-  <!-- Modal for Request Review (replaces dead link) -->
-  <div id="requestModal" class="gi-modal">
-    <div class="gi-modal-content">
-      <span class="gi-modal-close" id="closeModalBtn">&times;</span>
-      <h3><i class="fas fa-envelope"></i> Request Governance Review</h3>
-      <p style="margin-bottom: 1rem; font-size: 0.8rem;">A Governance Intelligence analyst will review your request.</p>
-      <input type="text" id="modalName" placeholder="Full name" value="">
-      <input type="email" id="modalEmail" placeholder="Email address" value="">
-      <input type="text" id="modalEntity" placeholder="Business entity name" value="">
-      <textarea id="modalMessage" rows="3" placeholder="Governance concern or question..."></textarea>
-      <button id="submitRequestBtn">Submit Request</button>
-      <p id="modalFeedback" style="margin-top: 0.8rem; font-size: 0.75rem; color: #C9A96E;"></p>
-    </div>
-  </div>
-
   <script>
     (function() {
-      // Modal handling
-      const modal = document.getElementById('requestModal');
-      const openBtn = document.getElementById('openRequestModalBtn');
-      const closeBtn = document.getElementById('closeModalBtn');
-      const submitBtn = document.getElementById('submitRequestBtn');
-      const feedback = document.getElementById('modalFeedback');
-      const contactNav = document.getElementById('contactNavLink');
-
-      function openModal() { if(modal) modal.style.display = 'flex'; }
-      function closeModal() { if(modal) modal.style.display = 'none'; if(feedback) feedback.innerText = ''; }
-
-      if(openBtn) openBtn.addEventListener('click', openModal);
-      if(closeBtn) closeBtn.addEventListener('click', closeModal);
-      if(contactNav) contactNav.addEventListener('click', (e) => { e.preventDefault(); openModal(); });
-      window.addEventListener('click', (e) => { if(e.target === modal) closeModal(); });
-
-      if(submitBtn) {
-        submitBtn.addEventListener('click', () => {
-          const name = document.getElementById('modalName')?.value.trim();
-          const email = document.getElementById('modalEmail')?.value.trim();
-          const entity = document.getElementById('modalEntity')?.value.trim();
-          const msg = document.getElementById('modalMessage')?.value.trim();
-          if(!name || !email) {
-            feedback.innerText = 'Name and email are required.';
-            return;
-          }
-          feedback.innerText = `✓ Thank you ${name}. A Governance Intelligence analyst will contact you within 2 business days.`;
-          setTimeout(() => { closeModal(); }, 2500);
-          document.getElementById('modalName').value = '';
-          document.getElementById('modalEmail').value = '';
-          document.getElementById('modalEntity').value = '';
-          document.getElementById('modalMessage').value = '';
-        });
-      }
-
       // ========== GOVERNANCE INTELLIGENCE™ STATE ==========
       const giState = {
         entity: { name: "", jurisdiction: "", industry: "", founded: "", legalStatus: "Active" },
