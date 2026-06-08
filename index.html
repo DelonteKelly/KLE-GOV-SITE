@@ -61,7 +61,7 @@
 <meta name="theme-color" content="#050A14">
 <meta name="msapplication-TileColor" content="#050A14">
 
-<!-- Updated JSON-LD structured data with renamed case study references -->
+<!-- Updated JSON-LD structured data: sameAs now excludes replit referral, includes kli-access and access subdomain -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -83,7 +83,9 @@
         "https://www.tiktok.com/@kellylegacypublications",
         "https://youtube.com/@kellylegacyinstitute",
         "https://www.linkedin.com/in/delonte-kelly-01961b3b4",
-        "https://github.com/DelonteKelly"
+        "https://github.com/DelonteKelly",
+        "https://kli-access.replit.app",
+        "https://access.kellylegacyestates.com"
       ],
       "department": [
         {
@@ -767,6 +769,75 @@
       color: var(--slate-meta);
     }
 
+    /* NEW: Infrastructure Cards (Platform Map) */
+    .infrastructure-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .infrastructure-card {
+      background: var(--charcoal-card);
+      border: 1px solid var(--charcoal-border);
+      padding: 1.6rem;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .infrastructure-card:hover {
+      border-color: rgba(200,162,76,0.5);
+      background: #1A1A1F;
+    }
+    .infrastructure-code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      color: var(--crimson);
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+    }
+    .infrastructure-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--ivory);
+      margin-bottom: 0.2rem;
+    }
+    .infrastructure-card .infra-subtitle {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--antique-gold-muted);
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+      border-bottom: 1px dashed var(--charcoal-border);
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+    .infrastructure-card p {
+      font-size: 0.8rem;
+      color: var(--ivory-dim);
+      line-height: 1.55;
+      margin: 0.75rem 0 1.25rem;
+      flex-grow: 1;
+    }
+    .infrastructure-status {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      background: rgba(158,42,42,0.2);
+      color: var(--crimson);
+      padding: 4px 8px;
+      border-radius: 2px;
+      margin-bottom: 1rem;
+      border-left: 2px solid var(--crimson);
+    }
+    .infrastructure-card .btn-primary {
+      align-self: flex-start;
+      margin-top: 0.5rem;
+      padding: 8px 18px;
+      font-size: 0.65rem;
+    }
+
     @media (max-width: 860px) {
       .container { padding: 0 24px; }
       .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -778,6 +849,7 @@
       .review-modal iframe { min-height: 400px; }
       .review-modal-header h2 { font-size: 1.2rem; }
       section { padding: 2.5rem 0; }
+      .infrastructure-grid { gap: 1rem; }
     }
     
     @media (max-width: 640px) {
@@ -858,7 +930,7 @@
                class="btn-primary"
                target="_blank"
                rel="noopener noreferrer">
-               Enter KLI Institutional Access Infrastructure™
+               Enter KLI Access App™
             </a>
             <a href="pages/fiduciary-doctrine.html" class="btn-primary btn-secondary">Explore Governance Doctrine</a>
             <a href="pages/contact.html" id="requestInstitutionalReviewBtn" class="btn-primary">Request Institutional Review</a>
@@ -907,6 +979,56 @@
         <div class="doctrine-item"><div class="doctrine-code">PUB-220</div><h3>Kelly Legacy Publications</h3><p>Doctrine catalog, institutional record series, and governance manuals for controlled distribution.</p></div>
         <div class="doctrine-item"><div class="doctrine-code">ACC-700</div><h3>KLI Institutional Access Infrastructure™</h3><p>Contribution-based governance access credential for classification and curriculum access.</p></div>
         <div class="doctrine-item"><div class="doctrine-code">AI-GOV</div><h3>Executive AI Governance Systems</h3><p>Oversight, human review, workflow governance, and data boundary rules for institutional AI.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW: Institutional Access Pathways Section -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">ACCESS INFRASTRUCTURE // PLATFORM MAP</div>
+        <h2>Institutional Access Pathways</h2>
+        <hr class="divider-gold">
+        <div class="section-sub">Kelly Legacy Estates operates through distinct infrastructure layers: public governance authority, institutional education access, Web3 verification infrastructure, and builder participation pathways.</div>
+      </div>
+      <div class="infrastructure-grid">
+        <!-- Card 1: Parent Site - now links internally to governance doctrine for a meaningful action -->
+        <div class="infrastructure-card">
+          <div class="infrastructure-code">PARENT-001</div>
+          <h3>Kelly Legacy Estates™</h3>
+          <div class="infra-subtitle">Parent Governance Site</div>
+          <div class="infrastructure-status">Public Authority Layer</div>
+          <p>The public institutional authority layer for the Office of the Fiduciary, governance doctrine, fiduciary education, publications, and continuity records.</p>
+          <a href="pages/governance.html" class="btn-primary" rel="noopener noreferrer">Review Parent Authority →</a>
+        </div>
+        <!-- Card 2: KLI Access App -->
+        <div class="infrastructure-card">
+          <div class="infrastructure-code">APP-101</div>
+          <h3>KLI Access™</h3>
+          <div class="infra-subtitle">Institutional Education App</div>
+          <div class="infrastructure-status">Active App Layer</div>
+          <p>Installable education app for orientation, doctrine review, curriculum pathways, Legacy AI guidance, member navigation, and institutional learning access.</p>
+          <a href="https://kli-access.replit.app" class="btn-primary" target="_blank" rel="noopener noreferrer">Open KLI Access →</a>
+        </div>
+        <!-- Card 3: Web3 Infrastructure -->
+        <div class="infrastructure-card">
+          <div class="infrastructure-code">WEB3-700</div>
+          <h3>Legacy Access / KLAT</h3>
+          <div class="infra-subtitle">Web3 Verification Infrastructure</div>
+          <div class="infrastructure-status">Under Active Development</div>
+          <p>Governed access infrastructure for KLAT verification, wallet recognition, contributor review, token-gated access, and governance participation routing.</p>
+          <a href="https://access.kellylegacyestates.com" class="btn-primary" target="_blank" rel="noopener noreferrer">View Web3 Access →</a>
+        </div>
+        <!-- Card 4: Replit Pathway -->
+        <div class="infrastructure-card">
+          <div class="infrastructure-code">BUILD-330</div>
+          <h3>Build with Replit</h3>
+          <div class="infra-subtitle">Development Referral Pathway</div>
+          <div class="infrastructure-status">Builder Pathway</div>
+          <p>For builders, contributors, and institutional participants interested in creating applications, prototypes, learning tools, and governance infrastructure.</p>
+          <a href="https://replit.com/refer/kellylegacy" class="btn-primary" target="_blank" rel="noopener noreferrer">Build with Replit →</a>
+        </div>
       </div>
     </div>
   </section>
@@ -968,12 +1090,12 @@
             </div>
           </div>
           <div>
-            <a href="https://kli-access.replit.app/"
+            <a href="https://access.kellylegacyestates.com"
                class="btn-primary"
                target="_blank"
                rel="noopener noreferrer"
                style="display: inline-block;">
-               Verify Institutional Access →
+               Verify Web3 Access →
             </a>
           </div>
         </div>
