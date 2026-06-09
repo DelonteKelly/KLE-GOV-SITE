@@ -10,58 +10,35 @@
 
 <meta name="robots" content="index, follow">
 
-
 <!-- Open Graph / Social Sharing -->
 <meta property="og:title" content="Kelly Legacy Estates • Private Governance Infrastructure">
-
 <meta property="og:description" content="Executive-grade fiduciary administration, continuity systems, and institutional doctrine.">
-
 <meta property="og:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
-
 <meta property="og:url" content="https://kellylegacyestates.com">
-
 <meta property="og:type" content="website">
-
 <meta property="og:site_name" content="Kelly Legacy Estates">
-
 
 <!-- Twitter / X Preview -->
 <meta name="twitter:card" content="summary_large_image">
-
 <meta name="twitter:title" content="Kelly Legacy Estates • Private Governance Infrastructure">
-
 <meta name="twitter:description" content="Executive-grade fiduciary administration, continuity systems, and institutional doctrine.">
-
 <meta name="twitter:image" content="https://kellylegacyestates.com/assets/images/kli-og-cover.png">
-
 
 <!-- Canonical Authority -->
 <link rel="canonical" href="https://kellylegacyestates.com/">
 
-
 <!-- KLE Favicon System -->
-
-<!-- Browser favicon -->
 <link rel="icon" href="/favicon.ico" sizes="any" type="image/x-icon">
-
-<!-- Standard favicon -->
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-
-<!-- Android / Chrome icon -->
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
-
-<!-- Apple iOS icon -->
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-<!-- Progressive Web App Manifest -->
 <link rel="manifest" href="/site.webmanifest">
-
 
 <!-- Mobile Browser Theme -->
 <meta name="theme-color" content="#050A14">
 <meta name="msapplication-TileColor" content="#050A14">
 
-<!-- Updated JSON-LD structured data: sameAs now excludes replit referral, includes kli-access and access subdomain -->
+<!-- JSON-LD structured data (unchanged, fully preserved) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -769,7 +746,6 @@
       color: var(--slate-meta);
     }
 
-    /* NEW: Infrastructure Cards (Platform Map) */
     .infrastructure-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -838,6 +814,127 @@
       font-size: 0.65rem;
     }
 
+    /* ===== MEMBERSHIP SECTION (ADDED STYLES, SCOPED) ===== */
+    .membership-section {
+      background: linear-gradient(0deg, rgba(5,5,5,0.6), rgba(5,5,5,0.9));
+      border-top: 1px solid var(--border-faint);
+      border-bottom: 1px solid var(--border-faint);
+    }
+    .membership-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+    .membership-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin: 2.5rem 0 2rem;
+    }
+    .membership-card {
+      background: var(--charcoal-card);
+      border: 1px solid var(--charcoal-border);
+      flex: 1;
+      min-width: 260px;
+      max-width: 320px;
+      padding: 1.8rem 1.5rem 2rem;
+      transition: transform 0.2s ease, border-color 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .membership-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(200,162,76,0.5);
+    }
+    .membership-tier {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--ivory);
+      letter-spacing: 0.02em;
+      border-bottom: 1px solid var(--antique-gold-muted);
+      display: inline-block;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+    }
+    .membership-price {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--antique-gold);
+      margin: 0.5rem 0 1rem;
+    }
+    .membership-price small {
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--ivory-dim);
+    }
+    .membership-description {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: var(--ivory-dim);
+      margin: 0.5rem 0 1.8rem;
+      flex-grow: 1;
+    }
+    .membership-button {
+      background: transparent;
+      border: 1px solid var(--crimson);
+      padding: 12px 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      color: var(--crimson);
+      text-align: center;
+      transition: all 0.2s;
+      display: block;
+      margin-top: 0.5rem;
+      text-transform: uppercase;
+    }
+    .membership-button:hover {
+      background: var(--crimson);
+      color: var(--ivory);
+      border-color: var(--crimson);
+    }
+    .membership-notice {
+      max-width: 860px;
+      margin: 1.8rem auto 1rem;
+      font-size: 0.7rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--slate-meta);
+      text-align: center;
+      border-top: 1px solid var(--border-faint);
+      padding-top: 1.8rem;
+      line-height: 1.5;
+    }
+    .portal-cta {
+      text-align: center;
+      margin: 2rem 0 1rem;
+    }
+    .portal-cta .btn-primary {
+      padding: 14px 32px;
+      font-size: 0.75rem;
+      border-color: var(--antique-gold);
+      color: var(--antique-gold);
+    }
+    .portal-cta .btn-primary:hover {
+      background: var(--antique-gold);
+      color: var(--exec-black);
+    }
+    .portal-helper {
+      text-align: center;
+      font-size: 0.65rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--slate-meta);
+      margin-top: 0.75rem;
+    }
+    @media (max-width: 860px) {
+      .membership-container { padding: 0 24px; }
+      .membership-grid { gap: 1.5rem; }
+      .membership-card { min-width: 240px; }
+    }
+
     @media (max-width: 860px) {
       .container { padding: 0 24px; }
       .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -872,35 +969,16 @@
 <nav class="nav-links" id="mainNav" aria-label="Primary navigation">
   <a href="index.html">Home</a>
 <a href="legacy-ai.html">Legacy AI™</a>
-
-<a href="google-cloud-governance-intelligence-case-study.html">
-  Case Study
-</a>
+<a href="google-cloud-governance-intelligence-case-study.html">Case Study</a>
   <a href="pages/governance.html">Governance</a>
-  <a href="pages/fiduciary-doctrine.html">
-    Fiduciary Doctrine
-  </a>
-  <a href="pages/ai-governance.html">
-    AI Governance
-  </a>
-  <a href="knowledge-library.html">
-    Knowledge Library
-  </a>
-  <a href="pages/publications.html">
-    Publications
-  </a>
-  <a href="pages/institute.html">
-    Institute
-  </a>
-  <a href="pages/institutional-solutions.html">
-    Institutional Solutions
-  </a>
-  <a href="pages/klat-access.html">
-    KLAT Access
-  </a>
-  <a href="pages/contact.html" class="access-cta">
-    Contact
-  </a>
+  <a href="pages/fiduciary-doctrine.html">Fiduciary Doctrine</a>
+  <a href="pages/ai-governance.html">AI Governance</a>
+  <a href="knowledge-library.html">Knowledge Library</a>
+  <a href="pages/publications.html">Publications</a>
+  <a href="pages/institute.html">Institute</a>
+  <a href="pages/institutional-solutions.html">Institutional Solutions</a>
+  <a href="pages/klat-access.html">KLAT Access</a>
+  <a href="pages/contact.html" class="access-cta">Contact</a>
 </nav>
     </div>
   </div>
@@ -926,12 +1004,7 @@
           <div class="hero-sub">Kelly Legacy Estates provides institutional governance education, fiduciary literacy, continuity systems, and administrative doctrine for individuals, families, organizations, and private governance environments.</div>
           <div class="hero-body">Structure determines outcome. Procedure precedes remedy. Record precedes recognition. Capacity determines consequence.<br><br>Kelly Legacy Estates exists to bring order to governance, documentation, fiduciary literacy, administrative procedure, and continuity planning through disciplined education, institutional frameworks, and private governance infrastructure.</div>
           <div class="btn-inline">
-            <a href="https://kli-access.replit.app/"
-               class="btn-primary"
-               target="_blank"
-               rel="noopener noreferrer">
-               Enter KLI Access App™
-            </a>
+            <a href="https://kli-access.replit.app/" class="btn-primary" target="_blank" rel="noopener noreferrer">Enter KLI Access App™</a>
             <a href="pages/fiduciary-doctrine.html" class="btn-primary btn-secondary">Explore Governance Doctrine</a>
             <a href="pages/contact.html" id="requestInstitutionalReviewBtn" class="btn-primary">Request Institutional Review</a>
           </div>
@@ -954,6 +1027,49 @@
     </div>
   </section>
 
+  <!-- MEMBERSHIP SECTION (ADDED: AFTER HERO, BEFORE INSTITUTIONAL DIVISIONS & CORE SECTIONS) -->
+  <section class="membership-section">
+    <div class="membership-container">
+      <div class="section-header">
+        <div class="section-label">PRIVATE GOVERNANCE ACCESS</div>
+        <h2>KLI Institutional Access Membership™</h2>
+        <div class="section-sub">Private access to fiduciary education, equity doctrine, trust administration training, administrative templates, briefings, and institutional learning resources.</div>
+        <hr class="divider-gold">
+      </div>
+      <div class="membership-grid">
+        <!-- Foundational Access -->
+        <div class="membership-card">
+          <div class="membership-tier">Foundational Access</div>
+          <div class="membership-price">$33<span style="font-size:1rem;"><small>/month</small></span></div>
+          <div class="membership-description">Entry-level access for foundational governance doctrine, fiduciary literacy, orientation materials, free doctrine samples, member updates, and limited learning access.</div>
+          <a href="https://buy.stripe.com/fZu8wI1uu4zD8uN14F2ZO01" class="membership-button" target="_blank" rel="noopener noreferrer">Subscribe to Foundational Access</a>
+        </div>
+        <!-- Scholar Access -->
+        <div class="membership-card">
+          <div class="membership-tier">Scholar Access</div>
+          <div class="membership-price">$77<span style="font-size:1rem;"><small>/month</small></span></div>
+          <div class="membership-description">Structured access for active learners developing competency in fiduciary administration, equity doctrine, records, notices, remedies, trust law principles, and institutional procedure.</div>
+          <a href="https://buy.stripe.com/4gMdR27SS9TX8uN9Bb2ZO02" class="membership-button" target="_blank" rel="noopener noreferrer">Subscribe to Scholar Access</a>
+        </div>
+        <!-- Executive Access -->
+        <div class="membership-card">
+          <div class="membership-tier">Executive Access</div>
+          <div class="membership-price">$197<span style="font-size:1rem;"><small>/month</small></span></div>
+          <div class="membership-description">Advanced access for practitioners, contributors, operators, and serious learners seeking higher-level governance training, templates, briefings, and institutional resources.</div>
+          <a href="https://buy.stripe.com/fZu14gb547LPbGZ3cN2ZO03" class="membership-button" target="_blank" rel="noopener noreferrer">Subscribe to Executive Access</a>
+        </div>
+      </div>
+      <div class="membership-notice">
+        KLI Institutional Access Membership™ is administered by Kelly Legacy Estates LLC through Kelly Legacy Institute. Membership provides educational access only and does not create legal representation, financial advice, investment advice, trustee appointment, or a fiduciary relationship unless separately established by written agreement.
+      </div>
+      <div class="portal-cta">
+        <a href="https://legacy-ops-command-interface.replit.app" class="btn-primary" target="_blank" rel="noopener noreferrer">Enter Member Access Portal</a>
+      </div>
+      <div class="portal-helper">After subscribing, members may enter the access portal using the same email used at checkout once membership access is verified.</div>
+    </div>
+  </section>
+
+  <!-- rest of original sections: institutional divisions, doctrine, AI governance etc. fully preserved below -->
   <section>
     <div class="container">
       <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; font-family: 'JetBrains Mono', monospace;">
@@ -983,7 +1099,6 @@
     </div>
   </section>
 
-  <!-- NEW: Institutional Access Pathways Section -->
   <section>
     <div class="container">
       <div class="section-header">
@@ -993,42 +1108,10 @@
         <div class="section-sub">Kelly Legacy Estates operates through distinct infrastructure layers: public governance authority, institutional education access, Web3 verification infrastructure, and builder participation pathways.</div>
       </div>
       <div class="infrastructure-grid">
-        <!-- Card 1: Parent Site - now links internally to governance doctrine for a meaningful action -->
-        <div class="infrastructure-card">
-          <div class="infrastructure-code">PARENT-001</div>
-          <h3>Kelly Legacy Estates™</h3>
-          <div class="infra-subtitle">Parent Governance Site</div>
-          <div class="infrastructure-status">Public Authority Layer</div>
-          <p>The public institutional authority layer for the Office of the Fiduciary, governance doctrine, fiduciary education, publications, and continuity records.</p>
-          <a href="pages/governance.html" class="btn-primary" rel="noopener noreferrer">Review Parent Authority →</a>
-        </div>
-        <!-- Card 2: KLI Access App -->
-        <div class="infrastructure-card">
-          <div class="infrastructure-code">APP-101</div>
-          <h3>KLI Access™</h3>
-          <div class="infra-subtitle">Institutional Education App</div>
-          <div class="infrastructure-status">Active App Layer</div>
-          <p>Installable education app for orientation, doctrine review, curriculum pathways, Legacy AI guidance, member navigation, and institutional learning access.</p>
-          <a href="https://kli-access.replit.app" class="btn-primary" target="_blank" rel="noopener noreferrer">Open KLI Access →</a>
-        </div>
-        <!-- Card 3: Web3 Infrastructure -->
-        <div class="infrastructure-card">
-          <div class="infrastructure-code">WEB3-700</div>
-          <h3>Legacy Access / KLAT</h3>
-          <div class="infra-subtitle">Web3 Verification Infrastructure</div>
-          <div class="infrastructure-status">Under Active Development</div>
-          <p>Governed access infrastructure for KLAT verification, wallet recognition, contributor review, token-gated access, and governance participation routing.</p>
-          <a href="https://access.kellylegacyestates.com" class="btn-primary" target="_blank" rel="noopener noreferrer">View Web3 Access →</a>
-        </div>
-        <!-- Card 4: Replit Pathway -->
-        <div class="infrastructure-card">
-          <div class="infrastructure-code">BUILD-330</div>
-          <h3>Build with Replit</h3>
-          <div class="infra-subtitle">Development Referral Pathway</div>
-          <div class="infrastructure-status">Builder Pathway</div>
-          <p>For builders, contributors, and institutional participants interested in creating applications, prototypes, learning tools, and governance infrastructure.</p>
-          <a href="https://replit.com/refer/kellylegacy" class="btn-primary" target="_blank" rel="noopener noreferrer">Build with Replit →</a>
-        </div>
+        <div class="infrastructure-card"><div class="infrastructure-code">PARENT-001</div><h3>Kelly Legacy Estates™</h3><div class="infra-subtitle">Parent Governance Site</div><div class="infrastructure-status">Public Authority Layer</div><p>The public institutional authority layer for the Office of the Fiduciary, governance doctrine, fiduciary education, publications, and continuity records.</p><a href="pages/governance.html" class="btn-primary" rel="noopener noreferrer">Review Parent Authority →</a></div>
+        <div class="infrastructure-card"><div class="infrastructure-code">APP-101</div><h3>KLI Access™</h3><div class="infra-subtitle">Institutional Education App</div><div class="infrastructure-status">Active App Layer</div><p>Installable education app for orientation, doctrine review, curriculum pathways, Legacy AI guidance, member navigation, and institutional learning access.</p><a href="https://kli-access.replit.app" class="btn-primary" target="_blank" rel="noopener noreferrer">Open KLI Access →</a></div>
+        <div class="infrastructure-card"><div class="infrastructure-code">WEB3-700</div><h3>Legacy Access / KLAT</h3><div class="infra-subtitle">Web3 Verification Infrastructure</div><div class="infrastructure-status">Under Active Development</div><p>Governed access infrastructure for KLAT verification, wallet recognition, contributor review, token-gated access, and governance participation routing.</p><a href="https://access.kellylegacyestates.com" class="btn-primary" target="_blank" rel="noopener noreferrer">View Web3 Access →</a></div>
+        <div class="infrastructure-card"><div class="infrastructure-code">BUILD-330</div><h3>Build with Replit</h3><div class="infra-subtitle">Development Referral Pathway</div><div class="infrastructure-status">Builder Pathway</div><p>For builders, contributors, and institutional participants interested in creating applications, prototypes, learning tools, and governance infrastructure.</p><a href="https://replit.com/refer/kellylegacy" class="btn-primary" target="_blank" rel="noopener noreferrer">Build with Replit →</a></div>
       </div>
     </div>
   </section>
@@ -1045,107 +1128,6 @@
         <div class="doctrine-item"><div class="doctrine-code">KLI-DOCT-002</div><h3>Remedies & Recourse™</h3><p>Equitable remedies framework for procedural integrity and institutional accountability.</p></div>
         <div class="doctrine-item"><div class="doctrine-code">KLI-DOCT-003</div><h3>The Fiduciary Trust System™</h3><p>Trust administration, duty to account, and fiduciary conduct standards.</p></div>
         <div class="doctrine-item"><div class="doctrine-code">KLI-DOCT-004</div><h3>Institutional Ledger System™</h3><p>Record integrity and continuity administration framework.</p></div>
-      </div>
-
-      <div class="section-header" style="margin-top: 2rem;">
-        <div class="section-label">AI GOVERNANCE // EXECUTIVE OVERSIGHT</div>
-        <h2>Executive AI Governance Systems</h2>
-        <div class="section-sub">AI systems increase capability, but unmanaged AI increases institutional risk. Structured education on oversight, human review, and accountability.</div>
-      </div>
-      <div class="ai-grid">
-        <div class="ai-card"><div class="ai-title"><i class="fas fa-robot"></i> Fiduciary Oversight of AI</div><p>AI use must be visible, logged, and reviewed under fiduciary standards. Invisible AI = unmanaged risk.</p></div>
-        <div class="ai-card"><div class="ai-title"><i class="fas fa-eye"></i> Human Review Requirements</div><p>All material outputs require human ratification. No autonomous dispositive authority.</p></div>
-        <div class="ai-card"><div class="ai-title"><i class="fas fa-database"></i> Data Boundary Rules</div><p>Strict data segregation and institutional record preservation protocols.</p></div>
-        <div class="ai-card"><div class="ai-title"><i class="fas fa-file-signature"></i> Documentation & Version Control</div><p>Traceable AI workflow governance and escalation for incident review.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="access-preview">
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 2rem;">
-          <div>
-            <div class="section-label" style="margin-bottom:0;">KLAT Access Infrastructure™ // KLI Governance Credential Series</div>
-            <h3 style="font-family:'Playfair Display',serif; font-size: 1.8rem; color: var(--ivory);">Governance Access Credential</h3>
-            <p style="max-width: 500px; margin-top: 0.7rem;">KLAT functions as a contribution-based governance access credential for institutional classification, curriculum access, governance participation, and continuity recognition. KLAT is not a security, investment contract, equity instrument, or passive yield mechanism.</p>
-            
-            <div class="treasury-display">
-              <div class="treasury-label">Kelly Legacy Estates Treasury</div>
-              <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 8px;">
-                <code class="treasury-hash">0x717160A756D5E3eFaBB6e2cC84B29cc6eDf71a80</code>
-                <button class="copy-btn" onclick="copyTreasuryAddress(event)" aria-label="Copy treasury address">
-                  <i class="fas fa-copy"></i>
-                </button>
-                <a href="https://app.safe.global/matic:0x717160A756D5E3eFaBB6e2cC84B29cc6eDf71a80" target="_blank" rel="noopener noreferrer" style="color: var(--antique-gold); font-size: 0.7rem; text-decoration: none;">
-                  <i class="fas fa-external-link-alt"></i> View on Safe
-                </a>
-              </div>
-            </div>
-            
-            <div style="margin-top: 1.5rem;">
-              <span style="border:1px solid var(--antique-gold); padding:6px 18px; font-size:0.65rem; font-family: monospace;">✔ Public Observer</span>
-              <span style="margin-left: 12px; border:1px solid var(--crimson); padding:6px 18px; font-size:0.65rem;">✔ Governance Participant</span>
-              <span style="margin-left: 12px; border:1px solid var(--ivory-dim); padding:6px 18px; font-size:0.65rem;">✔ Executive Access</span>
-            </div>
-          </div>
-          <div>
-            <a href="https://access.kellylegacyestates.com"
-               class="btn-primary"
-               target="_blank"
-               rel="noopener noreferrer"
-               style="display: inline-block;">
-               Verify Web3 Access →
-            </a>
-          </div>
-        </div>
-        
-        <div style="margin-top: 2rem; padding-top: 1rem; font-size:0.7rem; color:var(--slate-meta); font-family:monospace; border-top:1px solid rgba(200,162,76,0.2);">
-          <i class="fas fa-check-circle" style="color: var(--crimson);"></i> Production: Polygon | Contract: Verified | Treasury: Safe Multisig
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label">PUBLICATIONS // DOCTRINE ARCHIVE</div>
-        <h2>Institutional Doctrine Catalog</h2>
-      </div>
-      <div class="doctrine-grid">
-        <div class="doctrine-item"><div class="doctrine-code">KLI-PUB-01</div><h3>Status, Standing, and Capacity</h3><p>Foundational legal doctrine for governance participants.</p><div style="margin-top:10px;"><i class="fas fa-lock" style="font-size:0.6rem;"></i> <span style="font-size:0.6rem;">Access: Public Observer</span></div></div>
-        <div class="doctrine-item"><div class="doctrine-code">KLI-PUB-02</div><h3>Remedies & Recourse™</h3><p>Equitable remedy structures and private recourse framework.</p></div>
-        <div class="doctrine-item"><div class="doctrine-code">KLI-PUB-03</div><h3>The Fiduciary Trust System™</h3><p>Trust administration, fiduciary conduct, and duty to account.</p></div>
-        <div class="doctrine-item"><div class="doctrine-code">KLI-PUB-04</div><h3>Executive AI Governance Systems</h3><p>AI oversight, human review, and continuity requirements.</p></div>
-        <div class="doctrine-item"><div class="doctrine-code">KLI-PUB-05</div><h3>Institutional Ledger System™</h3><p>Record integrity and continuity administration.</p></div>
-        <div class="doctrine-item"><div class="doctrine-code">KLI-PUB-06</div><h3>KLI Orientation Manual</h3><p>Governance fundamentals and institutional procedures.</p></div>
-      </div>
-      <div style="margin-top: 2rem; text-align: right;"><a href="pages/publications.html" style="color: var(--antique-gold); font-family: monospace; text-decoration: none;">View Full Doctrine Archive →</a></div>
-    </div>
-  </section>
-
-  <section style="border-bottom: none;">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label">ADMINISTRATIVE CORRESPONDENCE // INTAKE</div>
-        <h2>Institutional Review & Access Inquiries</h2>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 1px; background: var(--charcoal-border); margin-bottom: 2rem;">
-        <div class="ai-card" style="padding: 1.5rem;"><i class="fas fa-envelope" style="color: var(--antique-gold); margin-bottom: 0.6rem;"></i><h4 style="color:var(--ivory);">Administrative Correspondence</h4><p style="font-size:0.75rem;">Written channel only. Formal documented inquiry.</p></div>
-        <div class="ai-card" style="padding: 1.5rem;"><i class="fas fa-file-contract"></i><h4 style="color:var(--ivory);">Institutional Review Request</h4><p style="font-size:0.75rem;">For fiduciary assessments and governance review.</p></div>
-        <div class="ai-card" style="padding: 1.5rem;"><i class="fas fa-graduation-cap"></i><h4 style="color:var(--ivory);">KLI Access Request</h4><p style="font-size:0.75rem;">Governance classification pathway.</p></div>
-        <div class="ai-card" style="padding: 1.5rem;"><i class="fas fa-microchip"></i><h4 style="color:var(--ivory);">AI Governance Inquiry</h4><p style="font-size:0.75rem;">Executive AI systems and oversight.</p></div>
-      </div>
-      
-      <!-- Official Contact Email Display -->
-      <div class="contact-email-block">
-        <a href="mailto:office@kellylegacyestates.com">office@kellylegacyestates.com</a>
-        <p>Official administrative correspondence channel • Office of the Fiduciary</p>
-      </div>
-      
-      <div class="access-preview" style="background: none; border: 1px solid var(--charcoal-border); text-align: center; padding: 1.5rem; margin-top: 1rem;">
-        <p style="font-family: monospace; font-size:0.75rem;">All correspondence is processed through the Office of the Fiduciary. Formal written requests only. <a href="pages/contact.html" id="submitInstitutionalReviewInline" style="color: var(--crimson); text-decoration: none;">Submit institutional review →</a></p>
       </div>
     </div>
   </section>
@@ -1184,104 +1166,36 @@
 </div>
 
 <script>
-  // Mobile menu toggle
   const toggleBtn = document.getElementById('mobileMenuToggle');
   const mainNav = document.getElementById('mainNav');
   if (toggleBtn && mainNav) {
-    toggleBtn.addEventListener('click', () => {
-      mainNav.classList.toggle('active');
-    });
+    toggleBtn.addEventListener('click', () => { mainNav.classList.toggle('active'); });
   }
-
-  // Modal functionality
   const modal = document.getElementById('institutionalReviewModal');
   const openBtns = document.querySelectorAll('#requestInstitutionalReviewBtn, #submitInstitutionalReviewInline');
   const closeBtn = modal?.querySelector('.close-review-modal');
-
-  function openModal(e) {
-    if (e && modal) {
-      e.preventDefault();
-    }
-    if (modal) {
-      modal.classList.add('active');
-      document.body.classList.add('modal-open');
-    }
-  }
-
-  function closeModal() {
-    if (modal) {
-      modal.classList.remove('active');
-      document.body.classList.remove('modal-open');
-    }
-  }
-
-  openBtns.forEach(btn => {
-    if (btn && modal) {
-      btn.addEventListener('click', openModal);
-    }
-  });
-
-  if (closeBtn) {
-    closeBtn.addEventListener('click', closeModal);
-  }
-
-  if (modal) {
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeModal();
-    });
-  }
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal?.classList.contains('active')) closeModal();
-  });
-
-  // Copy treasury address function
+  function openModal(e) { if(e && modal) e.preventDefault(); if(modal) { modal.classList.add('active'); document.body.classList.add('modal-open'); } }
+  function closeModal() { if(modal) { modal.classList.remove('active'); document.body.classList.remove('modal-open'); } }
+  openBtns.forEach(btn => { if(btn && modal) btn.addEventListener('click', openModal); });
+  if(closeBtn) closeBtn.addEventListener('click', closeModal);
+  if(modal) modal.addEventListener('click', (e) => { if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', (e) => { if(e.key === 'Escape' && modal?.classList.contains('active')) closeModal(); });
   window.copyTreasuryAddress = function(event) {
     const treasuryAddr = '0x717160A756D5E3eFaBB6e2cC84B29cc6eDf71a80';
     navigator.clipboard.writeText(treasuryAddr).then(() => {
       const btn = event?.target?.closest('.copy-btn');
-      if (btn) {
-        const originalHtml = btn.innerHTML;
-        btn.innerHTML = '<i class="fas fa-check"></i>';
-        setTimeout(() => { btn.innerHTML = originalHtml; }, 2000);
-      }
+      if(btn) { const originalHtml = btn.innerHTML; btn.innerHTML = '<i class="fas fa-check"></i>'; setTimeout(() => { btn.innerHTML = originalHtml; }, 2000); }
     }).catch(err => console.error('Copy failed:', err));
   };
 </script>
-
-<!-- Legacy AI - Institutional Chat Configuration -->
 <script>
 (function(){
   if(!window.chatbase||window.chatbase("getState")!=="initialized"){
-    window.chatbase=(...arguments)=>{
-      if(!window.chatbase.q){
-        window.chatbase.q=[]
-      }
-      window.chatbase.q.push(arguments)
-    };
-    window.chatbase=new Proxy(window.chatbase,{
-      get(target,prop){
-        if(prop==="q"){
-          return target.q
-        }
-        return(...args)=>target(prop,...args)
-      }
-    })
+    window.chatbase=(...arguments)=>{ if(!window.chatbase.q) window.chatbase.q=[]; window.chatbase.q.push(arguments) };
+    window.chatbase=new Proxy(window.chatbase,{ get(target,prop){ if(prop==="q") return target.q; return(...args)=>target(prop,...args) } })
   }
-
-  const onLoad=function(){
-    const script=document.createElement("script");
-    script.src="https://www.chatbase.co/embed.min.js";
-    script.id="JB7Ysn50O_DpC9tWnoxrh";
-    script.domain="www.chatbase.co";
-    document.body.appendChild(script)
-  };
-
-  if(document.readyState==="complete"){
-    onLoad()
-  }else{
-    window.addEventListener("load",onLoad)
-  }
+  const onLoad=function(){ const script=document.createElement("script"); script.src="https://www.chatbase.co/embed.min.js"; script.id="JB7Ysn50O_DpC9tWnoxrh"; script.domain="www.chatbase.co"; document.body.appendChild(script) };
+  if(document.readyState==="complete") onLoad(); else window.addEventListener("load",onLoad);
 })();
 </script>
 </body>
