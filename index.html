@@ -948,6 +948,96 @@
     @media (max-width: 640px) {
       .nav-wrapper { flex-direction: column; align-items: flex-start; }
     }
+
+    /* ===== START HERE OFFER SECTION ===== */
+    .starter-offer-section {
+      background: radial-gradient(circle at top left, rgba(158,42,42,0.12), transparent 35%),
+                  linear-gradient(180deg, #050505 0%, #0A0A0C 100%);
+      border-bottom: 1px solid var(--border-faint);
+    }
+
+    .offer-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .offer-card {
+      background: var(--charcoal-card);
+      border: 1px solid var(--charcoal-border);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .offer-card.primary-offer {
+      border-color: rgba(200,162,76,0.65);
+      box-shadow: 0 0 0 1px rgba(200,162,76,0.08);
+    }
+
+    .offer-code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      color: var(--crimson);
+      letter-spacing: 0.16em;
+      margin-bottom: 0.8rem;
+    }
+
+    .offer-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--ivory);
+      margin-bottom: 0.5rem;
+    }
+
+    .offer-price {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--antique-gold);
+      margin: 0.6rem 0 1rem;
+    }
+
+    .offer-card p {
+      font-size: 0.9rem;
+      color: var(--ivory-dim);
+      line-height: 1.65;
+      margin-bottom: 1.2rem;
+    }
+
+    .offer-list {
+      list-style: none;
+      margin: 0 0 1.6rem;
+      padding: 0;
+      flex-grow: 1;
+    }
+
+    .offer-list li {
+      font-size: 0.8rem;
+      color: #b8b8b0;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.035);
+      display: flex;
+      gap: 0.7rem;
+      align-items: baseline;
+    }
+
+    .offer-list li i {
+      color: var(--antique-gold);
+      font-size: 0.7rem;
+    }
+
+    @media (max-width: 860px) {
+      .offer-grid {
+        grid-template-columns: 1fr;
+      }
+      .offer-card {
+        padding: 1.5rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1000,9 +1090,9 @@
           <div class="hero-sub">Kelly Legacy Estates provides institutional governance education, fiduciary literacy, continuity systems, and administrative doctrine for individuals, families, organizations, and private governance environments.</div>
           <div class="hero-body">Structure determines outcome. Procedure precedes remedy. Record precedes recognition. Capacity determines consequence.<br><br>Kelly Legacy Estates exists to bring order to governance, documentation, fiduciary literacy, administrative procedure, and continuity planning through disciplined education, institutional frameworks, and private governance infrastructure.</div>
           <div class="btn-inline">
-            <a href="https://access.kellylegacyestates.com" class="btn-primary" target="_blank" rel="noopener noreferrer">Enter Member Access Portal</a>
-            <a href="pages/fiduciary-doctrine.html" class="btn-primary btn-secondary">Explore Governance Doctrine</a>
-            <a href="pages/contact.html" id="requestInstitutionalReviewBtn" class="btn-primary">Request Institutional Review</a>
+            <a href="#start-here" class="btn-primary btn-secondary">Start with the Fiduciary Starter Kit</a>
+            <a href="#workflow-review" class="btn-primary">Request Private Workflow Review</a>
+            <a href="#membership" class="btn-primary">View Membership Options</a>
           </div>
         </div>
         <div class="office-card">
@@ -1023,8 +1113,55 @@
     </div>
   </section>
 
+  <!-- START HERE OFFER SECTION -->
+  <section id="start-here" class="starter-offer-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">START HERE // FIRST ENTRY POINT</div>
+        <h2>Fiduciary Foundations Starter Kit™</h2>
+        <div class="section-sub">A practical first-step resource for organizing records, understanding capacity, and beginning a disciplined private administrative foundation.</div>
+        <hr class="divider-gold">
+      </div>
+      <div class="offer-grid">
+        <!-- Card 1: Starter Kit -->
+        <div class="offer-card primary-offer">
+          <div class="offer-code">ENTRY-047</div>
+          <h3>Fiduciary Foundations Starter Kit™</h3>
+          <div class="offer-price">$47</div>
+          <p>Built for individuals who need structure before pursuing remedy. This starter kit introduces the foundational principles of status, standing, capacity, records, notices, and administrative process.</p>
+          <ul class="offer-list">
+            <li><i class="fas fa-check-circle"></i> Status, Standing & Capacity overview</li>
+            <li><i class="fas fa-check-circle"></i> Records and administrative process checklist</li>
+            <li><i class="fas fa-check-circle"></i> Private governance orientation guide</li>
+            <li><i class="fas fa-check-circle"></i> Member access instructions</li>
+            <li><i class="fas fa-check-circle"></i> Next-step pathway into KLI</li>
+          </ul>
+          <a href="https://buy.stripe.com/5kQ8wIgpo2rvbGZ3cN2ZO05" class="btn-primary btn-secondary" target="_blank" rel="noopener noreferrer">Get the Starter Kit</a>
+        </div>
+        <!-- Card 2: Workflow Review -->
+        <div id="workflow-review" class="offer-card">
+          <div class="offer-code">REVIEW-297</div>
+          <h3>Private Administrative Workflow Review™</h3>
+          <div class="offer-price">$297</div>
+          <p>For individuals who need a structured review of their current administrative position, records, procedural posture, and next-step workflow.</p>
+          <ul class="offer-list">
+            <li><i class="fas fa-check-circle"></i> Intake review</li>
+            <li><i class="fas fa-check-circle"></i> Record organization checklist</li>
+            <li><i class="fas fa-check-circle"></i> Capacity and standing issue map</li>
+            <li><i class="fas fa-check-circle"></i> Recommended next steps</li>
+            <li><i class="fas fa-check-circle"></i> Written workflow summary</li>
+          </ul>
+          <a href="https://buy.stripe.com/eVq6oAb544zD4ex4gR2ZO06" class="btn-primary" target="_blank" rel="noopener noreferrer">Request Workflow Review</a>
+        </div>
+      </div>
+      <div class="membership-notice">
+        Educational review only. This does not create attorney-client representation, legal advice, financial advice, trustee appointment, or fiduciary engagement unless separately established by written agreement.
+      </div>
+    </div>
+  </section>
+
   <!-- MEMBERSHIP SECTION -->
-  <section class="membership-section">
+  <section id="membership" class="membership-section">
     <div class="membership-container">
       <div class="section-header">
         <div class="section-label">PRIVATE GOVERNANCE ACCESS</div>
