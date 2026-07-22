@@ -219,6 +219,12 @@ ul{list-style:none;}
   border-bottom:1px solid var(--gold) !important;
 }
 .nav-portal:hover{background:var(--gold);color:var(--navy) !important;}
+.nav-join{
+  background:var(--gold);color:var(--navy) !important;
+  padding:0.45rem 1rem !important;border-radius:var(--radius);
+  font-weight:600;border-bottom:none !important;
+}
+.nav-join:hover{background:var(--gold-soft);color:var(--navy) !important;}
 .nav-toggle{
   display:none;background:none;border:1px solid var(--line);
   color:var(--ivory);padding:0.55rem 0.75rem;border-radius:var(--radius);
@@ -540,28 +546,44 @@ h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:1rem;letter-spacing:0.01em
 @media (max-width: 720px){.principles{grid-template-columns:1fr;}}
 
 /* ---------- Membership ---------- */
-.tier-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;align-items:stretch;}
-.tier{
-  border:1px solid var(--line-soft);
-  background:var(--navy-3);
-  padding:2.4rem 2rem;border-radius:var(--radius);
-  display:flex;flex-direction:column;gap:1.1rem;
+.tier-grid{
+  margin-top:3rem;
+  display:flex;justify-content:center;
 }
-.tier.tier-featured{border-color:var(--gold);position:relative;}
+.tier{
+  width:100%;max-width:760px;
+  border:1px solid var(--gold);
+  background:var(--navy-3);
+  padding:2.75rem 2.5rem;border-radius:var(--radius);
+  display:flex;flex-direction:column;gap:1.1rem;
+  position:relative;
+  box-shadow:0 18px 50px rgba(0,0,0,0.35);
+}
 .tier-flag{
   position:absolute;top:-1px;right:-1px;
   font-family:var(--mono);font-size:0.6rem;letter-spacing:0.16em;
   text-transform:uppercase;color:var(--navy);background:var(--gold);
   padding:0.3rem 0.75rem;
 }
-.tier-name{font-family:var(--serif);font-size:1.5rem;}
-.tier-price{font-family:var(--serif);font-size:2.3rem;color:var(--gold-soft);}
+.tier-name{font-family:var(--serif);font-size:1.7rem;}
+.tier-price{font-family:var(--serif);font-size:2.5rem;color:var(--gold-soft);}
 .tier-price small{font-family:var(--sans);font-size:0.85rem;color:var(--slate);font-weight:400;}
-.tier ul{display:grid;gap:0.6rem;border-top:1px solid var(--line-soft);padding-top:1.2rem;}
+.tier-description{color:var(--slate-soft);font-size:0.97rem;font-weight:300;}
+.tier ul{
+  display:grid;grid-template-columns:1fr 1fr;gap:0.6rem 1.75rem;
+  border-top:1px solid var(--line-soft);padding-top:1.3rem;
+}
 .tier li{display:flex;gap:0.7rem;align-items:baseline;font-size:0.93rem;color:var(--slate-soft);}
 .tier li i{color:var(--gold);font-size:0.7rem;flex:none;}
-.tier .btn{margin-top:auto;justify-content:center;}
-@media (max-width: 940px){.tier-grid{grid-template-columns:1fr;max-width:480px;margin-left:auto;margin-right:auto;}}
+.tier .btn{margin-top:1rem;justify-content:center;}
+.membership-note{
+  font-size:0.82rem;color:var(--slate);text-align:center;
+  border-top:1px solid var(--line-soft);padding-top:1.1rem;margin-top:0.35rem;
+}
+@media (max-width: 640px){
+  .tier{padding:2.25rem 1.5rem;}
+  .tier ul{grid-template-columns:1fr;}
+}
 
 /* ---------- Disclosures ---------- */
 .disclosures{
@@ -687,9 +709,9 @@ h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:1rem;letter-spacing:0.01em
         <li><a href="#schools">Schools of Study</a></li>
         <li><a href="#research">Research</a></li>
         <li><a href="pages/publications.html">Publications</a></li>
-        <li><a href="#membership">Membership</a></li>
         <li><a href="pages/institute.html">About</a></li>
-        <li><a class="nav-portal" href="https://access.kellylegacyestates.com">Member Portal</a></li>
+        <li><a class="nav-join" href="https://buy.stripe.com/fZu8wI1uu4zD8uN14F2ZO01" target="_blank" rel="noopener noreferrer">Join &middot; $33/Month</a></li>
+        <li><a class="nav-portal" href="https://access.kellylegacyestates.com">Member Login</a></li>
       </ul>
     </nav>
   </div>
@@ -705,10 +727,10 @@ h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:1rem;letter-spacing:0.01em
       <h1 id="hero-heading">Learn the systems that govern <em>records, rights, obligations,</em> and institutions.</h1>
       <p class="hero-copy">Kelly Legacy Institute provides structured education in fiduciary literacy, administrative procedure, trust administration, legal research, record systems, governance, and institutional continuity.</p>
       <div class="hero-ctas">
-        <a class="btn btn-gold" href="#programs">Explore Academic Programs</a>
-        <a class="btn btn-outline" href="knowledge-library.html">Enter the Research Library</a>
+        <a class="btn btn-gold" href="https://buy.stripe.com/fZu8wI1uu4zD8uN14F2ZO01" target="_blank" rel="noopener noreferrer">Join Foundational Membership &middot; $33/Month</a>
+        <a class="btn btn-outline" href="#programs">Explore Academic Programs</a>
       </div>
-      <a class="btn-quiet hero-tertiary" href="https://access.kellylegacyestates.com">Access the Member Portal</a>
+      <a class="btn-quiet hero-tertiary" href="knowledge-library.html">Enter the Research Library</a>
     </div>
     <div class="hero-seal">
       <svg class="seal-svg" viewBox="0 0 320 320" role="img" aria-label="Institutional seal of Kelly Legacy Institute, established 2026">
@@ -817,6 +839,32 @@ h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:1rem;letter-spacing:0.01em
   </div>
 </section>
 
+<!-- Student profile -->
+<section class="section" id="student-profile" aria-labelledby="profile-heading">
+  <div class="section-inner">
+    <p class="eyebrow">Student Profile</p>
+    <h2 id="profile-heading">Built for disciplined students of records, procedure, and governance.</h2>
+    <p class="section-lede">Kelly Legacy Institute serves individuals who want to understand how records are created, how authority is exercised, how fiduciary duties are administered, and how durable institutions are governed.</p>
+    <div class="card-grid">
+      <article class="program-card reveal">
+        <span class="program-tier">Individual Study</span>
+        <h3>Record Keepers and Researchers</h3>
+        <p>For individuals organizing family records, conducting public-record research, evaluating claims, and developing disciplined administrative practices.</p>
+      </article>
+      <article class="program-card reveal">
+        <span class="program-tier">Fiduciary Practice</span>
+        <h3>Trustees, Representatives, and Stewards</h3>
+        <p>For those responsible for records, property, duties, beneficiaries, organizations, estates, or the interests of another.</p>
+      </article>
+      <article class="program-card reveal">
+        <span class="program-tier">Institutional Development</span>
+        <h3>Founders and Legacy Builders</h3>
+        <p>For individuals building businesses, family systems, educational programs, archives, governance structures, and enduring institutions.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- 8. Fiduciary Foundations curriculum -->
 <section class="section section-light" id="curriculum" aria-labelledby="curriculum-heading">
   <div class="section-inner">
@@ -864,6 +912,23 @@ h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:1rem;letter-spacing:0.01em
         <h3>Building the Administrative Record</h3>
         <p>Assembling correspondence, notices, exhibits, and procedural history into a coherent record capable of supporting review.</p>
       </article>
+    </div>
+  </div>
+</section>
+
+<!-- Learning outcomes -->
+<section class="section section-alt" id="outcomes" aria-labelledby="outcomes-heading">
+  <div class="section-inner">
+    <p class="eyebrow">Learning Outcomes</p>
+    <h2 id="outcomes-heading">Develop a repeatable method for administrative analysis.</h2>
+    <p class="section-lede">Foundational study is designed to strengthen the student&rsquo;s ability to examine records, identify authority, organize evidence, follow procedure, and preserve an accurate administrative history.</p>
+    <div class="principles">
+      <div class="principle reveal"><span class="principle-index">L-01</span><p>Separate verified facts from allegations and conclusions.</p></div>
+      <div class="principle reveal"><span class="principle-index">L-02</span><p>Identify parties, legal entities, representatives, and capacity.</p></div>
+      <div class="principle reveal"><span class="principle-index">L-03</span><p>Locate governing statutes, regulations, rules, and authorities.</p></div>
+      <div class="principle reveal"><span class="principle-index">L-04</span><p>Match required elements with supporting evidence.</p></div>
+      <div class="principle reveal"><span class="principle-index">L-05</span><p>Track notice, timing, deadlines, filings, and procedural posture.</p></div>
+      <div class="principle reveal"><span class="principle-index">L-06</span><p>Build a coherent and reviewable administrative record.</p></div>
     </div>
   </div>
 </section>
@@ -1146,45 +1211,26 @@ h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:1rem;letter-spacing:0.01em
 <section class="section" id="membership" aria-labelledby="membership-heading">
   <div class="section-inner">
     <p class="eyebrow">Institutional Access</p>
-    <h2 id="membership-heading">Membership Categories</h2>
-    <p class="section-lede">Membership provides structured access to the Institute's curriculum, research library, publications, and community of study.</p>
+    <h2 id="membership-heading">One membership. A complete foundation.</h2>
+    <p class="section-lede">Foundational Membership provides structured entry into the Institute&rsquo;s curriculum, research resources, publications, educational briefings, administrative tools, and community of study.</p>
     <div class="tier-grid">
       <article class="tier reveal">
-        <h3 class="tier-name">Foundation Membership</h3>
+        <span class="tier-flag">Primary Access</span>
+        <h3 class="tier-name">Foundational Membership</h3>
         <p class="tier-price">$33 <small>/ month</small></p>
+        <p class="tier-description">Designed for students beginning a disciplined study of records, capacity, standing, evidence, procedure, fiduciary duty, and institutional administration.</p>
         <ul>
-          <li><i class="fa-solid fa-circle" aria-hidden="true"></i> Foundational curriculum</li>
+          <li><i class="fa-solid fa-circle" aria-hidden="true"></i> Fiduciary Foundations curriculum</li>
           <li><i class="fa-solid fa-circle" aria-hidden="true"></i> Research library access</li>
           <li><i class="fa-solid fa-circle" aria-hidden="true"></i> Weekly educational briefings</li>
-          <li><i class="fa-solid fa-circle" aria-hidden="true"></i> Member community</li>
-        </ul>
-        <!-- Replace these enrollment anchors with the verified Stripe payment links before publication. -->
-        <a class="btn btn-outline" href="#foundation-enrollment">Enter Foundation</a>
-      </article>
-      <article class="tier tier-featured reveal">
-        <span class="tier-flag">Principal Pathway</span>
-        <h3 class="tier-name">Scholar Membership</h3>
-        <p class="tier-price">$77 <small>/ month</small></p>
-        <ul>
-          <li><i class="fa-solid fa-circle" aria-hidden="true"></i> Everything in Foundation</li>
-          <li><i class="fa-solid fa-circle" aria-hidden="true"></i> Advanced schools of study</li>
-          <li><i class="fa-solid fa-circle" aria-hidden="true"></i> Case-study workshops</li>
+          <li><i class="fa-solid fa-circle" aria-hidden="true"></i> Member learning community</li>
           <li><i class="fa-solid fa-circle" aria-hidden="true"></i> Institutional publications</li>
+          <li><i class="fa-solid fa-circle" aria-hidden="true"></i> Administrative study resources</li>
+          <li><i class="fa-solid fa-circle" aria-hidden="true"></i> Selected case-study workshops</li>
+          <li><i class="fa-solid fa-circle" aria-hidden="true"></i> Member portal access</li>
         </ul>
-        <!-- Replace these enrollment anchors with the verified Stripe payment links before publication. -->
-        <a class="btn btn-gold" href="#scholar-enrollment">Become a Scholar</a>
-      </article>
-      <article class="tier reveal">
-        <h3 class="tier-name">Executive Membership</h3>
-        <p class="tier-price">$197 <small>/ month</small></p>
-        <ul>
-          <li><i class="fa-solid fa-circle" aria-hidden="true"></i> Everything in Scholar</li>
-          <li><i class="fa-solid fa-circle" aria-hidden="true"></i> Executive briefings</li>
-          <li><i class="fa-solid fa-circle" aria-hidden="true"></i> Governance resources</li>
-          <li><i class="fa-solid fa-circle" aria-hidden="true"></i> Institutional implementation tools</li>
-        </ul>
-        <!-- Replace these enrollment anchors with the verified Stripe payment links before publication. -->
-        <a class="btn btn-outline" href="#executive-enrollment">Enter Executive Study</a>
+        <a class="btn btn-gold" href="https://buy.stripe.com/fZu8wI1uu4zD8uN14F2ZO01" target="_blank" rel="noopener noreferrer">Enter Foundational Membership</a>
+        <p class="membership-note">Secure membership enrollment is processed through Stripe. After enrollment, members receive access instructions for the Kelly Legacy Institute platform.</p>
       </article>
     </div>
 
@@ -1211,7 +1257,7 @@ h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:1rem;letter-spacing:0.01em
   <div class="section-inner">
     <h2 id="final-heading">Build records that can be reviewed. Build systems that can be governed. Build institutions that can endure.</h2>
     <div class="hero-ctas">
-      <a class="btn btn-gold" href="#membership">Begin Foundational Study</a>
+      <a class="btn btn-gold" href="https://buy.stripe.com/fZu8wI1uu4zD8uN14F2ZO01" target="_blank" rel="noopener noreferrer">Join Foundational Membership &middot; $33/Month</a>
       <a class="btn btn-outline" href="knowledge-library.html">Explore the Research Library</a>
       <a class="btn-quiet" href="https://access.kellylegacyestates.com">Enter the Member Portal</a>
     </div>
@@ -1236,9 +1282,9 @@ h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:1rem;letter-spacing:0.01em
         <a href="knowledge-library.html">Research Library</a>
         <a href="pages/publications.html">Publications</a>
         <a href="pages/institutional-solutions.html">Institutional Solutions</a>
-        <a href="#membership">Membership</a>
+        <a href="https://buy.stripe.com/fZu8wI1uu4zD8uN14F2ZO01" target="_blank" rel="noopener noreferrer">Join Foundational Membership</a>
         <a href="pages/institute.html">About</a>
-        <a href="https://access.kellylegacyestates.com">Member Portal</a>
+        <a href="https://access.kellylegacyestates.com">Member Login</a>
         <a href="pages/privacy.html">Privacy</a>
         <a href="pages/terms.html">Terms</a>
         <a href="pages/disclaimer.html">Educational Disclaimer</a>
@@ -1258,18 +1304,7 @@ h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:1rem;letter-spacing:0.01em
 <script>
 /* ============================================================
    Kelly Legacy Institute — homepage behavior
-   ------------------------------------------------------------
-   CONFIGURATION
-   Replace the enrollment anchors below with verified Stripe
-   payment links before publication. Update the constants and,
-   if preferred, wire them to the membership buttons.
    ============================================================ */
-var ENROLLMENT_LINKS = {
-  foundation: "#foundation-enrollment", /* Replace with verified Stripe payment link */
-  scholar:    "#scholar-enrollment",    /* Replace with verified Stripe payment link */
-  executive:  "#executive-enrollment"   /* Replace with verified Stripe payment link */
-};
-
 (function () {
   "use strict";
 
