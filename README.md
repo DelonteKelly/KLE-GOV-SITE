@@ -87,7 +87,7 @@ Institutional access and classification environment providing:
 
 Access Infrastructure:
 
-https://kli-access.replit.app/
+https://access.kellylegacyestates.com
 
 ---
 
@@ -106,8 +106,8 @@ Institutional AI governance framework focused on:
 ROUTING DESTINATIONS
 
 Function| Destination
-Institutional Access| https://kli-access.replit.app/
-Access Verification| https://kli-access.replit.app/
+Institutional Access| https://access.kellylegacyestates.com
+Access Verification| https://access.kellylegacyestates.com
 Publications Gateway| publications.html
 Governance Doctrine| fiduciary-doctrine.html
 Institute Portal| institute.html

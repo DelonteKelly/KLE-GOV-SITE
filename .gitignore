@@ -1,0 +1,6 @@
+# Local-only backups of restricted content removed from public pages.
+# Never commit: this repo is served in full by GitHub Pages, so anything
+# committed here is publicly reachable. Full originals also remain
+# recoverable via `git show <commit>:pages/<file>.html` from history.
+restricted-source/
+/restricted-source/*.original.html
